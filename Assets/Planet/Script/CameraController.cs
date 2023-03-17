@@ -38,7 +38,7 @@ public class CameraController : MonoBehaviour
         var mouse_y = -Input.GetAxis("Mouse Y");//获取鼠标Y轴移动
         if (Input.GetKey(KeyCode.Mouse1))
         {
-            transform.RotateAround(Rotation_Transform, Vector3.up, mouse_x * 5);
+            transform.RotateAround(Rotation_Transform, transform.up, mouse_x * 5);
             transform.RotateAround(Rotation_Transform, transform.right, mouse_y * 5);
         }
     }
