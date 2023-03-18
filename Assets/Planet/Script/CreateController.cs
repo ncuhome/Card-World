@@ -12,10 +12,11 @@ public class CreateController : MonoBehaviour
     public Material[] materials = new Material[10];
     public Transform itemParent;
     public MeshRenderer itemSprite;
+    public Color[] colors = new Color[4];
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i <= 20; i++)
+        for (int i = 0; i <= 1; i++)
         {
             CreateItem();
         }
@@ -40,6 +41,11 @@ public class CreateController : MonoBehaviour
         item.transform.position = Vector3.zero;
         item.transform.localScale = Vector3.one;
         item.transform.eulerAngles = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
+        while(ColorExt.Difference(item.GetComponent<GetPix>().GetColor(), colors[0]) < 0.1f)
+        {
+            Debug.Log(ColorExt.Difference(item.GetComponent<GetPix>().GetColor(), colors[0]));
+            item.transform.eulerAngles = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
+        }
         itemSprite = item.transform.Find("ItemSprite").GetComponent<MeshRenderer>();
         itemSprite.material = materials[(int)itemName];
         switch (itemName)
@@ -64,6 +70,16 @@ public class CreateController : MonoBehaviour
                 itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 0.5f, itemSprite.transform.localScale.y * 0.5f, itemSprite.transform.localScale.z);
                 itemSprite.transform.localPosition = new Vector3(0, 0.53f, 0);
                 break;
+        }
+    }
+
+    public class ColorExt
+    {
+        public static float Difference(Color c1, Color c2)
+        {
+            c1 *= 255; c2 *= 255;
+            var averageR = (c1.r + c2.r) * 0.5f;
+            return Mathf.Sqrt((2 + averageR / 255f) * Mathf.Pow(c1.r - c2.r, 2) + 4 * Mathf.Pow(c1.g - c2.g, 2) + (2 + (255 - averageR) / 255f) * Mathf.Pow(c1.b - c2.b, 2)) / (3 * 255f);
         }
     }
 }
