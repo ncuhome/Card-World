@@ -15,7 +15,7 @@ public class GetPix : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //Debug.DrawLine(transform.position, transform.position + transform.up * 100, Color.green);
     }
 
     public Color GetColor()
@@ -23,11 +23,12 @@ public class GetPix : MonoBehaviour
         target = GameObject.Find("Planet");
 
         RaycastHit hitInfo;
-        Ray rayForward = new Ray(transform.position, transform.forward);
+        Ray rayForward = new Ray(transform.position, transform.up);
         Ray rayBack = Reverse(rayForward, 3000);
         if (Physics.Raycast(rayBack, out hitInfo))
         {
-            //Debug.DrawLine(transform.position, transform.position + transform.forward * 100, Color.green);
+            //Debug.DrawLine(transform.position, transform.position + transform.up * 100, Color.green);
+            //Debug.Log(hitInfo.collider.gameObject.name);
             Vector2 uv = hitInfo.textureCoord;
             Renderer rendere = target.GetComponent<MeshRenderer>();
             Material material = rendere.material;

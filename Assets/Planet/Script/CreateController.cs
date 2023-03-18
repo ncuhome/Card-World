@@ -16,7 +16,7 @@ public class CreateController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i <= 1; i++)
+        for (int i = 0; i <= 19; i++)
         {
             CreateItem();
         }
@@ -41,11 +41,17 @@ public class CreateController : MonoBehaviour
         item.transform.position = Vector3.zero;
         item.transform.localScale = Vector3.one;
         item.transform.eulerAngles = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
-        while(ColorExt.Difference(item.GetComponent<GetPix>().GetColor(), colors[0]) < 0.1f)
+        
+        // Debug.Log(item.transform.eulerAngles);
+        // Debug.Log(ColorExt.Difference(item.GetComponent<GetPix>().GetColor(), colors[0]));
+
+        while (ColorExt.Difference(item.GetComponent<GetPix>().GetColor(), colors[0]) < 0.1f)
         {
-            Debug.Log(ColorExt.Difference(item.GetComponent<GetPix>().GetColor(), colors[0]));
             item.transform.eulerAngles = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
+            // Debug.Log(item.transform.eulerAngles);
+            // Debug.Log(ColorExt.Difference(item.GetComponent<GetPix>().GetColor(), colors[0]));
         }
+
         itemSprite = item.transform.Find("ItemSprite").GetComponent<MeshRenderer>();
         itemSprite.material = materials[(int)itemName];
         switch (itemName)
