@@ -98,6 +98,69 @@ public static class Noise_ZH
             }
         }
 
+        //地图左右边界置零并且各点插值降低
+        for (int y = 0; y < _MapHeight; y++)
+        {
+            float _NoiseHeight = 0f;
+            for (int x = Mathf.FloorToInt(_HalfWidth); x >= 0; x--)
+            {
+                _NoiseHeight = _NoiseMap[x, y] - (_NoiseMap[0, y] - _MinNoiseHeight) * Mathf.Exp((-x / _HalfWidth) * 10);
+                if (_NoiseHeight > _MaxNoiseHeight)
+                {
+                    _NoiseHeight = _MaxNoiseHeight;
+                }
+                else if (_NoiseHeight < _MinNoiseHeight)
+                {
+                    _NoiseHeight = _MinNoiseHeight;
+                }
+                _NoiseMap[x, y] = _NoiseHeight;
+            }
+            for (int x = Mathf.FloorToInt(_HalfWidth); x < _MapWidth; x++)
+            {
+                _NoiseHeight = _NoiseMap[x, y] - (_NoiseMap[_MapWidth - 1, y] - _MinNoiseHeight) * Mathf.Exp((x / _HalfWidth - 2) * 10);
+                if (_NoiseHeight > _MaxNoiseHeight)
+                {
+                    _NoiseHeight = _MaxNoiseHeight;
+                }
+                else if (_NoiseHeight < _MinNoiseHeight)
+                {
+                    _NoiseHeight = _MinNoiseHeight;
+                }
+                _NoiseMap[x, y] = _NoiseHeight;
+            }
+        }
+        //地图上下边界置1，并且各点插值升高
+        for (int x = 0; x < _MapWidth; x++)
+        {
+            float _NoiseHeight = 0f;
+            for (int y = Mathf.FloorToInt(_HalfHeight); y >= 0; y--)
+            {
+                _NoiseHeight = _NoiseMap[x, y] + (_MaxNoiseHeight - _NoiseMap[x, 0]) * Mathf.Exp((-y / _HalfHeight) * 5);
+                if (_NoiseHeight > _MaxNoiseHeight)
+                {
+                    _NoiseHeight = _MaxNoiseHeight;
+                }
+                else if (_NoiseHeight < _MinNoiseHeight)
+                {
+                    _NoiseHeight = _MinNoiseHeight;
+                }
+                _NoiseMap[x, y] = _NoiseHeight;
+            }
+            for (int y = Mathf.FloorToInt(_HalfHeight); y < _MapHeight; y++)
+            {
+                _NoiseHeight = _NoiseMap[x, y] + (_MaxNoiseHeight - _NoiseMap[x, _MapHeight - 1]) * Mathf.Exp((y / _HalfHeight - 2) * 5);
+                if (_NoiseHeight > _MaxNoiseHeight)
+                {
+                    _NoiseHeight = _MaxNoiseHeight;
+                }
+                else if (_NoiseHeight < _MinNoiseHeight)
+                {
+                    _NoiseHeight = _MinNoiseHeight;
+                }
+                _NoiseMap[x, y] = _NoiseHeight;
+            }
+        }
+
         //噪声贴图 最大值最小值 限定输出
         //图像叠加
         for (int y = 0; y < _MapHeight; y++)
@@ -107,6 +170,7 @@ public static class Noise_ZH
                 _NoiseMap[x, y] = Mathf.InverseLerp(_MinNoiseHeight, _MaxNoiseHeight, _NoiseMap[x, y]);
             }
         }
+
 
         //返回地图数据
         return _NoiseMap;
