@@ -129,26 +129,15 @@ public static class Noise_ZH
                 _NoiseMap[x, y] = _NoiseHeight;
             }
         }
+
+
         //地图上下边界置1，并且各点插值升高
         for (int x = 0; x < _MapWidth; x++)
         {
             float _NoiseHeight = 0f;
-            for (int y = Mathf.FloorToInt(_HalfHeight); y >= 0; y--)
-            {
-                _NoiseHeight = _NoiseMap[x, y] + (_MaxNoiseHeight - _NoiseMap[x, 0]) * Mathf.Exp((-y / _HalfHeight) * 5);
-                if (_NoiseHeight > _MaxNoiseHeight)
-                {
-                    _NoiseHeight = _MaxNoiseHeight;
-                }
-                else if (_NoiseHeight < _MinNoiseHeight)
-                {
-                    _NoiseHeight = _MinNoiseHeight;
-                }
-                _NoiseMap[x, y] = _NoiseHeight;
-            }
             for (int y = Mathf.FloorToInt(_HalfHeight); y < _MapHeight; y++)
             {
-                _NoiseHeight = _NoiseMap[x, y] + (_MaxNoiseHeight - _NoiseMap[x, _MapHeight - 1]) * Mathf.Exp((y / _HalfHeight - 2) * 5);
+                _NoiseHeight = _NoiseMap[x, y] + (_MaxNoiseHeight - _NoiseMap[x, _MapHeight - 1]) * Mathf.Exp(((y + 100) / _HalfHeight - 2) * 5);
                 if (_NoiseHeight > _MaxNoiseHeight)
                 {
                     _NoiseHeight = _MaxNoiseHeight;
@@ -159,7 +148,23 @@ public static class Noise_ZH
                 }
                 _NoiseMap[x, y] = _NoiseHeight;
             }
+            for (int y = Mathf.FloorToInt(_HalfHeight); y >= 0; y--)
+            {
+                _NoiseHeight = _NoiseMap[x, y] + (_MaxNoiseHeight - _NoiseMap[x, 0]) * Mathf.Exp((-(y - 100) / _HalfHeight) * 5);
+                if (_NoiseHeight > _MaxNoiseHeight)
+                {
+                    _NoiseHeight = _MaxNoiseHeight;
+                }
+                else if (_NoiseHeight < _MinNoiseHeight)
+                {
+                    _NoiseHeight = _MinNoiseHeight;
+                }
+                _NoiseMap[x, y] = _NoiseHeight;
+            }
+
         }
+
+        
 
         //噪声贴图 最大值最小值 限定输出
         //图像叠加
