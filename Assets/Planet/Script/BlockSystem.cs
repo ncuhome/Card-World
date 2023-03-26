@@ -22,23 +22,23 @@ public class BlockSystem : MonoBehaviour
 
 
     //求纬度（返回-90到90的float）
-    private float GetLatitude(Transform center, Transform point)
+    public float GetLatitude(Transform center, Transform point)
     {
         float radius = Vector3.Distance(center.transform.position, point.transform.position);
         return Mathf.Asin((point.position.y - center.position.y) / radius) * Mathf.Rad2Deg;//求纬度，并转成弧度
     }
 
     //求经度（返回-180到180的float）
-    private float GetLongitude(Transform center, Transform point)
+    public float GetLongitude(Transform center, Transform point)
     {
-        return Mathf.Atan2(center.position.z, point.position.x) * Mathf.Rad2Deg;//求经度
+        return Mathf.Atan2(point.position.z - center.position.z, point.position.x - center.position.x) * Mathf.Rad2Deg;//求经度
     }
 
     public int GetBlockNum(Transform center, Transform point)
     {
         float latitude = GetLatitude(center, point);
         float longitude = GetLongitude(center, point);
-        int blockX = (int)Mathf.Floor(longitude / 60) + 3;
+        int blockX = (int)Mathf.Floor(longitude / 60) + 4;
         int blockY = (int)Mathf.Floor(latitude / 45) + 2;
         return ((blockY * 6) + blockX);
     }
