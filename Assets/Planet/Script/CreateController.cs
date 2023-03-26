@@ -12,7 +12,6 @@ public class CreateController : MonoBehaviour
     public Material[] materials = new Material[10];
     public Transform itemParent;
     public MeshRenderer itemSprite;
-    public Color[] colors = new Color[4];
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +46,7 @@ public class CreateController : MonoBehaviour
         // Debug.Log(item.transform.eulerAngles);
         // Debug.Log(ColorExt.Difference(item.GetComponent<GetPix>().GetColor(), colors[0]));
         //Debug.Log(GetColorSystem.Instance);
-        while (ColorExt.Difference(GetColorSystem.Instance.GetColor(item.transform), colors[0]) < 0.1f)
+        while (ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(item.transform.up), ColorSystem.Instance.colors[0]) < 0.1f)
         {
             item.transform.eulerAngles = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
             // Debug.Log(item.transform.eulerAngles);
@@ -65,6 +64,7 @@ public class CreateController : MonoBehaviour
             case ItemName.Naked:
                 itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 0.5f, itemSprite.transform.localScale.y * 0.5f, itemSprite.transform.localScale.z);
                 itemSprite.transform.localPosition = new Vector3(0, 0.53f, 0);
+                item.GetComponent<Character>().isCharacter = true;
                 break;
             case ItemName.City:
             case ItemName.NightCity:
@@ -78,17 +78,6 @@ public class CreateController : MonoBehaviour
                 itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 0.5f, itemSprite.transform.localScale.y * 0.5f, itemSprite.transform.localScale.z);
                 itemSprite.transform.localPosition = new Vector3(0, 0.53f, 0);
                 break;
-        }
-    }
-
-    //获取颜色色差
-    public class ColorExt
-    {
-        public static float Difference(Color c1, Color c2)
-        {
-            c1 *= 255; c2 *= 255;
-            var averageR = (c1.r + c2.r) * 0.5f;
-            return Mathf.Sqrt((2 + averageR / 255f) * Mathf.Pow(c1.r - c2.r, 2) + 4 * Mathf.Pow(c1.g - c2.g, 2) + (2 + (255 - averageR) / 255f) * Mathf.Pow(c1.b - c2.b, 2)) / (3 * 255f);
         }
     }
 }

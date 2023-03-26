@@ -9,16 +9,16 @@ public class GetColorSystem : MonoBehaviour
     private void Awake()
     {
         //生成实例
-        if (GetColorSystem.Instance == null)
+        if (Instance == null)
         {
-            GetColorSystem.Instance = this;
+            Instance = this;
             Debug.Log("Instance GetColorSystem");
         }
+        target = GameObject.Find("Planet");
     }
     // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.Find("Planet");
     }
 
     // Update is called once per frame
@@ -28,10 +28,10 @@ public class GetColorSystem : MonoBehaviour
     }
 
     //输入指定的旋转方向获取对应的球面点颜色
-    public Color GetColor(Transform point)
+    public Color GetColor(Vector3 targetEuler)
     {
         RaycastHit hitInfo;
-        Ray rayForward = new Ray(target.transform.position, point.up);
+        Ray rayForward = new Ray(target.transform.position, targetEuler);
         Ray rayBack = Reverse(rayForward, 3000);
         if (Physics.Raycast(rayBack, out hitInfo))
         {

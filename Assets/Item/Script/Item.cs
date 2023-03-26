@@ -17,8 +17,8 @@ public class Item : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        blockNum = BlockSystem.Instance.GetBlockNum(center, this.transform);
-        latitude = BlockSystem.Instance.GetLatitude(center, this.transform);
-        longitude = BlockSystem.Instance.GetLongitude(center, this.transform);
+        blockNum = BlockSystem.Instance.GetBlockNum(center, this.transform.GetChild(0));
+        latitude = BlockSystem.Instance.GetLatitude(center, this.transform.GetChild(0));
+        longitude = BlockSystem.Instance.GetLongitude(center, this.transform.GetChild(0));
     }
 }
