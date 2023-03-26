@@ -6,12 +6,16 @@ public class BlockSystem : MonoBehaviour
 {
     public static BlockSystem Instance = null;
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
         }
+    }
+    void Start()
+    {
+
     }
 
     // Update is called once per frame

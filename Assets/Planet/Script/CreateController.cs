@@ -28,12 +28,14 @@ public class CreateController : MonoBehaviour
 
     }
 
+    //随机创建
     public void CreateItem()
     {
         ItemName itemName = (ItemName)Random.Range(0, 9);
         CreateItem(itemName);
     }
 
+    //指定创建
     public void CreateItem(ItemName itemName)
     {
         GameObject item = Instantiate(itemPrefab);
@@ -44,8 +46,8 @@ public class CreateController : MonoBehaviour
         
         // Debug.Log(item.transform.eulerAngles);
         // Debug.Log(ColorExt.Difference(item.GetComponent<GetPix>().GetColor(), colors[0]));
-
-        while (ColorExt.Difference(item.GetComponent<GetPix>().GetColor(), colors[0]) < 0.1f)
+        //Debug.Log(GetColorSystem.Instance);
+        while (ColorExt.Difference(GetColorSystem.Instance.GetColor(item.transform), colors[0]) < 0.1f)
         {
             item.transform.eulerAngles = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
             // Debug.Log(item.transform.eulerAngles);
@@ -79,6 +81,7 @@ public class CreateController : MonoBehaviour
         }
     }
 
+    //获取颜色色差
     public class ColorExt
     {
         public static float Difference(Color c1, Color c2)

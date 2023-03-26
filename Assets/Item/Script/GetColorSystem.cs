@@ -1,29 +1,37 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GetPix : MonoBehaviour
+public class GetColorSystem : MonoBehaviour
 {
+    public static GetColorSystem Instance = null;
     public GameObject target = null;
+    private void Awake()
+    {
+        //生成实例
+        if (GetColorSystem.Instance == null)
+        {
+            GetColorSystem.Instance = this;
+            Debug.Log("Instance GetColorSystem");
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
-
+        target = GameObject.Find("Planet");
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.DrawLine(transform.position, transform.position + transform.up * 100, Color.green);
+
     }
 
-    public Color GetColor()
+    //输入指定的旋转方向获取对应的球面点颜色
+    public Color GetColor(Transform point)
     {
-        target = GameObject.Find("Planet");
-
         RaycastHit hitInfo;
-        Ray rayForward = new Ray(transform.position, transform.up);
+        Ray rayForward = new Ray(target.transform.position, point.up);
         Ray rayBack = Reverse(rayForward, 3000);
         if (Physics.Raycast(rayBack, out hitInfo))
         {
