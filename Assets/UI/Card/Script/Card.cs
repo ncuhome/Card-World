@@ -13,12 +13,12 @@ public class Card : MonoBehaviour , IPointerEnterHandler, IPointerExitHandler, I
 
     public static float firstTime = 0.5f;  //抽卡第一阶段时长 变大并展示
 
-    public static float secondTime = 1.5f; //抽卡第二阶段时长 缩小进入卡槽
+    public static float secondTime = 0.4f; //抽卡第二阶段时长 缩小进入卡槽
 
-    public static GameObject cardTrash;
-    private bool canBeDrag;
+    public static GameObject cardTrash;    //垃圾桶在所有卡牌中都是一个对象
+    protected bool canBeDrag;
     [SerializeField] private Canvas cardCanvas;
-    private void Start() //卡牌被创建后立即执行
+    public void Start() //卡牌被创建后立即执行
     {
         cardTrash = GameObject.Find("TrashCan");
         Drawcards(); 
@@ -70,9 +70,9 @@ public class Card : MonoBehaviour , IPointerEnterHandler, IPointerExitHandler, I
          
     }
 
-    public void OnEndDrag(PointerEventData eventData)
+    public virtual void OnEndDrag(PointerEventData eventData)
     {
-        if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 350)
+        if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 350)  //在垃圾桶范围内
         {
             this.transform.DOMove(cardTrash.transform.position, 0.5f).OnComplete(() => { CardPack.DeleteCard(this); Destroy(this.gameObject); });
         }
