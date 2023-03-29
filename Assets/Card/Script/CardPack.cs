@@ -7,7 +7,7 @@ public class CardPack : MonoBehaviour //¿¨ÅÆ±³°ü
 {
     public int cardMaximums = 10;
     public static float cardPackHigh;
-    public static List<MonoBehaviour> cardPack = new List<MonoBehaviour>();
+    public static List<Card> cardPack = new List<Card>();
     private void Awake()
     {
         cardPackHigh = this.transform.position.y;

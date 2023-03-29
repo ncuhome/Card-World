@@ -15,12 +15,12 @@ public class Card : MonoBehaviour , IPointerEnterHandler, IPointerExitHandler, I
 
     public static float secondTime = 1.5f; //抽卡第二阶段时长 缩小进入卡槽
 
-    public Sequence pointerSequence;
-
+    public static GameObject cardTrash;
     private bool canBeDrag;
     [SerializeField] private Canvas cardCanvas;
     private void Start() //卡牌被创建后立即执行
     {
+        cardTrash = GameObject.Find("TrashCan");
         Drawcards(); 
     }
     public virtual void BeUse()  //使用卡牌函数
@@ -29,35 +29,54 @@ public class Card : MonoBehaviour , IPointerEnterHandler, IPointerExitHandler, I
     }
     public void Drawcards()
     {
+        canBeDrag = false;
         this.transform.localPosition = new Vector2(900, 0);
         Sequence quence = DOTween.Sequence(); //声明动画容器
         quence.Append(transform.DOLocalMove(new Vector2(0,540) , firstTime));
         quence.Join(transform.DOScale(new Vector2(3f, 3f), firstTime));
         quence.Join(transform.DORotate(new Vector2(15, -90), firstTime).From());
         quence.Append(transform.DOPunchPosition(new Vector2(5, 10), 0.2f, 1, 0.1f)); //卡牌震动
-        quence.AppendInterval(0.6f).OnComplete(() => { CardPack.AddCard(this); transform.DOScale(new Vector2(1f, 1f), secondTime); });   
+        quence.AppendInterval(0.6f).OnComplete(() => { CardPack.AddCard(this); transform.DOScale(new Vector2(1f, 1f), secondTime)
+            .OnComplete(() => { canBeDrag = true; }); });   
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        this.transform.SetAsLastSibling(); //显示在所有卡牌的最上面
-        this.pointerSequence.Append(transform.DOScale(new Vector2(1.5f, 1.5f), 0.1f));  //变大
+        if (canBeDrag)
+        {
+            this.transform.SetAsLastSibling(); //显示在所有卡牌的最上面
+            transform.DOScale(new Vector2(1.5f, 1.5f), 0.1f);  //变大
+        }
+        
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        this.pointerSequence.Append(transform.DOScale(new Vector2(1f, 1f), 0.1f));      //变小
+        if (canBeDrag)
+        {
+            transform.DOScale(new Vector2(1f, 1f), 0.1f);      //变小
+        }
+        
     }
 
     public void OnDrag(PointerEventData eventData) //卡牌拖拽效果
     {
-        this.GetComponent<RectTransform>().anchoredPosition += 
-            eventData.delta / this.transform.parent.transform.parent.GetComponent<Canvas>().scaleFactor;  
+        if (canBeDrag)
+        {
+            this.GetComponent<RectTransform>().anchoredPosition += 
+                eventData.delta / this.transform.parent.transform.parent.GetComponent<Canvas>().scaleFactor; 
+        }
+        
+         
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (this.GetComponent<RectTransform>().anchoredPosition.y >= CardPack.cardPackHigh + Card.cardSizey + 50)
+        if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 350)
+        {
+            this.transform.DOMove(cardTrash.transform.position, 0.5f).OnComplete(() => { CardPack.DeleteCard(this); Destroy(this.gameObject); });
+        }
+        else if (this.GetComponent<RectTransform>().anchoredPosition.y >= CardPack.cardPackHigh + Card.cardSizey + 50)
         {
             canBeDrag = false;
             CardPack.DeleteCard(this);
