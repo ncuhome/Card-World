@@ -50,7 +50,12 @@ MonoBehaviour:
   targetEuler: {x: 0, y: 0, z: 0}
   targetBlock: 0
   isCharacter: 0
-  turnSpeed: 0.1
+  turnSpeed: 20
+  targetQua: {x: 0, y: 0, z: 0, w: 0}
+  oldQua: {x: 0, y: 0, z: 0, w: 0}
+  nextQua: {x: 0, y: 0, z: 0, w: 0}
+  axisVec: {x: 0, y: 0, z: 0}
+  angle: 0
 --- !u!114 &3410726168517638650
 MonoBehaviour:
   m_ObjectHideFlags: 0

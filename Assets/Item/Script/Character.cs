@@ -10,13 +10,13 @@ public class Character : MonoBehaviour
     public Vector3 targetEuler;
     public int targetBlock;
     public bool isCharacter = false;
-    public float turnSpeed = 1f;
+    public float turnSpeed = 20f;
     public Quaternion targetQua;
     public Quaternion oldQua;
     private float time;
     private Transform center;
     public Quaternion nextQua;
-    public Vector3 normalVec;
+    public Vector3 axisVec;
     public float angle;
     // Start is called before the first frame update
     void Start()
@@ -37,20 +37,27 @@ public class Character : MonoBehaviour
             case CharacterState.idle:
                 do
                 {
-                    targetEuler = new Vector3(Random.Range(-180f, 180f), Random.Range(-180f, 180f), Random.Range(-180f, 180f));
+                    axisVec = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+                    angle = Random.Range(-60f, 60f);
                     oldQua = transform.rotation;
-                    targetQua = Quaternion.Euler(targetEuler);
+                    targetQua = Quaternion.AngleAxis(angle, axisVec) * oldQua;
                     targetBlock = BlockSystem.Instance.GetBlockNum(center.position, targetQua);
+                    //targetEuler = new Vector3(Random.Range(-180f, 180f), Random.Range(-180f, 180f), Random.Range(-180f, 180f));
+                    //targetQua = Quaternion.Euler(targetEuler);
+                    //targetBlock = BlockSystem.Instance.GetBlockNum(center.position, targetQua);
                 }
                 while (!RoadCanMove());
                 if (RoadCanMove())
                 {
-                    // turnSpeed = 20f / Quaternion.Angle(oldQua, targetQua);
-                    //normalVec = Vector3.Cross(transform.eulerAngles, targetEuler);
+                    //nextQua = oldQua;
                     //angle = Quaternion.Angle(oldQua, targetQua);
-                    turnSpeed = 0.5f;
+                    //Debug.Log("Start" + targetQua + " " + nextQua + " " + transform.rotation + " " + transform.eulerAngles);
+                    if (turnSpeed * angle < 0)
+                    {
+                        turnSpeed = -turnSpeed;
+                    }
                     time = 0;
-                    characterState = CharacterState.walk;
+                    characterState = CharacterState.wait;
                 }
                 break;
             case CharacterState.wait:
@@ -64,17 +71,18 @@ public class Character : MonoBehaviour
             case CharacterState.walk:
                 time += Time.deltaTime;
                 //  用 slerp 进行插值平滑的旋转
-                nextQua = Quaternion.Slerp(oldQua, targetQua, turnSpeed * time);
-                //nextQua = Quaternion.AngleAxis(20 * time, normalVec);
+                //nextQua = Quaternion.Slerp(oldQua, targetQua, turnSpeed * time);
+                nextQua = Quaternion.AngleAxis(turnSpeed * time, axisVec) * oldQua;
                 // if (ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(nextQua.eulerAngles), ColorSystem.Instance.colors[0]) < 0.1f)
                 // {
                 //     characterState = CharacterState.idle;
                 //     break;
                 // }
                 transform.rotation = nextQua;
-                // 当初始角度跟目标角度小于1,将目标角度赋值给初始角度,让旋转角度是我们需要的角度
+                //当初始角度跟目标角度小于1,将目标角度赋值给初始角度,让旋转角度是我们需要的角度
                 if (Quaternion.Angle(targetQua, transform.rotation) < 0.1)
                 {
+                    //Debug.Log("Target" + targetQua + " " + nextQua + " " + transform.rotation + " " + transform.eulerAngles);
                     transform.rotation = targetQua;
                     characterState = CharacterState.idle;
                 }
@@ -82,10 +90,10 @@ public class Character : MonoBehaviour
             case CharacterState.work:
                 break;
         }
-        //Debug.DrawLine(Vector3.zero, oldQua.eulerAngles, Color.green);
-        //Debug.DrawLine(Vector3.zero, targetEuler, Color.blue);
-        //Debug.DrawLine(transform.position, transform.up * 1000, Color.yellow);
-        //Debug.DrawLine(Vector3.zero, normalVec, Color.red);
+        //Debug.DrawLine(Vector3.zero, oldVec, Color.green);
+        //Debug.DrawLine(Vector3.zero, targetVec, Color.blue);
+        Debug.DrawLine(transform.position, transform.rotation * Vector3.up * 1000, Color.yellow);
+        Debug.DrawLine(Vector3.zero, axisVec * 1000, Color.red);
     }
 
     public bool RoadCanMove()
@@ -101,4 +109,7 @@ public class Character : MonoBehaviour
         // }
         return true;
     }
+
+
+
 }
