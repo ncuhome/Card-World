@@ -26,24 +26,30 @@ public class BlockSystem : MonoBehaviour
 
 
     //求纬度（返回-90到90的float）
-    public float GetLatitude(Transform center, Transform point)
+    public float GetLatitude(Vector3 centerPos, Vector3 pointPos)
     {
-        float radius = Vector3.Distance(center.transform.position, point.transform.position);
-        return Mathf.Asin((point.position.y - center.position.y) / radius) * Mathf.Rad2Deg;//求纬度，并转成弧度
+        float radius = Vector3.Distance(centerPos, pointPos);
+        return Mathf.Asin((pointPos.y - centerPos.y) / radius) * Mathf.Rad2Deg;//求纬度，并转成弧度
     }
 
     //求经度（返回-180到180的float）
-    public float GetLongitude(Transform center, Transform point)
+    public float GetLongitude(Vector3 centerPos, Vector3 pointPos)
     {
-        return Mathf.Atan2(point.position.z - center.position.z, point.position.x - center.position.x) * Mathf.Rad2Deg;//求经度
+        return Mathf.Atan2(pointPos.z - centerPos.z, pointPos.x - centerPos.x) * Mathf.Rad2Deg;//求经度
     }
 
-    public int GetBlockNum(Transform center, Transform point)
+    public int GetBlockNum(Vector3 centerPos, Vector3 pointPos)
     {
-        float latitude = GetLatitude(center, point);
-        float longitude = GetLongitude(center, point);
+        float latitude = GetLatitude(centerPos, pointPos);
+        float longitude = GetLongitude(centerPos, pointPos);
         int blockX = (int)Mathf.Floor(longitude / 60) + 4;
         int blockY = (int)Mathf.Floor(latitude / 45) + 2;
         return ((blockY * 6) + blockX);
+    }
+
+    public int GetBlockNum(Vector3 centerPos, Quaternion pointQua)
+    {
+        Vector3 pointPos = (pointQua * Vector3.up).normalized; 
+        return GetBlockNum(centerPos, pointPos);
     }
 }

@@ -15,10 +15,11 @@ public class CreateController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i <= 19; i++)
-        {
-            CreateItem();
-        }
+        // for (int i = 0; i <= 19; i++)
+        // {
+        //     CreateItem();
+        // }
+        CreateItem(ItemName.Farmer);
     }
 
     // Update is called once per frame

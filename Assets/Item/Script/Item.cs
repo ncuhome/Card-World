@@ -12,13 +12,16 @@ public class Item : MonoBehaviour
     void Start()
     {
         center = GameObject.Find("Planet").transform;
+        blockNum = BlockSystem.Instance.GetBlockNum(center.position, this.transform.GetChild(0).position);
+        latitude = BlockSystem.Instance.GetLatitude(center.position, this.transform.GetChild(0).position);
+        longitude = BlockSystem.Instance.GetLongitude(center.position, this.transform.GetChild(0).position);
     }
 
     // Update is called once per frame
     void Update()
     {
-        blockNum = BlockSystem.Instance.GetBlockNum(center, this.transform.GetChild(0));
-        latitude = BlockSystem.Instance.GetLatitude(center, this.transform.GetChild(0));
-        longitude = BlockSystem.Instance.GetLongitude(center, this.transform.GetChild(0));
+        blockNum = BlockSystem.Instance.GetBlockNum(center.position, this.transform.GetChild(0).position);
+        latitude = BlockSystem.Instance.GetLatitude(center.position, this.transform.GetChild(0).position);
+        longitude = BlockSystem.Instance.GetLongitude(center.position, this.transform.GetChild(0).position);
     }
 }

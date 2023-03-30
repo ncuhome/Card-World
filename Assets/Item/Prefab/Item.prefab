@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterState: 0
   targetEuler: {x: 0, y: 0, z: 0}
+  targetBlock: 0
   isCharacter: 0
   turnSpeed: 0.1
 --- !u!114 &3410726168517638650
