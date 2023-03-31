@@ -10,18 +10,22 @@ public class Character : MonoBehaviour
     public int targetBlock;
     private bool isCharacter = false;
     public float turnSpeed = 20f;
-    private Quaternion targetQua;
-    private Quaternion oldQua;
+    public Quaternion targetQua;
+    public Quaternion oldQua;
     private float time;
     private Transform center;
-    private Quaternion nextQua;
+    public Quaternion nextQua;
     private Vector3 axisVec;
-    private float angle;
+    public float angle;
+    public Item item;
+    public bool foundResource;
+    public GameObject resourceObject;
+    public Quaternion currQua;
     // Start is called before the first frame update
     void Start()
     {
         center = GameObject.Find("Planet").transform;
-        if (GetComponent<Item>().itemType == Item.ItemType.Character)
+        if (item.itemType == Item.ItemType.Character)
         {
             isCharacter = true;
         }
@@ -34,6 +38,7 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        currQua = transform.rotation;
         if (!isCharacter)
         {
             return;
@@ -55,9 +60,9 @@ public class Character : MonoBehaviour
                     //targetQua = Quaternion.Euler(targetEuler);
                     //targetBlock = BlockSystem.Instance.GetBlockNum(center.position, targetQua);
                 }
-                while (!RoadCanMove());
+                while (!RoadCanMove(targetBlock));
                 //获取完毕后进行旋转方向的判定
-                if (RoadCanMove())
+                if (RoadCanMove(targetBlock))
                 {
                     //nextQua = oldQua;
                     //angle = Quaternion.Angle(oldQua, targetQua);
@@ -70,7 +75,7 @@ public class Character : MonoBehaviour
                     characterState = CharacterState.wait;
                 }
                 break;
-                //进入等待阶段
+            //进入等待阶段
             case CharacterState.wait:
                 time += Time.deltaTime;
                 if (time > 0.3f)
@@ -79,7 +84,7 @@ public class Character : MonoBehaviour
                     time = 0;
                 }
                 break;
-                //进入行走阶段
+            //进入行走阶段
             case CharacterState.walk:
                 time += Time.deltaTime;
                 //使用绕轴旋转
@@ -91,15 +96,35 @@ public class Character : MonoBehaviour
                 // }
                 transform.rotation = nextQua;
                 //当初始角度跟目标角度小于0.1,将目标角度赋值给初始角度,让旋转角度是我们需要的角度
-                if (Quaternion.Angle(targetQua, transform.rotation) < 0.1)
+                //if (Quaternion.Angle(targetQua, transform.rotation) < 1)
+                if (time > angle / turnSpeed)
                 {
+                    time = 0;
                     transform.rotation = targetQua;
-                    characterState = CharacterState.idle;
+                    if (!foundResource)
+                    {
+                        characterState = CharacterState.idle;
+                    }
+                    else
+                    {
+                        characterState = CharacterState.gather;
+                    }
                 }
                 break;
             case CharacterState.work:
                 break;
             case CharacterState.gather:
+                time += Time.deltaTime;
+                if (time > 5f)
+                {
+                    characterState = CharacterState.idle;
+                    if (resourceObject != null)
+                    {
+                        Destroy(resourceObject);
+                        resourceObject = null;
+                    }
+                    foundResource = false;
+                }
                 break;
         }
         //Debug.DrawLine(Vector3.zero, oldVec, Color.green);
@@ -108,9 +133,9 @@ public class Character : MonoBehaviour
         Debug.DrawLine(Vector3.zero, axisVec * 1000, Color.red);
     }
 
-    public bool RoadCanMove()
+    public bool RoadCanMove(int block)
     {
-        if (targetBlock != GetComponent<Item>().blockNum)
+        if (block != item.blockNum)
         {
             //Debug.Log(GetComponent<Item>().blockNum + " " + targetBlock);
             return false;
@@ -120,6 +145,30 @@ public class Character : MonoBehaviour
         //     return false;
         // }
         return true;
+    }
+
+    public void WalkToTargetEuler(Vector3 targetEuler)
+    {
+        Quaternion newTargetQua = Quaternion.Euler(targetEuler);
+
+        int newTargetBlock = BlockSystem.Instance.GetBlockNum(center.position, newTargetQua);
+        if (RoadCanMove(newTargetBlock))
+        {
+            foundResource = true;
+            Vector3 targetVec = newTargetQua * Vector3.up;
+            Vector3 oldVec = transform.rotation * Vector3.up;
+            axisVec = Vector3.Cross(oldVec, targetVec);
+            oldQua = transform.rotation;
+            targetQua = newTargetQua;
+            angle = Quaternion.Angle(oldQua, targetQua);
+            Debug.Log(targetQua + " " + resourceObject.transform.rotation);
+            if (turnSpeed * angle < 0)
+            {
+                turnSpeed = -turnSpeed;
+            }
+            time = 0;
+            characterState = CharacterState.wait;
+        }
     }
 
 

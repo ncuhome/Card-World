@@ -11,7 +11,7 @@ public class Item : MonoBehaviour
     public int blockNum = 0;
     public float latitude = 0f;
     public float longitude = 0f;
-    public CapsuleCollider itemCollider;
+    public Character character;
     // Start is called before the first frame update
     void Start()
     {

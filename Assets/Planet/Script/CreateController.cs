@@ -19,15 +19,15 @@ public class CreateController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i <= 3; i++)
+        for (int i = 0; i <= 0; i++)
         {
             CreateItem(ItemName.Naked);
         }
-        for (int i = 0; i <= 24; i++)
+        for (int i = 0; i <= 12; i++)
         {
             CreateItem(ItemName.Shrub);
         }
-        for (int i = 0; i <= 24; i++)
+        for (int i = 0; i <= 12; i++)
         {
             CreateItem(ItemName.Tree);
         }
