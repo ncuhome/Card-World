@@ -28,10 +28,10 @@ public class GetColorSystem : MonoBehaviour
     }
 
     //输入指定的旋转方向获取对应的球面点颜色
-    public Color GetColor(Vector3 targetEuler)
+    public Color GetColor(Vector3 targetVec)
     {
         RaycastHit hitInfo;
-        Ray rayForward = new Ray(target.transform.position, targetEuler);
+        Ray rayForward = new Ray(target.transform.position, targetVec);
         Ray rayBack = Reverse(rayForward, 3000);
         if (Physics.Raycast(rayBack, out hitInfo))
         {
@@ -57,6 +57,7 @@ public class GetColorSystem : MonoBehaviour
         }
     }
 
+    //翻转射线
     public Ray Reverse(Ray ray, float distance)
     {
         return new Ray(ray.origin + ray.direction * distance, -ray.direction);

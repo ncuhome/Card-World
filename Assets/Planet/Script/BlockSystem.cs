@@ -38,6 +38,7 @@ public class BlockSystem : MonoBehaviour
         return Mathf.Atan2(pointPos.z - centerPos.z, pointPos.x - centerPos.x) * Mathf.Rad2Deg;//求经度
     }
 
+    //获取区块编号（1-24）
     public int GetBlockNum(Vector3 centerPos, Vector3 pointPos)
     {
         float latitude = GetLatitude(centerPos, pointPos);
@@ -46,7 +47,7 @@ public class BlockSystem : MonoBehaviour
         int blockY = (int)Mathf.Floor(latitude / 45) + 2;
         return ((blockY * 6) + blockX);
     }
-
+    //用四元数代表方向向量获取区块坐标
     public int GetBlockNum(Vector3 centerPos, Quaternion pointQua)
     {
         Vector3 pointPos = (pointQua * Vector3.up).normalized; 

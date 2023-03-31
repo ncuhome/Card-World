@@ -3,25 +3,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum CharacterState { idle, wait, walk, work }
+public enum CharacterState { idle, wait, walk, work, gather }
 public class Character : MonoBehaviour
 {
     public CharacterState characterState = CharacterState.idle;
-    public Vector3 targetEuler;
     public int targetBlock;
-    public bool isCharacter = false;
+    private bool isCharacter = false;
     public float turnSpeed = 20f;
-    public Quaternion targetQua;
-    public Quaternion oldQua;
+    private Quaternion targetQua;
+    private Quaternion oldQua;
     private float time;
     private Transform center;
-    public Quaternion nextQua;
-    public Vector3 axisVec;
-    public float angle;
+    private Quaternion nextQua;
+    private Vector3 axisVec;
+    private float angle;
     // Start is called before the first frame update
     void Start()
     {
         center = GameObject.Find("Planet").transform;
+        if (GetComponent<Item>().itemType == Item.ItemType.Character)
+        {
+            isCharacter = true;
+        }
+        else
+        {
+            isCharacter = false;
+        }
     }
 
     // Update is called once per frame
@@ -34,7 +41,9 @@ public class Character : MonoBehaviour
 
         switch (characterState)
         {
+            //待机状态
             case CharacterState.idle:
+                //自动获取可行的移动方向和距离
                 do
                 {
                     axisVec = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), Random.Range(-1f, 1f));
@@ -47,6 +56,7 @@ public class Character : MonoBehaviour
                     //targetBlock = BlockSystem.Instance.GetBlockNum(center.position, targetQua);
                 }
                 while (!RoadCanMove());
+                //获取完毕后进行旋转方向的判定
                 if (RoadCanMove())
                 {
                     //nextQua = oldQua;
@@ -60,6 +70,7 @@ public class Character : MonoBehaviour
                     characterState = CharacterState.wait;
                 }
                 break;
+                //进入等待阶段
             case CharacterState.wait:
                 time += Time.deltaTime;
                 if (time > 0.3f)
@@ -68,10 +79,10 @@ public class Character : MonoBehaviour
                     time = 0;
                 }
                 break;
+                //进入行走阶段
             case CharacterState.walk:
                 time += Time.deltaTime;
-                //  用 slerp 进行插值平滑的旋转
-                //nextQua = Quaternion.Slerp(oldQua, targetQua, turnSpeed * time);
+                //使用绕轴旋转
                 nextQua = Quaternion.AngleAxis(turnSpeed * time, axisVec) * oldQua;
                 // if (ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(nextQua.eulerAngles), ColorSystem.Instance.colors[0]) < 0.1f)
                 // {
@@ -79,15 +90,16 @@ public class Character : MonoBehaviour
                 //     break;
                 // }
                 transform.rotation = nextQua;
-                //当初始角度跟目标角度小于1,将目标角度赋值给初始角度,让旋转角度是我们需要的角度
+                //当初始角度跟目标角度小于0.1,将目标角度赋值给初始角度,让旋转角度是我们需要的角度
                 if (Quaternion.Angle(targetQua, transform.rotation) < 0.1)
                 {
-                    //Debug.Log("Target" + targetQua + " " + nextQua + " " + transform.rotation + " " + transform.eulerAngles);
                     transform.rotation = targetQua;
                     characterState = CharacterState.idle;
                 }
                 break;
             case CharacterState.work:
+                break;
+            case CharacterState.gather:
                 break;
         }
         //Debug.DrawLine(Vector3.zero, oldVec, Color.green);
