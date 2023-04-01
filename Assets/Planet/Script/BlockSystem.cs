@@ -43,14 +43,34 @@ public class BlockSystem : MonoBehaviour
     {
         float latitude = GetLatitude(centerPos, pointPos);
         float longitude = GetLongitude(centerPos, pointPos);
-        int blockX = (int)Mathf.Floor(longitude / 60) + 4;
+        int blockX = (int)Mathf.Floor(longitude / 60) + 3;
         int blockY = (int)Mathf.Floor(latitude / 45) + 2;
         return ((blockY * 6) + blockX);
     }
     //用四元数代表方向向量获取区块坐标
     public int GetBlockNum(Vector3 centerPos, Quaternion pointQua)
     {
-        Vector3 pointPos = (pointQua * Vector3.up).normalized; 
+        Vector3 pointPos = (pointQua * Vector3.up).normalized;
         return GetBlockNum(centerPos, pointPos);
+    }
+
+    public int[] GetNearBlock(Vector3 centerPos, int blockNum)
+    {
+        int[] nearBlock = new int[] { };
+        int blockY = blockNum / 6;
+        int blockX = blockNum - blockY * 6;
+        if (blockY == 0)
+        {
+            nearBlock = new int[4] { blockY * 6 + (blockX - 1) % 6, blockNum, blockY * 6 + (blockX + 1) % 6, blockNum + 6 };
+        }
+        else if ((blockY == 1) || (blockY == 2))
+        {
+            nearBlock = new int[5] { blockNum - 6, blockY * 6 + (blockX - 1) % 6, blockNum, blockY * 6 + (blockX + 1) % 6, blockNum + 6 };
+        }
+        else
+        {
+            nearBlock = new int[4] { blockNum - 6, blockY * 6 + (blockX - 1) % 6, blockNum, blockY * 6 + (blockX + 1) % 6};
+        }
+        return nearBlock;
     }
 }

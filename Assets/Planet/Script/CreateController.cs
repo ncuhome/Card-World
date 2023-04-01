@@ -92,22 +92,22 @@ public class CreateController : MonoBehaviour
             case ItemName.Savages:
             case ItemName.Naked:
                 itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 0.5f, itemSprite.transform.localScale.y * 0.5f, itemSprite.transform.localScale.z);
-                itemSprite.transform.localPosition = new Vector3(0, 0.53f, 0);
+                itemSprite.transform.localPosition = new Vector3(0, 0.51f, 0);
                 item.GetComponent<Item>().itemType = Item.ItemType.Character;
                 break;
             case ItemName.City:
             case ItemName.NightCity:
-                itemSprite.transform.localPosition = new Vector3(0, 0.58f, 0);
+                itemSprite.transform.localPosition = new Vector3(0, 0.55f, 0);
                 item.GetComponent<Item>().itemType = Item.ItemType.Building;
                 break;
             case ItemName.Pyramid:
-                itemSprite.transform.localPosition = new Vector3(0, 0.565f, 0);
+                itemSprite.transform.localPosition = new Vector3(0, 0.54f, 0);
                 item.GetComponent<Item>().itemType = Item.ItemType.Building;
                 break;
             case ItemName.Shrub:
             case ItemName.Tree:
                 itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 0.5f, itemSprite.transform.localScale.y * 0.5f, itemSprite.transform.localScale.z);
-                itemSprite.transform.localPosition = new Vector3(0, 0.53f, 0);
+                itemSprite.transform.localPosition = new Vector3(0, 0.515f, 0);
                 item.GetComponent<Item>().itemType = Item.ItemType.Resource;
                 ResourceSystem.Instance.resourceInBlock[BlockSystem.Instance.GetBlockNum(Vector3.zero, Quaternion.Euler(targetEuler))] ++;
                 break;

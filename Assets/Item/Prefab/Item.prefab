@@ -126,9 +126,14 @@ MonoBehaviour:
   characterState: 0
   targetBlock: 0
   turnSpeed: 20
+  targetQua: {x: 0, y: 0, z: 0, w: 0}
+  oldQua: {x: 0, y: 0, z: 0, w: 0}
+  nextQua: {x: 0, y: 0, z: 0, w: 0}
+  angle: 0
   item: {fileID: 3410726168517638650}
   foundResource: 0
   resourceObject: {fileID: 0}
+  currQua: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &3410726168517638650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,7 +180,7 @@ Transform:
   m_GameObject: {fileID: 7820871686053603793}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.58, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.20000003, z: 0.0001}
+  m_LocalScale: {x: 0.05, y: 0.1, z: 0.0001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5544999559913742287}
