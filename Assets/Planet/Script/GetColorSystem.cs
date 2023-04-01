@@ -8,13 +8,13 @@ public class GetColorSystem : MonoBehaviour
     public GameObject target = null;
     private void Awake()
     {
+        //target = GameObject.Find("Planet");
         //生成实例
         if (Instance == null)
         {
             Instance = this;
             Debug.Log("Instance GetColorSystem");
         }
-        target = GameObject.Find("Planet");
     }
     // Start is called before the first frame update
     void Start()

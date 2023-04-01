@@ -458,6 +458,7 @@ GameObject:
   - component: {fileID: 912914637}
   - component: {fileID: 912914638}
   - component: {fileID: 912914639}
+  - component: {fileID: 912914640}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -530,7 +531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45755ac02db5be7419ad045a4017abcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1555151207}
 --- !u!114 &912914639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,6 +549,20 @@ MonoBehaviour:
   - {r: 0.8980393, g: 0.8745099, b: 0.6901961, a: 0}
   - {r: 0.5568628, g: 0.8352942, b: 0.3137255, a: 0}
   - {r: 0.9176471, g: 0.9450981, b: 1, a: 0}
+--- !u!114 &912914640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912914634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9f225d2fc190a4e9af13f1e418df91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceInBlock: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  regenerationDuration: 5
 --- !u!1 &1457100088
 GameObject:
   m_ObjectHideFlags: 0

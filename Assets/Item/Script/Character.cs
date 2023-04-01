@@ -89,6 +89,7 @@ public class Character : MonoBehaviour
                 time += Time.deltaTime;
                 //使用绕轴旋转
                 nextQua = Quaternion.AngleAxis(turnSpeed * time, axisVec) * oldQua;
+                //Debug.Log(Quaternion.Angle(transform.rotation, targetQua));
                 // if (ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(nextQua.eulerAngles), ColorSystem.Instance.colors[0]) < 0.1f)
                 // {
                 //     characterState = CharacterState.idle;
@@ -120,7 +121,7 @@ public class Character : MonoBehaviour
                     characterState = CharacterState.idle;
                     if (resourceObject != null)
                     {
-                        Destroy(resourceObject);
+                        ResourceSystem.Instance.GatherResource(resourceObject);
                         resourceObject = null;
                     }
                     foundResource = false;
@@ -160,8 +161,7 @@ public class Character : MonoBehaviour
             axisVec = Vector3.Cross(oldVec, targetVec);
             oldQua = transform.rotation;
             targetQua = newTargetQua;
-            angle = Quaternion.Angle(oldQua, targetQua);
-            Debug.Log(targetQua + " " + resourceObject.transform.rotation);
+            angle = Vector3.Angle(oldVec, targetVec);
             if (turnSpeed * angle < 0)
             {
                 turnSpeed = -turnSpeed;

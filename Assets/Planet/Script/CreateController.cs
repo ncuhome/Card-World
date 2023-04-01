@@ -12,10 +12,19 @@ public class CreateController : MonoBehaviour
     {
         Character, Building, Resource
     }
+    public static CreateController Instance = null;
     public GameObject itemPrefab;
     public Material[] materials = new Material[10];
     public Transform itemParent;
     public MeshRenderer itemSprite;
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            Debug.Log("Instance CreateController");
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -23,14 +32,9 @@ public class CreateController : MonoBehaviour
         {
             CreateItem(ItemName.Naked);
         }
-        for (int i = 0; i <= 12; i++)
-        {
-            CreateItem(ItemName.Shrub);
-        }
-        for (int i = 0; i <= 12; i++)
-        {
-            CreateItem(ItemName.Tree);
-        }
+
+        
+       
         //CreateItem(ItemName.Farmer);
     }
 
@@ -57,6 +61,17 @@ public class CreateController : MonoBehaviour
             targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
         }
 
+        CreateItem(itemName, targetEuler);
+    }
+    //指定类型和区块
+    public void CreateItem(ItemName itemName, int[] blockNum)
+    {
+        Vector3 targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
+        while ((ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[0]) < 0.1f) 
+                || (System.Array.IndexOf(blockNum, BlockSystem.Instance.GetBlockNum(Vector3.zero, Quaternion.Euler(targetEuler))) == -1))
+        {
+            targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
+        }
         CreateItem(itemName, targetEuler);
     }
     //指定类型和坐标
@@ -94,6 +109,7 @@ public class CreateController : MonoBehaviour
                 itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 0.5f, itemSprite.transform.localScale.y * 0.5f, itemSprite.transform.localScale.z);
                 itemSprite.transform.localPosition = new Vector3(0, 0.53f, 0);
                 item.GetComponent<Item>().itemType = Item.ItemType.Resource;
+                ResourceSystem.Instance.resourceInBlock[BlockSystem.Instance.GetBlockNum(Vector3.zero, Quaternion.Euler(targetEuler))] ++;
                 break;
         }
     }
