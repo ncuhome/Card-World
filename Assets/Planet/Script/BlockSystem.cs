@@ -54,6 +54,7 @@ public class BlockSystem : MonoBehaviour
         return GetBlockNum(centerPos, pointPos);
     }
 
+    //获取当前区块的周围区块（包括自身
     public int[] GetNearBlock(Vector3 centerPos, int blockNum)
     {
         int[] nearBlock = new int[] { };

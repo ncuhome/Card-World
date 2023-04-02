@@ -5,7 +5,7 @@ using UnityEngine;
 public class ResourceSystem : MonoBehaviour
 {
     private float time;
-    public int[] resourceInBlock = new int[25];
+    public int[] resourceInBlock = new int[24];
     public static ResourceSystem Instance = null;
     public float regenerationDuration;
     public GameObject center;
@@ -24,7 +24,7 @@ public class ResourceSystem : MonoBehaviour
     void Start()
     {
         time = 0;
-        resourceInBlock = new int[25];
+        resourceInBlock = new int[24];
         for (int i = 0; i <= 12; i++)
         {
             CreateController.Instance.CreateItem(CreateController.ItemName.Shrub);
@@ -47,11 +47,12 @@ public class ResourceSystem : MonoBehaviour
         }
     }
 
+    //获取资源最少的区块
     public int MinResourceBlock()
     {
         int minResource = 10000;
         int minNum = 0;
-        for (int i = 1; i <= 24; i++)
+        for (int i = 0; i < 24; i++)
         {
             if (minResource > resourceInBlock[i])
             {
@@ -62,14 +63,17 @@ public class ResourceSystem : MonoBehaviour
         return minNum;
     }
 
-    public void GatherResource(GameObject resourceObject)
+    //获取资源
+    public void GatherResource(Character character,GameObject resourceObject)
     {
         int blockNum = resourceObject.GetComponent<Item>().blockNum;
         resourceInBlock[blockNum]--;
+        character.resourceNum ++;
         DeleteResource(resourceObject);
         RegenerationResource(BlockSystem.Instance.GetNearBlock(center.transform.position,blockNum));
     }
 
+    //删除资源
     public void DeleteResource(GameObject resourceObject)
     {
         Destroy(resourceObject);
@@ -77,7 +81,7 @@ public class ResourceSystem : MonoBehaviour
 
     public void RegenerationResource(int[] blockNum)
     {
-        Debug.Log("RegenerationResource: Block[] " + blockNum);
+        //Debug.Log("RegenerationResource: Block[] " + blockNum);
         CreateController.Instance.CreateItem((CreateController.ItemName)Random.Range(8, 10), blockNum);
     }
 

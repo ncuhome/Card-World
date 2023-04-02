@@ -3,24 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum CharacterState { idle, wait, walk, work, gather }
+public enum CharacterState { idle, wait, walk, work, gather, build }
 public class Character : MonoBehaviour
 {
     public CharacterState characterState = CharacterState.idle;
     public int targetBlock;
     private bool isCharacter = false;
     public float turnSpeed = 20f;
-    public Quaternion targetQua;
-    public Quaternion oldQua;
+    public Quaternion targetQua, oldQua, nextQua;
     private float time;
     private Transform center;
-    public Quaternion nextQua;
     private Vector3 axisVec;
     public float angle;
     public Item item;
-    public bool foundResource;
+    public bool foundResource, goToBuild;
     public GameObject resourceObject;
-    public Quaternion currQua;
+    public int resourceNum, characterNum;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +36,6 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currQua = transform.rotation;
         if (!isCharacter)
         {
             return;
@@ -102,13 +99,17 @@ public class Character : MonoBehaviour
                 {
                     time = 0;
                     transform.rotation = targetQua;
-                    if (!foundResource)
+                    if (foundResource)
                     {
-                        characterState = CharacterState.idle;
+                        characterState = CharacterState.gather;
+                    }
+                    else if (goToBuild)
+                    {
+                        characterState = CharacterState.build;
                     }
                     else
                     {
-                        characterState = CharacterState.gather;
+                        characterState = CharacterState.idle;
                     }
                 }
                 break;
@@ -121,10 +122,19 @@ public class Character : MonoBehaviour
                     characterState = CharacterState.idle;
                     if (resourceObject != null)
                     {
-                        ResourceSystem.Instance.GatherResource(resourceObject);
+                        ResourceSystem.Instance.GatherResource(this, resourceObject);
                         resourceObject = null;
                     }
                     foundResource = false;
+                }
+                break;
+            case CharacterState.build:
+                time += Time.deltaTime;
+                if (time > 5f)
+                {
+                    characterState = CharacterState.idle;
+                    BuildingSystem.Instance.Build(this);
+                    goToBuild = false;
                 }
                 break;
         }

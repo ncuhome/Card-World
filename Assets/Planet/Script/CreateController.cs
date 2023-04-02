@@ -28,13 +28,14 @@ public class CreateController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i <= 0; i++)
+        int num = Random.Range(0, 24);
+        for (int i = 0; i <= 1; i++)
         {
-            CreateItem(ItemName.Naked);
+            CreateItem(ItemName.Naked, new int[] { num });
         }
 
-        
-       
+
+
         //CreateItem(ItemName.Farmer);
     }
 
@@ -67,7 +68,7 @@ public class CreateController : MonoBehaviour
     public void CreateItem(ItemName itemName, int[] blockNum)
     {
         Vector3 targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
-        while ((ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[0]) < 0.1f) 
+        while ((ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[0]) < 0.1f)
                 || (System.Array.IndexOf(blockNum, BlockSystem.Instance.GetBlockNum(Vector3.zero, Quaternion.Euler(targetEuler))) == -1))
         {
             targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
@@ -84,6 +85,9 @@ public class CreateController : MonoBehaviour
         item.transform.eulerAngles = targetEuler;
         itemSprite = item.transform.Find("ItemSprite").GetComponent<MeshRenderer>();
         itemSprite.material = materials[(int)itemName];
+
+        Item itemScript = item.GetComponent<Item>();
+        Character character = item.GetComponent<Character>();
         switch (itemName)
         {
             case ItemName.Army:
@@ -93,24 +97,36 @@ public class CreateController : MonoBehaviour
             case ItemName.Naked:
                 itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 0.5f, itemSprite.transform.localScale.y * 0.5f, itemSprite.transform.localScale.z);
                 itemSprite.transform.localPosition = new Vector3(0, 0.51f, 0);
-                item.GetComponent<Item>().itemType = Item.ItemType.Character;
+                itemScript.itemType = Item.ItemType.Character;
+                character.characterNum = GetCharacterNum();
+                CharacterSystem.Instance.characters[GetCharacterNum()] = character;
                 break;
             case ItemName.City:
             case ItemName.NightCity:
                 itemSprite.transform.localPosition = new Vector3(0, 0.55f, 0);
-                item.GetComponent<Item>().itemType = Item.ItemType.Building;
+                itemScript.itemType = Item.ItemType.Building;
                 break;
             case ItemName.Pyramid:
                 itemSprite.transform.localPosition = new Vector3(0, 0.54f, 0);
-                item.GetComponent<Item>().itemType = Item.ItemType.Building;
+                itemScript.itemType = Item.ItemType.Building;
                 break;
             case ItemName.Shrub:
             case ItemName.Tree:
                 itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 0.5f, itemSprite.transform.localScale.y * 0.5f, itemSprite.transform.localScale.z);
                 itemSprite.transform.localPosition = new Vector3(0, 0.515f, 0);
-                item.GetComponent<Item>().itemType = Item.ItemType.Resource;
-                ResourceSystem.Instance.resourceInBlock[BlockSystem.Instance.GetBlockNum(Vector3.zero, Quaternion.Euler(targetEuler))] ++;
+                itemScript.itemType = Item.ItemType.Resource;
+                ResourceSystem.Instance.resourceInBlock[BlockSystem.Instance.GetBlockNum(Vector3.zero, Quaternion.Euler(targetEuler))]++;
                 break;
         }
+    }
+
+    private int GetCharacterNum()
+    {
+        int i = 0;
+        while (CharacterSystem.Instance.characters[i] != null)
+        {
+            i++;
+        }
+        return i;
     }
 }
