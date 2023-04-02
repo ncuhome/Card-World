@@ -88,6 +88,8 @@ GameObject:
   - component: {fileID: 7820871686020335005}
   - component: {fileID: 49210321581785791}
   - component: {fileID: 3410726168517638650}
+  - component: {fileID: -5957294728151938232}
+  - component: {fileID: 1214893024808620160}
   m_Layer: 0
   m_Name: Item
   m_TagString: Untagged
@@ -129,11 +131,15 @@ MonoBehaviour:
   targetQua: {x: 0, y: 0, z: 0, w: 0}
   oldQua: {x: 0, y: 0, z: 0, w: 0}
   nextQua: {x: 0, y: 0, z: 0, w: 0}
+  time: 0
   angle: 0
   item: {fileID: 3410726168517638650}
   foundResource: 0
+  goToBuild: 0
   resourceObject: {fileID: 0}
-  currQua: {x: 0, y: 0, z: 0, w: 0}
+  resourceNum: 0
+  characterNum: 0
+  buildingObject: {fileID: 0}
 --- !u!114 &3410726168517638650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,6 +158,32 @@ MonoBehaviour:
   latitude: 0
   longitude: 0
   character: {fileID: 49210321581785791}
+--- !u!114 &-5957294728151938232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7820871686020335004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be559396a0c3d0e4eb777b88ac9267ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finishBuilding: 0
+--- !u!114 &1214893024808620160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7820871686020335004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50780b119292f32498d7e3e1b8dee85e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGathering: 0
 --- !u!1 &7820871686053603793
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,10 +23,12 @@ public class ItemCollider : MonoBehaviour
         switch (transform.tag)
         {
             case "Character":
-                if (other.tag == "Resource")
+                if ((other.tag == "Resource") && (!other.transform.parent.parent.GetComponent<Resources>().isGathering))
                 {
+                    item.character.foundResource = true;
+                    other.transform.parent.parent.GetComponent<Resources>().isGathering = true;
                     item.character.resourceObject = other.GetComponent<ItemCollider>().item.gameObject;
-                    item.character.WalkToTargetEuler(other.GetComponent<ItemCollider>().item.transform.eulerAngles);
+                    item.character.WalkToTargetEuler(other.GetComponent<ItemCollider>().item.transform.rotation);
                 }
                 break;
             case "Building":
@@ -42,10 +44,12 @@ public class ItemCollider : MonoBehaviour
         switch (transform.tag)
         {
             case "Character":
-                if (other.tag == "Resource")
+                if ((other.tag == "Resource") && (!other.transform.parent.parent.GetComponent<Resources>().isGathering))
                 {
+                    item.character.foundResource = true;
+                    other.transform.parent.parent.GetComponent<Resources>().isGathering = true;
                     item.character.resourceObject = other.GetComponent<ItemCollider>().item.gameObject;
-                    item.character.WalkToTargetEuler(other.GetComponent<ItemCollider>().item.transform.eulerAngles);
+                    item.character.WalkToTargetEuler(other.GetComponent<ItemCollider>().item.transform.rotation);
                 }
                 break;
             case "Building":

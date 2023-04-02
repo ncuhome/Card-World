@@ -10,15 +10,16 @@ public class Character : MonoBehaviour
     public int targetBlock;
     private bool isCharacter = false;
     public float turnSpeed = 20f;
-    public Quaternion targetQua, oldQua, nextQua;
-    private float time;
+    public Quaternion targetQua, oldQua, nextQua, curQua;
+    public float time;
     private Transform center;
-    private Vector3 axisVec;
+    private Vector3 axisVec, targetVec, oldVec;
     public float angle;
     public Item item;
     public bool foundResource, goToBuild;
     public GameObject resourceObject;
     public int resourceNum, characterNum;
+    public GameObject buildingObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +37,7 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        curQua = transform.rotation;
         if (!isCharacter)
         {
             return;
@@ -52,6 +54,8 @@ public class Character : MonoBehaviour
                     angle = Random.Range(-60f, 60f);
                     oldQua = transform.rotation;
                     targetQua = Quaternion.AngleAxis(angle, axisVec) * oldQua;
+                    targetVec = targetQua * Vector3.up;
+                    oldVec = oldQua * Vector3.up;
                     targetBlock = BlockSystem.Instance.GetBlockNum(center.position, targetQua);
                     //targetEuler = new Vector3(Random.Range(-180f, 180f), Random.Range(-180f, 180f), Random.Range(-180f, 180f));
                     //targetQua = Quaternion.Euler(targetEuler);
@@ -94,7 +98,7 @@ public class Character : MonoBehaviour
                 // }
                 transform.rotation = nextQua;
                 //当初始角度跟目标角度小于0.1,将目标角度赋值给初始角度,让旋转角度是我们需要的角度
-                //if (Quaternion.Angle(targetQua, transform.rotation) < 1)
+                //if (Vector3.Angle(oldVec, targetVec) < 1f)
                 if (time > angle / turnSpeed)
                 {
                     time = 0;
@@ -119,22 +123,28 @@ public class Character : MonoBehaviour
                 time += Time.deltaTime;
                 if (time > 5f)
                 {
-                    characterState = CharacterState.idle;
                     if (resourceObject != null)
                     {
                         ResourceSystem.Instance.GatherResource(this, resourceObject);
                         resourceObject = null;
                     }
                     foundResource = false;
+                    characterState = CharacterState.idle;
                 }
                 break;
             case CharacterState.build:
                 time += Time.deltaTime;
                 if (time > 5f)
                 {
-                    characterState = CharacterState.idle;
                     BuildingSystem.Instance.Build(this);
+                    if (buildingObject != null)
+                    {
+                        buildingObject.transform.localScale = Vector3.one;
+                        buildingObject.GetComponent<Building>().finishBuilding = true;
+                        buildingObject = null;
+                    }
                     goToBuild = false;
+                    characterState = CharacterState.idle;
                 }
                 break;
         }
@@ -158,16 +168,13 @@ public class Character : MonoBehaviour
         return true;
     }
 
-    public void WalkToTargetEuler(Vector3 targetEuler)
+    public void WalkToTargetEuler(Quaternion newTargetQua)
     {
-        Quaternion newTargetQua = Quaternion.Euler(targetEuler);
-
         int newTargetBlock = BlockSystem.Instance.GetBlockNum(center.position, newTargetQua);
         if (RoadCanMove(newTargetBlock))
         {
-            foundResource = true;
-            Vector3 targetVec = newTargetQua * Vector3.up;
-            Vector3 oldVec = transform.rotation * Vector3.up;
+            targetVec = newTargetQua * Vector3.up;
+            oldVec = transform.rotation * Vector3.up;
             axisVec = Vector3.Cross(oldVec, targetVec);
             oldQua = transform.rotation;
             targetQua = newTargetQua;
@@ -177,7 +184,6 @@ public class Character : MonoBehaviour
                 turnSpeed = -turnSpeed;
             }
             time = 0;
-            characterState = CharacterState.wait;
         }
     }
 

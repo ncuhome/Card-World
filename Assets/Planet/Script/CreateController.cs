@@ -28,11 +28,7 @@ public class CreateController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int num = Random.Range(0, 24);
-        for (int i = 0; i <= 1; i++)
-        {
-            CreateItem(ItemName.Naked, new int[] { num });
-        }
+        
 
 
 
@@ -57,7 +53,7 @@ public class CreateController : MonoBehaviour
     public void CreateItem(ItemName itemName)
     {
         Vector3 targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
-        while (ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[0]) < 0.1f)
+        while (ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[0]) < 0.01f)
         {
             targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
         }
@@ -68,7 +64,7 @@ public class CreateController : MonoBehaviour
     public void CreateItem(ItemName itemName, int[] blockNum)
     {
         Vector3 targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
-        while ((ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[0]) < 0.1f)
+        while ((ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[0]) < 0.01f)
                 || (System.Array.IndexOf(blockNum, BlockSystem.Instance.GetBlockNum(Vector3.zero, Quaternion.Euler(targetEuler))) == -1))
         {
             targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
@@ -100,15 +96,18 @@ public class CreateController : MonoBehaviour
                 itemScript.itemType = Item.ItemType.Character;
                 character.characterNum = GetCharacterNum();
                 CharacterSystem.Instance.characters[GetCharacterNum()] = character;
+                item.name = "Character";
                 break;
             case ItemName.City:
             case ItemName.NightCity:
-                itemSprite.transform.localPosition = new Vector3(0, 0.55f, 0);
-                itemScript.itemType = Item.ItemType.Building;
-                break;
-            case ItemName.Pyramid:
                 itemSprite.transform.localPosition = new Vector3(0, 0.54f, 0);
                 itemScript.itemType = Item.ItemType.Building;
+                item.name = "Building";
+                break;
+            case ItemName.Pyramid:
+                itemSprite.transform.localPosition = new Vector3(0, 0.53f, 0);
+                itemScript.itemType = Item.ItemType.Building;
+                item.name = "Building";
                 break;
             case ItemName.Shrub:
             case ItemName.Tree:
@@ -116,10 +115,12 @@ public class CreateController : MonoBehaviour
                 itemSprite.transform.localPosition = new Vector3(0, 0.515f, 0);
                 itemScript.itemType = Item.ItemType.Resource;
                 ResourceSystem.Instance.resourceInBlock[BlockSystem.Instance.GetBlockNum(Vector3.zero, Quaternion.Euler(targetEuler))]++;
+                item.name = "Resource";
                 break;
         }
     }
 
+    //获取角色数组里的最小空位
     private int GetCharacterNum()
     {
         int i = 0;
