@@ -8,7 +8,6 @@ public class ItemCollider : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -25,10 +24,15 @@ public class ItemCollider : MonoBehaviour
             case "Character":
                 if ((other.tag == "Resource") && (!other.transform.parent.parent.GetComponent<Resources>().isGathering))
                 {
-                    item.character.foundResource = true;
-                    other.transform.parent.parent.GetComponent<Resources>().isGathering = true;
-                    item.character.resourceObject = other.GetComponent<ItemCollider>().item.gameObject;
-                    item.character.WalkToTargetEuler(other.GetComponent<ItemCollider>().item.transform.rotation);
+                    int targetBlock = BlockSystem.Instance.GetBlockNum(item.center.position, other.GetComponent<ItemCollider>().item.transform.rotation);
+                    if (item.character.RoadCanMove(targetBlock))
+                    {
+                        item.character.foundResource = true;
+                        other.transform.parent.parent.GetComponent<Resources>().isGathering = true;
+                        item.character.resourceObject = other.GetComponent<ItemCollider>().item.gameObject;
+                        Debug.Log("resourceRotation:" + other.GetComponent<ItemCollider>().item.transform.rotation);
+                        item.character.WalkToTargetEuler(other.GetComponent<ItemCollider>().item.transform.rotation);
+                    }
                 }
                 break;
             case "Building":
@@ -46,10 +50,15 @@ public class ItemCollider : MonoBehaviour
             case "Character":
                 if ((other.tag == "Resource") && (!other.transform.parent.parent.GetComponent<Resources>().isGathering))
                 {
-                    item.character.foundResource = true;
-                    other.transform.parent.parent.GetComponent<Resources>().isGathering = true;
-                    item.character.resourceObject = other.GetComponent<ItemCollider>().item.gameObject;
-                    item.character.WalkToTargetEuler(other.GetComponent<ItemCollider>().item.transform.rotation);
+                    int targetBlock = BlockSystem.Instance.GetBlockNum(item.center.position, other.GetComponent<ItemCollider>().item.transform.rotation);
+                    if (item.character.RoadCanMove(targetBlock))
+                    {
+                        item.character.foundResource = true;
+                        other.transform.parent.parent.GetComponent<Resources>().isGathering = true;
+                        item.character.resourceObject = other.GetComponent<ItemCollider>().item.gameObject;
+                        Debug.Log("resourceRotation:" + other.GetComponent<ItemCollider>().item.transform.rotation);
+                        item.character.WalkToTargetEuler(other.GetComponent<ItemCollider>().item.transform.rotation);
+                    }
                 }
                 break;
             case "Building":

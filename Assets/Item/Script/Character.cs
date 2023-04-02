@@ -68,10 +68,7 @@ public class Character : MonoBehaviour
                     //nextQua = oldQua;
                     //angle = Quaternion.Angle(oldQua, targetQua);
                     //Debug.Log("Start" + targetQua + " " + nextQua + " " + transform.rotation + " " + transform.eulerAngles);
-                    if (turnSpeed * angle < 0)
-                    {
-                        turnSpeed = -turnSpeed;
-                    }
+                    turnSpeed = Mathf.Abs(turnSpeed) * angle / Mathf.Abs(angle);
                     time = 0;
                     characterState = CharacterState.wait;
                 }
@@ -178,12 +175,11 @@ public class Character : MonoBehaviour
             axisVec = Vector3.Cross(oldVec, targetVec);
             oldQua = transform.rotation;
             targetQua = newTargetQua;
+            Debug.Log("TargetQua:" + targetQua);
             angle = Vector3.Angle(oldVec, targetVec);
-            if (turnSpeed * angle < 0)
-            {
-                turnSpeed = -turnSpeed;
-            }
+            turnSpeed = Mathf.Abs(turnSpeed) * angle / Mathf.Abs(angle);
             time = 0;
+            characterState = CharacterState.wait;
         }
     }
 
