@@ -14,7 +14,7 @@ public class SignUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
@@ -24,7 +24,7 @@ public class SignUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void DisplayText(string newText, float time, Color color)  //提醒玩家的UI的展示
@@ -33,9 +33,17 @@ public class SignUI : MonoBehaviour
         instance.tmpText.text = newText;
         instance.tmpText.color = color;
         Invoke("SetTextNULL", time);
-
     }
-    private void SetTextNULL()
+    public void DisplayText(string newText, bool permanent, Color color)  //提醒玩家的UI的展示
+    {
+        if (permanent)
+        {
+            StartCoroutine(FadeCoroutine(0.2f));
+            instance.tmpText.text = newText;
+            instance.tmpText.color = color;
+        }
+    }
+    public void SetTextNULL()
     {
         instance.tmpText.text = string.Empty;
     }

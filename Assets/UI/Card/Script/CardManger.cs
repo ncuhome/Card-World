@@ -6,11 +6,15 @@ public class CardManger : MonoBehaviour
 {
     public GameObject normalCard;
     public GameObject redCard;
+    public static CardManger instance;
     private void Start()
     {
-        
+        if (instance == null)
+        {
+            instance = this;
+        }
     }
-        
+
     public void DealCard()  //·¢ÅÆ
     {
         if (CardPack.cardPack.Count < 6)
@@ -29,4 +33,5 @@ public class CardManger : MonoBehaviour
             newCard.transform.localScale = Vector2.zero;
         }
     }
+
 }

@@ -46,4 +46,28 @@ public class BlockSystem : MonoBehaviour
         int blockY = (int)Mathf.Floor(latitude / 45) + 2;
         return ((blockY * 6) + blockX);
     }
+
+    //多态
+
+    //求纬度（返回-90到90的float）
+    public float GetLatitude(Vector3 center, Vector3 point)
+    {
+        float radius = Vector3.Distance(center, point);
+        return Mathf.Asin((point.y - center.y) / radius) * Mathf.Rad2Deg;//求纬度，并转成弧度
+    }
+
+    //求经度（返回-180到180的float）
+    public float GetLongitude(Vector3 center, Vector3 point)
+    {
+        return Mathf.Atan2(point.z - center.z, point.x - center.x) * Mathf.Rad2Deg;//求经度
+    }
+
+    public int GetBlockNum(Vector3 center, Vector3 point)
+    {
+        float latitude = GetLatitude(center, point);
+        float longitude = GetLongitude(center, point);
+        int blockX = (int)Mathf.Floor(longitude / 60) + 4;
+        int blockY = (int)Mathf.Floor(latitude / 45) + 2;
+        return ((blockY * 6) + blockX);
+    }
 }
