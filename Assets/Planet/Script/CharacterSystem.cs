@@ -45,8 +45,8 @@ public class CharacterSystem : MonoBehaviour
             builders = new int[4] { -1, -1, -1, -1 };
             for (int j = 0; j < 100; j++)
             {
-                if ((characters[j] != null) && (characters[j].item.blockNum == i) && (characters[j].characterState != CharacterState.gather)
-                 && (characters[j].resourceNum >= targetResource) && (characters[j].goToBuild == false))
+                if ((characters[j] != null) && (BuildingSystem.Instance.buildingInBlock[i] < BuildingSystem.Instance.maxBuildingInBlock) && (characters[j].item.blockNum == i)
+                 && (characters[j].characterState != CharacterState.gather) && (ResourceSystem.Instance.resourceNum >= targetResource) && (characters[j].goToBuild == false))
                 {
                     builders[num] = j;
                     num++;

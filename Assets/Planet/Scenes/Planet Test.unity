@@ -565,6 +565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceInBlock: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   regenerationDuration: 5
+  resourceNum: 0
   center: {fileID: 1555151207}
 --- !u!114 &912914641
 MonoBehaviour:
@@ -1579,6 +1580,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  maxAge: 50
 --- !u!114 &912914643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1592,7 +1594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 2
-  targetResource: 2
+  targetResource: 4
   builders: 
   buildings:
   - {fileID: 0}
@@ -1695,6 +1697,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  buildingInBlock: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  maxBuildingInBlock: 5
 --- !u!1 &1457100088
 GameObject:
   m_ObjectHideFlags: 0

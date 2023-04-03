@@ -8,7 +8,9 @@ public class BuildingSystem : MonoBehaviour
     public int size;
     public int targetResource;
     public int[] builders;
-    public Building[] buildings = new Building[100];
+    public Building[] buildings = new Building[120];
+    public int[] buildingInBlock = new int[24];
+    public int maxBuildingInBlock;
     // Start is called before the first frame update
     /// <summary>
     /// Awake is called when the script instance is being loaded.
@@ -43,6 +45,8 @@ public class BuildingSystem : MonoBehaviour
             buildings[buildingNum] = GameObject.Find("Items").transform.GetChild(GameObject.Find("Items").transform.childCount - 1).GetComponent<Building>();
             buildings[buildingNum].transform.localScale = Vector3.zero;
             buildings[buildingNum].finishBuilding = false;
+            buildingInBlock[CharacterSystem.Instance.characters[builders[0]].item.blockNum]++;
+            ResourceSystem.Instance.resourceNum -= targetResource;
             foreach (int builderNum in builders)
             {
                 if (builderNum < 0) { continue; }
@@ -55,9 +59,7 @@ public class BuildingSystem : MonoBehaviour
 
     public void Build(Character builder)
     {
-        builder.resourceNum -= targetResource;
         builder.age += 20f;
-
     }
 
     private int GetBuildingNum()

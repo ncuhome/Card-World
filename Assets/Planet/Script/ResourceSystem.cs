@@ -8,6 +8,7 @@ public class ResourceSystem : MonoBehaviour
     public int[] resourceInBlock = new int[24];
     public static ResourceSystem Instance = null;
     public float regenerationDuration;
+    public int resourceNum;
     public GameObject center;
     /// <summary>
     /// Awake is called when the script instance is being loaded.
@@ -68,7 +69,7 @@ public class ResourceSystem : MonoBehaviour
     {
         int blockNum = resourceObject.GetComponent<Item>().blockNum;
         resourceInBlock[blockNum]--;
-        character.resourceNum ++;
+        resourceNum ++;
         DeleteResource(resourceObject);
         RegenerationResource(BlockSystem.Instance.GetNearBlock(center.transform.position,blockNum));
     }
