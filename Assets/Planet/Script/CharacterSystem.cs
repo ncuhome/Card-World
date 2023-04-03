@@ -6,6 +6,7 @@ public class CharacterSystem : MonoBehaviour
 {
     public static CharacterSystem Instance = null;
     public Character[] characters = new Character[100];
+    public float maxAge = 50f;
     private void Awake()
     {
         if (Instance == null)

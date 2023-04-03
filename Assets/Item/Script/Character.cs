@@ -20,6 +20,8 @@ public class Character : MonoBehaviour
     public GameObject resourceObject;
     public int resourceNum, characterNum;
     public GameObject buildingObject;
+    public float age;
+    public int[] homeRange;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class Character : MonoBehaviour
         if (item.itemType == Item.ItemType.Character)
         {
             isCharacter = true;
+            homeRange = BlockSystem.Instance.GetRandomNearBlock(center.position, BlockSystem.Instance.GetBlockNum(center.position, transform.rotation));
         }
         else
         {
@@ -41,6 +44,12 @@ public class Character : MonoBehaviour
         if (!isCharacter)
         {
             return;
+        }
+
+        age += Time.deltaTime * 0.5f;
+        if (age > CharacterSystem.Instance.maxAge)
+        {
+            Die();
         }
 
         switch (characterState)
@@ -153,7 +162,7 @@ public class Character : MonoBehaviour
 
     public bool RoadCanMove(int block)
     {
-        if (block != item.blockNum)
+        if (System.Array.IndexOf(homeRange, block) == -1)
         {
             //Debug.Log(GetComponent<Item>().blockNum + " " + targetBlock);
             return false;
@@ -181,6 +190,12 @@ public class Character : MonoBehaviour
             time = 0;
             characterState = CharacterState.wait;
         }
+    }
+
+    public void Die()
+    {
+        CharacterSystem.Instance.characters[characterNum] = null;
+        Destroy(this.gameObject);
     }
 
 

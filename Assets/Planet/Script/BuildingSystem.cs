@@ -56,7 +56,7 @@ public class BuildingSystem : MonoBehaviour
     public void Build(Character builder)
     {
         builder.resourceNum -= targetResource;
-        //寿命减少（预留
+        builder.age += 20f;
 
     }
 

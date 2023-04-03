@@ -70,8 +70,33 @@ public class BlockSystem : MonoBehaviour
         }
         else
         {
-            nearBlock = new int[4] { blockNum - 6, blockY * 6 + (blockX - 1) % 6, blockNum, blockY * 6 + (blockX + 1) % 6};
+            nearBlock = new int[4] { blockNum - 6, blockY * 6 + (blockX - 1) % 6, blockNum, blockY * 6 + (blockX + 1) % 6 };
         }
         return nearBlock;
+    }
+
+    public int[] GetRandomNearBlock(Vector3 centerPos, int blockNum)
+    {
+        int[] nearBlock = new int[] { };
+        int[] randomNearBlock = new int[] { };
+        int blockY = blockNum / 6;
+        int blockX = blockNum - blockY * 6;
+
+        if (blockY == 0)
+        {
+            nearBlock = new int[3] { blockY * 6 + (blockX - 1) % 6, blockY * 6 + (blockX + 1) % 6, blockNum + 6 };
+            randomNearBlock = new int[2] { blockNum, nearBlock[Random.Range(0, 3)] };
+        }
+        else if ((blockY == 1) || (blockY == 2))
+        {
+            nearBlock = new int[4] { blockNum - 6, blockY * 6 + (blockX - 1) % 6, blockY * 6 + (blockX + 1) % 6, blockNum + 6 };
+            randomNearBlock = new int[2] { blockNum, nearBlock[Random.Range(0, 4)] };
+        }
+        else
+        {
+            nearBlock = new int[3] { blockNum - 6, blockY * 6 + (blockX - 1) % 6, blockY * 6 + (blockX + 1) % 6 };
+            randomNearBlock = new int[2] { blockNum, nearBlock[Random.Range(0, 3)] };
+        }
+        return randomNearBlock;
     }
 }
