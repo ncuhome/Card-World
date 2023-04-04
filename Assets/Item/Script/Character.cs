@@ -18,10 +18,12 @@ public class Character : MonoBehaviour
     public Item item;
     public bool foundResource, goToBuild;
     public GameObject resourceObject;
-    public int resourceNum, characterNum;
+    public int characterNum;
     public GameObject buildingObject;
     public float age;
+    public float ageSpeed;
     public int[] homeRange;
+    public Color pixelColor;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,12 +43,22 @@ public class Character : MonoBehaviour
     void Update()
     {
         curQua = transform.rotation;
+        pixelColor = GetColorSystem.Instance.GetColor(transform.rotation* Vector3.up);
         if (!isCharacter)
         {
             return;
         }
 
-        age += Time.deltaTime * 0.5f;
+        if ((ColorSystem.ColorExt.Difference(pixelColor, ColorSystem.Instance.colors[1]) < 0.01f)
+         || (ColorSystem.ColorExt.Difference(pixelColor, ColorSystem.Instance.colors[3]) < 0.01f))
+        {
+            ageSpeed = 1f;
+        }
+        else
+        {
+            ageSpeed = 0.5f;
+        }
+        age += Time.deltaTime * ageSpeed;
         if (age > CharacterSystem.Instance.maxAge)
         {
             Die();

@@ -35,11 +35,11 @@ public class GetColorSystem : MonoBehaviour
         Ray rayBack = Reverse(rayForward, 3000);
         if (Physics.Raycast(rayBack, out hitInfo))
         {
-            //Debug.DrawLine(transform.position, transform.position + transform.up * 100, Color.green);
+            //Debug.DrawLine(transform.position, transform.position + targetVec * 100, Color.green);
             //Debug.Log(hitInfo.collider.gameObject.name);
             Vector2 uv = hitInfo.textureCoord;
-            Renderer rendere = target.GetComponent<MeshRenderer>();
-            Material material = rendere.material;
+            Renderer renderer = target.GetComponent<MeshRenderer>();
+            Material material = renderer.material;
             Texture2D texture = material.mainTexture as Texture2D;
             int width = texture.width;
             int height = texture.height;
@@ -53,7 +53,7 @@ public class GetColorSystem : MonoBehaviour
         }
         else
         {
-            return Color.white;
+            return Color.black;
         }
     }
 

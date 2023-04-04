@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6404215982095302393}
   - component: {fileID: 4579293044318039649}
   - component: {fileID: 8858910853972604428}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ItemPhysics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 49210321581785791}
   - component: {fileID: -5957294728151938232}
   - component: {fileID: 1214893024808620160}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,11 +156,12 @@ MonoBehaviour:
   foundResource: 0
   goToBuild: 0
   resourceObject: {fileID: 0}
-  resourceNum: 0
   characterNum: 0
   buildingObject: {fileID: 0}
   age: 0
+  ageSpeed: 0
   homeRange: 
+  pixelColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &-5957294728151938232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,7 +200,7 @@ GameObject:
   - component: {fileID: 7820871686053603798}
   - component: {fileID: 7820871686053603797}
   - component: {fileID: 7820871686053603799}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ItemSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
