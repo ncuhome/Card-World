@@ -16,12 +16,28 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
     public static float secondTime = 0.4f; //≥Èø®µ⁄∂˛Ω◊∂Œ ±≥§ Àı–°Ω¯»Îø®≤€
 
     public static GameObject cardTrash;    //¿¨ª¯Õ∞‘⁄À˘”–ø®≈∆÷–∂º «“ª∏ˆ∂‘œÛ
+
+    public float mouseTimer;               // Û±ÍÕ£¡Ùµƒ ±º‰
+
+    public bool mouseOnCard;               // Û±Í «∑Ò‘⁄ø®≈∆…œ
     protected bool canBeDrag;
-    [SerializeField] private Canvas cardCanvas;
+    private Canvas cardCanvas;
+    [SerializeField] private GameObject descriptionPanel;
     public void Start() //ø®≈∆±ª¥¥Ω®∫Û¡¢º¥÷¥––
     {
         cardTrash = GameObject.Find("TrashCan");
         Drawcards();
+    }
+    private void Update()
+    {
+        if (mouseOnCard == true)
+        {
+            mouseTimer += Time.deltaTime;
+            if (mouseTimer > 0.5f)
+            {
+                descriptionPanel.transform.DOLocalMoveX(cardSizex, 0.1f);
+            }
+        }
     }
     public virtual void BeUse()  // π”√ø®≈∆∫Ø ˝
     {
@@ -46,16 +62,19 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
     {
         if (canBeDrag && CardPack.canBeDrag)
         {
+            mouseOnCard = true;
             this.transform.SetAsLastSibling(); //œ‘ æ‘⁄À˘”–ø®≈∆µƒ◊Ó…œ√Ê
-            transform.DOScale(new Vector2(1.5f, 1.5f), 0.1f);  //±‰¥Û
+            transform.DOScale(new Vector2(1.75f, 1.75f), 0.1f);  //±‰¥Û
         }
-
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         if (canBeDrag && CardPack.canBeDrag)
         {
+            mouseOnCard = false;
+            mouseTimer = 0;
+            descriptionPanel.transform.DOLocalMoveX(0, 0.1f);
             transform.DOScale(new Vector2(1f, 1f), 0.1f);      //±‰–°
         }
 
@@ -86,7 +105,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
                 CardPack.DeleteCard(this);
                 transform.DOLocalMove(new Vector2(0, 540), 0.5f);
                 transform.DOScale(new Vector2(2f, 2f), 0.5f).
-                    OnComplete(() => { this.GetComponent<Image>().DOFade(0, 0.2f).OnComplete(() => { Destroy(this); }); });
+                    OnComplete(() => { this.GetComponent<Image>().DOFade(0, 0.2f).OnComplete(() => { Destroy(this.gameObject); }); });
                 BeUse();
             }
             else
@@ -190,7 +209,7 @@ public class AccidentRangeUsageCard : AccidentCard, IAffectBlock //∑∂Œß π”√µƒ“‚Õ
                     AffectBlock(BlockSystem.Instance.GetBlockNum(MouseOnSphere.instance.sphere.transform.position, MouseOnSphere.instance.ReturnMousePosition()));
                     SignUI.instance.SetTextNULL();
                     CardPack.canBeDrag = true;  //∆‰À˚ø®≈∆ƒ‹±ªÕœ∂Ø
-                    Destroy(this);
+                    Destroy(this.gameObject);
                 }
             }
             yield return null;
