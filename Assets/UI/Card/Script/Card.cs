@@ -84,6 +84,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
     {
         if (canBeDrag && CardPack.canBeDrag)
         {
+            mouseOnCard = false;
             this.GetComponent<RectTransform>().anchoredPosition +=
                 eventData.delta / this.transform.parent.transform.parent.GetComponent<Canvas>().scaleFactor;
         }
@@ -105,7 +106,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
                 CardPack.DeleteCard(this);
                 transform.DOLocalMove(new Vector2(0, 540), 0.5f);
                 transform.DOScale(new Vector2(2f, 2f), 0.5f).
-                    OnComplete(() => { this.GetComponent<Image>().DOFade(0, 0.2f).OnComplete(() => { Destroy(this.gameObject); }); });
+                    OnComplete(() => { Destroy(this.transform.GetChild(0).gameObject); this.transform.GetChild(1).GetComponent<Image>().DOFade(0, 0.2f).OnComplete(() => { Destroy(this.gameObject); }); });
                 BeUse();
             }
             else
@@ -172,7 +173,7 @@ public class AccidentRangeUsageCard : AccidentCard, IAffectBlock //·¶Î§Ê¹ÓÃµÄÒâÍ
         {
             if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 350)  //ÔÚÀ¬»øÍ°·¶Î§ÄÚ
             {
-                SignUI.instance.DisplayText("You can't broke it", 1f, Color.red);
+                SignUI.instance.DisplayText("ÄãÎÞ·¨´Ý»ÙÕâÕÅÒâÍâ¿¨", 1f, Color.red);
                 CardPack.SortCard();
             }
             else if (this.GetComponent<RectTransform>().anchoredPosition.y >= CardPack.cardPackHigh + Card.cardSizey + 50)  //ÔÚÊ¹ÓÃ
@@ -181,7 +182,7 @@ public class AccidentRangeUsageCard : AccidentCard, IAffectBlock //·¶Î§Ê¹ÓÃµÄÒâÍ
                 CardPack.DeleteCard(this);
                 transform.DOLocalMove(new Vector2(0, 540), 0.5f);
                 transform.DOScale(new Vector2(2f, 2f), 0.5f).
-                    OnComplete(() => { this.GetComponent<Image>().DOFade(0, 0.2f).OnComplete(() => { CardPack.DeleteCard(this); }); });
+                    OnComplete(() => { Destroy(this.transform.GetChild(0).gameObject); this.transform.GetChild(1).GetComponent<Image>().DOFade(0, 0.2f).OnComplete(() => { CardPack.DeleteCard(this); }); });
                 BeUse();
             }
             else
@@ -219,7 +220,7 @@ public class AccidentRangeUsageCard : AccidentCard, IAffectBlock //·¶Î§Ê¹ÓÃµÄÒâÍ
     public override void BeUse()
     {
         isSelect = true;
-        SignUI.instance.DisplayText("Choose you Block", true, Color.red);
+        SignUI.instance.DisplayText("Ñ¡ÔñÄãÒª×÷ÓÃµÄÇø¿é", true, Color.red);
         CardPack.canBeDrag = false;  //ÆäËû¿¨ÅÆ²»ÄÜ±»ÍÏ¶¯
         StartCoroutine(SelectBlock());
     }
