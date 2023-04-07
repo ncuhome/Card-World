@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 49210321581785791}
   - component: {fileID: -5957294728151938232}
   - component: {fileID: 1214893024808620160}
+  - component: {fileID: 8284814796439455633}
   m_Layer: 2
   m_Name: Item
   m_TagString: Untagged
@@ -161,7 +162,8 @@ MonoBehaviour:
   age: 0
   ageSpeed: 0
   homeRange: 
-  pixelColor: {r: 0, g: 0, b: 0, a: 0}
+  specialSkill: -1
+  itemSprite: {fileID: 0}
 --- !u!114 &-5957294728151938232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +177,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finishBuilding: 0
+  itemSprite: {fileID: 0}
+  specialBuilding: -1
 --- !u!114 &1214893024808620160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,6 +192,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGathering: 0
+--- !u!114 &8284814796439455633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7820871686020335004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21c7834b4eb8e894ca5af8a58e94597f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  illumination: 0
+  eulerAngles: 0
+  lightTransform: {fileID: 0}
 --- !u!1 &7820871686053603793
 GameObject:
   m_ObjectHideFlags: 0

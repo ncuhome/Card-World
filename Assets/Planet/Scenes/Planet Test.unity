@@ -461,6 +461,7 @@ GameObject:
   - component: {fileID: 912914637}
   - component: {fileID: 912914638}
   - component: {fileID: 912914639}
+  - component: {fileID: 912914644}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1581,6 +1582,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   maxAge: 50
+  eraMaterials:
+  - {fileID: 2100000, guid: 6f5f3757bfacc7849853e19acf378bc0, type: 2}
+  - {fileID: 2100000, guid: 6c597e60cc46c0d4bafc0c9fca4d2a31, type: 2}
+  - {fileID: 2100000, guid: 8ffa3cb87769cbb40b04a0246aba5234, type: 2}
+  specialMaterials:
+  - {fileID: 2100000, guid: 154d3d387ab4448489d8b12f1d4a486d, type: 2}
+  - {fileID: 2100000, guid: ce643dffc4988134dabded25a4d85175, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &912914643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1699,6 +1715,44 @@ MonoBehaviour:
   - {fileID: 0}
   buildingInBlock: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxBuildingInBlock: 5
+  eraMaterials:
+  - {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+  - {fileID: 2100000, guid: 1a908373fdba3cd459f6697c3f03e614, type: 2}
+  - {fileID: 0}
+  specialMaterials:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &912914644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912914634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f224b6240747714cac1a633b8983c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  era: 0
 --- !u!1 &1457100088
 GameObject:
   m_ObjectHideFlags: 0
