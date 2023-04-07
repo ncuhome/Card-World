@@ -7,6 +7,8 @@ public class CharacterSystem : MonoBehaviour
     public static CharacterSystem Instance = null;
     public Character[] characters = new Character[100];
     public float maxAge = 50f;
+    public Material[] eraMaterials = new Material[3];
+    public Material[] specialMaterials = new Material[10];
     private void Awake()
     {
         if (Instance == null)
@@ -24,7 +26,18 @@ public class CharacterSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        switch (EraSystem.Instance.era)
+        {
+            case Era.AncientEra:
+                maxAge = 50f;
+                break;
+            case Era.ClassicalEra:
+                maxAge = 75f;
+                break;
+            case Era.IndustrialEra:
+                maxAge = 100f;
+                break;
+        }
     }
 
     public void TestCreate()
@@ -32,7 +45,7 @@ public class CharacterSystem : MonoBehaviour
         int num = Random.Range(0, 24);
         for (int i = 0; i <= 3; i++)
         {
-            CreateController.Instance.CreateItem(CreateController.ItemName.Naked, new int[] { num });
+            CreateController.Instance.CreateItem(ItemName.Naked, new int[] { num });
         }
     }
     //判定是否能进行建筑，并且返回作为建造者的角色下标
