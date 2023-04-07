@@ -2,16 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ItemName
+{
+    Army, Businessman, Farmer, Savages, Naked, City, NightCity, Pyramid, Shrub, Tree
+}
 public class CreateController : MonoBehaviour
 {
-    public enum ItemName
-    {
-        Army, Businessman, Farmer, Savages, Naked, City, NightCity, Pyramid, Shrub, Tree
-    }
-    public enum ItemClass
-    {
-        Character, Building, Resource
-    }
     public static CreateController Instance = null;
     public GameObject itemPrefab;
     public Material[] materials = new Material[10];
@@ -28,7 +24,7 @@ public class CreateController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
 
 
 
@@ -93,7 +89,7 @@ public class CreateController : MonoBehaviour
             case ItemName.Naked:
                 itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 0.5f, itemSprite.transform.localScale.y * 0.5f, itemSprite.transform.localScale.z);
                 itemSprite.transform.localPosition = new Vector3(0, 0.51f, 0);
-                itemScript.itemType = Item.ItemType.Character;
+                itemScript.itemType = ItemType.Character;
                 character.characterNum = GetCharacterNum();
                 CharacterSystem.Instance.characters[GetCharacterNum()] = character;
                 item.name = "Character";
@@ -101,19 +97,19 @@ public class CreateController : MonoBehaviour
             case ItemName.City:
             case ItemName.NightCity:
                 itemSprite.transform.localPosition = new Vector3(0, 0.54f, 0);
-                itemScript.itemType = Item.ItemType.Building;
+                itemScript.itemType = ItemType.Building;
                 item.name = "Building";
                 break;
             case ItemName.Pyramid:
                 itemSprite.transform.localPosition = new Vector3(0, 0.53f, 0);
-                itemScript.itemType = Item.ItemType.Building;
+                itemScript.itemType = ItemType.Building;
                 item.name = "Building";
                 break;
             case ItemName.Shrub:
             case ItemName.Tree:
                 itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 0.5f, itemSprite.transform.localScale.y * 0.5f, itemSprite.transform.localScale.z);
                 itemSprite.transform.localPosition = new Vector3(0, 0.515f, 0);
-                itemScript.itemType = Item.ItemType.Resource;
+                itemScript.itemType = ItemType.Resource;
                 ResourceSystem.Instance.resourceInBlock[BlockSystem.Instance.GetBlockNum(Vector3.zero, Quaternion.Euler(targetEuler))]++;
                 item.name = "Resource";
                 break;

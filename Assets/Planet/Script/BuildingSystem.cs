@@ -11,6 +11,8 @@ public class BuildingSystem : MonoBehaviour
     public Building[] buildings = new Building[120];
     public int[] buildingInBlock = new int[24];
     public int maxBuildingInBlock;
+    public Material[] eraMaterials = new Material[3];
+    public Material[] specialMaterials = new Material[20];
     // Start is called before the first frame update
     /// <summary>
     /// Awake is called when the script instance is being loaded.
@@ -41,7 +43,7 @@ public class BuildingSystem : MonoBehaviour
                 targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
             }
             int buildingNum = GetBuildingNum();
-            CreateController.Instance.CreateItem(CreateController.ItemName.City, targetEuler);
+            CreateController.Instance.CreateItem(ItemName.City, targetEuler);
             buildings[buildingNum] = GameObject.Find("Items").transform.GetChild(GameObject.Find("Items").transform.childCount - 1).GetComponent<Building>();
             buildings[buildingNum].transform.localScale = Vector3.zero;
             buildings[buildingNum].finishBuilding = false;
@@ -71,4 +73,5 @@ public class BuildingSystem : MonoBehaviour
         }
         return i;
     }
+    
 }
