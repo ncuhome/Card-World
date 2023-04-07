@@ -28,11 +28,11 @@ public class ResourceSystem : MonoBehaviour
         resourceInBlock = new int[24];
         for (int i = 0; i <= 12; i++)
         {
-            CreateController.Instance.CreateItem(CreateController.ItemName.Shrub);
+            CreateController.Instance.CreateItem(ItemName.Shrub);
         }
         for (int i = 0; i <= 12; i++)
         {
-            CreateController.Instance.CreateItem(CreateController.ItemName.Tree);
+            CreateController.Instance.CreateItem(ItemName.Tree);
         }
 
     }
@@ -83,7 +83,7 @@ public class ResourceSystem : MonoBehaviour
     public void RegenerationResource(int[] blockNum)
     {
         //Debug.Log("RegenerationResource: Block[] " + blockNum);
-        CreateController.Instance.CreateItem((CreateController.ItemName)Random.Range(8, 10), blockNum);
+        CreateController.Instance.CreateItem((ItemName)Random.Range(8, 10), blockNum);
     }
 
     

@@ -9,7 +9,7 @@ public class Resources : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (GetComponent<Item>().itemType == Item.ItemType.Resource)
+        if (GetComponent<Item>().itemType == ItemType.Resource)
         {
             isResource = true;
         }

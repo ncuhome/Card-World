@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum CharacterState { idle, wait, walk, work, gather, build }
+public enum SpecialSkill { none = -1, mining, building, farming, grazing, domestication, researching }
 public class Character : MonoBehaviour
 {
     public CharacterState characterState = CharacterState.idle;
@@ -23,12 +24,15 @@ public class Character : MonoBehaviour
     public float age;
     public float ageSpeed;
     public int[] homeRange;
-    public Color pixelColor;
+    private Color pixelColor;
+    public SpecialSkill specialSkill = SpecialSkill.none;
+    public MeshRenderer itemSprite;
     // Start is called before the first frame update
     void Start()
     {
         center = GameObject.Find("Planet").transform;
-        if (item.itemType == Item.ItemType.Character)
+        itemSprite = item.transform.Find("ItemSprite").GetComponent<MeshRenderer>();
+        if (item.itemType == ItemType.Character)
         {
             isCharacter = true;
             homeRange = BlockSystem.Instance.GetRandomNearBlock(center.position, BlockSystem.Instance.GetBlockNum(center.position, transform.rotation));
@@ -43,26 +47,15 @@ public class Character : MonoBehaviour
     void Update()
     {
         curQua = transform.rotation;
-        pixelColor = GetColorSystem.Instance.GetColor(transform.rotation* Vector3.up);
+        pixelColor = GetColorSystem.Instance.GetColor(transform.rotation * Vector3.up);
         if (!isCharacter)
         {
             return;
         }
 
-        if ((ColorSystem.ColorExt.Difference(pixelColor, ColorSystem.Instance.colors[1]) < 0.01f)
-         || (ColorSystem.ColorExt.Difference(pixelColor, ColorSystem.Instance.colors[3]) < 0.01f))
-        {
-            ageSpeed = 1f;
-        }
-        else
-        {
-            ageSpeed = 0.5f;
-        }
-        age += Time.deltaTime * ageSpeed;
-        if (age > CharacterSystem.Instance.maxAge)
-        {
-            Die();
-        }
+
+        AddAge();
+        SwitchImage();
 
         switch (characterState)
         {
@@ -108,11 +101,11 @@ public class Character : MonoBehaviour
                 time += Time.deltaTime;
                 //使用绕轴旋转
                 nextQua = Quaternion.AngleAxis(turnSpeed * time, axisVec) * oldQua;
-                //Debug.Log(Quaternion.Angle(transform.rotation, targetQua));
-                // if (ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(nextQua.eulerAngles), ColorSystem.Instance.colors[0]) < 0.1f)
+                // if (ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(nextQua * Vector3.up), ColorSystem.Instance.colors[0]) < 0.1f)
                 // {
                 //     characterState = CharacterState.idle;
-                //     break;
+                //     nextQua = transform.rotation;
+                //     time = 0;
                 // }
                 transform.rotation = nextQua;
                 //当初始角度跟目标角度小于0.1,将目标角度赋值给初始角度,让旋转角度是我们需要的角度
@@ -208,6 +201,36 @@ public class Character : MonoBehaviour
     {
         CharacterSystem.Instance.characters[characterNum] = null;
         Destroy(this.gameObject);
+    }
+
+    public void AddAge()
+    {
+        if ((ColorSystem.ColorExt.Difference(pixelColor, ColorSystem.Instance.colors[1]) < 0.01f)
+         || (ColorSystem.ColorExt.Difference(pixelColor, ColorSystem.Instance.colors[3]) < 0.01f))
+        {
+            ageSpeed = 1f;
+        }
+        else
+        {
+            ageSpeed = 0.5f;
+        }
+        age += Time.deltaTime * ageSpeed;
+        if ((age > CharacterSystem.Instance.maxAge) && (!goToBuild))
+        {
+            Die();
+        }
+    }
+
+    public void SwitchImage()
+    {
+        if (specialSkill == SpecialSkill.none)
+        {
+            itemSprite.material = CharacterSystem.Instance.eraMaterials[(int)EraSystem.Instance.era];
+        }
+        else
+        {
+            itemSprite.material = CharacterSystem.Instance.specialMaterials[(int)specialSkill];
+        }
     }
 
 

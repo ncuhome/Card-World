@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ItemType { Character, Building, Resource }
 public class Item : MonoBehaviour
 {
-    public enum ItemType { Character, Building, Resource }
     public Transform center = null;
     public ItemType itemType;
     public int blockNum = 0;
@@ -25,13 +25,13 @@ public class Item : MonoBehaviour
         switch (itemType)
         {
             case ItemType.Character:
-                ChangeAllTag(transform,"Character");
+                ChangeAllTag(transform, "Character");
                 break;
             case ItemType.Building:
-                ChangeAllTag(transform,"Building");
+                ChangeAllTag(transform, "Building");
                 break;
             case ItemType.Resource:
-                ChangeAllTag(transform,"Resource");
+                ChangeAllTag(transform, "Resource");
                 break;
         }
     }
