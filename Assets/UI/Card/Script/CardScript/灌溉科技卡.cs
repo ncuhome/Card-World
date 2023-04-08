@@ -5,8 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class RedCard : RangeUsageCard
+public class 灌溉科技卡 : Card
 {
-
 
 }

@@ -1,4 +1,4 @@
-using DG.Tweening;
+ï»¿using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,23 +7,23 @@ using UnityEngine.UI;
 
 public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IDragHandler, IEndDragHandler
 {
-    public static int cardSizex = 100;     //¿¨ÅÆ¿í¶È
+    public static int cardSizex = 100;     //å¡ç‰Œå®½åº¦
 
-    public static int cardSizey = 150;     //¿¨ÅÆ¸ß¶È
+    public static int cardSizey = 150;     //å¡ç‰Œé«˜åº¦
 
-    public static float firstTime = 0.5f;  //³é¿¨µÚÒ»½×¶ÎÊ±³¤ ±ä´ó²¢Õ¹Ê¾
+    public static float firstTime = 0.5f;  //æŠ½å¡ç¬¬ä¸€é˜¶æ®µæ—¶é•¿ å˜å¤§å¹¶å±•ç¤º
 
-    public static float secondTime = 0.4f; //³é¿¨µÚ¶ş½×¶ÎÊ±³¤ ËõĞ¡½øÈë¿¨²Û
+    public static float secondTime = 0.4f; //æŠ½å¡ç¬¬äºŒé˜¶æ®µæ—¶é•¿ ç¼©å°è¿›å…¥å¡æ§½
 
-    public static GameObject cardTrash;    //À¬»øÍ°ÔÚËùÓĞ¿¨ÅÆÖĞ¶¼ÊÇÒ»¸ö¶ÔÏó
+    public static GameObject cardTrash;    //åƒåœ¾æ¡¶åœ¨æ‰€æœ‰å¡ç‰Œä¸­éƒ½æ˜¯ä¸€ä¸ªå¯¹è±¡
 
-    public float mouseTimer;               //Êó±êÍ£ÁôµÄÊ±¼ä
+    private float mouseTimer;               //é¼ æ ‡åœç•™çš„æ—¶é—´
 
-    public bool mouseOnCard;               //Êó±êÊÇ·ñÔÚ¿¨ÅÆÉÏ
+    private bool mouseOnCard;               //é¼ æ ‡æ˜¯å¦åœ¨å¡ç‰Œä¸Š
     protected bool canBeDrag;
     private Canvas cardCanvas;
     [SerializeField] private GameObject descriptionPanel;
-    public void Start() //¿¨ÅÆ±»´´½¨ºóÁ¢¼´Ö´ĞĞ
+    public void Start() //å¡ç‰Œè¢«åˆ›å»ºåç«‹å³æ‰§è¡Œ
     {
         cardTrash = GameObject.Find("TrashCan");
         Drawcards();
@@ -39,7 +39,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
             }
         }
     }
-    public virtual void BeUse()  //Ê¹ÓÃ¿¨ÅÆº¯Êı
+    public virtual void BeUse()  //ä½¿ç”¨å¡ç‰Œå‡½æ•°
     {
 
     }
@@ -47,11 +47,11 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
     {
         canBeDrag = false;
         this.transform.localPosition = new Vector2(900, 0);
-        Sequence quence = DOTween.Sequence(); //ÉùÃ÷¶¯»­ÈİÆ÷
+        Sequence quence = DOTween.Sequence(); //å£°æ˜åŠ¨ç”»å®¹å™¨
         quence.Append(transform.DOLocalMove(new Vector2(0, 540), firstTime));
         quence.Join(transform.DOScale(new Vector2(3f, 3f), firstTime));
         quence.Join(transform.DORotate(new Vector2(15, -90), firstTime).From());
-        quence.Append(transform.DOPunchPosition(new Vector2(5, 10), 0.2f, 1, 0.1f)); //¿¨ÅÆÕğ¶¯
+        quence.Append(transform.DOPunchPosition(new Vector2(5, 10), 0.2f, 1, 0.1f)); //å¡ç‰Œéœ‡åŠ¨
         quence.AppendInterval(0.6f).OnComplete(() => {
             CardPack.AddCard(this); transform.DOScale(new Vector2(1f, 1f), secondTime)
             .OnComplete(() => { canBeDrag = true; });
@@ -63,8 +63,8 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
         if (canBeDrag && CardPack.canBeDrag)
         {
             mouseOnCard = true;
-            this.transform.SetAsLastSibling(); //ÏÔÊ¾ÔÚËùÓĞ¿¨ÅÆµÄ×îÉÏÃæ
-            transform.DOScale(new Vector2(1.75f, 1.75f), 0.1f);  //±ä´ó
+            this.transform.SetAsLastSibling(); //æ˜¾ç¤ºåœ¨æ‰€æœ‰å¡ç‰Œçš„æœ€ä¸Šé¢
+            transform.DOScale(new Vector2(1.75f, 1.75f), 0.1f);  //å˜å¤§
         }
     }
 
@@ -75,12 +75,12 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
             mouseOnCard = false;
             mouseTimer = 0;
             descriptionPanel.transform.DOLocalMoveX(0, 0.1f);
-            transform.DOScale(new Vector2(1f, 1f), 0.1f);      //±äĞ¡
+            transform.DOScale(new Vector2(1f, 1f), 0.1f);      //å˜å°
         }
 
     }
 
-    public void OnDrag(PointerEventData eventData) //¿¨ÅÆÍÏ×§Ğ§¹û
+    public void OnDrag(PointerEventData eventData) //å¡ç‰Œæ‹–æ‹½æ•ˆæœ
     {
         if (canBeDrag && CardPack.canBeDrag)
         {
@@ -96,7 +96,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
     {
         if (canBeDrag && CardPack.canBeDrag)
         {
-            if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 350)  //ÔÚÀ¬»øÍ°·¶Î§ÄÚ
+            if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 350)  //åœ¨åƒåœ¾æ¡¶èŒƒå›´å†…
             {
                 this.transform.DOMove(cardTrash.transform.position, 0.5f).OnComplete(() => { CardPack.DeleteCard(this); Destroy(this.gameObject); });
             }
@@ -106,7 +106,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
                 CardPack.DeleteCard(this);
                 transform.DOLocalMove(new Vector2(0, 540), 0.5f);
                 transform.DOScale(new Vector2(2f, 2f), 0.5f).
-                    OnComplete(() => { Destroy(this.transform.GetChild(0).gameObject); this.transform.GetChild(1).GetComponent<Image>().DOFade(0, 0.2f).OnComplete(() => { Destroy(this.gameObject); }); });
+                    OnComplete(() => { Destroy(this.transform.GetChild(0).gameObject); this.transform.GetChild(1).GetComponent<Image>().DOFade(0, 0.2f).OnComplete(() => { CardPack.DeleteCard(this); }); });
                 BeUse();
             }
             else
@@ -124,12 +124,12 @@ public class AccidentCard : Card
     {
         if (canBeDrag && CardPack.canBeDrag)
         {
-            if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 350)  //ÔÚÀ¬»øÍ°·¶Î§ÄÚ
+            if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 350)  //åœ¨åƒåœ¾æ¡¶èŒƒå›´å†…
             {
                 SignUI.instance.DisplayText("You can't broke it", 1f, Color.red);
                 CardPack.SortCard();
             }
-            else if (this.GetComponent<RectTransform>().anchoredPosition.y >= CardPack.cardPackHigh + Card.cardSizey + 50)  //ÔÚÊ¹ÓÃ
+            else if (this.GetComponent<RectTransform>().anchoredPosition.y >= CardPack.cardPackHigh + Card.cardSizey + 50)  //åœ¨ä½¿ç”¨
             {
                 this.canBeDrag = false;
                 CardPack.DeleteCard(this);
@@ -146,37 +146,67 @@ public class AccidentCard : Card
     }
 }
 
-public class RangeUsageCard : Card, IPointerUpHandler //·¶Î§Ê¹ÓÃµÄ¿¨ÅÆ
+public class RangeUsageCard : Card, IAffectBlock //èŒƒå›´ä½¿ç”¨çš„å¡ç‰Œ
 {
     public bool isSelect = false;
+
+    public virtual void AffectBlock(int block) //å¯¹åŒºå—çš„ä½œç”¨å‡½æ•°
+    {
+        Debug.Log(block);
+    }
+
+    IEnumerator SelectBlock()
+    {
+        while (isSelect == true)
+        {
+            Debug.Log("ç°åœ¨æŒ‡ç€åŒºå—" + BlockSystem.Instance.GetBlockNum(MouseOnSphere.instance.sphere.transform.position, MouseOnSphere.instance.ReturnMousePosition()));
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (MouseOnSphere.instance.ReturnMousePosition() != Vector3.zero)
+                {
+                    AffectBlock(BlockSystem.Instance.GetBlockNum(MouseOnSphere.instance.sphere.transform.position, MouseOnSphere.instance.ReturnMousePosition()));
+                    SignUI.instance.SetTextNULL();
+                    CardPack.canBeDrag = true;  //å…¶ä»–å¡ç‰Œèƒ½è¢«æ‹–åŠ¨
+                    Destroy(this.gameObject);
+                }
+            }
+            yield return null;
+        }
+    }
+
     public override void BeUse()
     {
         isSelect = true;
+        SignUI.instance.DisplayText("é€‰æ‹©ä½ è¦ä½œç”¨çš„åŒºå—", true, Color.red);
+        CardPack.canBeDrag = false;  //å…¶ä»–å¡ç‰Œä¸èƒ½è¢«æ‹–åŠ¨
+        StartCoroutine(SelectBlock());
     }
-    public virtual void OnPointerUp(PointerEventData eventData)
-    {
 
-        if (isSelect)
-        {
-            Debug.Log(BlockSystem.Instance.GetBlockNum(MouseOnSphere.instance.sphere.transform.position, MouseOnSphere.instance.ReturnMousePosition()));
-            isSelect = false;
-        }
-    }
+    //private void Update()
+    //{
+    //    if (isSelect == true)
+    //    {
+    //        if (Input.GetMouseButtonDown(0))
+    //        {
+    //            AffectBlock(BlockSystem.Instance.GetBlockNum(MouseOnSphere.instance.sphere.transform.position, MouseOnSphere.instance.ReturnMousePosition()));
+    //        }
+    //    }
+    //}
 }
 
-public class AccidentRangeUsageCard : AccidentCard, IAffectBlock //·¶Î§Ê¹ÓÃµÄÒâÍâÅÆ
+public class AccidentRangeUsageCard : AccidentCard, IAffectBlock //èŒƒå›´ä½¿ç”¨çš„æ„å¤–ç‰Œ
 {
     public bool isSelect = false;
     public override void OnEndDrag(PointerEventData eventData)
     {
         if (canBeDrag && CardPack.canBeDrag)
         {
-            if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 350)  //ÔÚÀ¬»øÍ°·¶Î§ÄÚ
+            if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 350)  //åœ¨åƒåœ¾æ¡¶èŒƒå›´å†…
             {
-                SignUI.instance.DisplayText("ÄãÎŞ·¨´İ»ÙÕâÕÅÒâÍâ¿¨", 1f, Color.red);
+                SignUI.instance.DisplayText("ä½ æ— æ³•æ‘§æ¯è¿™å¼ æ„å¤–å¡", 1f, Color.red);
                 CardPack.SortCard();
             }
-            else if (this.GetComponent<RectTransform>().anchoredPosition.y >= CardPack.cardPackHigh + Card.cardSizey + 50)  //ÔÚÊ¹ÓÃ
+            else if (this.GetComponent<RectTransform>().anchoredPosition.y >= CardPack.cardPackHigh + Card.cardSizey + 50)  //åœ¨ä½¿ç”¨
             {
                 this.canBeDrag = false;
                 CardPack.DeleteCard(this);
@@ -193,7 +223,7 @@ public class AccidentRangeUsageCard : AccidentCard, IAffectBlock //·¶Î§Ê¹ÓÃµÄÒâÍ
     }
 
 
-    public virtual void AffectBlock(int block) //¶ÔÇø¿éµÄ×÷ÓÃº¯Êı
+    public virtual void AffectBlock(int block) //å¯¹åŒºå—çš„ä½œç”¨å‡½æ•°
     {
         Debug.Log(block);
     }
@@ -202,14 +232,14 @@ public class AccidentRangeUsageCard : AccidentCard, IAffectBlock //·¶Î§Ê¹ÓÃµÄÒâÍ
     {
         while (isSelect == true)
         {
-            Debug.Log("ÏÖÔÚÖ¸×ÅÇø¿é" + BlockSystem.Instance.GetBlockNum(MouseOnSphere.instance.sphere.transform.position, MouseOnSphere.instance.ReturnMousePosition()));
+            Debug.Log("ç°åœ¨æŒ‡ç€åŒºå—" + BlockSystem.Instance.GetBlockNum(MouseOnSphere.instance.sphere.transform.position, MouseOnSphere.instance.ReturnMousePosition()));
             if (Input.GetMouseButtonDown(0))
             {
                 if (MouseOnSphere.instance.ReturnMousePosition() != Vector3.zero)
                 {
                     AffectBlock(BlockSystem.Instance.GetBlockNum(MouseOnSphere.instance.sphere.transform.position, MouseOnSphere.instance.ReturnMousePosition()));
                     SignUI.instance.SetTextNULL();
-                    CardPack.canBeDrag = true;  //ÆäËû¿¨ÅÆÄÜ±»ÍÏ¶¯
+                    CardPack.canBeDrag = true;  //å…¶ä»–å¡ç‰Œèƒ½è¢«æ‹–åŠ¨
                     Destroy(this.gameObject);
                 }
             }
@@ -220,8 +250,8 @@ public class AccidentRangeUsageCard : AccidentCard, IAffectBlock //·¶Î§Ê¹ÓÃµÄÒâÍ
     public override void BeUse()
     {
         isSelect = true;
-        SignUI.instance.DisplayText("Ñ¡ÔñÄãÒª×÷ÓÃµÄÇø¿é", true, Color.red);
-        CardPack.canBeDrag = false;  //ÆäËû¿¨ÅÆ²»ÄÜ±»ÍÏ¶¯
+        SignUI.instance.DisplayText("é€‰æ‹©ä½ è¦ä½œç”¨çš„åŒºå—", true, Color.red);
+        CardPack.canBeDrag = false;  //å…¶ä»–å¡ç‰Œä¸èƒ½è¢«æ‹–åŠ¨
         StartCoroutine(SelectBlock());
     }
 

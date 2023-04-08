@@ -1,30 +1,28 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TechNode : MonoBehaviour
 {
-    public string nodeName;  //¸Ã¿Æ¼¼µÄÃû×Ö
+    public string nodeName;  //è¯¥ç§‘æŠ€çš„åå­—
 
-    public bool unlock = false;  //ÊÇ·ñÒÑ¾­½âËø
+    public bool unlock = false;  //æ˜¯å¦å·²ç»è§£é”
 
     [SerializeField]private List<TechNode> frontTechnology = null;
-    public bool DetectUnlocked()  //¼ì²é¸Ã¿Æ¼¼ÊÇ·ñÒÑ¾­½âËø
+    public bool DetectUnlocked()  //æ£€æŸ¥è¯¥ç§‘æŠ€æ˜¯å¦å·²ç»è§£é”
     {
-        if (unlock)  //ÒÑ¾­½âËø
+        if (unlock)  //å·²ç»è§£é”
         {
             return true;
         }
-        else        //Ã»ÓĞ½âËø
+        else        //æ²¡æœ‰è§£é”
         {
             return false;
         }
     }
-    public void UnlockIt() //½âËøÕâ¸ö¿Æ¼¼
+    public void UnlockIt() //è§£é”è¿™ä¸ªç§‘æŠ€
     {
         int count = 0;
         for (int i = 0; i < frontTechnology.Count; i++)
@@ -35,20 +33,20 @@ public class TechNode : MonoBehaviour
             }
             else
             {
-                SignUI.instance.DisplayText("Ç°ÖÃ¿Æ¼¼" + frontTechnology[i].nodeName + "Î´½âËø", 3f, Color.red);
+                SignUI.instance.DisplayText("å‰ç½®ç§‘æŠ€" + frontTechnology[i].nodeName + "æœªè§£é”", 3f, Color.red);
             }
         }
 
-        if (count == frontTechnology.Count) //Ç°ÖÃ¿Æ¼¼¶¼±»½âËø
+        if (count == frontTechnology.Count) //å‰ç½®ç§‘æŠ€éƒ½è¢«è§£é”
         {
             this.unlock = true;
             this.gameObject.GetComponent<Image>().color = new Color(255, 0, 0, 0.5f);
-            SignUI.instance.DisplayText("ÄãÒÑ¾­½âËø" + this.nodeName, 2.5f, Color.blue);
-        }
+            SignUI.instance.DisplayText("ä½ å·²ç»è§£é”" + this.nodeName, 2.5f, Color.blue);
+        }                                          
     }
     //void Start()
     //{
-    //    nodeName = this.gameObject.name; //Ãû×ÖÎª´îÔØ½Å±¾µÄÎïÌåµÄÃû×Ö
+    //    nodeName = this.gameObject.name; //åå­—ä¸ºæ­è½½è„šæœ¬çš„ç‰©ä½“çš„åå­—
     //}
 
     void Update()
