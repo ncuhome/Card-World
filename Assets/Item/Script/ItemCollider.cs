@@ -18,7 +18,7 @@ public class ItemCollider : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (item.character.foundResource || item.character.goToBuild) { return; }
+        if (item.character.foundResource || item.character.goToBuild || item.character.goHome) { return; }
         switch (transform.tag)
         {
             case "Character":
@@ -44,7 +44,7 @@ public class ItemCollider : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (item.character.foundResource || item.character.goToBuild) { return; }
+        if (item.character.foundResource || item.character.goToBuild || item.character.goHome) { return; }
         switch (transform.tag)
         {
             case "Character":
