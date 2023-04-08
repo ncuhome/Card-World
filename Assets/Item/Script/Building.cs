@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum SpecialBuilding { none = -1}
+public enum SpecialBuilding { none = -1 }
 public class Building : MonoBehaviour
 {
     private bool isBuilding;
     public bool finishBuilding;
     private float time;
-    private int population;
+    public int population;
     public MeshRenderer itemSprite;
     public SpecialBuilding specialBuilding = SpecialBuilding.none;
+    public bool stopGenerate = false;
+    public int generatePopulation;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,11 +33,17 @@ public class Building : MonoBehaviour
     {
         if (!isBuilding) { return; }
         SwitchImage();
+        if (stopGenerate) { return; }
         time += Time.deltaTime;
         if (time > 60f / population)
         {
             time = 0;
             CreateController.Instance.CreateItem(ItemName.Naked, transform.eulerAngles);
+            generatePopulation++;
+        }
+        if (generatePopulation > population)
+        {
+            stopGenerate = true;
         }
     }
 

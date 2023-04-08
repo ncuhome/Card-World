@@ -53,7 +53,7 @@ public class BuildingSystem : MonoBehaviour
             {
                 if (builderNum < 0) { continue; }
                 CharacterSystem.Instance.characters[builderNum].goToBuild = true;
-                CharacterSystem.Instance.characters[builderNum].WalkToTargetEuler(Quaternion.Euler(targetEuler));
+                CharacterSystem.Instance.characters[builderNum].WalkToTargetQua(Quaternion.Euler(targetEuler));
                 CharacterSystem.Instance.characters[builderNum].buildingObject = buildings[buildingNum].gameObject;
             }
         }
@@ -73,5 +73,22 @@ public class BuildingSystem : MonoBehaviour
         }
         return i;
     }
-    
+
+    public Building FindNearBuilding(Transform itemTransform)
+    {
+        Building nearBuilding = null;
+        float minAngle = 3600f;
+        foreach (Building building in buildings)
+        {
+            if (building == null) { continue; }
+            float angle = Vector3.Angle(itemTransform.rotation * Vector3.up, building.transform.rotation * Vector3.up);
+            if (angle < minAngle)
+            {
+                minAngle = angle;
+                nearBuilding = building;
+            }
+        }
+        return nearBuilding;
+    }
+
 }

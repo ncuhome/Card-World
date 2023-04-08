@@ -20,7 +20,6 @@ public class CharacterSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        TestCreate();
     }
 
     // Update is called once per frame
@@ -40,14 +39,6 @@ public class CharacterSystem : MonoBehaviour
         }
     }
 
-    public void TestCreate()
-    {
-        int num = Random.Range(0, 24);
-        for (int i = 0; i <= 3; i++)
-        {
-            CreateController.Instance.CreateItem(ItemName.Naked, new int[] { num });
-        }
-    }
     //判定是否能进行建筑，并且返回作为建造者的角色下标
     public int[] GetBuilders(int size, int targetResource)
     {
