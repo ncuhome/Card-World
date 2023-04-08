@@ -91,4 +91,25 @@ public class BuildingSystem : MonoBehaviour
         return nearBuilding;
     }
 
+    public void EndOfCivilization()
+    {
+        for (int i = 0; i < 120; i++)
+        {
+            if (buildings[i] == null) { continue; }
+            if (buildings[i].specialBuilding == SpecialBuilding.none)
+            {
+                Destroy(buildings[i].gameObject);
+                buildings[i] = null;
+            }
+            else
+            {
+                if (Random.Range(0f,1f) < 0.3f)
+                {
+                    Destroy(buildings[i].gameObject);
+                    buildings[i] = null;
+                }
+            }
+        }
+    }
+
 }
