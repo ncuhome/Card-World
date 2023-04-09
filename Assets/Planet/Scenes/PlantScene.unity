@@ -566,7 +566,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceInBlock: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   regenerationDuration: 5
-  resourceNum: 
+  resourceDatas:
+  - name: "\u6728\u5934"
+    resourceType: 0
+    resourceNum: 0
+  - name: "\u77F3\u5934"
+    resourceType: 1
+    resourceNum: 0
+  - name: "\u6C34\u8D44\u6E90"
+    resourceType: 2
+    resourceNum: 0
+  - name: "\u6591\u5CA9"
+    resourceType: 3
+    resourceNum: 0
+  - name: "\u71E7\u77F3"
+    resourceType: 4
+    resourceNum: 0
+  - name: "\u9ECF\u571F"
+    resourceType: 5
+    resourceNum: 0
+  - name: "\u77F3\u818F\u77F3"
+    resourceType: 6
+    resourceNum: 0
+  - name: "\u82B1\u5C97\u5CA9"
+    resourceType: 7
+    resourceNum: 0
+  - name: "\u94C1\u77FF"
+    resourceType: 8
+    resourceNum: 0
+  - name: "\u91D1\u77FF"
+    resourceType: 9
+    resourceNum: 0
+  - name: "\u9752\u94DC\u77FF"
+    resourceType: 10
+    resourceNum: 0
+  - name: "\u7164\u70AD\u77FF"
+    resourceType: 11
+    resourceNum: 0
+  - name: "\u77F3\u6CB9"
+    resourceType: 12
+    resourceNum: 0
   center: {fileID: 1555151207}
 --- !u!114 &912914641
 MonoBehaviour:
@@ -1617,43 +1656,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 0
     isHomeBuilding: 1
   - name: "\u8349\u6728\u5C4B"
@@ -1662,43 +1701,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 0
     isHomeBuilding: 1
   - name: "\u7F8A\u5708"
@@ -1707,43 +1746,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 0
     isHomeBuilding: 0
   - name: "\u539F\u59CB\u6355\u9C7C\u8BBE\u65BD"
@@ -1752,43 +1791,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 0
     isHomeBuilding: 0
   - name: "\u539F\u59CB\u519C\u7530"
@@ -1797,43 +1836,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 0
     isHomeBuilding: 0
   - name: "\u5C0F\u578B\u7801\u5934"
@@ -1842,43 +1881,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 0
     isHomeBuilding: 0
   - name: "\u5DE8\u77F3\u9635"
@@ -1887,43 +1926,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 1
     isHomeBuilding: 0
   - name: "\u5236\u9676\u8F6C\u76D8"
@@ -1932,43 +1971,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 1
     isHomeBuilding: 0
   - name: "\u706B\u5806"
@@ -1977,43 +2016,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 1
     isHomeBuilding: 0
   - name: "\u5B66\u5802"
@@ -2022,43 +2061,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 1
     isHomeBuilding: 0
   - name: "\u77F3\u5C4B"
@@ -2067,43 +2106,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 0
     isHomeBuilding: 1
   - name: "\u957F\u5C4B"
@@ -2112,43 +2151,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 0
     isHomeBuilding: 1
   - name: "\u57CE\u5E02\u4F4F\u5B85"
@@ -2157,43 +2196,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 0
     isHomeBuilding: 1
   - name: "\u7801\u5934"
@@ -2202,43 +2241,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 0
     isHomeBuilding: 0
   - name: "\u5854\u697C"
@@ -2247,43 +2286,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 0
     isHomeBuilding: 0
   - name: "\u519C\u573A"
@@ -2292,43 +2331,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 0
     isHomeBuilding: 0
   - name: "\u70BC\u91D1\u7814\u7A76\u6240"
@@ -2337,43 +2376,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 1
     isHomeBuilding: 0
   - name: "\u57CE\u5821"
@@ -2382,43 +2421,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 1
     isHomeBuilding: 0
   - name: "\u5927\u578B\u8230\u961F"
@@ -2427,43 +2466,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 1
     isHomeBuilding: 0
   - name: "\u5C0F\u578B\u91D1\u5C5E\u5DE5\u574A"
@@ -2472,43 +2511,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 1
     isHomeBuilding: 0
   - name: "\u6DF7\u51DD\u571F\u5927\u53A6"
@@ -2517,43 +2556,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 0
     isHomeBuilding: 1
   - name: "\u5927\u522B\u91CE"
@@ -2562,43 +2601,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 0
     isHomeBuilding: 1
   - name: "\u56DB\u5408\u9662"
@@ -2607,43 +2646,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 0
     isHomeBuilding: 1
   - name: "\u5929\u6587\u53F0"
@@ -2652,43 +2691,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 0
     isHomeBuilding: 0
   - name: "\u73B0\u4EE3\u5316\u519C\u573A"
@@ -2697,43 +2736,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 0
     isHomeBuilding: 0
   - name: "\u706B\u7BAD\u53D1\u5C04\u57FA\u5730"
@@ -2742,43 +2781,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 1
     isHomeBuilding: 0
   - name: "\u91D1\u5C5E\u51B6\u70BC\u5382"
@@ -2787,43 +2826,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 1
     isHomeBuilding: 0
   - name: "\u6838\u7535\u7AD9"
@@ -2832,43 +2871,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 1
     isHomeBuilding: 0
   - name: "\u84B8\u6C7D\u57CE\u5821"
@@ -2877,43 +2916,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 1
     isHomeBuilding: 0
   - name: "\u6ED1\u7FD4\u673A\u673A\u573A"
@@ -2922,43 +2961,43 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u5934"
       resourceType: 1
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      targetNum: 0
+      resourceNum: 0
     - name: "\u6591\u5CA9"
       resourceType: 3
-      targetNum: 0
+      resourceNum: 0
     - name: "\u71E7\u77F3"
       resourceType: 4
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9ECF\u571F"
       resourceType: 5
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      targetNum: 0
+      resourceNum: 0
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      targetNum: 0
+      resourceNum: 0
     - name: "\u94C1\u77FF"
       resourceType: 8
-      targetNum: 0
+      resourceNum: 0
     - name: "\u91D1\u77FF"
       resourceType: 9
-      targetNum: 0
+      resourceNum: 0
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      targetNum: 0
+      resourceNum: 0
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      targetNum: 0
+      resourceNum: 0
     - name: "\u77F3\u6CB9"
       resourceType: 12
-      targetNum: 0
+      resourceNum: 0
     isSpecialBuilding: 1
     isHomeBuilding: 0
   builders: 

@@ -3,14 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
-[System.Serializable]
-public class ResourceData
-{
-    public string name;
-    public ResourceType resourceType;
-    public int targetNum;
-}
 [System.Serializable]
 public class BuildingData
 {
@@ -45,36 +37,47 @@ public class BuildingSystem : MonoBehaviour
     }
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //builders = CharacterSystem.Instance.GetBuilders(size, targetResource);
-        if (builders != null)
+        for (int i = 0; i < 30; i++)
         {
-            Vector3 targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
-            while ((ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[0]) < 0.01f)
-                || (CharacterSystem.Instance.characters[builders[0]].item.blockNum != BlockSystem.Instance.GetBlockNum(Vector3.zero, Quaternion.Euler(targetEuler))))
+            bool canBuild = true;
+            for (int j = 0; j < 13; j++)
             {
-                targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
+                if (ResourceSystem.Instance.resourceDatas[j].resourceNum < buildingDatas[i].targetResource[j].resourceNum) { canBuild = false; }
             }
-            int buildingNum = GetBuildingNum();
-            CreateController.Instance.CreateItem(ItemName.City, targetEuler);
-            buildings[buildingNum] = GameObject.Find("Items").transform.GetChild(GameObject.Find("Items").transform.childCount - 1).GetComponent<Building>();
-            buildings[buildingNum].transform.localScale = Vector3.zero;
-            buildings[buildingNum].finishBuilding = false;
-            buildingInBlock[CharacterSystem.Instance.characters[builders[0]].item.blockNum]++;
-
-            //ResourceSystem.Instance.resourceNum -= targetResource;
-
-            foreach (int builderNum in builders)
+            if (!canBuild) { continue; }
+            builders = CharacterSystem.Instance.GetBuilders(size);
+            if (builders != null)
             {
-                if (builderNum < 0) { continue; }
-                CharacterSystem.Instance.characters[builderNum].goToBuild = true;
-                CharacterSystem.Instance.characters[builderNum].WalkToTargetQua(Quaternion.Euler(targetEuler));
-                CharacterSystem.Instance.characters[builderNum].buildingObject = buildings[buildingNum].gameObject;
+                Vector3 targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
+                while ((ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[0]) < 0.01f)
+                    || (CharacterSystem.Instance.characters[builders[0]].item.blockNum != BlockSystem.Instance.GetBlockNum(Vector3.zero, Quaternion.Euler(targetEuler))))
+                {
+                    targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
+                }
+                int buildingNum = GetBuildingNum();
+                CreateController.Instance.CreateItem(ItemName.City, targetEuler);
+                buildings[buildingNum] = GameObject.Find("Items").transform.GetChild(GameObject.Find("Items").transform.childCount - 1).GetComponent<Building>();
+                buildings[buildingNum].transform.localScale = Vector3.zero;
+                buildings[buildingNum].finishBuilding = false;
+                buildingInBlock[CharacterSystem.Instance.characters[builders[0]].item.blockNum]++;
+
+                for (int j = 0; j < 13; j++)
+                {
+                    buildingDatas[i].targetResource[j].resourceNum -= ResourceSystem.Instance.resourceDatas[j].resourceNum;
+                }
+                foreach (int builderNum in builders)
+                {
+                    if (builderNum < 0) { continue; }
+                    CharacterSystem.Instance.characters[builderNum].goToBuild = true;
+                    CharacterSystem.Instance.characters[builderNum].WalkToTargetQua(Quaternion.Euler(targetEuler));
+                    CharacterSystem.Instance.characters[builderNum].buildingObject = buildings[buildingNum].gameObject;
+                }
             }
         }
     }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public enum ResourceType { Wood, Stone, Water, Porphyry, Flint, Clay, GypsumStone, Granite, IronOre, GoldOre, BronzeOre, CoalMine, OilVent }
 public class Resources : MonoBehaviour
 {
