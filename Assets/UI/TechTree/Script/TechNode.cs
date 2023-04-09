@@ -22,7 +22,7 @@ public class TechNode : MonoBehaviour
             return false;
         }
     }
-    public void UnlockIt() //解锁这个科技
+    public void UnlockIt() //点击解锁这个科技
     {
         int count = 0;
         for (int i = 0; i < frontTechnology.Count; i++)
@@ -43,6 +43,12 @@ public class TechNode : MonoBehaviour
             this.gameObject.GetComponent<Image>().color = new Color(255, 0, 0, 0.5f);
             SignUI.instance.DisplayText("你已经解锁" + this.nodeName, 2.5f, Color.blue);
         }                                          
+    }
+    public void ImmediateUnlockIt()
+    {
+        this.unlock = true;
+        this.gameObject.GetComponent<Image>().color = new Color(255, 0, 0, 0.5f);
+        SignUI.instance.DisplayText("你已经解锁" + this.nodeName, 2.5f, Color.blue);
     }
     //void Start()
     //{

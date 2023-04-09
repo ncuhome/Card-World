@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class 驯服科技卡 : Card
 {
-
+    public override void BeUse()
+    {
+        驯化.instance.ImmediateUnlockIt();
+    }
 
 }

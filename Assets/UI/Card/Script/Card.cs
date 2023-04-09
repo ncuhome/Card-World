@@ -65,6 +65,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
             mouseOnCard = true;
             this.transform.SetAsLastSibling(); //显示在所有卡牌的最上面
             transform.DOScale(new Vector2(1.75f, 1.75f), 0.1f);  //变大
+            transform.DOLocalMoveY(transform.position.y + 50, 0.1f);  //向上移动
         }
     }
 
@@ -76,6 +77,9 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
             mouseTimer = 0;
             descriptionPanel.transform.DOLocalMoveX(0, 0.1f);
             transform.DOScale(new Vector2(1f, 1f), 0.1f);      //变小
+            canBeDrag = false;
+            transform.DOLocalMoveY(CardPack.cardPackHigh, 0.1f)
+                .OnComplete(() => { canBeDrag = true; });  //向下移动
         }
 
     }
