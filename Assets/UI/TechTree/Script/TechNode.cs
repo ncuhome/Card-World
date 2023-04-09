@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections;
+
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,11 +18,13 @@ public class TechNode : MonoBehaviour
             return true;
         }
         else        //没有解锁
+
         {
             return false;
         }
     }
     public void UnlockIt() //点击解锁这个科技
+
     {
         int count = 0;
         for (int i = 0; i < frontTechnology.Count; i++)

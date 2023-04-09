@@ -21,6 +21,6 @@ public class LightController : MonoBehaviour
         {
             time -= 1 / rotateSpeed;
         }
-        lightCenter.eulerAngles = new Vector3(0, 0, -time * rotateSpeed * 360);
+        lightCenter.eulerAngles = new Vector3(0, time * rotateSpeed * 360, -90);
     }
 }

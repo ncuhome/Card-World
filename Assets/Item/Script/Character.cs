@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum CharacterState { idle, wait, walk, work, gather, build }
+public enum CharacterState { idle, wait, walk, work, gather, build, sleep }
 public enum SpecialSkill { none = -1, mining, building, farming, grazing, domestication, researching }
 public class Character : MonoBehaviour
 {
@@ -27,6 +27,8 @@ public class Character : MonoBehaviour
     private Color pixelColor;
     public SpecialSkill specialSkill = SpecialSkill.none;
     public MeshRenderer itemSprite;
+    public bool goHome = false;
+    public Building home;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +58,7 @@ public class Character : MonoBehaviour
 
         AddAge();
         SwitchImage();
+        GoHome();
 
         switch (characterState)
         {
@@ -82,7 +85,10 @@ public class Character : MonoBehaviour
                     //nextQua = oldQua;
                     //angle = Quaternion.Angle(oldQua, targetQua);
                     //Debug.Log("Start" + targetQua + " " + nextQua + " " + transform.rotation + " " + transform.eulerAngles);
-                    turnSpeed = Mathf.Abs(turnSpeed) * angle / Mathf.Abs(angle);
+                    if (angle != 0)
+                    {
+                        turnSpeed = Mathf.Abs(turnSpeed) * angle / Mathf.Abs(angle);
+                    }
                     time = 0;
                     characterState = CharacterState.wait;
                 }
@@ -114,7 +120,11 @@ public class Character : MonoBehaviour
                 {
                     time = 0;
                     transform.rotation = targetQua;
-                    if (foundResource)
+                    if (goHome)
+                    {
+                        characterState = CharacterState.sleep;
+                    }
+                    else if (foundResource)
                     {
                         characterState = CharacterState.gather;
                     }
@@ -158,6 +168,12 @@ public class Character : MonoBehaviour
                     characterState = CharacterState.idle;
                 }
                 break;
+            case CharacterState.sleep:
+                if (goHome == false)
+                {
+                    characterState = CharacterState.idle;
+                }
+                break;
         }
         //Debug.DrawLine(Vector3.zero, oldVec, Color.green);
         //Debug.DrawLine(Vector3.zero, targetVec, Color.blue);
@@ -179,7 +195,7 @@ public class Character : MonoBehaviour
         return true;
     }
 
-    public void WalkToTargetEuler(Quaternion newTargetQua)
+    public void WalkToTargetQua(Quaternion newTargetQua)
     {
         int newTargetBlock = BlockSystem.Instance.GetBlockNum(center.position, newTargetQua);
         if (RoadCanMove(newTargetBlock))
@@ -189,9 +205,12 @@ public class Character : MonoBehaviour
             axisVec = Vector3.Cross(oldVec, targetVec);
             oldQua = transform.rotation;
             targetQua = newTargetQua;
-            Debug.Log("TargetQua:" + targetQua);
+            //Debug.Log("TargetQua:" + targetQua);
             angle = Vector3.Angle(oldVec, targetVec);
-            turnSpeed = Mathf.Abs(turnSpeed) * angle / Mathf.Abs(angle);
+            if (angle != 0)
+            {
+                turnSpeed = Mathf.Abs(turnSpeed) * angle / Mathf.Abs(angle);
+            }
             time = 0;
             characterState = CharacterState.wait;
         }
@@ -205,7 +224,11 @@ public class Character : MonoBehaviour
 
     public void AddAge()
     {
-        if ((ColorSystem.ColorExt.Difference(pixelColor, ColorSystem.Instance.colors[1]) < 0.01f)
+        if (goHome)
+        {
+            ageSpeed = 0f;
+        }
+        else if ((ColorSystem.ColorExt.Difference(pixelColor, ColorSystem.Instance.colors[1]) < 0.01f)
          || (ColorSystem.ColorExt.Difference(pixelColor, ColorSystem.Instance.colors[3]) < 0.01f))
         {
             ageSpeed = 1f;
@@ -230,6 +253,25 @@ public class Character : MonoBehaviour
         else
         {
             itemSprite.material = CharacterSystem.Instance.specialMaterials[(int)specialSkill];
+        }
+    }
+
+    public void GoHome()
+    {
+        if (goToBuild) { return; }
+        home = BuildingSystem.Instance.FindNearBuilding(transform);
+        if (home == null) { return; }
+        if (home.GetComponent<LightProbes>().illumination == Illumination.day)
+        {
+            goHome = false;
+        }
+        else
+        {
+            if (goHome == false)
+            {
+                WalkToTargetQua(home.transform.rotation);
+            }
+            goHome = true;
         }
     }
 

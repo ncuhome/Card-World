@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum ResourceType { Wood, Stone, Water, Porphyry, Flint, Clay, GypsumStone, Granite, IronOre, GoldOre, BronzeOre, CoalMine, OilVent }
 public class Resources : MonoBehaviour
 {
     private bool isResource;
     public bool isGathering;
+    public ResourceType resourceType = ResourceType.Wood;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,11 +20,11 @@ public class Resources : MonoBehaviour
         {
             isResource = false;
         }
-    }   
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (!isResource) {return;}
+        if (!isResource) { return; }
     }
 }
