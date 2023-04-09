@@ -2,7 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum SpecialBuilding { none = -1 }
+public enum BuildingType
+{
+    Cave, GrassHouse, SheepPen, FishingFacility, OriginalFarmland, SmallDock, Stonehenge, PotteryTurntable, TheFire, School,
+    StoneHouse, LongHouse, UrbanHousing, Pier, Tower, Farm, AlchemyInstitute, Castle, LargeFleet, SmallMetalWorkshop,
+    ConcreteBuilding, Villa, CourtyardHouse, Observatory, ModernFarm, RocketLaunchBase, MetalSmelter, NuclearPowerPlant,SteamCastle,GliderAirports
+}
 public class Building : MonoBehaviour
 {
     private bool isBuilding;
@@ -10,7 +15,7 @@ public class Building : MonoBehaviour
     private float time;
     public int population;
     public MeshRenderer itemSprite;
-    public SpecialBuilding specialBuilding = SpecialBuilding.none;
+    public BuildingType buildingType = BuildingType.Cave;
     public bool stopGenerate = false;
     public int generatePopulation;
     // Start is called before the first frame update
@@ -49,13 +54,6 @@ public class Building : MonoBehaviour
 
     public void SwitchImage()
     {
-        if (specialBuilding == SpecialBuilding.none)
-        {
-            itemSprite.material = BuildingSystem.Instance.eraMaterials[(int)EraSystem.Instance.era];
-        }
-        else
-        {
-            itemSprite.material = BuildingSystem.Instance.specialMaterials[(int)specialBuilding];
-        }
+
     }
 }
