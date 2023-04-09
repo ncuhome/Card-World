@@ -5,8 +5,10 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class RedCard : AccidentRangeUsageCard
+public class 灌溉科技卡 : Card
 {
-
-
+    public override void BeUse()
+    {
+        早期农业.instance.ImmediateUnlockIt();
+    }
 }

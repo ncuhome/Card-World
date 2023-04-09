@@ -1,9 +1,10 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CardManger : MonoBehaviour
 {
+    [SerializeField]private GameObject[] AllCard = new GameObject[25];
     public GameObject normalCard;
     public GameObject redCard;
     public static CardManger instance;
@@ -15,7 +16,7 @@ public class CardManger : MonoBehaviour
         }
     }
 
-    public void DealCard()  //·¢ÅÆ
+    public void DealCard()  //å‘ç‰Œ
     {
         if (CardPack.cardPack.Count < 6)
         {
@@ -23,13 +24,13 @@ public class CardManger : MonoBehaviour
             int a = Random.Range(0, 2);
             if (a == 0)
             {
-                newCard = Instantiate(this.normalCard);
+                newCard = Instantiate(AllCard[23]);
             }
             else
             {
-                newCard = Instantiate(this.redCard);
+                newCard = Instantiate(AllCard[18]);
             }
-            newCard.transform.SetParent(GameObject.Find("Card pack").transform);  //ÉèÖÃ¸¸ÀàÎª¿¨°ü
+            newCard.transform.SetParent(GameObject.Find("Card pack").transform);  //è®¾ç½®çˆ¶ç±»ä¸ºå¡åŒ…
             newCard.transform.localScale = Vector2.zero;
         }
     }
