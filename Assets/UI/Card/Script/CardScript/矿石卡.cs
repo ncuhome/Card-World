@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class RedCard : AccidentRangeUsageCard
+public class 矿石卡 : RangeUsageCard
 {
 
 

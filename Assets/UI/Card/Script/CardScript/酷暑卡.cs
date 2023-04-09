@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class RedCard : AccidentRangeUsageCard
+public class 酷暑卡 : RangeUsageCard
 {
 
 
