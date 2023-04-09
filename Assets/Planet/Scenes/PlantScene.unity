@@ -566,7 +566,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceInBlock: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   regenerationDuration: 5
-  resourceNum: 0
+  resourceDatas:
+  - name: "\u6728\u5934"
+    resourceType: 0
+    resourceNum: 0
+  - name: "\u77F3\u5934"
+    resourceType: 1
+    resourceNum: 0
+  - name: "\u6C34\u8D44\u6E90"
+    resourceType: 2
+    resourceNum: 0
+  - name: "\u6591\u5CA9"
+    resourceType: 3
+    resourceNum: 0
+  - name: "\u71E7\u77F3"
+    resourceType: 4
+    resourceNum: 0
+  - name: "\u9ECF\u571F"
+    resourceType: 5
+    resourceNum: 0
+  - name: "\u77F3\u818F\u77F3"
+    resourceType: 6
+    resourceNum: 0
+  - name: "\u82B1\u5C97\u5CA9"
+    resourceType: 7
+    resourceNum: 0
+  - name: "\u94C1\u77FF"
+    resourceType: 8
+    resourceNum: 0
+  - name: "\u91D1\u77FF"
+    resourceType: 9
+    resourceNum: 0
+  - name: "\u9752\u94DC\u77FF"
+    resourceType: 10
+    resourceNum: 0
+  - name: "\u7164\u70AD\u77FF"
+    resourceType: 11
+    resourceNum: 0
+  - name: "\u77F3\u6CB9"
+    resourceType: 12
+    resourceNum: 0
   center: {fileID: 1555151207}
 --- !u!114 &912914641
 MonoBehaviour:
@@ -1610,7 +1649,1357 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 2
-  targetResource: 4
+  buildingDatas:
+  - name: "\u5C71\u6D1E"
+    buildingType: 0
+    era: 0
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 0
+    isHomeBuilding: 1
+  - name: "\u8349\u6728\u5C4B"
+    buildingType: 1
+    era: 0
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 0
+    isHomeBuilding: 1
+  - name: "\u7F8A\u5708"
+    buildingType: 2
+    era: 0
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 0
+    isHomeBuilding: 0
+  - name: "\u539F\u59CB\u6355\u9C7C\u8BBE\u65BD"
+    buildingType: 3
+    era: 0
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 0
+    isHomeBuilding: 0
+  - name: "\u539F\u59CB\u519C\u7530"
+    buildingType: 4
+    era: 0
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 0
+    isHomeBuilding: 0
+  - name: "\u5C0F\u578B\u7801\u5934"
+    buildingType: 5
+    era: 0
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 0
+    isHomeBuilding: 0
+  - name: "\u5DE8\u77F3\u9635"
+    buildingType: 6
+    era: 0
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 1
+    isHomeBuilding: 0
+  - name: "\u5236\u9676\u8F6C\u76D8"
+    buildingType: 7
+    era: 0
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 1
+    isHomeBuilding: 0
+  - name: "\u706B\u5806"
+    buildingType: 8
+    era: 0
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 1
+    isHomeBuilding: 0
+  - name: "\u5B66\u5802"
+    buildingType: 9
+    era: 0
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 1
+    isHomeBuilding: 0
+  - name: "\u77F3\u5C4B"
+    buildingType: 10
+    era: 1
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 0
+    isHomeBuilding: 1
+  - name: "\u957F\u5C4B"
+    buildingType: 11
+    era: 1
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 0
+    isHomeBuilding: 1
+  - name: "\u57CE\u5E02\u4F4F\u5B85"
+    buildingType: 12
+    era: 1
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 0
+    isHomeBuilding: 1
+  - name: "\u7801\u5934"
+    buildingType: 13
+    era: 1
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 0
+    isHomeBuilding: 0
+  - name: "\u5854\u697C"
+    buildingType: 14
+    era: 1
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 0
+    isHomeBuilding: 0
+  - name: "\u519C\u573A"
+    buildingType: 15
+    era: 1
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 0
+    isHomeBuilding: 0
+  - name: "\u70BC\u91D1\u7814\u7A76\u6240"
+    buildingType: 16
+    era: 1
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 1
+    isHomeBuilding: 0
+  - name: "\u57CE\u5821"
+    buildingType: 14
+    era: 0
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 1
+    isHomeBuilding: 0
+  - name: "\u5927\u578B\u8230\u961F"
+    buildingType: 18
+    era: 1
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 1
+    isHomeBuilding: 0
+  - name: "\u5C0F\u578B\u91D1\u5C5E\u5DE5\u574A"
+    buildingType: 19
+    era: 1
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 1
+    isHomeBuilding: 0
+  - name: "\u6DF7\u51DD\u571F\u5927\u53A6"
+    buildingType: 20
+    era: 2
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 0
+    isHomeBuilding: 1
+  - name: "\u5927\u522B\u91CE"
+    buildingType: 21
+    era: 2
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 0
+    isHomeBuilding: 1
+  - name: "\u56DB\u5408\u9662"
+    buildingType: 22
+    era: 2
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 0
+    isHomeBuilding: 1
+  - name: "\u5929\u6587\u53F0"
+    buildingType: 23
+    era: 2
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 0
+    isHomeBuilding: 0
+  - name: "\u73B0\u4EE3\u5316\u519C\u573A"
+    buildingType: 24
+    era: 2
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 0
+    isHomeBuilding: 0
+  - name: "\u706B\u7BAD\u53D1\u5C04\u57FA\u5730"
+    buildingType: 25
+    era: 2
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 1
+    isHomeBuilding: 0
+  - name: "\u91D1\u5C5E\u51B6\u70BC\u5382"
+    buildingType: 26
+    era: 2
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 1
+    isHomeBuilding: 0
+  - name: "\u6838\u7535\u7AD9"
+    buildingType: 27
+    era: 2
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 1
+    isHomeBuilding: 0
+  - name: "\u84B8\u6C7D\u57CE\u5821"
+    buildingType: 28
+    era: 2
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 1
+    isHomeBuilding: 0
+  - name: "\u6ED1\u7FD4\u673A\u673A\u573A"
+    buildingType: 29
+    era: 2
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
+      resourceNum: 0
+    isSpecialBuilding: 1
+    isHomeBuilding: 0
   builders: 
   buildings:
   - {fileID: 0}
@@ -1715,11 +3104,17 @@ MonoBehaviour:
   - {fileID: 0}
   buildingInBlock: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxBuildingInBlock: 5
-  eraMaterials:
-  - {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
-  - {fileID: 2100000, guid: 1a908373fdba3cd459f6697c3f03e614, type: 2}
+  buildingMaterials:
   - {fileID: 0}
-  specialMaterials:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

@@ -24,11 +24,7 @@ public class CreateController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-
-
-
-        //CreateItem(ItemName.Farmer);
+        TestCreate();
     }
 
     // Update is called once per frame
@@ -125,5 +121,19 @@ public class CreateController : MonoBehaviour
             i++;
         }
         return i;
+    }
+
+
+    public void TestCreate()
+    {
+        int num = Random.Range(0, 24);
+        for (int i = 0; i <= 3; i++)
+        {
+            CreateController.Instance.CreateItem(ItemName.Naked, new int[] { num });
+        }
+        CreateController.Instance.CreateItem(ItemName.City, new int[] { num });
+        BuildingSystem.Instance.buildings[0] = GameObject.Find("Items").transform.GetChild(GameObject.Find("Items").transform.childCount - 1).GetComponent<Building>();
+        BuildingSystem.Instance.buildingInBlock[num]++;
+        BuildingSystem.Instance.buildings[0].stopGenerate = true;
     }
 }

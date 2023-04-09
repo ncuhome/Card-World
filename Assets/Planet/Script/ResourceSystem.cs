@@ -1,14 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[System.Serializable]
+public class ResourceData
+{
+    public string name;
+    public ResourceType resourceType;
+    public int resourceNum;
+}
 public class ResourceSystem : MonoBehaviour
 {
     private float time;
     public int[] resourceInBlock = new int[24];
     public static ResourceSystem Instance = null;
     public float regenerationDuration;
-    public int resourceNum;
+    public ResourceData[] resourceDatas = new ResourceData[13];
     public GameObject center;
     /// <summary>
     /// Awake is called when the script instance is being loaded.
@@ -65,13 +71,13 @@ public class ResourceSystem : MonoBehaviour
     }
 
     //获取资源
-    public void GatherResource(Character character,GameObject resourceObject)
+    public void GatherResource(Character character, GameObject resourceObject)
     {
         int blockNum = resourceObject.GetComponent<Item>().blockNum;
         resourceInBlock[blockNum]--;
-        resourceNum ++;
+        resourceDatas[(int)resourceObject.GetComponent<Resources>().resourceType].resourceNum++;
         DeleteResource(resourceObject);
-        RegenerationResource(BlockSystem.Instance.GetNearBlock(center.transform.position,blockNum));
+        RegenerationResource(BlockSystem.Instance.GetNearBlock(center.transform.position, blockNum));
     }
 
     //删除资源
@@ -86,5 +92,5 @@ public class ResourceSystem : MonoBehaviour
         CreateController.Instance.CreateItem((ItemName)Random.Range(8, 10), blockNum);
     }
 
-    
+
 }
