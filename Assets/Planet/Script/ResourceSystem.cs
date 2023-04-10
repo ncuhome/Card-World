@@ -7,6 +7,7 @@ public class ResourceData
     public string name;
     public ResourceType resourceType;
     public int resourceNum;
+    public Material resourceMaterial;
 }
 public class ResourceSystem : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class ResourceSystem : MonoBehaviour
     public int[] resourceInBlock = new int[24];
     public static ResourceSystem Instance = null;
     public float regenerationDuration;
-    public ResourceData[] resourceDatas = new ResourceData[13];
+    public ResourceData[] resourceDatas = new ResourceData[14];
     public GameObject center;
     /// <summary>
     /// Awake is called when the script instance is being loaded.
@@ -77,7 +78,7 @@ public class ResourceSystem : MonoBehaviour
         resourceInBlock[blockNum]--;
         resourceDatas[(int)resourceObject.GetComponent<Resources>().resourceType].resourceNum++;
         DeleteResource(resourceObject);
-        RegenerationResource(BlockSystem.Instance.GetNearBlock(center.transform.position, blockNum));
+        StartCoroutine(DelayRegeneration(5f));
     }
 
     //删除资源
@@ -86,10 +87,22 @@ public class ResourceSystem : MonoBehaviour
         Destroy(resourceObject);
     }
 
+    public IEnumerator DelayRegeneration(float time)
+    {
+        yield return new WaitForSeconds(time);
+        RegenerationResource();
+    }
+
     public void RegenerationResource(int[] blockNum)
     {
         //Debug.Log("RegenerationResource: Block[] " + blockNum);
         CreateController.Instance.CreateItem((ItemName)Random.Range(8, 10), blockNum);
+    }
+
+    public void RegenerationResource()
+    {
+        //Debug.Log("RegenerationResource: Block[] " + blockNum);
+        CreateController.Instance.CreateItem((ItemName)Random.Range(8, 10));
     }
 
 

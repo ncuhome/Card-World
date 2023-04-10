@@ -9,9 +9,10 @@ public class BuildingData
     public string name;
     public BuildingType buildingType;
     public Era era;
-    public ResourceData[] targetResource = new ResourceData[13];
+    public ResourceData[] targetResource = new ResourceData[14];
     public bool isSpecialBuilding;
     public bool isHomeBuilding;
+    public Material buildingMaterial;
 }
 public class BuildingSystem : MonoBehaviour
 {

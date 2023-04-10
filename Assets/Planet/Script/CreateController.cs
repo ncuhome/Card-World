@@ -106,7 +106,6 @@ public class CreateController : MonoBehaviour
                 itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 0.5f, itemSprite.transform.localScale.y * 0.5f, itemSprite.transform.localScale.z);
                 itemSprite.transform.localPosition = new Vector3(0, 0.515f, 0);
                 itemScript.itemType = ItemType.Resource;
-                ResourceSystem.Instance.resourceInBlock[BlockSystem.Instance.GetBlockNum(Vector3.zero, Quaternion.Euler(targetEuler))]++;
                 item.name = "Resource";
                 break;
         }

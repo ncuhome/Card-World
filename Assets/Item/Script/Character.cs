@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum CharacterState { idle, wait, walk, work, gather, build, sleep }
-public enum SpecialSkill { none = -1, mining, building, farming, grazing, domestication, researching }
+public enum SpecialSkill { None = -1, Hunting, Farming, Stargazing, AstronomicalObservation, Leading, Alchemy, Smelt, Refining, Navigation, OceanSailing, AerospaceResearch, GenerateElectricity }
 public class Character : MonoBehaviour
 {
     public CharacterState characterState = CharacterState.idle;
@@ -25,7 +25,7 @@ public class Character : MonoBehaviour
     public float ageSpeed;
     public int[] homeRange;
     private Color pixelColor;
-    public SpecialSkill specialSkill = SpecialSkill.none;
+    public SpecialSkill specialSkill = SpecialSkill.None;
     public MeshRenderer itemSprite;
     public bool goHome = false;
     public Building home;
@@ -246,7 +246,7 @@ public class Character : MonoBehaviour
 
     public void SwitchImage()
     {
-        if (specialSkill == SpecialSkill.none)
+        if (specialSkill == SpecialSkill.None)
         {
             itemSprite.material = CharacterSystem.Instance.eraMaterials[(int)EraSystem.Instance.era];
         }

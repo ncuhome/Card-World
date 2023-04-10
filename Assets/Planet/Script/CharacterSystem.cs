@@ -1,11 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[System.Serializable]
+public class CharacterData
+{
+    public string name;
+    public SpecialSkill specialSkill;
+    public Era era;
+    public Material characterMaterial;
+}
 public class CharacterSystem : MonoBehaviour
 {
     public static CharacterSystem Instance = null;
     public Character[] characters = new Character[100];
+    public CharacterData[] characterDatas = new CharacterData[20];
     public float maxAge = 50f;
     public Material[] eraMaterials = new Material[3];
     public Material[] specialMaterials = new Material[10];
