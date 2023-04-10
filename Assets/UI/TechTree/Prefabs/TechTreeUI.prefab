@@ -423,7 +423,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8486117288964017598
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1645,6 +1645,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8486117289397916569}
   - component: {fileID: 8486117289397916574}
+  - component: {fileID: 1253458917}
   m_Layer: 0
   m_Name: TechTreeUI
   m_TagString: Untagged
@@ -1681,6 +1682,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6545c9da4e2c7a43bc546c058daf59f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1253458917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8486117289397916575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8021e1e78b2976a45b37714276403422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allTechNode:
+  - {fileID: 8486117290542154073}
+  - {fileID: 8486117289421889644}
+  - {fileID: 8486117290894072234}
+  - {fileID: 8486117290979766689}
+  - {fileID: 8486117289913390564}
+  - {fileID: 8486117289878293103}
+  - {fileID: 8486117289039352346}
+  - {fileID: 8486117289608861785}
+  - {fileID: 8486117289714906551}
+  - {fileID: 8486117290479103873}
+  - {fileID: 8486117290005183402}
+  - {fileID: 8486117289400806357}
+  - {fileID: 8486117289912247928}
+  - {fileID: 8486117290309598805}
+  - {fileID: 8486117290925271543}
+  - {fileID: 8486117290398169677}
+  - {fileID: 8486117290878540365}
+  - {fileID: 8486117290903971127}
+  - {fileID: 8486117289486122369}
+  - {fileID: 8486117289356635580}
+  - {fileID: 8486117290101830460}
+  - {fileID: 8486117289391714248}
+  - {fileID: 8486117289775589538}
+  - {fileID: 8486117289510608931}
+  - {fileID: 8486117290165276680}
+  - {fileID: 8486117290480324135}
+  - {fileID: 8486117290810720852}
 --- !u!1 &8486117289400806379
 GameObject:
   m_ObjectHideFlags: 0
@@ -8299,7 +8340,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -846, y: 453}
+  m_AnchoredPosition: {x: 807, y: 494}
   m_SizeDelta: {x: 172.1373, y: 58.6753}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8486117291009804301

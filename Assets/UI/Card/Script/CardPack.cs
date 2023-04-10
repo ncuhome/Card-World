@@ -1,21 +1,21 @@
-using DG.Tweening;
+ï»¿using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CardPack : MonoBehaviour //¿¨ÅÆ±³°ü
+public class CardPack : MonoBehaviour //å¡ç‰ŒèƒŒåŒ…
 {
     public int cardMaximums = 10;
     public static float cardPackHigh;
     public static List<Card> cardPack = new List<Card>();
-    public static bool canBeDrag = true;  //È«¾Ö¿ØÖÆ¿¨ÅÆÊÇ·ñ¿ÉÒÔ±»ÍÏµ½£¬Èç¹ûÕıÔÚÊ¹ÓÃÊ±ÎŞ·¨ÍÏ¶¯
+    public static bool canBeDrag = true;  //å…¨å±€æ§åˆ¶å¡ç‰Œæ˜¯å¦å¯ä»¥è¢«æ‹–åˆ°ï¼Œå¦‚æœæ­£åœ¨ä½¿ç”¨æ—¶æ— æ³•æ‹–åŠ¨
     private void Awake()
     {
         cardPackHigh = this.transform.position.y;
     }
     public static void AddCard(Card newCard)
     {
-        cardPack.Add(newCard); //Ïò¿¨°üÁĞ±íÖĞ¼ÓÈëĞÂ¿¨ÅÆ
+        cardPack.Add(newCard); //å‘å¡åŒ…åˆ—è¡¨ä¸­åŠ å…¥æ–°å¡ç‰Œ
         SortCard();
     }
     public static void DeleteCard(Card card)
@@ -25,10 +25,12 @@ public class CardPack : MonoBehaviour //¿¨ÅÆ±³°ü
     }
     public static void SortCard()
     {
+        canBeDrag = false;
         float first = -Card.cardSizex / 2 * (cardPack.Count - 1);
         for (int i = 0; i < cardPack.Count; i++)
         {
-            cardPack[i].gameObject.transform.DOLocalMove(new Vector2(first + i * Card.cardSizex, 0), Card.secondTime);
+            cardPack[i].gameObject.transform.DOLocalMove(new Vector2(first + i * Card.cardSizex, 0), Card.secondTime)
+                .OnComplete(() => { canBeDrag = true; });
         }
     }
 }
