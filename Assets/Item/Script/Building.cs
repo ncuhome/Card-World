@@ -6,7 +6,7 @@ public enum BuildingType
 {
     Cave, GrassHouse, SheepPen, FishingFacility, OriginalFarmland, SmallDock, Stonehenge, PotteryTurntable, TheFire, School,
     StoneHouse, LongHouse, UrbanHousing, Pier, Tower, Farm, AlchemyInstitute, Castle, LargeFleet, SmallMetalWorkshop,
-    ConcreteBuilding, Villa, CourtyardHouse, Observatory, ModernFarm, RocketLaunchBase, MetalSmelter, NuclearPowerPlant,SteamCastle,GliderAirports
+    ConcreteBuilding, Villa, CourtyardHouse, Observatory, ModernFarm, RocketLaunchBase, MetalSmelter, NuclearPowerPlant, SteamCastle, GliderAirports
 }
 public class Building : MonoBehaviour
 {
@@ -43,7 +43,7 @@ public class Building : MonoBehaviour
         if (time > 60f / population)
         {
             time = 0;
-            CreateController.Instance.CreateItem(ItemName.Naked, transform.eulerAngles);
+            CreateController.Instance.CreateItem(ItemType.Character, null, null, SpecialSkill.None, transform.eulerAngles);
             generatePopulation++;
         }
         if (generatePopulation > population)

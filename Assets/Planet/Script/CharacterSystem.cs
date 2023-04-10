@@ -8,6 +8,7 @@ public class CharacterData
     public SpecialSkill specialSkill;
     public Era era;
     public Material characterMaterial;
+    public int characterNum;
 }
 public class CharacterSystem : MonoBehaviour
 {
@@ -67,6 +68,18 @@ public class CharacterSystem : MonoBehaviour
                         return builders;
                     }
                 }
+            }
+        }
+        return null;
+    }
+
+    public CharacterData GetCharacter(Era era, SpecialSkill? characterSkill)
+    {
+        foreach (CharacterData characterData in characterDatas)
+        {
+            if ((characterData.era == era)&&(characterData.specialSkill == characterSkill))
+            {
+                return characterData;
             }
         }
         return null;

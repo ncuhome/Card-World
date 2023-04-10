@@ -62,7 +62,7 @@ public class BuildingSystem : MonoBehaviour
                     targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
                 }
                 int buildingNum = GetBuildingNum();
-                CreateController.Instance.CreateItem(ItemName.City, targetEuler);
+                CreateController.Instance.CreateItem(ItemType.Building, null, BuildingType.GrassHouse, null, targetEuler);
                 buildings[buildingNum] = GameObject.Find("Items").transform.GetChild(GameObject.Find("Items").transform.childCount - 1).GetComponent<Building>();
                 buildings[buildingNum].transform.localScale = Vector3.zero;
                 buildings[buildingNum].finishBuilding = false;
