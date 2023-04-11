@@ -1,4 +1,4 @@
-
+﻿
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,15 +10,37 @@ public class TechNode : MonoBehaviour
 
     public bool unlock = false;  //是否已经解锁
 
-    [SerializeField]private List<TechNode> frontTechnology = null;
+    [SerializeField]public List<TechNode> frontTechnology = null;
     public bool DetectUnlocked()  //检查该科技是否已经解锁
     {
         if (unlock)  //已经解锁
         {
             return true;
         }
-        else        //没有解锁
-
+        else         //没有解锁
+        {
+            return false;
+        }
+    }
+    public bool CanBeUnlocked()  //检查该科技的前置科技是否全部被解锁
+    {
+        int count = 0;
+        if (this.frontTechnology == null)
+        {
+            return true;
+        }
+        foreach(TechNode node in this.frontTechnology)
+        {
+            if (node.unlock == true)
+            {
+                count++;
+            }
+        }
+        if (count == frontTechnology.Count)
+        {
+            return true;
+        }
+        else
         {
             return false;
         }
@@ -52,10 +74,6 @@ public class TechNode : MonoBehaviour
         this.gameObject.GetComponent<Image>().color = new Color(255, 0, 0, 0.5f);
         SignUI.instance.DisplayText("你已经解锁" + this.nodeName, 2.5f, Color.blue);
     }
-    //void Start()
-    //{
-    //    nodeName = this.gameObject.name; //名字为搭载脚本的物体的名字
-    //}
 
     void Update()
     {

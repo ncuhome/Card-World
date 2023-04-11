@@ -13,7 +13,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
 
     public static float firstTime = 0.5f;  //抽卡第一阶段时长 变大并展示
 
-    public static float secondTime = 0.4f; //抽卡第二阶段时长 缩小进入卡槽
+    public static float secondTime = 0.3f; //抽卡第二阶段时长 缩小进入卡槽
 
     public static GameObject cardTrash;    //垃圾桶在所有卡牌中都是一个对象
 
