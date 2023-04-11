@@ -20,8 +20,8 @@ public class CardManger : MonoBehaviour
 
     public void DealCard()  //发牌
     {
-        if (CardPack.cardPack.Count < 6)
-        {
+        //if (CardPack.cardPack.Count < 6)
+        //{
             GameObject newCard;
             float allProbability = 0;
             for (int i = 0; i < cardProbability.Length; i++)
@@ -40,7 +40,7 @@ public class CardManger : MonoBehaviour
                     break;
                 }
                 frontProbability += cardProbability[i];
-            }
+ 
         }
             
         //if (CardPack.cardPack.Count < 6)
