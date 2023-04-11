@@ -1,11 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[System.Serializable]
+public class CharacterData
+{
+    public string name;
+    public SpecialSkill specialSkill;
+    public Era era;
+    public Material characterMaterial;
+    public int characterNum;
+}
 public class CharacterSystem : MonoBehaviour
 {
     public static CharacterSystem Instance = null;
     public Character[] characters = new Character[100];
+    public CharacterData[] characterDatas = new CharacterData[20];
     public float maxAge = 50f;
     public Material[] eraMaterials = new Material[3];
     public Material[] specialMaterials = new Material[10];
@@ -59,6 +68,19 @@ public class CharacterSystem : MonoBehaviour
                         return builders;
                     }
                 }
+            }
+        }
+        return null;
+    }
+
+    //根据时代和特殊能力获取对应角色
+    public CharacterData GetCharacter(Era era, SpecialSkill? characterSkill)
+    {
+        foreach (CharacterData characterData in characterDatas)
+        {
+            if ((characterData.era == era)&&(characterData.specialSkill == characterSkill))
+            {
+                return characterData;
             }
         }
         return null;

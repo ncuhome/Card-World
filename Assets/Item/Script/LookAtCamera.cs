@@ -7,9 +7,19 @@ public class LookAtCamera : MonoBehaviour
 {
     [Header("面向的摄像机Camera")]
     public Camera cameraToLookAt;
+    public bool lookAtCamera = true;
 
+    public void Start()
+    {
+        //如果是水资源或者石油或者农田就不旋转
+        if (transform.parent.GetComponent<Resources>().resourceType == ResourceType.Water || transform.parent.GetComponent<Building>().buildingType == BuildingType.Farm) 
+        {
+            lookAtCamera = false;
+        }
+    }
     void Update()
     {
+        if (!lookAtCamera) {return;}
         //若cameraToLookAt为空，则自动选择主摄像机
         if (cameraToLookAt == null)
             cameraToLookAt = Camera.main;

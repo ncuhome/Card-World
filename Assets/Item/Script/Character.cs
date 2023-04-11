@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum CharacterState { idle, wait, walk, work, gather, build, sleep }
-public enum SpecialSkill { none = -1, mining, building, farming, grazing, domestication, researching }
+public enum SpecialSkill { None = -1, Hunting, Farming, Stargazing, AstronomicalObservation, Leading, Alchemy, Smelt, Refining, Navigation, OceanSailing, AerospaceResearch, GenerateElectricity }
 public class Character : MonoBehaviour
 {
     public CharacterState characterState = CharacterState.idle;
@@ -17,7 +17,7 @@ public class Character : MonoBehaviour
     private Vector3 axisVec, targetVec, oldVec;
     public float angle;
     public Item item;
-    public bool foundResource, goToBuild;
+    public bool foundResource, goToBuild, finishBuilding;
     public GameObject resourceObject;
     public int characterNum;
     public GameObject buildingObject;
@@ -25,7 +25,7 @@ public class Character : MonoBehaviour
     public float ageSpeed;
     public int[] homeRange;
     private Color pixelColor;
-    public SpecialSkill specialSkill = SpecialSkill.none;
+    public SpecialSkill specialSkill = SpecialSkill.None;
     public MeshRenderer itemSprite;
     public bool goHome = false;
     public Building home;
@@ -57,7 +57,6 @@ public class Character : MonoBehaviour
 
 
         AddAge();
-        SwitchImage();
         GoHome();
 
         switch (characterState)
@@ -157,15 +156,18 @@ public class Character : MonoBehaviour
                 time += Time.deltaTime;
                 if (time > 5f)
                 {
-                    BuildingSystem.Instance.Build(this);
+                    age += 20f;
                     if (buildingObject != null)
                     {
                         buildingObject.transform.localScale = Vector3.one;
                         buildingObject.GetComponent<Building>().finishBuilding = true;
+                    }
+                    if (buildingObject.GetComponent<Building>().finishBuilding)
+                    {
+                        goToBuild = false;
+                        characterState = CharacterState.idle;
                         buildingObject = null;
                     }
-                    goToBuild = false;
-                    characterState = CharacterState.idle;
                 }
                 break;
             case CharacterState.sleep:
@@ -177,10 +179,11 @@ public class Character : MonoBehaviour
         }
         //Debug.DrawLine(Vector3.zero, oldVec, Color.green);
         //Debug.DrawLine(Vector3.zero, targetVec, Color.blue);
-        Debug.DrawLine(transform.position, transform.rotation * Vector3.up * 1000, Color.yellow);
-        Debug.DrawLine(Vector3.zero, axisVec * 1000, Color.red);
+        // Debug.DrawLine(transform.position, transform.rotation * Vector3.up * 1000, Color.yellow);
+        // Debug.DrawLine(Vector3.zero, axisVec * 1000, Color.red);
     }
 
+    //判断目的地是否在角色活动范围内
     public bool RoadCanMove(int block)
     {
         if (System.Array.IndexOf(homeRange, block) == -1)
@@ -195,6 +198,7 @@ public class Character : MonoBehaviour
         return true;
     }
 
+    //向给定四元数走过去
     public void WalkToTargetQua(Quaternion newTargetQua)
     {
         int newTargetBlock = BlockSystem.Instance.GetBlockNum(center.position, newTargetQua);
@@ -216,12 +220,14 @@ public class Character : MonoBehaviour
         }
     }
 
+    //角色死亡
     public void Die()
     {
         CharacterSystem.Instance.characters[characterNum] = null;
         Destroy(this.gameObject);
     }
 
+    //增加年龄
     public void AddAge()
     {
         if (goHome)
@@ -244,22 +250,11 @@ public class Character : MonoBehaviour
         }
     }
 
-    public void SwitchImage()
-    {
-        if (specialSkill == SpecialSkill.none)
-        {
-            itemSprite.material = CharacterSystem.Instance.eraMaterials[(int)EraSystem.Instance.era];
-        }
-        else
-        {
-            itemSprite.material = CharacterSystem.Instance.specialMaterials[(int)specialSkill];
-        }
-    }
-
+    //根据最近的居住建筑是否被光照判断是否回家
     public void GoHome()
     {
         if (goToBuild) { return; }
-        home = BuildingSystem.Instance.FindNearBuilding(transform);
+        home = BuildingSystem.Instance.FindNearHome(transform);
         if (home == null) { return; }
         if (home.GetComponent<LightProbes>().illumination == Illumination.day)
         {
