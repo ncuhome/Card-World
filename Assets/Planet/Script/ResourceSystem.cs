@@ -37,14 +37,10 @@ public class ResourceSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // time += Time.deltaTime;
-        // if (time > regenerationDuration)
-        // {
-        //     time = 0;
-        //     RegenerationResource(new int[1] { MinResourceBlock() });
-        // }
+        InstantiateByTime();
     }
 
+    //初始化资源
     public void ResourceInitialization()
     {
         time = 0;
@@ -67,6 +63,18 @@ public class ResourceSystem : MonoBehaviour
                     CreateController.Instance.CreateItem(ItemType.Resource, ResourceType.Water, null, null, new int[] { i });
                 }
             }
+        }
+    }
+    //测试用，按时间生成资源
+    public void InstantiateByTime()
+    {
+        time += Time.deltaTime;
+        if (time > regenerationDuration)
+        {
+            time = 0;
+            RegenerationResource(ResourceType.Wood);
+            RegenerationResource(ResourceType.Stone);
+            RegenerationResource(ResourceType.Water);
         }
     }
 
@@ -92,33 +100,35 @@ public class ResourceSystem : MonoBehaviour
         int blockNum = resourceObject.GetComponent<Item>().blockNum;
         //resourceInBlock[blockNum]--;
         resourceDatas[(int)resourceObject.GetComponent<Resources>().resourceType].resourceNum++;
-        // DeleteResource(resourceObject);
-        // StartCoroutine(DelayRegeneration(5f));
+        DeleteResource(resourceObject);
+        StartCoroutine(DelayRegeneration(resourceObject.GetComponent<Resources>().resourceType,5f));
     }
 
-    // //删除资源
-    // public void DeleteResource(GameObject resourceObject)
-    // {
-    //     Destroy(resourceObject);
-    // }
+    //删除资源
+    public void DeleteResource(GameObject resourceObject)
+    {
+        Destroy(resourceObject);
+    }
 
-    // public IEnumerator DelayRegeneration(float time)
-    // {
-    //     yield return new WaitForSeconds(time);
-    //     RegenerationResource();
-    // }
+    //延迟重新添加资源
+    public IEnumerator DelayRegeneration(ResourceType resourceType,float time)
+    {
+        yield return new WaitForSeconds(time);
+        RegenerationResource(resourceType);
+    }
 
-    // public void RegenerationResource(int[] blockNum)
-    // {
-    //     //Debug.Log("RegenerationResource: Block[] " + blockNum);
-    //     CreateController.Instance.CreateItem((ItemName)Random.Range(8, 10), blockNum);
-    // }
-
-    // public void RegenerationResource()
-    // {
-    //     //Debug.Log("RegenerationResource: Block[] " + blockNum);
-    //     CreateController.Instance.CreateItem((ItemName)Random.Range(8, 10));
-    // }
+    //在指定区块生成指定资源
+    public void RegenerationResource(ResourceType resourceType, int[] blockNum)
+    {
+        //Debug.Log("RegenerationResource: Block[] " + blockNum);
+        CreateController.Instance.CreateItem(ItemType.Resource, resourceType, null, null, blockNum);
+    }
+    //在随机区块生成指定资源
+    public void RegenerationResource(ResourceType resourceType)
+    {
+        //Debug.Log("RegenerationResource: Block[] " + blockNum);
+        CreateController.Instance.CreateItem(ItemType.Resource, resourceType, null, null);
+    }
 
 
 }

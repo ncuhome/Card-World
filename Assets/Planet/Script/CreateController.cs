@@ -65,6 +65,8 @@ public class CreateController : MonoBehaviour
 
         Item itemScript = item.GetComponent<Item>();
         Character character = item.GetComponent<Character>();
+        Resources resources = item.GetComponent<Resources>();
+        Building building = item.GetComponent<Building>();
 
         switch (itemType)
         {
@@ -74,6 +76,25 @@ public class CreateController : MonoBehaviour
                 itemScript.itemType = ItemType.Resource;
                 itemSprite.material = ResourceSystem.Instance.resourceDatas[(int)resourceType].resourceMaterials[0];
                 item.name = ResourceSystem.Instance.resourceDatas[(int)resourceType].name;
+                resources.resourceType = (ResourceType)resourceType;
+                switch (resourceType)
+                {
+                    case ResourceType.Wood:
+                        if (ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[1]) < 0.01f)
+                        {
+                            itemSprite.material = ResourceSystem.Instance.resourceDatas[(int)resourceType].resourceMaterials[0];
+                        }
+                        else if (ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[2]) < 0.01f)
+                        {
+                            int random = Random.Range(1,4);
+                            itemSprite.material = ResourceSystem.Instance.resourceDatas[(int)resourceType].resourceMaterials[random];
+                        }
+                        else if (ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[3]) < 0.01f)
+                        {
+                            itemSprite.material = ResourceSystem.Instance.resourceDatas[(int)resourceType].resourceMaterials[4];
+                        }
+                        break;
+                }
                 break;
             case ItemType.Building:
                 itemSprite.transform.localPosition = new Vector3(0, 0.54f, 0);
