@@ -72,13 +72,14 @@ public class CreateController : MonoBehaviour
         {
             case ItemType.Resource:
                 itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 0.5f, itemSprite.transform.localScale.y * 0.5f, itemSprite.transform.localScale.z);
-                itemSprite.transform.localPosition = new Vector3(0, 0.515f, 0);
+                itemSprite.transform.localPosition = new Vector3(0, 0.505f, 0);
                 itemScript.itemType = ItemType.Resource;
                 itemSprite.material = ResourceSystem.Instance.resourceDatas[(int)resourceType].resourceMaterials[0];
                 item.name = ResourceSystem.Instance.resourceDatas[(int)resourceType].name;
                 resources.resourceType = (ResourceType)resourceType;
                 switch (resourceType)
                 {
+                    //分地形生成木头资源
                     case ResourceType.Wood:
                         if (ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[1]) < 0.01f)
                         {
@@ -86,25 +87,39 @@ public class CreateController : MonoBehaviour
                         }
                         else if (ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[2]) < 0.01f)
                         {
-                            int random = Random.Range(1,4);
-                            itemSprite.material = ResourceSystem.Instance.resourceDatas[(int)resourceType].resourceMaterials[random];
+                            int randomWood = Random.Range(1, 4);
+                            itemSprite.material = ResourceSystem.Instance.resourceDatas[(int)resourceType].resourceMaterials[randomWood];
                         }
                         else if (ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[3]) < 0.01f)
                         {
                             itemSprite.material = ResourceSystem.Instance.resourceDatas[(int)resourceType].resourceMaterials[4];
                         }
                         break;
+                    //随机生成水资源
+                    case ResourceType.Water:
+                        int randomWater = Random.Range(0, 2);
+                        itemSprite.transform.localPosition = new Vector3(0, 0.5f, 0);
+                        itemSprite.material = ResourceSystem.Instance.resourceDatas[(int)resourceType].resourceMaterials[randomWater];
+                        if (randomWater == 0)
+                        {
+                            itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 2, itemSprite.transform.localScale.z, itemSprite.transform.localScale.y);
+                        }
+                        else
+                        {
+                            itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x, itemSprite.transform.localScale.z, itemSprite.transform.localScale.y);
+                        }
+                        break;
                 }
                 break;
             case ItemType.Building:
-                itemSprite.transform.localPosition = new Vector3(0, 0.54f, 0);
+                itemSprite.transform.localPosition = new Vector3(0, 0.52f, 0);
                 itemScript.itemType = ItemType.Building;
                 itemSprite.material = BuildingSystem.Instance.buildingDatas[(int)buildingType].buildingMaterial;
                 item.name = BuildingSystem.Instance.buildingDatas[(int)buildingType].name;
                 break;
             case ItemType.Character:
                 itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 0.5f, itemSprite.transform.localScale.y * 0.5f, itemSprite.transform.localScale.z);
-                itemSprite.transform.localPosition = new Vector3(0, 0.51f, 0);
+                itemSprite.transform.localPosition = new Vector3(0, 0.505f, 0);
                 itemScript.itemType = ItemType.Character;
                 character.characterNum = GetCharacterNum();
                 CharacterSystem.Instance.characters[GetCharacterNum()] = character;
@@ -125,7 +140,7 @@ public class CreateController : MonoBehaviour
         return i;
     }
 
-
+    //调试用初始化
     public void TestCreate()
     {
         int num = Random.Range(0, 24);

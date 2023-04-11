@@ -73,6 +73,7 @@ public class CharacterSystem : MonoBehaviour
         return null;
     }
 
+    //根据时代和特殊能力获取对应角色
     public CharacterData GetCharacter(Era era, SpecialSkill? characterSkill)
     {
         foreach (CharacterData characterData in characterDatas)

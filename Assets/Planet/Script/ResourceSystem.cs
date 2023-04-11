@@ -64,6 +64,11 @@ public class ResourceSystem : MonoBehaviour
                 }
             }
         }
+        for (int i = 3; i < 13; i++)
+        {
+            Debug.Log((ResourceType)i);
+            CreateController.Instance.CreateItem(ItemType.Resource, (ResourceType)i, null, null);
+        }
     }
     //测试用，按时间生成资源
     public void InstantiateByTime()
@@ -101,7 +106,7 @@ public class ResourceSystem : MonoBehaviour
         //resourceInBlock[blockNum]--;
         resourceDatas[(int)resourceObject.GetComponent<Resources>().resourceType].resourceNum++;
         DeleteResource(resourceObject);
-        StartCoroutine(DelayRegeneration(resourceObject.GetComponent<Resources>().resourceType,5f));
+        StartCoroutine(DelayRegeneration(resourceObject.GetComponent<Resources>().resourceType, 5f));
     }
 
     //删除资源
@@ -111,7 +116,7 @@ public class ResourceSystem : MonoBehaviour
     }
 
     //延迟重新添加资源
-    public IEnumerator DelayRegeneration(ResourceType resourceType,float time)
+    public IEnumerator DelayRegeneration(ResourceType resourceType, float time)
     {
         yield return new WaitForSeconds(time);
         RegenerationResource(resourceType);
