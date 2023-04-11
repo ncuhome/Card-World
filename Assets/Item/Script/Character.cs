@@ -157,7 +157,7 @@ public class Character : MonoBehaviour
                 time += Time.deltaTime;
                 if (time > 5f)
                 {
-                    BuildingSystem.Instance.Build(this);
+                    age += 20f;
                     if (buildingObject != null)
                     {
                         buildingObject.transform.localScale = Vector3.one;

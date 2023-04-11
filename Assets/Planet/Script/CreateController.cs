@@ -20,7 +20,7 @@ public class CreateController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //TestCreate();
+        TestCreate();
     }
 
     // Update is called once per frame
