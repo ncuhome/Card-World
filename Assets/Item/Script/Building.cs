@@ -6,7 +6,8 @@ public enum BuildingType
 {
     Cave, GrassHouse, SheepPen, FishingFacility, OriginalFarmland, SmallDock, Stonehenge, PotteryTurntable, TheFire, School,
     StoneHouse, LongHouse, UrbanHousing, Pier, Tower, Farm, AlchemyInstitute, Castle, LargeFleet, SmallMetalWorkshop,
-    ConcreteBuilding, Villa, CourtyardHouse, Observatory, ModernFarm, RocketLaunchBase, MetalSmelter, NuclearPowerPlant, SteamCastle, GliderAirports
+    ConcreteBuilding, Villa, CourtyardHouse, Observatory, ModernFarm, RocketLaunchBase, MetalSmelter, NuclearPowerPlant, SteamCastle, GliderAirports,
+    OilVent
 }
 public class Building : MonoBehaviour
 {
@@ -37,7 +38,6 @@ public class Building : MonoBehaviour
     void Update()
     {
         if (!isBuilding) { return; }
-        SwitchImage();
         if (stopGenerate) { return; }
         time += Time.deltaTime;
         if (time > 60f / population)
@@ -50,10 +50,5 @@ public class Building : MonoBehaviour
         {
             stopGenerate = true;
         }
-    }
-
-    public void SwitchImage()
-    {
-
     }
 }

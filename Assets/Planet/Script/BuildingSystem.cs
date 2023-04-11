@@ -21,7 +21,7 @@ public class BuildingSystem : MonoBehaviour
     public int size; //需求人数
     public BuildingData[] buildingDatas = new BuildingData[30]; //构建建筑的数据库
     public int[] builders;
-    public Building[] buildings = new Building[120]; 
+    public Building[] buildings = new Building[120];
     public int[] buildingInBlock = new int[24];
     public int maxBuildingInBlock;
     // Start is called before the first frame update
@@ -81,9 +81,9 @@ public class BuildingSystem : MonoBehaviour
             buildings[buildingNum] = GameObject.Find("Items").transform.GetChild(GameObject.Find("Items").transform.childCount - 1).GetComponent<Building>();
             buildings[buildingNum].transform.localScale = Vector3.zero;
             buildings[buildingNum].finishBuilding = false;
-            if (!buildingDatas[(int)buildings[buildingNum].buildingType].isHomeBuilding) {buildings[buildingNum].stopGenerate = true;}
-            buildingInBlock[CharacterSystem.Instance.characters[builders[0]].item.blockNum]++; 
-            
+            if (!buildingDatas[(int)buildings[buildingNum].buildingType].isHomeBuilding) { buildings[buildingNum].stopGenerate = true; }
+            buildingInBlock[CharacterSystem.Instance.characters[builders[0]].item.blockNum]++;
+
             //减少建造需求的对应资源
             for (int j = 0; j < 13; j++)
             {
@@ -118,6 +118,7 @@ public class BuildingSystem : MonoBehaviour
         foreach (Building building in buildings)
         {
             if (building == null) { continue; }
+            //Debug.Log(building.name + " " + building.buildingType + " " + buildingDatas[(int)building.buildingType].isHomeBuilding);
             if (!buildingDatas[(int)building.buildingType].isHomeBuilding) { continue; }
             float angle = Vector3.Angle(itemTransform.rotation * Vector3.up, building.transform.rotation * Vector3.up);
             if (angle < minAngle)
@@ -142,7 +143,7 @@ public class BuildingSystem : MonoBehaviour
             }
             else
             {
-                if (Random.Range(0f,1f) < 0.3f)
+                if (Random.Range(0f, 1f) < 0.3f)
                 {
                     Destroy(buildings[i].gameObject);
                     buildings[i] = null;

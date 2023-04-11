@@ -115,7 +115,15 @@ public class CreateController : MonoBehaviour
                 itemSprite.transform.localPosition = new Vector3(0, 0.52f, 0);
                 itemScript.itemType = ItemType.Building;
                 itemSprite.material = BuildingSystem.Instance.buildingDatas[(int)buildingType].buildingMaterial;
+                building.buildingType = (BuildingType)buildingType;
                 item.name = BuildingSystem.Instance.buildingDatas[(int)buildingType].name;
+                switch (buildingType)
+                {
+                    case BuildingType.Farm:
+                        itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x, itemSprite.transform.localScale.z, itemSprite.transform.localScale.y);
+                        item.transform.localPosition = new Vector3(0, 0.5f, 0);
+                        break;
+                }
                 break;
             case ItemType.Character:
                 itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 0.5f, itemSprite.transform.localScale.y * 0.5f, itemSprite.transform.localScale.z);
