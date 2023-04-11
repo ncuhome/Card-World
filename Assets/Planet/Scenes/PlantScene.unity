@@ -482,17 +482,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 7820871686020335004, guid: b7155749918d7254499a42f6ff0f7f38, type: 3}
-  materials:
-  - {fileID: 2100000, guid: ce643dffc4988134dabded25a4d85175, type: 2}
-  - {fileID: 2100000, guid: 8ffa3cb87769cbb40b04a0246aba5234, type: 2}
-  - {fileID: 2100000, guid: 6c597e60cc46c0d4bafc0c9fca4d2a31, type: 2}
-  - {fileID: 2100000, guid: 154d3d387ab4448489d8b12f1d4a486d, type: 2}
-  - {fileID: 2100000, guid: 6f5f3757bfacc7849853e19acf378bc0, type: 2}
-  - {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
-  - {fileID: 2100000, guid: a9f1a3ed18f1e6845b3db9b412be4cf6, type: 2}
-  - {fileID: 2100000, guid: 1a908373fdba3cd459f6697c3f03e614, type: 2}
-  - {fileID: 2100000, guid: f592c6f6e74b75f458baca7a26f76ed8, type: 2}
-  - {fileID: 2100000, guid: a237d44ee34d69f49adcfe041f46b055, type: 2}
   itemParent: {fileID: 1968171382}
   itemSprite: {fileID: 0}
 --- !u!4 &912914636
@@ -564,48 +553,83 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c9f225d2fc190a4e9af13f1e418df91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceInBlock: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   regenerationDuration: 5
   resourceDatas:
   - name: "\u6728\u5934"
     resourceType: 0
     resourceNum: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: a315f842e8650264b98d6832d2e1a512, type: 2}
+    - {fileID: 2100000, guid: 1d9af6f0ca204c644a353e93dd51b60f, type: 2}
+    - {fileID: 2100000, guid: 1d7e58e1e6f61ea4db2e20f28f9fa2e1, type: 2}
+    - {fileID: 2100000, guid: 41c19775a0cf76b439ab48bc7bc8f2c8, type: 2}
+    - {fileID: 2100000, guid: c508dd7a75c53204196acdae7da40656, type: 2}
   - name: "\u77F3\u5934"
     resourceType: 1
     resourceNum: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: 90be2108c2c302740b4d03c36bdfebe7, type: 2}
   - name: "\u6C34\u8D44\u6E90"
     resourceType: 2
     resourceNum: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: 5f99f8c0643b2e7479401ade2e596705, type: 2}
+    - {fileID: 2100000, guid: dc1c98a0fb518e54fa6cefe5a2f93531, type: 2}
   - name: "\u6591\u5CA9"
     resourceType: 3
     resourceNum: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: 8da8c53f387f455459c5b8a373d4dc03, type: 2}
   - name: "\u71E7\u77F3"
     resourceType: 4
     resourceNum: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: b2f85a9968931df47aa07e2d5e501c36, type: 2}
   - name: "\u9ECF\u571F"
     resourceType: 5
     resourceNum: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: 95c2762f65f791e458aa102d1efd63bb, type: 2}
   - name: "\u77F3\u818F\u77F3"
     resourceType: 6
     resourceNum: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: 1a908373fdba3cd459f6697c3f03e614, type: 2}
   - name: "\u82B1\u5C97\u5CA9"
     resourceType: 7
     resourceNum: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: 3f7ce1ce2f388d54abffee928d6b5295, type: 2}
   - name: "\u94C1\u77FF"
     resourceType: 8
     resourceNum: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: 3a68b0c9b35c8a14ab0c2f220de35517, type: 2}
   - name: "\u91D1\u77FF"
     resourceType: 9
     resourceNum: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: 4604462d3fb7f804793a9509d51a8009, type: 2}
   - name: "\u9752\u94DC\u77FF"
     resourceType: 10
     resourceNum: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: 367ff12321ca31643abca448bf69afc4, type: 2}
   - name: "\u7164\u70AD\u77FF"
     resourceType: 11
     resourceNum: 0
-  - name: "\u77F3\u6CB9"
+    resourceMaterials:
+    - {fileID: 2100000, guid: 586899950f85e6042aee5ed796c2cfa4, type: 2}
+  - name: "\u949B\u77FF"
     resourceType: 12
     resourceNum: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: 138114a3c8a3dd14e8b80bff97428452, type: 2}
+  - name: "\u77F3\u6CB9"
+    resourceType: 13
+    resourceNum: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: 1f937ae0f77e4d143b41b185771133df, type: 2}
   center: {fileID: 1555151207}
 --- !u!114 &912914641
 MonoBehaviour:
@@ -1620,6 +1644,107 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  characterDatas:
+  - name: "\u666E\u901A\u539F\u59CB\u4EBA"
+    specialSkill: -1
+    era: 0
+    characterMaterial: {fileID: 2100000, guid: 6f5f3757bfacc7849853e19acf378bc0, type: 2}
+    characterNum: 0
+  - name: "\u72E9\u730E\u539F\u59CB\u4EBA"
+    specialSkill: 0
+    era: 0
+    characterMaterial: {fileID: 2100000, guid: 154d3d387ab4448489d8b12f1d4a486d, type: 2}
+    characterNum: 1
+  - name: "\u539F\u59CB\u519C\u6C11"
+    specialSkill: 1
+    era: 0
+    characterMaterial: {fileID: 2100000, guid: 6c597e60cc46c0d4bafc0c9fca4d2a31, type: 2}
+    characterNum: 2
+  - name: "\u539F\u59CB\u89C2\u661F\u8005"
+    specialSkill: 2
+    era: 0
+    characterMaterial: {fileID: 0}
+    characterNum: 3
+  - name: "\u90E8\u843D\u914B\u957F"
+    specialSkill: 4
+    era: 0
+    characterMaterial: {fileID: 0}
+    characterNum: 4
+  - name: "\u666E\u901A\u53E4\u5178\u4EBA"
+    specialSkill: -1
+    era: 1
+    characterMaterial: {fileID: 0}
+    characterNum: 5
+  - name: "\u70BC\u91D1\u672F\u5E08"
+    specialSkill: 5
+    era: 1
+    characterMaterial: {fileID: 0}
+    characterNum: 6
+  - name: "\u57CE\u4E3B"
+    specialSkill: 4
+    era: 1
+    characterMaterial: {fileID: 0}
+    characterNum: 7
+  - name: "\u8230\u957F"
+    specialSkill: 9
+    era: 1
+    characterMaterial: {fileID: 0}
+    characterNum: 8
+  - name: "\u6C34\u624B"
+    specialSkill: 8
+    era: 1
+    characterMaterial: {fileID: 0}
+    characterNum: 9
+  - name: "\u53E4\u5178\u519C\u6C11"
+    specialSkill: 1
+    era: 1
+    characterMaterial: {fileID: 0}
+    characterNum: 10
+  - name: "\u5929\u6587\u5B66\u5BB6"
+    specialSkill: 3
+    era: 1
+    characterMaterial: {fileID: 0}
+    characterNum: 11
+  - name: "\u91D1\u5C5E\u5DE5\u5320"
+    specialSkill: 6
+    era: 1
+    characterMaterial: {fileID: 0}
+    characterNum: 12
+  - name: "\u666E\u901A\u4EBA"
+    specialSkill: -1
+    era: 2
+    characterMaterial: {fileID: 0}
+    characterNum: 13
+  - name: "\u519B\u8230\u957F"
+    specialSkill: 9
+    era: 2
+    characterMaterial: {fileID: 0}
+    characterNum: 14
+  - name: "\u6D77\u5458"
+    specialSkill: 8
+    era: 2
+    characterMaterial: {fileID: 0}
+    characterNum: 15
+  - name: "\u51B6\u70BC\u5DE5\u4EBA"
+    specialSkill: 7
+    era: 2
+    characterMaterial: {fileID: 0}
+    characterNum: 16
+  - name: "\u7535\u529B\u5DE5\u4EBA"
+    specialSkill: 11
+    era: 2
+    characterMaterial: {fileID: 0}
+    characterNum: 17
+  - name: "\u73B0\u4EE3\u5316\u519C\u6C11"
+    specialSkill: 1
+    era: 2
+    characterMaterial: {fileID: 0}
+    characterNum: 18
+  - name: "\u592A\u7A7A\u79D1\u5B66\u5BB6"
+    specialSkill: 10
+    era: 2
+    characterMaterial: {fileID: 0}
+    characterNum: 19
   maxAge: 50
   eraMaterials:
   - {fileID: 2100000, guid: 6f5f3757bfacc7849853e19acf378bc0, type: 2}
@@ -1656,270 +1781,384 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 0
+      resourceNum: 100000
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 0
+      resourceNum: 100000
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      resourceNum: 0
+      resourceNum: 100000
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
-      resourceNum: 0
+      resourceNum: 100000
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
-      resourceNum: 0
+      resourceNum: 100000
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
-      resourceNum: 0
+      resourceNum: 100000
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      resourceNum: 0
+      resourceNum: 100000
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      resourceNum: 0
+      resourceNum: 100000
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
-      resourceNum: 0
+      resourceNum: 100000
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
-      resourceNum: 0
+      resourceNum: 100000
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      resourceNum: 0
+      resourceNum: 100000
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      resourceNum: 0
+      resourceNum: 100000
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 13
+      resourceNum: 100000
+      resourceMaterials: []
     - name: "\u77F3\u6CB9"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 1
+    buildingMaterial: {fileID: 2100000, guid: b62d4191aff1dbc4592f49ff922b30fb, type: 2}
+    canBuild: 0
   - name: "\u8349\u6728\u5C4B"
     buildingType: 1
     era: 0
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 0
+      resourceNum: 1
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 1
+    buildingMaterial: {fileID: 2100000, guid: 9ac30ccab801e244facbbe1c3aa20ca0, type: 2}
+    canBuild: 0
   - name: "\u7F8A\u5708"
     buildingType: 2
     era: 0
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 0
+      resourceNum: 1
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 89ca4ed0035484f41be5aa2b0a3a1bac, type: 2}
+    canBuild: 0
   - name: "\u539F\u59CB\u6355\u9C7C\u8BBE\u65BD"
     buildingType: 3
     era: 0
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: ada6539085386874fae62db151838e65, type: 2}
+    canBuild: 0
   - name: "\u539F\u59CB\u519C\u7530"
     buildingType: 4
     era: 0
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 0
+      resourceNum: 1
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 974c1804b35b92f47a477be4b3890cb2, type: 2}
+    canBuild: 0
   - name: "\u5C0F\u578B\u7801\u5934"
     buildingType: 5
     era: 0
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 01fb8facf4660014c9d1240da6f42839, type: 2}
+    canBuild: 0
   - name: "\u5DE8\u77F3\u9635"
     buildingType: 6
     era: 0
@@ -1927,44 +2166,63 @@ MonoBehaviour:
     - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      resourceNum: 0
+      resourceNum: 1
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 990a34d80a417ed41a6a28b1197426d9, type: 2}
+    canBuild: 0
   - name: "\u5236\u9676\u8F6C\u76D8"
     buildingType: 7
     era: 0
@@ -1972,89 +2230,127 @@ MonoBehaviour:
     - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
   - name: "\u706B\u5806"
     buildingType: 8
     era: 0
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
-      resourceNum: 0
+      resourceNum: 1
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 8ecc1184fa465a646a40ab04a0654c5b, type: 2}
+    canBuild: 0
   - name: "\u5B66\u5802"
     buildingType: 9
     era: 0
@@ -2062,314 +2358,447 @@ MonoBehaviour:
     - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 0
+      resourceNum: 1
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      resourceNum: 0
+      resourceNum: 3
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 51c141c8118c98844b1269158afc2519, type: 2}
+    canBuild: 0
   - name: "\u77F3\u5C4B"
     buildingType: 10
     era: 1
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 1
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
   - name: "\u957F\u5C4B"
     buildingType: 11
     era: 1
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 1
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
   - name: "\u57CE\u5E02\u4F4F\u5B85"
     buildingType: 12
     era: 1
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 1
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
   - name: "\u7801\u5934"
     buildingType: 13
     era: 1
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
   - name: "\u5854\u697C"
     buildingType: 14
     era: 1
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
   - name: "\u519C\u573A"
     buildingType: 15
     era: 1
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
   - name: "\u70BC\u91D1\u7814\u7A76\u6240"
     buildingType: 16
     era: 1
@@ -2377,44 +2806,63 @@ MonoBehaviour:
     - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 0
+      resourceNum: 4
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
-      resourceNum: 0
+      resourceNum: 1
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
   - name: "\u57CE\u5821"
     buildingType: 14
     era: 0
@@ -2422,89 +2870,127 @@ MonoBehaviour:
     - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 0
+      resourceNum: 1
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      resourceNum: 0
+      resourceNum: 3
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
   - name: "\u5927\u578B\u8230\u961F"
     buildingType: 18
     era: 1
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      resourceNum: 0
+      resourceNum: 3
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
   - name: "\u5C0F\u578B\u91D1\u5C5E\u5DE5\u574A"
     buildingType: 19
     era: 1
@@ -2512,44 +2998,63 @@ MonoBehaviour:
     - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
-      resourceNum: 0
+      resourceNum: 1
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      resourceNum: 0
+      resourceNum: 1
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
   - name: "\u6DF7\u51DD\u571F\u5927\u53A6"
     buildingType: 20
     era: 2
@@ -2557,44 +3062,63 @@ MonoBehaviour:
     - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 0
+      resourceNum: 4
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      resourceNum: 0
+      resourceNum: 3
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
-      resourceNum: 0
+      resourceNum: 3
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 1
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
   - name: "\u5927\u522B\u91CE"
     buildingType: 21
     era: 2
@@ -2602,44 +3126,63 @@ MonoBehaviour:
     - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 0
+      resourceNum: 3
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
-      resourceNum: 0
+      resourceNum: 3
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
-      resourceNum: 0
+      resourceNum: 3
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 1
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
   - name: "\u56DB\u5408\u9662"
     buildingType: 22
     era: 2
@@ -2647,44 +3190,63 @@ MonoBehaviour:
     - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 0
+      resourceNum: 4
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      resourceNum: 0
+      resourceNum: 3
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
-      resourceNum: 0
+      resourceNum: 3
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 1
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
   - name: "\u5929\u6587\u53F0"
     buildingType: 23
     era: 2
@@ -2692,89 +3254,127 @@ MonoBehaviour:
     - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 0
+      resourceNum: 4
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
-      resourceNum: 0
+      resourceNum: 3
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
-      resourceNum: 0
+      resourceNum: 3
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
   - name: "\u73B0\u4EE3\u5316\u519C\u573A"
     buildingType: 24
     era: 2
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 0
+      resourceNum: 3
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 0
+      resourceNum: 4
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 1
+      resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
   - name: "\u706B\u7BAD\u53D1\u5C04\u57FA\u5730"
     buildingType: 25
     era: 2
@@ -2782,44 +3382,63 @@ MonoBehaviour:
     - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
-      resourceNum: 0
+      resourceNum: 2
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
+      resourceNum: 1
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
       resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
   - name: "\u91D1\u5C5E\u51B6\u70BC\u5382"
     buildingType: 26
     era: 2
@@ -2827,44 +3446,63 @@ MonoBehaviour:
     - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
-      resourceNum: 0
+      resourceNum: 3
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      resourceNum: 0
+      resourceNum: 3
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceNum: 4
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
   - name: "\u6838\u7535\u7AD9"
     buildingType: 27
     era: 2
@@ -2872,44 +3510,63 @@ MonoBehaviour:
     - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      resourceNum: 0
+      resourceNum: 4
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
-      resourceNum: 0
+      resourceNum: 3
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
-      resourceNum: 0
+      resourceNum: 3
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceNum: 4
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
   - name: "\u84B8\u6C7D\u57CE\u5821"
     buildingType: 28
     era: 2
@@ -2917,44 +3574,63 @@ MonoBehaviour:
     - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
-      resourceNum: 0
+      resourceNum: 3
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
-      resourceNum: 0
+      resourceNum: 3
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
-      resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceNum: 4
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
   - name: "\u6ED1\u7FD4\u673A\u673A\u573A"
     buildingType: 29
     era: 2
@@ -2962,44 +3638,127 @@ MonoBehaviour:
     - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u71E7\u77F3"
       resourceType: 4
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9ECF\u571F"
       resourceType: 5
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u77F3\u818F\u77F3"
       resourceType: 6
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u82B1\u5C97\u5CA9"
       resourceType: 7
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u94C1\u77FF"
       resourceType: 8
-      resourceNum: 0
+      resourceNum: 3
+      resourceMaterials: []
     - name: "\u91D1\u77FF"
       resourceType: 9
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u9752\u94DC\u77FF"
       resourceType: 10
       resourceNum: 0
+      resourceMaterials: []
     - name: "\u7164\u70AD\u77FF"
       resourceType: 11
       resourceNum: 0
-    - name: "\u77F3\u6CB9"
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
       resourceType: 12
       resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 3
+      resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
+  - name: "\u77F3\u6CB9\u55B7\u53E3"
+    buildingType: 30
+    era: 2
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 10000
+      resourceMaterials: []
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 10000
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 10000
+      resourceMaterials: []
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 10000
+      resourceMaterials: []
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 10000
+      resourceMaterials: []
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 10000
+      resourceMaterials: []
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 10000
+      resourceMaterials: []
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 10000
+      resourceMaterials: []
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 10000
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 10000
+      resourceMaterials: []
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 10000
+      resourceMaterials: []
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 10000
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 12
+      resourceNum: 10000
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 10000
+      resourceMaterials: []
+    isSpecialBuilding: 1
+    isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
   builders: 
   buildings:
   - {fileID: 0}
@@ -3104,37 +3863,6 @@ MonoBehaviour:
   - {fileID: 0}
   buildingInBlock: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxBuildingInBlock: 5
-  buildingMaterials:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &912914644
 MonoBehaviour:
   m_ObjectHideFlags: 0

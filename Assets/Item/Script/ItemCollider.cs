@@ -30,7 +30,7 @@ public class ItemCollider : MonoBehaviour
                         item.character.foundResource = true;
                         other.transform.parent.parent.GetComponent<Resources>().isGathering = true;
                         item.character.resourceObject = other.GetComponent<ItemCollider>().item.gameObject;
-                        Debug.Log("resourceRotation:" + other.GetComponent<ItemCollider>().item.transform.rotation);
+                        //Debug.Log("resourceRotation:" + other.GetComponent<ItemCollider>().item.transform.rotation);
                         item.character.WalkToTargetQua(other.GetComponent<ItemCollider>().item.transform.rotation);
                     }
                 }
@@ -56,7 +56,7 @@ public class ItemCollider : MonoBehaviour
                         item.character.foundResource = true;
                         other.transform.parent.parent.GetComponent<Resources>().isGathering = true;
                         item.character.resourceObject = other.GetComponent<ItemCollider>().item.gameObject;
-                        Debug.Log("resourceRotation:" + other.GetComponent<ItemCollider>().item.transform.rotation);
+                        //Debug.Log("resourceRotation:" + other.GetComponent<ItemCollider>().item.transform.rotation);
                         item.character.WalkToTargetQua(other.GetComponent<ItemCollider>().item.transform.rotation);
                     }
                 }

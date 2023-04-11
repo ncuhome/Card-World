@@ -164,6 +164,8 @@ MonoBehaviour:
   homeRange: 
   specialSkill: -1
   itemSprite: {fileID: 0}
+  goHome: 0
+  home: {fileID: 0}
 --- !u!114 &-5957294728151938232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,8 +179,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finishBuilding: 0
+  population: 0
   itemSprite: {fileID: 0}
-  specialBuilding: -1
+  buildingType: 0
+  stopGenerate: 0
+  generatePopulation: 0
 --- !u!114 &1214893024808620160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGathering: 0
+  resourceType: 0
 --- !u!114 &8284814796439455633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,7 +241,7 @@ Transform:
   m_GameObject: {fileID: 7820871686053603793}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.58, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.1, z: 0.0001}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.0001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5544999559913742287}
@@ -270,7 +276,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1a908373fdba3cd459f6697c3f03e614, type: 2}
+  - {fileID: 2100000, guid: 95c2762f65f791e458aa102d1efd63bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
