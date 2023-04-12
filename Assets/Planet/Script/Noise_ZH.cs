@@ -137,7 +137,7 @@ public static class Noise_ZH
             float _NoiseHeight = 0f;
             for (int y = Mathf.FloorToInt(_HalfHeight); y < _MapHeight; y++)
             {
-                _NoiseHeight = _NoiseMap[x, y] + (_MaxNoiseHeight - _NoiseMap[x, _MapHeight - 1]) * Mathf.Exp(((y + 100) / _HalfHeight - 2) * 5);
+                _NoiseHeight = _NoiseMap[x, y] + (_MaxNoiseHeight - _NoiseMap[x, _MapHeight - 1]) * Mathf.Exp(((y + 200) / _HalfHeight - 2) * 5);
                 if (_NoiseHeight > _MaxNoiseHeight)
                 {
                     _NoiseHeight = _MaxNoiseHeight;
@@ -150,7 +150,7 @@ public static class Noise_ZH
             }
             for (int y = Mathf.FloorToInt(_HalfHeight); y >= 0; y--)
             {
-                _NoiseHeight = _NoiseMap[x, y] + (_MaxNoiseHeight - _NoiseMap[x, 0]) * Mathf.Exp((-(y - 100) / _HalfHeight) * 5);
+                _NoiseHeight = _NoiseMap[x, y] + (_MaxNoiseHeight - _NoiseMap[x, 0]) * Mathf.Exp((-(y - 200) / _HalfHeight) * 5);
                 if (_NoiseHeight > _MaxNoiseHeight)
                 {
                     _NoiseHeight = _MaxNoiseHeight;

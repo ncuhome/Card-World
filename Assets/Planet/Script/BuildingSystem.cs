@@ -1,3 +1,4 @@
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,11 +15,13 @@ public class BuildingData //构建可序列化的数据类
     public bool isHomeBuilding;
     public Material buildingMaterial;
     public bool canBuild; //当前是否可以建造该种建筑
+    public string[] needTech;
 }
 public class BuildingSystem : MonoBehaviour
 {
     public static BuildingSystem Instance = null;
     public int size; //需求人数
+    public int builderAge;
     public BuildingData[] buildingDatas = new BuildingData[30]; //构建建筑的数据库
     public int[] builders;
     public Building[] buildings = new Building[120];
@@ -44,6 +47,22 @@ public class BuildingSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        switch (EraSystem.Instance.era)
+        {
+            case Era.AncientEra:
+                builderAge = 0;
+                size = 3;
+                break;
+            case Era.ClassicalEra:
+                builderAge = 20;
+                size = 4;
+                break;
+            case Era.IndustrialEra:
+                builderAge = 40;
+                size = 5;
+                break;
+        }
+
         //寻找可建造的建筑
         BuildingData[] buildingsCanBeBuild = new BuildingData[30];
         int buildingsCanBeBuildNum = 0;
@@ -51,6 +70,16 @@ public class BuildingSystem : MonoBehaviour
         {
             buildingDatas[i].canBuild = true;
             if (EraSystem.Instance.era != buildingDatas[i].era) { buildingDatas[i].canBuild = false; }
+
+            // foreach (string techNode in buildingDatas[i].needTech)
+            // {
+            //     if (techNode == null) {continue;}
+            //     if (!TechTree.instance.GetWhetherUnlocked(techNode))
+            //     {
+            //         buildingDatas[i].canBuild = false;
+            //     }
+            // }
+            
             for (int j = 0; j < 13; j++)
             {
                 if (ResourceSystem.Instance.resourceDatas[j].resourceNum < buildingDatas[i].targetResource[j].resourceNum) { buildingDatas[i].canBuild = false; }
