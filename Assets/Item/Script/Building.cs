@@ -19,6 +19,8 @@ public class Building : MonoBehaviour
     public BuildingType buildingType = BuildingType.Cave;
     public bool stopGenerate = false;
     public int generatePopulation;
+    public GameObject oil;
+    public float oilTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +40,14 @@ public class Building : MonoBehaviour
     void Update()
     {
         if (!isBuilding) { return; }
+        GeneratePopulation();
+
+
+
+    }
+
+    void GeneratePopulation()
+    {
         if (stopGenerate) { return; }
         time += Time.deltaTime;
         if (time > 60f / population)
@@ -49,6 +59,20 @@ public class Building : MonoBehaviour
         if (generatePopulation > population)
         {
             stopGenerate = true;
+        }
+    }
+
+    void InstantiateOil()
+    {
+        if (buildingType != BuildingType.OilVent) { return; }
+        if (oil == null)
+        {
+            oilTime += Time.deltaTime;
+            if (oilTime > 20f)
+            {
+                CreateController.Instance.CreateItem(ItemType.Resource, ResourceType.Oil, null, null, transform.eulerAngles);
+                oil = transform.parent.GetChild(transform.parent.childCount - 1).gameObject;
+            }
         }
     }
 }

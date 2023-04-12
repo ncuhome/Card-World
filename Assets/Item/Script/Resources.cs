@@ -8,6 +8,8 @@ public class Resources : MonoBehaviour
 {
     private bool isResource;
     public bool isGathering;
+    public bool canBeGathered = true;
+    public bool isNature;
     public ResourceType resourceType = ResourceType.Wood;
     // Start is called before the first frame update
     void Start()
@@ -26,5 +28,9 @@ public class Resources : MonoBehaviour
     void Update()
     {
         if (!isResource) { return; }
+        if ((resourceType == ResourceType.Oil) && (EraSystem.Instance.era != Era.IndustrialEra))
+        {
+            canBeGathered = false;
+        }
     }
 }

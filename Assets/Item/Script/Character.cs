@@ -55,7 +55,6 @@ public class Character : MonoBehaviour
             return;
         }
 
-
         AddAge();
         GoHome();
 
@@ -156,7 +155,7 @@ public class Character : MonoBehaviour
                 time += Time.deltaTime;
                 if (time > 5f)
                 {
-                    age += 20f;
+                    age += BuildingSystem.Instance.builderAge;
                     if (buildingObject != null)
                     {
                         buildingObject.transform.localScale = Vector3.one;
