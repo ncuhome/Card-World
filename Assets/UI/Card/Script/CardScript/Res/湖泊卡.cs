@@ -7,6 +7,10 @@ using UnityEngine.UI;
 
 public class 湖泊卡 : RangeUsageCard
 {
-
+    public override void AffectBlock(int[] block)
+    {
+        Debug.Log("森林卡生成树木");
+        ResourceSystem.Instance.RegenerationResource(ResourceType.Water, block);
+    }
 
 }

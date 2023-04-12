@@ -66,13 +66,15 @@ public class TechNode : MonoBehaviour
             this.unlock = true;
             this.gameObject.GetComponent<Image>().color = new Color(255, 0, 0, 0.5f);
             SignUI.instance.DisplayText("你已经解锁" + this.nodeName, 2.5f, Color.blue);
-        }                                          
+        }
+        TechTree.instance.ConfirmEra();
     }
     public void ImmediateUnlockIt()
     {
         this.unlock = true;
         this.gameObject.GetComponent<Image>().color = new Color(255, 0, 0, 0.5f);
         SignUI.instance.DisplayText("你已经解锁" + this.nodeName, 2.5f, Color.blue);
+        TechTree.instance.ConfirmEra();
     }
 
     void Update()

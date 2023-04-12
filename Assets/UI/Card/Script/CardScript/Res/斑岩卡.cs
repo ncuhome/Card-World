@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class 斑岩卡 : RangeUsageCard
 {
-
+    public override void AffectBlock(int[] block)
+    {
+        ResourceSystem.Instance.RegenerationResource(ResourceType.Porphyry, block);
+    }
 
 }
