@@ -20,6 +20,8 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
     private float mouseTimer;               //鼠标停留的时间
 
     private bool mouseOnCard;               //鼠标是否在卡牌上
+
+    private int moveY = 50;                     //鼠标在卡牌上时卡牌上移高度
     protected bool canBeDrag;
     private Canvas cardCanvas;
     [SerializeField] private GameObject descriptionPanel;
@@ -65,7 +67,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
             mouseOnCard = true;
             this.transform.SetAsLastSibling(); //显示在所有卡牌的最上面
             transform.DOScale(new Vector2(1.75f, 1.75f), 0.1f);  //变大
-            transform.DOLocalMoveY(transform.position.y + 50, 0.1f);  //向上移动
+            transform.DOLocalMoveY(transform.position.y + moveY, 0.1f);  //向上移动
         }
     }
 
@@ -154,9 +156,9 @@ public class RangeUsageCard : Card, IAffectBlock //范围使用的卡牌
 {
     public bool isSelect = false;
 
-    public virtual void AffectBlock(int block) //对区块的作用函数
+    public virtual void AffectBlock(int[] block) //对区块的作用函数
     {
-        Debug.Log(block);
+        Debug.Log("对区块" + block);
     }
 
     IEnumerator SelectBlock()
@@ -168,7 +170,9 @@ public class RangeUsageCard : Card, IAffectBlock //范围使用的卡牌
             {
                 if (MouseOnSphere.instance.ReturnMousePosition() != Vector3.zero)
                 {
-                    AffectBlock(BlockSystem.Instance.GetBlockNum(MouseOnSphere.instance.sphere.transform.position, MouseOnSphere.instance.ReturnMousePosition()));
+                    int[] block = new int[1]; 
+                    block[0] = BlockSystem.Instance.GetBlockNum(MouseOnSphere.instance.sphere.transform.position, MouseOnSphere.instance.ReturnMousePosition());
+                    AffectBlock(block);
                     SignUI.instance.SetTextNULL();
                     CardPack.canBeDrag = true;  //其他卡牌能被拖动
                     Destroy(this.gameObject);
@@ -227,7 +231,7 @@ public class AccidentRangeUsageCard : AccidentCard, IAffectBlock //范围使用�
     }
 
 
-    public virtual void AffectBlock(int block) //对区块的作用函数
+    public virtual void AffectBlock(int[] block) //对区块的作用函数
     {
         Debug.Log(block);
     }
@@ -241,7 +245,9 @@ public class AccidentRangeUsageCard : AccidentCard, IAffectBlock //范围使用�
             {
                 if (MouseOnSphere.instance.ReturnMousePosition() != Vector3.zero)
                 {
-                    AffectBlock(BlockSystem.Instance.GetBlockNum(MouseOnSphere.instance.sphere.transform.position, MouseOnSphere.instance.ReturnMousePosition()));
+                    int[] block = new int[1];
+                    block[0] = BlockSystem.Instance.GetBlockNum(MouseOnSphere.instance.sphere.transform.position, MouseOnSphere.instance.ReturnMousePosition());
+                    AffectBlock(block);
                     SignUI.instance.SetTextNULL();
                     CardPack.canBeDrag = true;  //其他卡牌能被拖动
                     Destroy(this.gameObject);
@@ -273,7 +279,7 @@ public class AccidentRangeUsageCard : AccidentCard, IAffectBlock //范围使用�
 
 interface IAffectBlock
 {
-    public void AffectBlock(int block);
+    public void AffectBlock(int[] block);
 
 }
 

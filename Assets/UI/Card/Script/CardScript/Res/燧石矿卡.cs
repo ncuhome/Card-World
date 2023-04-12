@@ -8,5 +8,8 @@ using UnityEngine.UI;
 public class 燧石矿卡 : RangeUsageCard
 {
 
-
+    public override void AffectBlock(int[] block)
+    {
+        ResourceSystem.Instance.RegenerationResource(ResourceType.Flint, block);
+    }
 }
