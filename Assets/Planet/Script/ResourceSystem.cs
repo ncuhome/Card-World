@@ -106,7 +106,10 @@ public class ResourceSystem : MonoBehaviour
         //resourceInBlock[blockNum]--;
         resourceDatas[(int)resourceObject.GetComponent<Resources>().resourceType].resourceNum++;
         DeleteResource(resourceObject);
-        StartCoroutine(DelayRegeneration(resourceObject.GetComponent<Resources>().resourceType, 5f));
+        if (resourceObject.GetComponent<Resources>().isNature)
+        {
+            StartCoroutine(DelayRegeneration(resourceObject.GetComponent<Resources>().resourceType, 5f));
+        }
     }
 
     //删除资源

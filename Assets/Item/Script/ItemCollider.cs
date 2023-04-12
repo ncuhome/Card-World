@@ -22,7 +22,7 @@ public class ItemCollider : MonoBehaviour
         switch (transform.tag)
         {
             case "Character":
-                if ((other.tag == "Resource") && (!other.transform.parent.parent.GetComponent<Resources>().isGathering))
+                if ((other.tag == "Resource") && (!other.transform.parent.parent.GetComponent<Resources>().isGathering) && (other.transform.parent.parent.GetComponent<Resources>().canBeGathered))
                 {
                     int targetBlock = BlockSystem.Instance.GetBlockNum(item.center.position, other.GetComponent<ItemCollider>().item.transform.rotation);
                     if (item.character.RoadCanMove(targetBlock))
@@ -48,7 +48,7 @@ public class ItemCollider : MonoBehaviour
         switch (transform.tag)
         {
             case "Character":
-                if ((other.tag == "Resource") && (!other.transform.parent.parent.GetComponent<Resources>().isGathering))
+                if ((other.tag == "Resource") && (!other.transform.parent.parent.GetComponent<Resources>().isGathering) && (other.transform.parent.parent.GetComponent<Resources>().canBeGathered))
                 {
                     int targetBlock = BlockSystem.Instance.GetBlockNum(item.center.position, other.GetComponent<ItemCollider>().item.transform.rotation);
                     if (item.character.RoadCanMove(targetBlock))
