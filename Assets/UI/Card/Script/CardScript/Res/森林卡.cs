@@ -9,7 +9,10 @@ public class 森林卡 : RangeUsageCard
 {
     public override void AffectBlock(int[] block)
     {
-        Debug.Log("森林卡生成树木");
-        ResourceSystem.Instance.RegenerationResource(ResourceType.Wood, block);
+        for (int i = 0; i < 10; i++)
+        {
+            BlockSystem.Instance.blocks[block[0]].livability += 3;
+            ResourceSystem.Instance.RegenerationResource(ResourceType.Wood, block);
+        }
     }
 }

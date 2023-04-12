@@ -9,6 +9,8 @@ public class 斑岩卡 : RangeUsageCard
 {
     public override void AffectBlock(int[] block)
     {
+        BlockSystem.Instance.blocks[block[0]].water -= 3;
+        BlockSystem.Instance.blocks[block[0]].livability -= 3;
         ResourceSystem.Instance.RegenerationResource(ResourceType.Porphyry, block);
     }
 

@@ -161,11 +161,12 @@ public class RangeUsageCard : Card, IAffectBlock //范围使用的卡牌
         Debug.Log("对区块" + block);
     }
 
-    IEnumerator SelectBlock()
+    public virtual IEnumerator SelectBlock()
     {
         while (isSelect == true)
         {
-            Debug.Log("现在指着区块" + BlockSystem.Instance.GetBlockNum(MouseOnSphere.instance.sphere.transform.position, MouseOnSphere.instance.ReturnMousePosition()));
+            CardPack.canBeDrag = false;
+            //Debug.Log("现在指着区块" + BlockSystem.Instance.GetBlockNum(MouseOnSphere.instance.sphere.transform.position, MouseOnSphere.instance.ReturnMousePosition()));
             if (Input.GetMouseButtonDown(0))
             {
                 if (MouseOnSphere.instance.ReturnMousePosition() != Vector3.zero)
@@ -238,9 +239,10 @@ public class AccidentRangeUsageCard : AccidentCard, IAffectBlock //范围使用�
 
     IEnumerator SelectBlock()
     {
+        
         while (isSelect == true)
         {
-            Debug.Log("现在指着区块" + BlockSystem.Instance.GetBlockNum(MouseOnSphere.instance.sphere.transform.position, MouseOnSphere.instance.ReturnMousePosition()));
+            CardPack.canBeDrag = false;
             if (Input.GetMouseButtonDown(0))
             {
                 if (MouseOnSphere.instance.ReturnMousePosition() != Vector3.zero)

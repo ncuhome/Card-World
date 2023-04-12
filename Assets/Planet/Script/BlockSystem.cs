@@ -1,10 +1,22 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+[System.Serializable]
+public class Block
+{
+    public float temperature = 20f;//温度
+
+    public float water = 20;      //水量
+
+    public float livability = 50; //宜居度
+}
 
 public class BlockSystem : MonoBehaviour
 {
     public static BlockSystem Instance = null;
+
+    public Block[] blocks = new Block[24];
     // Start is called before the first frame update
     private void Awake()
     {
@@ -98,5 +110,30 @@ public class BlockSystem : MonoBehaviour
             randomNearBlock = new int[2] { blockNum, nearBlock[Random.Range(0, 3)] };
         }
         return randomNearBlock;
+    }
+    public IEnumerator NauAffectBlock(float tem, float water, float livability, float theTime, GameObject thisCard,int[] block)
+    {
+        float allTime = 0;
+        float time = 0;
+        while (true)
+        {
+            
+            Debug.Log("正在完成效果");
+            allTime += Time.deltaTime;
+            time += Time.deltaTime;
+            if (time > 1)
+            {
+                BlockSystem.Instance.blocks[block[0]].temperature += tem;
+                BlockSystem.Instance.blocks[block[0]].water += water;
+                BlockSystem.Instance.blocks[block[0]].livability += livability;
+                time -= 1;
+            }
+            if (allTime > theTime)
+            {
+                break;
+            }
+            yield return null;
+        }
+        Destroy(thisCard);
     }
 }
