@@ -1,22 +1,22 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class MouseOnSphere : MonoBehaviour //¶ÁÈ¡Êó±êÔÚÇòÉÏµÄÎ»ÖÃ
+public class MouseOnSphere : MonoBehaviour //è¯»å–é¼ æ ‡åœ¨çƒä¸Šçš„ä½ç½®
 {
     public static MouseOnSphere instance;
 
-    // ÉùÃ÷±äÁ¿£¬±íÊ¾ÇòĞÎ¶ÔÏó
+    // å£°æ˜å˜é‡ï¼Œè¡¨ç¤ºçƒå½¢å¯¹è±¡
     public GameObject sphere;
 
-    // ÉùÃ÷Ò»¸ö¹«¹²±äÁ¿£¬±íÊ¾ÇòĞÎÍ¶ÉäÌåµÄ°ë¾¶
+    // å£°æ˜ä¸€ä¸ªå…¬å…±å˜é‡ï¼Œè¡¨ç¤ºçƒå½¢æŠ•å°„ä½“çš„åŠå¾„
     private float planetRadius;
 
-    // ÉùÃ÷Ò»¸ö¹«¹²±äÁ¿£¬±íÊ¾ÇòĞÎÍ¶ÉäÌåµÄ×î´ó¾àÀë
+    // å£°æ˜ä¸€ä¸ªå…¬å…±å˜é‡ï¼Œè¡¨ç¤ºçƒå½¢æŠ•å°„ä½“çš„æœ€å¤§è·ç¦»
     private float maxDistance = 100f;
 
-    // ¶¨ÒåÒ»¸öÓÃÓÚ»æÖÆÔ²µÄLineRenderer×é¼ş
+    // å®šä¹‰ä¸€ä¸ªç”¨äºç»˜åˆ¶åœ†çš„LineRendererç»„ä»¶
     private LineRenderer lineRenderer;
 
     void Start()
@@ -29,30 +29,30 @@ public class MouseOnSphere : MonoBehaviour //¶ÁÈ¡Êó±êÔÚÇòÉÏµÄÎ»ÖÃ
         lineRenderer = this.gameObject.AddComponent<LineRenderer>();
         planetRadius = 0.5f * sphere.transform.localScale.x;
     }
-    public Vector3 ReturnMousePosition()  //·µ»ØÊó±êÔÚÇòÌåÉÏµÄ×ø±ê
+    public Vector3 ReturnMousePosition()  //è¿”å›é¼ æ ‡åœ¨çƒä½“ä¸Šçš„åæ ‡
     {
-        // »ñÈ¡Êó±êÔÚÆÁÄ»ÉÏµÄÎ»ÖÃ×ø±ê
+        // è·å–é¼ æ ‡åœ¨å±å¹•ä¸Šçš„ä½ç½®åæ ‡
         Vector3 mousePos = Input.mousePosition;
 
-        // ½«Êó±êµÄÎ»ÖÃ×ø±ê×ª»»ÎªÒ»ÌõÉäÏß
+        // å°†é¼ æ ‡çš„ä½ç½®åæ ‡è½¬æ¢ä¸ºä¸€æ¡å°„çº¿
         Ray ray = Camera.main.ScreenPointToRay(mousePos);
 
-        // ÉùÃ÷Ò»¸ö±äÁ¿£¬ÓÃÀ´´æ´¢Åö×²ĞÅÏ¢
+        // å£°æ˜ä¸€ä¸ªå˜é‡ï¼Œç”¨æ¥å­˜å‚¨ç¢°æ’ä¿¡æ¯
         RaycastHit hit;
 
-        // ´ÓÉäÏßµÄÆğµã·¢ÉäÒ»¸öÇòĞÎÍ¶ÉäÌå£¬Èç¹ûÓëÈÎºÎÅö×²Æ÷Ïà½»£¬¾Í½«Åö×²ĞÅÏ¢¸³Öµ¸ø hit ±äÁ¿£¬²¢·µ»Ø true
+        // ä»å°„çº¿çš„èµ·ç‚¹å‘å°„ä¸€ä¸ªçƒå½¢æŠ•å°„ä½“ï¼Œå¦‚æœä¸ä»»ä½•ç¢°æ’å™¨ç›¸äº¤ï¼Œå°±å°†ç¢°æ’ä¿¡æ¯èµ‹å€¼ç»™ hit å˜é‡ï¼Œå¹¶è¿”å› true
         if (Physics.Raycast(ray.origin, ray.direction, out hit, maxDistance))
         {
-            // ¼ì²éÅö×²µÄÅö×²Æ÷ÊÇ·ñÊÇÇòĞÎ¶ÔÏóµÄÅö×²Æ÷
+            // æ£€æŸ¥ç¢°æ’çš„ç¢°æ’å™¨æ˜¯å¦æ˜¯çƒå½¢å¯¹è±¡çš„ç¢°æ’å™¨
             if (hit.collider == sphere.GetComponent<SphereCollider>())
             {
-                // »ñÈ¡ÇòĞÎ¶ÔÏóÉÏµÄÅö×²µã×ø±ê
+                // è·å–çƒå½¢å¯¹è±¡ä¸Šçš„ç¢°æ’ç‚¹åæ ‡
                 Vector3 hitPoint = hit.point;
-                Debug.Log("Êó±êµÄ×ø±êÎª" + hitPoint);
+                Debug.Log("é¼ æ ‡çš„åæ ‡ä¸º" + hitPoint);
                 return hitPoint;
             }
         }
-        Debug.Log("Êó±êµÄ×ø±êÃ»ÔÚĞÇÇòÉÏ");
-        return Vector3.zero;  //Êó±êÃ»Åöµ½ÇòÌå
+        Debug.Log("é¼ æ ‡çš„åæ ‡æ²¡åœ¨æ˜Ÿçƒä¸Š");
+        return Vector3.zero;  //é¼ æ ‡æ²¡ç¢°åˆ°çƒä½“
     }
 }

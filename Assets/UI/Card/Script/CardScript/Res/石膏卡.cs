@@ -10,6 +10,8 @@ public class 石膏卡 : RangeUsageCard
     public override void AffectBlock(int[] block)
     {
         ResourceSystem.Instance.RegenerationResource(ResourceType.GypsumStone, block);
+        BlockSystem.Instance.blocks[block[0]].water -= 3;
+        BlockSystem.Instance.blocks[block[0]].livability -= 3;
     }
 
 }
