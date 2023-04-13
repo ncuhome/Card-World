@@ -38,10 +38,12 @@ public class ShowResManger : MonoBehaviour
         if (foldRes.activeInHierarchy == false)
         {
             foldRes.SetActive(true);
+            AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[7]);
         }
         else if (foldRes.activeInHierarchy == true)
         {
             foldRes.SetActive(false);
+            AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[7]);
         }
     }
     public void ShowResName()
@@ -49,10 +51,12 @@ public class ShowResManger : MonoBehaviour
         if (change)
         {
             change = false;
+            AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[7]);
         }
         else if (!change)
         {
             change = true;
+            AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[7]);
         }
     }
 }
