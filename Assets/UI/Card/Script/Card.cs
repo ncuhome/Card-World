@@ -43,7 +43,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
     }
     public virtual void BeUse()  //使用卡牌函数
     {
-
+        AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[5]);
     }
     public void Drawcards()
     {
@@ -102,9 +102,10 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
     {
         if (canBeDrag && CardPack.canBeDrag)
         {
-            if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 350)  //在垃圾桶范围内
+            if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 200)  //在垃圾桶范围内
             {
                 this.transform.DOMove(cardTrash.transform.position, 0.5f).OnComplete(() => { CardPack.DeleteCard(this); Destroy(this.gameObject); });
+                AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[6]);
             }
             else if (this.GetComponent<RectTransform>().anchoredPosition.y >= CardPack.cardPackHigh + Card.cardSizey + 50)
             {
@@ -188,7 +189,8 @@ public class RangeUsageCard : Card, IAffectBlock //范围使用的卡牌
         isSelect = true;
         SignUI.instance.DisplayText("选择你要作用的区块", true, Color.red);
         CardPack.canBeDrag = false;  //其他卡牌不能被拖动
-        StartCoroutine(SelectBlock());
+        StartCoroutine(SelectBlock()); 
+        AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[5]);
     }
 
     //private void Update()
@@ -265,6 +267,7 @@ public class AccidentRangeUsageCard : AccidentCard, IAffectBlock //范围使用�
         SignUI.instance.DisplayText("选择你要作用的区块", true, Color.red);
         CardPack.canBeDrag = false;  //其他卡牌不能被拖动
         StartCoroutine(SelectBlock());
+        AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[5]);
     }
 
     //private void Update()

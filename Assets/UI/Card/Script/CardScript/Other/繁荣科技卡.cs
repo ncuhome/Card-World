@@ -18,5 +18,6 @@ public class 繁荣科技卡 : Card //随机解锁一个可以被解锁的科技
         }
         int random = Random.Range(0, canBeUnlock.Count); //解锁随机一个科技
         canBeUnlock[random].ImmediateUnlockIt();
+        AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[5]);
     }
 }
