@@ -73,14 +73,14 @@ public class BuildingSystem : MonoBehaviour
             buildingDatas[i].canBuild = true;
             if (EraSystem.Instance.era != buildingDatas[i].era) { buildingDatas[i].canBuild = false; }
 
-            // foreach (string techNode in buildingDatas[i].needTech)
-            // {
-            //     if (techNode == null) {continue;}
-            //     if (!TechTree.instance.GetWhetherUnlocked(techNode))
-            //     {
-            //         buildingDatas[i].canBuild = false;
-            //     }
-            // }
+            foreach (string techNode in buildingDatas[i].needTech)
+            {
+                if (techNode == null) {continue;}
+                if (!TechTree.instance.GetWhetherUnlocked(techNode))
+                {
+                    buildingDatas[i].canBuild = false;
+                }
+            }
 
             for (int j = 0; j < 13; j++)
             {
