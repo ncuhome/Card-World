@@ -231,6 +231,22 @@ public class Character : MonoBehaviour
     //角色死亡
     public void Die()
     {
+        if (CharacterSystem.Instance.GetCharacter(EraSystem.Instance.era, specialSkill).techAbility && (Random.value > 0.7f))
+        {
+            List<TechNode> canBeUnlock = new List<TechNode>();
+            foreach (TechNode tech in TechTree.instance.allTechNode)
+            {
+                Debug.Log(tech);
+                if (tech.CanBeUnlocked() == true && tech.unlock == false)
+                {
+                    Debug.Log(tech + "second");
+                    canBeUnlock.Add(tech);
+                }
+            }
+            int random = Random.Range(0, canBeUnlock.Count); //解锁随机一个科技
+            canBeUnlock[random].ImmediateUnlockIt();
+        }
+
         CharacterSystem.Instance.characters[characterNum] = null;
         Destroy(this.gameObject);
     }
@@ -283,7 +299,11 @@ public class Character : MonoBehaviour
     public void Stay(BuildingType buildingType)
     {
         targetBuilding = BuildingSystem.Instance.FindNearBuildingWithType(transform, buildingType);
-        if (targetBuilding == null) { return; }
+        if (targetBuilding == null)
+        {
+            stayInBuilding = false;
+            return;
+        }
         if (stayInBuilding == false)
         {
             if (goToBuild || goHome || foundResource) { return; }
@@ -338,7 +358,7 @@ public class Character : MonoBehaviour
         }
     }
 
-   
+
 
 
 }

@@ -10,6 +10,7 @@ public class CharacterData
     public Material characterMaterial;
     public int characterNum;
     public int preCharacterNum;
+    public bool techAbility;
 }
 public class CharacterSystem : MonoBehaviour
 {
@@ -120,6 +121,11 @@ public class CharacterSystem : MonoBehaviour
                 int num = Random.Range(0, charactersCanProgressNum);
                 character.specialSkill = charactersCanProgress[num].specialSkill;
                 character.itemSprite.material = charactersCanProgress[num].characterMaterial;
+            }
+            else
+            {
+                character.specialSkill = SpecialSkill.None;
+                character.itemSprite.material = GetCharacter(EraSystem.Instance.era, SpecialSkill.None).characterMaterial;
             }
         }
     }

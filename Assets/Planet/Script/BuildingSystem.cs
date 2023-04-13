@@ -207,6 +207,10 @@ public class BuildingSystem : MonoBehaviour
         foreach (Building building in buildings)
         {
             if (buildingDatas[(int)building.buildingType].isSpecialBuilding) { continue; }
+            if (Random.value < 0.3f)
+            {
+                Destroy(building.gameObject);
+            }
             BuildingData[] buildingsCanProgress = new BuildingData[30];
             int buildingsCanProgressNum = 0;
             for (int i = 0; i < 30; i++)
@@ -219,16 +223,9 @@ public class BuildingSystem : MonoBehaviour
             }
             if (buildingsCanProgressNum != 0)
             {
-                int buildingNum = GetBuildingNum();
-                CreateController.Instance.CreateItem(ItemType.Building, null, buildingsCanProgress[Random.Range(0, buildingsCanProgressNum)].buildingType, null, building.transform.eulerAngles);
-                BuildingSystem.Instance.buildings[buildingNum] = GameObject.Find("Items").transform.GetChild(GameObject.Find("Items").transform.childCount - 1).GetComponent<Building>();
-                buildings[buildingNum].finishBuilding = true;
-                buildings[buildingNum].stopGenerate = true;
-                Destroy(building.gameObject);
-            }
-            else
-            {
-                Destroy(building.gameObject);
+                int num = Random.Range(0, buildingsCanProgressNum);
+                building.itemSprite.material = buildingsCanProgress[num].buildingMaterial;
+                building.buildingType = buildingsCanProgress[num].buildingType;
             }
         }
     }
