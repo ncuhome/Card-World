@@ -156,6 +156,7 @@ MonoBehaviour:
   item: {fileID: 3410726168517638650}
   foundResource: 0
   goToBuild: 0
+  finishBuilding: 0
   resourceObject: {fileID: 0}
   characterNum: 0
   buildingObject: {fileID: 0}
@@ -165,7 +166,9 @@ MonoBehaviour:
   specialSkill: -1
   itemSprite: {fileID: 0}
   goHome: 0
+  stayInBuilding: 0
   home: {fileID: 0}
+  targetBuilding: {fileID: 0}
 --- !u!114 &-5957294728151938232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,6 +187,8 @@ MonoBehaviour:
   buildingType: 0
   stopGenerate: 0
   generatePopulation: 0
+  oil: {fileID: 0}
+  oilTime: 0
 --- !u!114 &1214893024808620160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,6 +202,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGathering: 0
+  canBeGathered: 1
+  isNature: 0
   resourceType: 0
 --- !u!114 &8284814796439455633
 MonoBehaviour:
@@ -276,7 +283,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 95c2762f65f791e458aa102d1efd63bb, type: 2}
+  - {fileID: 2100000, guid: 1c71a843aea129b46b3be6378f0715d6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -311,3 +318,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraToLookAt: {fileID: 0}
+  lookAtCamera: 1

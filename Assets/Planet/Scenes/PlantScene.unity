@@ -1721,133 +1721,133 @@ MonoBehaviour:
   - name: "\u666E\u901A\u539F\u59CB\u4EBA"
     specialSkill: -1
     era: 0
-    characterMaterial: {fileID: 2100000, guid: 6f5f3757bfacc7849853e19acf378bc0, type: 2}
+    characterMaterial: {fileID: 2100000, guid: 1c71a843aea129b46b3be6378f0715d6, type: 2}
     characterNum: 0
     preCharacterNum: -1
     techAbility: 0
   - name: "\u72E9\u730E\u539F\u59CB\u4EBA"
     specialSkill: 0
     era: 0
-    characterMaterial: {fileID: 2100000, guid: 154d3d387ab4448489d8b12f1d4a486d, type: 2}
+    characterMaterial: {fileID: 2100000, guid: 76d238024b2dce24db3329b706937a34, type: 2}
     characterNum: 1
     preCharacterNum: -1
     techAbility: 0
   - name: "\u539F\u59CB\u519C\u6C11"
     specialSkill: 1
     era: 0
-    characterMaterial: {fileID: 2100000, guid: 6c597e60cc46c0d4bafc0c9fca4d2a31, type: 2}
+    characterMaterial: {fileID: 2100000, guid: 6008991c5edbce84ca77c994e7dab9e2, type: 2}
     characterNum: 2
     preCharacterNum: -1
     techAbility: 0
   - name: "\u539F\u59CB\u89C2\u661F\u8005"
     specialSkill: 2
     era: 0
-    characterMaterial: {fileID: 0}
+    characterMaterial: {fileID: 2100000, guid: 500b8be8a0d0c3a49b3344a8b8882d8a, type: 2}
     characterNum: 3
     preCharacterNum: -1
     techAbility: 0
   - name: "\u90E8\u843D\u914B\u957F"
     specialSkill: 4
     era: 0
-    characterMaterial: {fileID: 0}
+    characterMaterial: {fileID: 2100000, guid: daed4cf8e754b4c4b98843883eaf3973, type: 2}
     characterNum: 4
     preCharacterNum: -1
     techAbility: 0
   - name: "\u666E\u901A\u53E4\u5178\u4EBA"
     specialSkill: -1
     era: 1
-    characterMaterial: {fileID: 0}
+    characterMaterial: {fileID: 2100000, guid: a775400d07b158b44b8c82cc2be96954, type: 2}
     characterNum: 5
     preCharacterNum: 0
     techAbility: 0
   - name: "\u70BC\u91D1\u672F\u5E08"
     specialSkill: 5
     era: 1
-    characterMaterial: {fileID: 0}
+    characterMaterial: {fileID: 2100000, guid: 8deea82d78ec4b444ad713fbc0c70043, type: 2}
     characterNum: 6
     preCharacterNum: 3
     techAbility: 0
   - name: "\u57CE\u4E3B"
     specialSkill: 4
     era: 1
-    characterMaterial: {fileID: 0}
+    characterMaterial: {fileID: 2100000, guid: 11c60838a27aa0b42922de102c22fdcd, type: 2}
     characterNum: 7
     preCharacterNum: 4
     techAbility: 0
   - name: "\u8230\u957F"
     specialSkill: 9
     era: 1
-    characterMaterial: {fileID: 0}
+    characterMaterial: {fileID: 2100000, guid: d4087e2d8fbe80648b8785a0e897ec9d, type: 2}
     characterNum: 8
     preCharacterNum: -1
     techAbility: 0
   - name: "\u6C34\u624B"
     specialSkill: 8
     era: 1
-    characterMaterial: {fileID: 0}
+    characterMaterial: {fileID: 2100000, guid: b0259ec7adeaeca4f8a34c327ad0f6a9, type: 2}
     characterNum: 9
     preCharacterNum: 1
     techAbility: 0
   - name: "\u53E4\u5178\u519C\u6C11"
     specialSkill: 1
     era: 1
-    characterMaterial: {fileID: 0}
+    characterMaterial: {fileID: 2100000, guid: a8302cb52bc927f4ba82bece2c77ec6b, type: 2}
     characterNum: 10
     preCharacterNum: 2
     techAbility: 0
   - name: "\u5929\u6587\u5B66\u5BB6"
     specialSkill: 3
     era: 1
-    characterMaterial: {fileID: 0}
+    characterMaterial: {fileID: 2100000, guid: 5577e64bf9655354780592e5062a1428, type: 2}
     characterNum: 11
     preCharacterNum: 3
     techAbility: 0
   - name: "\u91D1\u5C5E\u5DE5\u5320"
     specialSkill: 6
     era: 1
-    characterMaterial: {fileID: 0}
+    characterMaterial: {fileID: 2100000, guid: a488ac5554cbbab48b4915994c8f194b, type: 2}
     characterNum: 12
     preCharacterNum: 0
     techAbility: 0
   - name: "\u666E\u901A\u4EBA"
     specialSkill: -1
     era: 2
-    characterMaterial: {fileID: 0}
+    characterMaterial: {fileID: 2100000, guid: 6f4cf0c7615e55245b243d306283b572, type: 2}
     characterNum: 13
     preCharacterNum: 5
     techAbility: 0
   - name: "\u519B\u8230\u957F"
     specialSkill: 9
     era: 2
-    characterMaterial: {fileID: 0}
+    characterMaterial: {fileID: 2100000, guid: 00a1ce28b721fd54ca0045d06aa3b5c1, type: 2}
     characterNum: 14
     preCharacterNum: 8
     techAbility: 0
   - name: "\u6D77\u5458"
     specialSkill: 8
     era: 2
-    characterMaterial: {fileID: 0}
+    characterMaterial: {fileID: 2100000, guid: 47953fa9a119c6540acfb8aa199cdc42, type: 2}
     characterNum: 15
     preCharacterNum: 9
     techAbility: 0
   - name: "\u51B6\u70BC\u5DE5\u4EBA"
     specialSkill: 7
     era: 2
-    characterMaterial: {fileID: 0}
+    characterMaterial: {fileID: 2100000, guid: a488ac5554cbbab48b4915994c8f194b, type: 2}
     characterNum: 16
     preCharacterNum: 12
     techAbility: 0
   - name: "\u7535\u529B\u5DE5\u4EBA"
     specialSkill: 11
     era: 2
-    characterMaterial: {fileID: 0}
+    characterMaterial: {fileID: 2100000, guid: b6c09f7b5f338c845b264f5be775215c, type: 2}
     characterNum: 17
     preCharacterNum: -1
     techAbility: 0
   - name: "\u73B0\u4EE3\u5316\u519C\u6C11"
     specialSkill: 1
     era: 2
-    characterMaterial: {fileID: 0}
+    characterMaterial: {fileID: 2100000, guid: 3b53e88fbdbbf364d86e8d32db8da02a, type: 2}
     characterNum: 18
     preCharacterNum: 10
     techAbility: 0
@@ -4249,6 +4249,7 @@ MonoBehaviour:
   - {fileID: 0}
   buildingInBlock: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxBuildingInBlock: 10
+  guarantees: 0
 --- !u!114 &912914644
 MonoBehaviour:
   m_ObjectHideFlags: 0
