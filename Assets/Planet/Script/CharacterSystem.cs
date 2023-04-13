@@ -9,6 +9,7 @@ public class CharacterData
     public Era era;
     public Material characterMaterial;
     public int characterNum;
+    public int preCharacterNum;
 }
 public class CharacterSystem : MonoBehaviour
 {
@@ -78,11 +79,48 @@ public class CharacterSystem : MonoBehaviour
     {
         foreach (CharacterData characterData in characterDatas)
         {
-            if ((characterData.era == era)&&(characterData.specialSkill == characterSkill))
+            if ((characterData.era == era) && (characterData.specialSkill == characterSkill))
             {
                 return characterData;
             }
         }
         return null;
+    }
+
+
+
+    //获取角色数组里的最小空位
+    public int GetCharacterNum()
+    {
+        int i = 0;
+        while (characters[i] != null)
+        {
+            i++;
+        }
+        return i;
+    }
+
+    //文明进阶
+    public void CivilizationProgresses()
+    {
+        foreach (Character character in characters)
+        {
+            CharacterData[] charactersCanProgress = new CharacterData[20];
+            int charactersCanProgressNum = 0;
+            for (int i = 0; i < 20; i++)
+            {
+                if (characterDatas[i].preCharacterNum == character.characterNum)
+                {
+                    charactersCanProgress[charactersCanProgressNum] = characterDatas[i];
+                    charactersCanProgressNum++;
+                }
+            }
+            if (charactersCanProgressNum != 0)
+            {
+                int num = Random.Range(0,charactersCanProgressNum);
+                character.specialSkill = charactersCanProgress[num].specialSkill;
+                character.itemSprite.material =  charactersCanProgress[num].characterMaterial;
+            }
+        }
     }
 }
