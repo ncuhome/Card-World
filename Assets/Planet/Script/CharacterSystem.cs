@@ -17,8 +17,6 @@ public class CharacterSystem : MonoBehaviour
     public Character[] characters = new Character[100];
     public CharacterData[] characterDatas = new CharacterData[20];
     public float maxAge = 50f;
-    public Material[] eraMaterials = new Material[3];
-    public Material[] specialMaterials = new Material[10];
     private void Awake()
     {
         if (Instance == null)
@@ -47,6 +45,8 @@ public class CharacterSystem : MonoBehaviour
                 maxAge = 110f;
                 break;
         }
+
+        EndOfCivilization();
     }
 
     //判定是否能进行建筑，并且返回作为建造者的角色下标
@@ -155,6 +155,16 @@ public class CharacterSystem : MonoBehaviour
                 return SpecialSkill.AerospaceResearch;
         }
         return SpecialSkill.None;
+    }
+
+    public void EndOfCivilization()
+    {
+        for (int i = 0; i < characters.Length; i++)
+        {
+            if (characters[i] != null) { return; }
+        }
+        BuildingSystem.Instance.EndOfCivilization();
+        Debug.Log("End Of Civilization");
     }
 
 }
