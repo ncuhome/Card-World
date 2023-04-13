@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- 
+
 //摄像机操作   
 //删减版   在实际的使用中可能会有限制的需求  比如最大远离多少  最近距离多少   不能旋转到地面以下等
 public class CameraController : MonoBehaviour
@@ -22,13 +22,13 @@ public class CameraController : MonoBehaviour
     //镜头的远离和接近
     public void Ctrl_Cam_Move()
     {
-        if (Input.GetAxis("Mouse ScrollWheel") > 0)
+        if ((Input.GetAxis("Mouse ScrollWheel") > 0) && (Vector3.Distance(transform.position, Vector3.zero) > 7f))
         {
-            transform.Translate(Vector3.forward * 1f);//速度可调  自行调整
+            transform.Translate(Vector3.forward * 0.25f);//速度可调  自行调整
         }
-        if (Input.GetAxis("Mouse ScrollWheel") < 0)
+        if ((Input.GetAxis("Mouse ScrollWheel") < 0) && (Vector3.Distance(transform.position, Vector3.zero) < 20f))
         {
-            transform.Translate(Vector3.forward * -1f);//速度可调  自行调整
+            transform.Translate(Vector3.forward * -0.25f);//速度可调  自行调整
         }
     }
     //摄像机的旋转

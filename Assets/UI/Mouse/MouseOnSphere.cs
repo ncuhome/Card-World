@@ -44,7 +44,7 @@ public class MouseOnSphere : MonoBehaviour //读取鼠标在球上的位置
         if (Physics.Raycast(ray.origin, ray.direction, out hit, maxDistance))
         {
             // 检查碰撞的碰撞器是否是球形对象的碰撞器
-            if (hit.collider == sphere.GetComponent<SphereCollider>())
+            if (hit.collider == sphere.GetComponent<MeshCollider>())
             {
                 // 获取球形对象上的碰撞点坐标
                 Vector3 hitPoint = hit.point;
