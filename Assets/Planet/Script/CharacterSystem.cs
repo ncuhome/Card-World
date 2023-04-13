@@ -111,7 +111,7 @@ public class CharacterSystem : MonoBehaviour
             int charactersCanProgressNum = 0;
             for (int i = 0; i < 20; i++)
             {
-                if (characterDatas[i].preCharacterNum == character.characterNum)
+                if (characterDatas[i].preCharacterNum == GetCharacter(EraSystem.Instance.era, character.specialSkill).characterNum)
                 {
                     charactersCanProgress[charactersCanProgressNum] = characterDatas[i];
                     charactersCanProgressNum++;
@@ -122,11 +122,13 @@ public class CharacterSystem : MonoBehaviour
                 int num = Random.Range(0, charactersCanProgressNum);
                 character.specialSkill = charactersCanProgress[num].specialSkill;
                 character.itemSprite.material = charactersCanProgress[num].characterMaterial;
+                character.name = charactersCanProgress[num].name;
             }
             else
             {
                 character.specialSkill = SpecialSkill.None;
                 character.itemSprite.material = GetCharacter(EraSystem.Instance.era, SpecialSkill.None).characterMaterial;
+                character.name = GetCharacter(EraSystem.Instance.era, SpecialSkill.None).name;
             }
         }
     }

@@ -2278,7 +2278,7 @@ MonoBehaviour:
     era: 1
     characterMaterial: {fileID: 2100000, guid: a488ac5554cbbab48b4915994c8f194b, type: 2}
     characterNum: 12
-    preCharacterNum: 0
+    preCharacterNum: -1
     techAbility: 0
   - name: "\u666E\u901A\u4EBA"
     specialSkill: -1
