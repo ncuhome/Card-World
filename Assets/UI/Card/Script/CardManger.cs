@@ -20,6 +20,7 @@ public class CardManger : MonoBehaviour
 
     public void DealCard()  //发牌
     {
+        AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[1]);
         //if (CardPack.cardPack.Count < 6)
         //{
         //GameObject newCard;
