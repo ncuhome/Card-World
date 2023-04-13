@@ -170,7 +170,7 @@ public class Character : MonoBehaviour
                         buildingObject.transform.localScale = Vector3.one;
                         buildingObject.GetComponent<Building>().finishBuilding = true;
                     }
-                    if (buildingObject.GetComponent<Building>().finishBuilding)
+                    if ((buildingObject == null) || (buildingObject.GetComponent<Building>().finishBuilding))
                     {
                         goToBuild = false;
                         characterState = CharacterState.idle;

@@ -75,7 +75,7 @@ public class BuildingSystem : MonoBehaviour
 
             foreach (string techNode in buildingDatas[i].needTech)
             {
-                if (techNode == null) { continue; }
+                if (techNode == null) {continue;}
                 if (!TechTree.instance.GetWhetherUnlocked(techNode))
                 {
                     buildingDatas[i].canBuild = false;
@@ -226,6 +226,7 @@ public class BuildingSystem : MonoBehaviour
     {
         foreach (Building building in buildings)
         {
+            if (building == null) { continue; }
             if (buildingDatas[(int)building.buildingType].isSpecialBuilding) { continue; }
             if (Random.value < 0.3f)
             {
