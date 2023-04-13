@@ -130,33 +130,25 @@ public class CreateController : MonoBehaviour
                 itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 0.5f, itemSprite.transform.localScale.y * 0.5f, itemSprite.transform.localScale.z);
                 itemSprite.transform.localPosition = new Vector3(0, 0.505f, 0);
                 itemScript.itemType = ItemType.Character;
-                character.characterNum = GetCharacterNum();
-                CharacterSystem.Instance.characters[GetCharacterNum()] = character;
+                character.characterNum = CharacterSystem.Instance.GetCharacterNum();
+                character.specialSkill = (SpecialSkill)characterSkill;
+                CharacterSystem.Instance.characters[CharacterSystem.Instance.GetCharacterNum()] = character;
                 itemSprite.material = CharacterSystem.Instance.GetCharacter(EraSystem.Instance.era, characterSkill).characterMaterial;
                 item.name = CharacterSystem.Instance.GetCharacter(EraSystem.Instance.era, characterSkill).name;
                 break;
         }
     }
 
-    //获取角色数组里的最小空位
-    private int GetCharacterNum()
-    {
-        int i = 0;
-        while (CharacterSystem.Instance.characters[i] != null)
-        {
-            i++;
-        }
-        return i;
-    }
-
     //调试用初始化
     public void TestCreate()
     {
-        int num = Random.Range(0, 24);
+        int num = 13;
         for (int i = 0; i <= 3; i++)
         {
             CreateController.Instance.CreateItem(ItemType.Character, null, null, SpecialSkill.None, new int[] { num });
         }
+        CreateController.Instance.CreateItem(ItemType.Character, null, null, SpecialSkill.Hunting, new int[] { num });
+        CreateController.Instance.CreateItem(ItemType.Character, null, null, SpecialSkill.Farming, new int[] { num });
         CreateController.Instance.CreateItem(ItemType.Building, null, BuildingType.Cave, null, new int[] { num });
         BuildingSystem.Instance.buildings[0] = GameObject.Find("Items").transform.GetChild(GameObject.Find("Items").transform.childCount - 1).GetComponent<Building>();
         BuildingSystem.Instance.buildingInBlock[num]++;

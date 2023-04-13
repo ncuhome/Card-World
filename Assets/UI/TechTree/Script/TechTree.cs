@@ -58,6 +58,8 @@ public class TechTree : MonoBehaviour
             {
                 EraSignUI.instance.DisplayText("你进入了工业时代！", 5f, Color.red);
                 AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[2]);
+                BuildingSystem.Instance.CivilizationProgresses();
+                CharacterSystem.Instance.CivilizationProgresses();
             }
             EraSystem.Instance.era = Era.IndustrialEra;
             return 2; //第三个时代
@@ -76,6 +78,8 @@ public class TechTree : MonoBehaviour
             {
                 EraSignUI.instance.DisplayText("你进入了古典时代！", 5f, Color.red);
                 AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[2]);
+                BuildingSystem.Instance.CivilizationProgresses();
+                CharacterSystem.Instance.CivilizationProgresses();
             }
             EraSystem.Instance.era = Era.ClassicalEra;
             return 1; //第二个时代

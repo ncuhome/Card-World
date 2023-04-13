@@ -27,8 +27,8 @@ public class Character : MonoBehaviour
     private Color pixelColor;
     public SpecialSkill specialSkill = SpecialSkill.None;
     public MeshRenderer itemSprite;
-    public bool goHome = false;
-    public Building home;
+    public bool goHome, stayInBuilding = false;
+    public Building home, targetBuilding;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +56,7 @@ public class Character : MonoBehaviour
         }
 
         AddAge();
+        StartWork();
         GoHome();
 
         switch (characterState)
@@ -122,6 +123,10 @@ public class Character : MonoBehaviour
                     {
                         characterState = CharacterState.sleep;
                     }
+                    else if (stayInBuilding)
+                    {
+                        characterState = CharacterState.work;
+                    }
                     else if (foundResource)
                     {
                         characterState = CharacterState.gather;
@@ -137,6 +142,10 @@ public class Character : MonoBehaviour
                 }
                 break;
             case CharacterState.work:
+                if (stayInBuilding == false)
+                {
+                    characterState = CharacterState.idle;
+                }
                 break;
             case CharacterState.gather:
                 time += Time.deltaTime;
@@ -222,6 +231,22 @@ public class Character : MonoBehaviour
     //角色死亡
     public void Die()
     {
+        if (CharacterSystem.Instance.GetCharacter(EraSystem.Instance.era, specialSkill).techAbility && (Random.value > 0.7f))
+        {
+            List<TechNode> canBeUnlock = new List<TechNode>();
+            foreach (TechNode tech in TechTree.instance.allTechNode)
+            {
+                Debug.Log(tech);
+                if (tech.CanBeUnlocked() == true && tech.unlock == false)
+                {
+                    Debug.Log(tech + "second");
+                    canBeUnlock.Add(tech);
+                }
+            }
+            int random = Random.Range(0, canBeUnlock.Count); //解锁随机一个科技
+            canBeUnlock[random].ImmediateUnlockIt();
+        }
+
         CharacterSystem.Instance.characters[characterNum] = null;
         Destroy(this.gameObject);
     }
@@ -236,11 +261,11 @@ public class Character : MonoBehaviour
         else if ((ColorSystem.ColorExt.Difference(pixelColor, ColorSystem.Instance.colors[1]) < 0.01f)
          || (ColorSystem.ColorExt.Difference(pixelColor, ColorSystem.Instance.colors[3]) < 0.01f))
         {
-            ageSpeed = 1f;
+            ageSpeed = 1f + (BlockSystem.Instance.blocks[item.blockNum].water * BlockSystem.Instance.blocks[item.blockNum].temperature * 8f) / (BlockSystem.Instance.blocks[item.blockNum].water + BlockSystem.Instance.blocks[item.blockNum].temperature) / BlockSystem.Instance.blocks[item.blockNum].livability - 1;
         }
         else
         {
-            ageSpeed = 0.5f;
+            ageSpeed = 0.5f + (BlockSystem.Instance.blocks[item.blockNum].water * BlockSystem.Instance.blocks[item.blockNum].temperature * 8f) / (BlockSystem.Instance.blocks[item.blockNum].water + BlockSystem.Instance.blocks[item.blockNum].temperature) / BlockSystem.Instance.blocks[item.blockNum].livability - 1;
         }
         age += Time.deltaTime * ageSpeed;
         if ((age > CharacterSystem.Instance.maxAge) && (!goToBuild))
@@ -252,7 +277,7 @@ public class Character : MonoBehaviour
     //根据最近的居住建筑是否被光照判断是否回家
     public void GoHome()
     {
-        if (goToBuild) { return; }
+        //if (EraSystem.Instance.era == Era.IndustrialEra) { return; }
         home = BuildingSystem.Instance.FindNearHome(transform);
         if (home == null) { return; }
         if (home.GetComponent<LightProbes>().illumination == Illumination.day)
@@ -263,11 +288,76 @@ public class Character : MonoBehaviour
         {
             if (goHome == false)
             {
+                if (goToBuild || foundResource) { return; }
                 WalkToTargetQua(home.transform.rotation);
+                goHome = true;
+                stayInBuilding = false;
             }
-            goHome = true;
         }
     }
+
+    public void Stay(BuildingType buildingType)
+    {
+        targetBuilding = BuildingSystem.Instance.FindNearBuildingWithType(transform, buildingType);
+        if (targetBuilding == null)
+        {
+            //stayInBuilding = false;
+            return;
+        }
+        if (stayInBuilding == false)
+        {
+            if (goToBuild || goHome || foundResource) { return; }
+            stayInBuilding = true;
+            WalkToTargetQua(targetBuilding.transform.rotation);
+        }
+    }
+
+    public void StartWork()
+    {
+        switch (specialSkill)
+        {
+            case SpecialSkill.None:
+                break;
+            case SpecialSkill.Hunting:
+                Stay(BuildingType.SheepPen);
+                Stay(BuildingType.FishingFacility);
+                break;
+            case SpecialSkill.Farming:
+                Stay(BuildingType.OriginalFarmland);
+                Stay(BuildingType.Farm);
+                Stay(BuildingType.ModernFarm);
+                break;
+            case SpecialSkill.Stargazing:
+                Stay(BuildingType.Stonehenge);
+                break;
+            case SpecialSkill.AstronomicalObservation:
+                Stay(BuildingType.Tower);
+                break;
+            case SpecialSkill.Leading:
+                break;
+            case SpecialSkill.Alchemy:
+                Stay(BuildingType.AlchemyInstitute);
+                break;
+            case SpecialSkill.Smelt:
+                Stay(BuildingType.SmallMetalWorkshop);
+                break;
+            case SpecialSkill.Refining:
+                Stay(BuildingType.MetalSmelter);
+                break;
+            case SpecialSkill.Navigation:
+                break;
+            case SpecialSkill.OceanSailing:
+                break;
+            case SpecialSkill.AerospaceResearch:
+                Stay(BuildingType.RocketLaunchBase);
+                break;
+            case SpecialSkill.GenerateElectricity:
+                Stay(BuildingType.NuclearPowerPlant);
+                break;
+
+        }
+    }
+
 
 
 

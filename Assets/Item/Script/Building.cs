@@ -28,7 +28,18 @@ public class Building : MonoBehaviour
         if (GetComponent<Item>().itemType == ItemType.Building)
         {
             isBuilding = true;
-            population = Random.Range(1, 5);
+            switch (EraSystem.Instance.era)
+            {
+                case Era.AncientEra:
+                    population = Random.Range(3, 7);
+                    break;
+                case Era.ClassicalEra:
+                    population = Random.Range(5, 8);
+                    break;
+                case Era.IndustrialEra:
+                    population = Random.Range(6, 10);
+                    break;
+            }
         }
         else
         {
@@ -41,9 +52,7 @@ public class Building : MonoBehaviour
     {
         if (!isBuilding) { return; }
         GeneratePopulation();
-
-
-
+        InstantiateOil();
     }
 
     void GeneratePopulation()
@@ -53,7 +62,7 @@ public class Building : MonoBehaviour
         if (time > 60f / population)
         {
             time = 0;
-            CreateController.Instance.CreateItem(ItemType.Character, null, null, SpecialSkill.None, transform.eulerAngles);
+            CreateController.Instance.CreateItem(ItemType.Character, null, null, CharacterSystem.Instance.GetRandomSkill(), transform.eulerAngles);
             generatePopulation++;
         }
         if (generatePopulation > population)
@@ -72,6 +81,7 @@ public class Building : MonoBehaviour
             {
                 CreateController.Instance.CreateItem(ItemType.Resource, ResourceType.Oil, null, null, transform.eulerAngles);
                 oil = transform.parent.GetChild(transform.parent.childCount - 1).gameObject;
+                oilTime = 0;
             }
         }
     }

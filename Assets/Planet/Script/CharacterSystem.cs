@@ -9,6 +9,8 @@ public class CharacterData
     public Era era;
     public Material characterMaterial;
     public int characterNum;
+    public int preCharacterNum;
+    public bool techAbility;
 }
 public class CharacterSystem : MonoBehaviour
 {
@@ -16,8 +18,6 @@ public class CharacterSystem : MonoBehaviour
     public Character[] characters = new Character[100];
     public CharacterData[] characterDatas = new CharacterData[20];
     public float maxAge = 50f;
-    public Material[] eraMaterials = new Material[3];
-    public Material[] specialMaterials = new Material[10];
     private void Awake()
     {
         if (Instance == null)
@@ -37,15 +37,17 @@ public class CharacterSystem : MonoBehaviour
         switch (EraSystem.Instance.era)
         {
             case Era.AncientEra:
-                maxAge = 50f;
+                maxAge = 60f;
                 break;
             case Era.ClassicalEra:
-                maxAge = 75f;
+                maxAge = 85f;
                 break;
             case Era.IndustrialEra:
-                maxAge = 100f;
+                maxAge = 110f;
                 break;
         }
+
+        EndOfCivilization();
     }
 
     //判定是否能进行建筑，并且返回作为建造者的角色下标
@@ -59,7 +61,7 @@ public class CharacterSystem : MonoBehaviour
             for (int j = 0; j < 100; j++)
             {
                 if ((characters[j] != null) && (BuildingSystem.Instance.buildingInBlock[i] < BuildingSystem.Instance.maxBuildingInBlock) && (characters[j].item.blockNum == i)
-                 && (characters[j].foundResource == false) && (characters[j].goToBuild == false) && (characters[j].goHome == false))
+                 && (characters[j].foundResource == false) && (characters[j].goToBuild == false) && (characters[j].goHome == false) && (characters[j].stayInBuilding == false))
                 {
                     builders[num] = j;
                     num++;
@@ -78,11 +80,97 @@ public class CharacterSystem : MonoBehaviour
     {
         foreach (CharacterData characterData in characterDatas)
         {
-            if ((characterData.era == era)&&(characterData.specialSkill == characterSkill))
+            if ((characterData.era == era) && (characterData.specialSkill == characterSkill))
             {
                 return characterData;
             }
         }
         return null;
     }
+
+
+
+    //获取角色数组里的最小空位
+    public int GetCharacterNum()
+    {
+        int i = 0;
+        while (characters[i] != null)
+        {
+            i++;
+        }
+        return i;
+    }
+
+    //文明进阶
+    public void CivilizationProgresses()
+    {
+        foreach (Character character in characters)
+        {
+            CharacterData[] charactersCanProgress = new CharacterData[20];
+            int charactersCanProgressNum = 0;
+            for (int i = 0; i < 20; i++)
+            {
+                if (characterDatas[i].preCharacterNum == character.characterNum)
+                {
+                    charactersCanProgress[charactersCanProgressNum] = characterDatas[i];
+                    charactersCanProgressNum++;
+                }
+            }
+            if (charactersCanProgressNum != 0)
+            {
+                int num = Random.Range(0, charactersCanProgressNum);
+                character.specialSkill = charactersCanProgress[num].specialSkill;
+                character.itemSprite.material = charactersCanProgress[num].characterMaterial;
+            }
+            else
+            {
+                character.specialSkill = SpecialSkill.None;
+                character.itemSprite.material = GetCharacter(EraSystem.Instance.era, SpecialSkill.None).characterMaterial;
+            }
+        }
+    }
+
+    //根据概率和时代获取随机的技能
+    public SpecialSkill GetRandomSkill()
+    {
+        float random = Random.value;
+        switch (EraSystem.Instance.era)
+        {
+            case Era.AncientEra:
+                if (random < 0.5f) { return SpecialSkill.None; }
+                if (random < 0.65f) { return SpecialSkill.Hunting; }
+                if (random < 0.8f) { return SpecialSkill.Farming; }
+                if (random < 0.9f) { return SpecialSkill.Stargazing; }
+                return SpecialSkill.Leading;
+            case Era.ClassicalEra:
+                if (random < 0.3f) { return SpecialSkill.None; }
+                if (random < 0.45f) { return SpecialSkill.Alchemy; }
+                if (random < 0.55f) { return SpecialSkill.Leading; }
+                if (random < 0.6f) { return SpecialSkill.OceanSailing; }
+                if (random < 0.65f) { return SpecialSkill.Navigation; }
+                if (random < 0.8f) { return SpecialSkill.Farming; }
+                if (random < 0.85f) { return SpecialSkill.AstronomicalObservation; }
+                return SpecialSkill.Smelt;
+            case Era.IndustrialEra:
+                if (random < 0.4f) { return SpecialSkill.None; }
+                if (random < 0.44f) { return SpecialSkill.OceanSailing; }
+                if (random < 0.52f) { return SpecialSkill.Navigation; }
+                if (random < 0.68f) { return SpecialSkill.Refining; }
+                if (random < 0.8f) { return SpecialSkill.GenerateElectricity; }
+                if (random < 0.95f) { return SpecialSkill.Farming; }
+                return SpecialSkill.AerospaceResearch;
+        }
+        return SpecialSkill.None;
+    }
+
+    public void EndOfCivilization()
+    {
+        for (int i = 0; i < characters.Length; i++)
+        {
+            if (characters[i] != null) { return; }
+        }
+        BuildingSystem.Instance.EndOfCivilization();
+        Debug.Log("End Of Civilization");
+    }
+
 }

@@ -9,7 +9,7 @@ public class Block
 
     public float water = 20;      //水量
 
-    public float livability = 50; //宜居度
+    public float livability = 80; //宜居度
 }
 
 public class BlockSystem : MonoBehaviour
