@@ -514,76 +514,76 @@ MonoBehaviour:
   blocks:
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
   - temperature: 20
     water: 20
-    livability: 50
+    livability: 80
 --- !u!114 &912914638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2063,7 +2063,7 @@ MonoBehaviour:
       resourceNum: 0
       resourceMaterials: []
     isSpecialBuilding: 0
-    isHomeBuilding: 0
+    isHomeBuilding: 1
     buildingMaterial: {fileID: 2100000, guid: 89ca4ed0035484f41be5aa2b0a3a1bac, type: 2}
     canBuild: 0
     needTech:
@@ -2132,7 +2132,7 @@ MonoBehaviour:
     isSpecialBuilding: 0
     isHomeBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: ada6539085386874fae62db151838e65, type: 2}
-    canBuild: 0
+    canBuild: 1
     needTech:
     - "\u9020\u8239"
     preBuildings: 
@@ -2197,7 +2197,7 @@ MonoBehaviour:
       resourceNum: 0
       resourceMaterials: []
     isSpecialBuilding: 0
-    isHomeBuilding: 0
+    isHomeBuilding: 1
     buildingMaterial: {fileID: 2100000, guid: 974c1804b35b92f47a477be4b3890cb2, type: 2}
     canBuild: 0
     needTech:
@@ -2264,7 +2264,7 @@ MonoBehaviour:
       resourceNum: 0
       resourceMaterials: []
     isSpecialBuilding: 0
-    isHomeBuilding: 0
+    isHomeBuilding: 1
     buildingMaterial: {fileID: 2100000, guid: 01fb8facf4660014c9d1240da6f42839, type: 2}
     canBuild: 0
     needTech:
