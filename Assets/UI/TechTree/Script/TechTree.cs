@@ -40,7 +40,7 @@ public class TechTree : MonoBehaviour
                 }
             }
         }
-        throw new NullReferenceException("没有找到该科技,请检查你输入的科技名字是否正确");
+        throw new NullReferenceException("没有找到该科技,请检查你输入的科技名字是否正确" + techName);
     }
     public int ConfirmEra() //判断属于那个时代
     {
