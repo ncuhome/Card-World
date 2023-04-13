@@ -160,6 +160,25 @@ public class BuildingSystem : MonoBehaviour
         return nearHome;
     }
 
+    public Building FindNearBuildingWithType(Transform itemTransform, BuildingType buildingType)
+    {
+        Building nearBuilding = null;
+        float minAngle = 3600f;
+        foreach (Building building in buildings)
+        {
+            if (building == null) { continue; }
+            //Debug.Log(building.name + " " + building.buildingType + " " + buildingDatas[(int)building.buildingType].isHomeBuilding);
+            if (building.buildingType != buildingType) { continue; }
+            float angle = Vector3.Angle(itemTransform.rotation * Vector3.up, building.transform.rotation * Vector3.up);
+            if (angle < minAngle)
+            {
+                minAngle = angle;
+                nearBuilding = building;
+            }
+        }
+        return nearBuilding;
+    }
+
     //文明终结
     public void EndOfCivilization()
     {
