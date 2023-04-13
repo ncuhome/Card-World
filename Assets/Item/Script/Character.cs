@@ -301,7 +301,7 @@ public class Character : MonoBehaviour
         targetBuilding = BuildingSystem.Instance.FindNearBuildingWithType(transform, buildingType);
         if (targetBuilding == null)
         {
-            stayInBuilding = false;
+            //stayInBuilding = false;
             return;
         }
         if (stayInBuilding == false)

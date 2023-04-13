@@ -28,6 +28,7 @@ public class BuildingSystem : MonoBehaviour
     public Building[] buildings = new Building[120];
     public int[] buildingInBlock = new int[24];
     public int maxBuildingInBlock;
+    public int guarantees;
     // Start is called before the first frame update
     /// <summary>
     /// Awake is called when the script instance is being loaded.
@@ -94,12 +95,31 @@ public class BuildingSystem : MonoBehaviour
 
         //如果有可建造的建筑，就开始寻找工人
         if (buildingsCanBeBuildNum == 0) { return; }
-        int buildingRandomNum = Random.Range(0, buildingsCanBeBuildNum);
         builders = CharacterSystem.Instance.GetBuilders(size);
 
         //获取了工人则开始建造
         if (builders != null)
         {
+            //保底出居住建筑
+            int buildingRandomNum = Random.Range(0, buildingsCanBeBuildNum);
+            if (!buildingsCanBeBuild[buildingRandomNum].isHomeBuilding)
+            {
+                guarantees++;
+                if (guarantees > 2f)
+                {
+                    while (!buildingsCanBeBuild[buildingRandomNum].isHomeBuilding)
+                    {
+                        buildingRandomNum = Random.Range(0, buildingsCanBeBuildNum);
+                    }
+                    guarantees = 0;
+                }
+            }
+            else
+            {
+                guarantees = 0;
+            }
+
+
             Vector3 targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
             while ((ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[0]) < 0.01f)
                 || (CharacterSystem.Instance.characters[builders[0]].item.blockNum != BlockSystem.Instance.GetBlockNum(Vector3.zero, Quaternion.Euler(targetEuler))))
