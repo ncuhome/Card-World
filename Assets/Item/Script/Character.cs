@@ -236,11 +236,11 @@ public class Character : MonoBehaviour
         else if ((ColorSystem.ColorExt.Difference(pixelColor, ColorSystem.Instance.colors[1]) < 0.01f)
          || (ColorSystem.ColorExt.Difference(pixelColor, ColorSystem.Instance.colors[3]) < 0.01f))
         {
-            ageSpeed = 1f;
+            ageSpeed = 1f + (BlockSystem.Instance.blocks[item.blockNum].water * BlockSystem.Instance.blocks[item.blockNum].temperature * 8f) / (BlockSystem.Instance.blocks[item.blockNum].water + BlockSystem.Instance.blocks[item.blockNum].temperature) / BlockSystem.Instance.blocks[item.blockNum].livability - 1;
         }
         else
         {
-            ageSpeed = 0.5f;
+            ageSpeed = 0.5f + (BlockSystem.Instance.blocks[item.blockNum].water * BlockSystem.Instance.blocks[item.blockNum].temperature * 8f) / (BlockSystem.Instance.blocks[item.blockNum].water + BlockSystem.Instance.blocks[item.blockNum].temperature) / BlockSystem.Instance.blocks[item.blockNum].livability - 1;
         }
         age += Time.deltaTime * ageSpeed;
         if ((age > CharacterSystem.Instance.maxAge) && (!goToBuild))

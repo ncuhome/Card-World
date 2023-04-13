@@ -511,6 +511,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdf85520d50497f4ead49e1583979d20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blocks:
+  - temperature: 20
+    water: 20
+    livability: 50
+  - temperature: 20
+    water: 20
+    livability: 50
+  - temperature: 20
+    water: 20
+    livability: 50
+  - temperature: 20
+    water: 20
+    livability: 50
+  - temperature: 20
+    water: 20
+    livability: 50
+  - temperature: 20
+    water: 20
+    livability: 50
+  - temperature: 20
+    water: 20
+    livability: 50
+  - temperature: 20
+    water: 20
+    livability: 50
+  - temperature: 20
+    water: 20
+    livability: 50
+  - temperature: 20
+    water: 20
+    livability: 50
+  - temperature: 20
+    water: 20
+    livability: 50
+  - temperature: 20
+    water: 20
+    livability: 50
+  - temperature: 20
+    water: 20
+    livability: 50
+  - temperature: 20
+    water: 20
+    livability: 50
+  - temperature: 20
+    water: 20
+    livability: 50
+  - temperature: 20
+    water: 20
+    livability: 50
+  - temperature: 20
+    water: 20
+    livability: 50
+  - temperature: 20
+    water: 20
+    livability: 50
+  - temperature: 20
+    water: 20
+    livability: 50
+  - temperature: 20
+    water: 20
+    livability: 50
+  - temperature: 20
+    water: 20
+    livability: 50
+  - temperature: 20
+    water: 20
+    livability: 50
+  - temperature: 20
+    water: 20
+    livability: 50
+  - temperature: 20
+    water: 20
+    livability: 50
 --- !u!114 &912914638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1650,101 +1723,121 @@ MonoBehaviour:
     era: 0
     characterMaterial: {fileID: 2100000, guid: 6f5f3757bfacc7849853e19acf378bc0, type: 2}
     characterNum: 0
+    preCharacterNum: -1
   - name: "\u72E9\u730E\u539F\u59CB\u4EBA"
     specialSkill: 0
     era: 0
     characterMaterial: {fileID: 2100000, guid: 154d3d387ab4448489d8b12f1d4a486d, type: 2}
     characterNum: 1
+    preCharacterNum: -1
   - name: "\u539F\u59CB\u519C\u6C11"
     specialSkill: 1
     era: 0
     characterMaterial: {fileID: 2100000, guid: 6c597e60cc46c0d4bafc0c9fca4d2a31, type: 2}
     characterNum: 2
+    preCharacterNum: -1
   - name: "\u539F\u59CB\u89C2\u661F\u8005"
     specialSkill: 2
     era: 0
     characterMaterial: {fileID: 0}
     characterNum: 3
+    preCharacterNum: -1
   - name: "\u90E8\u843D\u914B\u957F"
     specialSkill: 4
     era: 0
     characterMaterial: {fileID: 0}
     characterNum: 4
+    preCharacterNum: -1
   - name: "\u666E\u901A\u53E4\u5178\u4EBA"
     specialSkill: -1
     era: 1
     characterMaterial: {fileID: 0}
     characterNum: 5
+    preCharacterNum: 0
   - name: "\u70BC\u91D1\u672F\u5E08"
     specialSkill: 5
     era: 1
     characterMaterial: {fileID: 0}
     characterNum: 6
+    preCharacterNum: 3
   - name: "\u57CE\u4E3B"
     specialSkill: 4
     era: 1
     characterMaterial: {fileID: 0}
     characterNum: 7
+    preCharacterNum: 4
   - name: "\u8230\u957F"
     specialSkill: 9
     era: 1
     characterMaterial: {fileID: 0}
     characterNum: 8
+    preCharacterNum: -1
   - name: "\u6C34\u624B"
     specialSkill: 8
     era: 1
     characterMaterial: {fileID: 0}
     characterNum: 9
+    preCharacterNum: 1
   - name: "\u53E4\u5178\u519C\u6C11"
     specialSkill: 1
     era: 1
     characterMaterial: {fileID: 0}
     characterNum: 10
+    preCharacterNum: 2
   - name: "\u5929\u6587\u5B66\u5BB6"
     specialSkill: 3
     era: 1
     characterMaterial: {fileID: 0}
     characterNum: 11
+    preCharacterNum: 3
   - name: "\u91D1\u5C5E\u5DE5\u5320"
     specialSkill: 6
     era: 1
     characterMaterial: {fileID: 0}
     characterNum: 12
+    preCharacterNum: 0
   - name: "\u666E\u901A\u4EBA"
     specialSkill: -1
     era: 2
     characterMaterial: {fileID: 0}
     characterNum: 13
+    preCharacterNum: 5
   - name: "\u519B\u8230\u957F"
     specialSkill: 9
     era: 2
     characterMaterial: {fileID: 0}
     characterNum: 14
+    preCharacterNum: 8
   - name: "\u6D77\u5458"
     specialSkill: 8
     era: 2
     characterMaterial: {fileID: 0}
     characterNum: 15
+    preCharacterNum: 9
   - name: "\u51B6\u70BC\u5DE5\u4EBA"
     specialSkill: 7
     era: 2
     characterMaterial: {fileID: 0}
     characterNum: 16
+    preCharacterNum: 12
   - name: "\u7535\u529B\u5DE5\u4EBA"
     specialSkill: 11
     era: 2
     characterMaterial: {fileID: 0}
     characterNum: 17
+    preCharacterNum: -1
   - name: "\u73B0\u4EE3\u5316\u519C\u6C11"
     specialSkill: 1
     era: 2
     characterMaterial: {fileID: 0}
     characterNum: 18
+    preCharacterNum: 10
   - name: "\u592A\u7A7A\u79D1\u5B66\u5BB6"
     specialSkill: 10
     era: 2
     characterMaterial: {fileID: 0}
     characterNum: 19
+    preCharacterNum: 11
   maxAge: 50
   eraMaterials:
   - {fileID: 2100000, guid: 6f5f3757bfacc7849853e19acf378bc0, type: 2}

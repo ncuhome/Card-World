@@ -130,23 +130,12 @@ public class CreateController : MonoBehaviour
                 itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 0.5f, itemSprite.transform.localScale.y * 0.5f, itemSprite.transform.localScale.z);
                 itemSprite.transform.localPosition = new Vector3(0, 0.505f, 0);
                 itemScript.itemType = ItemType.Character;
-                character.characterNum = GetCharacterNum();
-                CharacterSystem.Instance.characters[GetCharacterNum()] = character;
+                character.characterNum = CharacterSystem.Instance.GetCharacterNum();
+                CharacterSystem.Instance.characters[CharacterSystem.Instance.GetCharacterNum()] = character;
                 itemSprite.material = CharacterSystem.Instance.GetCharacter(EraSystem.Instance.era, characterSkill).characterMaterial;
                 item.name = CharacterSystem.Instance.GetCharacter(EraSystem.Instance.era, characterSkill).name;
                 break;
         }
-    }
-
-    //获取角色数组里的最小空位
-    private int GetCharacterNum()
-    {
-        int i = 0;
-        while (CharacterSystem.Instance.characters[i] != null)
-        {
-            i++;
-        }
-        return i;
     }
 
     //调试用初始化
