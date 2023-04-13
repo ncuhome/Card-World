@@ -72,6 +72,7 @@ public class Building : MonoBehaviour
             {
                 CreateController.Instance.CreateItem(ItemType.Resource, ResourceType.Oil, null, null, transform.eulerAngles);
                 oil = transform.parent.GetChild(transform.parent.childCount - 1).gameObject;
+                oilTime = 0;
             }
         }
     }

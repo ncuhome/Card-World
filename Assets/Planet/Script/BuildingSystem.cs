@@ -16,6 +16,7 @@ public class BuildingData //构建可序列化的数据类
     public Material buildingMaterial;
     public bool canBuild; //当前是否可以建造该种建筑
     public string[] needTech;
+    public BuildingType[] preBuildings;
 }
 public class BuildingSystem : MonoBehaviour
 {
@@ -79,7 +80,7 @@ public class BuildingSystem : MonoBehaviour
             //         buildingDatas[i].canBuild = false;
             //     }
             // }
-            
+
             for (int j = 0; j < 13; j++)
             {
                 if (ResourceSystem.Instance.resourceDatas[j].resourceNum < buildingDatas[i].targetResource[j].resourceNum) { buildingDatas[i].canBuild = false; }
@@ -107,11 +108,11 @@ public class BuildingSystem : MonoBehaviour
             }
             int buildingNum = GetBuildingNum();
             CreateController.Instance.CreateItem(ItemType.Building, null, buildingsCanBeBuild[buildingRandomNum].buildingType, null, targetEuler);
-            buildings[buildingNum] = GameObject.Find("Items").transform.GetChild(GameObject.Find("Items").transform.childCount - 1).GetComponent<Building>();
+            BuildingSystem.Instance.buildings[buildingNum] = GameObject.Find("Items").transform.GetChild(GameObject.Find("Items").transform.childCount - 1).GetComponent<Building>();
             buildings[buildingNum].transform.localScale = Vector3.zero;
             buildings[buildingNum].finishBuilding = false;
-            if (!buildingDatas[(int)buildings[buildingNum].buildingType].isHomeBuilding) { buildings[buildingNum].stopGenerate = true; }
             buildingInBlock[CharacterSystem.Instance.characters[builders[0]].item.blockNum]++;
+            if (!buildingDatas[(int)buildings[buildingNum].buildingType].isHomeBuilding) { buildings[buildingNum].stopGenerate = true; }
 
             //减少建造需求的对应资源
             for (int j = 0; j < 13; j++)
@@ -129,7 +130,7 @@ public class BuildingSystem : MonoBehaviour
     }
 
     //获取最小的建筑空位
-    private int GetBuildingNum()
+    public int GetBuildingNum()
     {
         int i = 0;
         while (buildings[i] != null)
@@ -177,6 +178,38 @@ public class BuildingSystem : MonoBehaviour
                     Destroy(buildings[i].gameObject);
                     buildings[i] = null;
                 }
+            }
+        }
+    }
+
+    //文明进阶
+    public void CivilizationProgresses()
+    {
+        foreach (Building building in buildings)
+        {
+            if (buildingDatas[(int)building.buildingType].isSpecialBuilding) { continue; }
+            BuildingData[] buildingsCanProgress = new BuildingData[30];
+            int buildingsCanProgressNum = 0;
+            for (int i = 0; i < 30; i++)
+            {
+                if (System.Array.IndexOf(buildingDatas[i].preBuildings, building.buildingType) != -1)
+                {
+                    buildingsCanProgress[buildingsCanProgressNum] = buildingDatas[i];
+                    buildingsCanProgressNum++;
+                }
+            }
+            if (buildingsCanProgressNum != 0)
+            {
+                int buildingNum = GetBuildingNum();
+                CreateController.Instance.CreateItem(ItemType.Building, null, buildingsCanProgress[Random.Range(0, buildingsCanProgressNum)].buildingType, null, building.transform.eulerAngles);
+                BuildingSystem.Instance.buildings[buildingNum] = GameObject.Find("Items").transform.GetChild(GameObject.Find("Items").transform.childCount - 1).GetComponent<Building>();
+                buildings[buildingNum].finishBuilding = true;
+                buildings[buildingNum].stopGenerate = true;
+                Destroy(building.gameObject);
+            }
+            else
+            {
+                Destroy(building.gameObject);
             }
         }
     }

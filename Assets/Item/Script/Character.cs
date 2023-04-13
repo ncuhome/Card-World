@@ -253,6 +253,7 @@ public class Character : MonoBehaviour
     public void GoHome()
     {
         if (goToBuild) { return; }
+        if (EraSystem.Instance.era == Era.IndustrialEra) { return; }
         home = BuildingSystem.Instance.FindNearHome(transform);
         if (home == null) { return; }
         if (home.GetComponent<LightProbes>().illumination == Illumination.day)
