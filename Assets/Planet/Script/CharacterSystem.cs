@@ -106,6 +106,7 @@ public class CharacterSystem : MonoBehaviour
     {
         foreach (Character character in characters)
         {
+            if (character == null) { continue; }
             CharacterData[] charactersCanProgress = new CharacterData[20];
             int charactersCanProgressNum = 0;
             for (int i = 0; i < 20; i++)

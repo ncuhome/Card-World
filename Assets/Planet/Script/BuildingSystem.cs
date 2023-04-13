@@ -226,6 +226,7 @@ public class BuildingSystem : MonoBehaviour
     {
         foreach (Building building in buildings)
         {
+            if (building == null) { continue; }
             if (buildingDatas[(int)building.buildingType].isSpecialBuilding) { continue; }
             if (Random.value < 0.3f)
             {
