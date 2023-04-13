@@ -182,6 +182,7 @@ public class BuildingSystem : MonoBehaviour
         }
     }
 
+    //文明进阶
     public void CivilizationProgresses()
     {
         foreach (Building building in buildings)
