@@ -192,7 +192,7 @@ public class BuildingSystem : MonoBehaviour
             }
             else
             {
-                if (Random.Range(0f, 1f) < 0.3f)
+                if (Random.Range(0f, 1f) > 0.3f)
                 {
                     Destroy(buildings[i].gameObject);
                     buildings[i] = null;
