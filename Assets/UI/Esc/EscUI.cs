@@ -13,10 +13,12 @@ public class EscUI : MonoBehaviour
             if (Esc.activeInHierarchy == true)
             {
                 Esc.SetActive(false);
+                Time.timeScale = 1f;
             }
             else if (Esc.activeInHierarchy == false)
             {
                 Esc.SetActive(true);
+                Time.timeScale = 0f;
             }
         }
     }
@@ -34,6 +36,8 @@ public class EscUI : MonoBehaviour
         AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[7]);
         Debug.Log("Relodad");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Esc.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     public void Continue()
@@ -41,5 +45,6 @@ public class EscUI : MonoBehaviour
         AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[7]);
         Debug.Log("Continue");
         Esc.SetActive(false);
+        Time.timeScale = 1f;
     }
 }

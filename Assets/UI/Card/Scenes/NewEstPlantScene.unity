@@ -130,16 +130,72 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4723322303350829364, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+    - target: {fileID: 591502575, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1039137930}
+    - target: {fileID: 591502575, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReLoad
+      objectReference: {fileID: 0}
+    - target: {fileID: 591502575, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FailUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486964999, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4723322303350829364, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+    - target: {fileID: 1486964999, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486964999, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4723322303350829364, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_AnchorMin.x
+    - target: {fileID: 1486964999, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486964999, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486964999, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486964999, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -61.000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 1669743515, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1039137930}
+    - target: {fileID: 1669743515, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1669743515, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FailUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2030165469, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2030165469, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2030165469, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2030165469, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
@@ -186,34 +242,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5938307560302162416, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5938307560302162416, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6058594124559115715, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6058594124559115715, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1457100093}
-    - target: {fileID: 6058594124559115715, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_volume
-      objectReference: {fileID: 0}
-    - target: {fileID: 6058594124559115715, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.AudioListener, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6058594124559115715, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 6875215470551126260, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
       propertyPath: m_Name
       value: AllUI
@@ -2299,117 +2331,142 @@ MonoBehaviour:
     era: 0
     characterMaterial: {fileID: 2100000, guid: 6f5f3757bfacc7849853e19acf378bc0, type: 2}
     characterNum: 0
+    preCharacterNum: 0
+    techAbility: 0
   - name: "\u72E9\u730E\u539F\u59CB\u4EBA"
     specialSkill: 0
     era: 0
     characterMaterial: {fileID: 2100000, guid: 154d3d387ab4448489d8b12f1d4a486d, type: 2}
     characterNum: 1
+    preCharacterNum: 0
+    techAbility: 0
   - name: "\u539F\u59CB\u519C\u6C11"
     specialSkill: 1
     era: 0
     characterMaterial: {fileID: 2100000, guid: 6c597e60cc46c0d4bafc0c9fca4d2a31, type: 2}
     characterNum: 2
+    preCharacterNum: 0
+    techAbility: 0
   - name: "\u539F\u59CB\u89C2\u661F\u8005"
     specialSkill: 2
     era: 0
     characterMaterial: {fileID: 0}
     characterNum: 3
+    preCharacterNum: 0
+    techAbility: 0
   - name: "\u90E8\u843D\u914B\u957F"
     specialSkill: 4
     era: 0
     characterMaterial: {fileID: 0}
     characterNum: 4
+    preCharacterNum: 0
+    techAbility: 0
   - name: "\u666E\u901A\u53E4\u5178\u4EBA"
     specialSkill: -1
     era: 1
     characterMaterial: {fileID: 0}
     characterNum: 5
+    preCharacterNum: 0
+    techAbility: 0
   - name: "\u70BC\u91D1\u672F\u5E08"
     specialSkill: 5
     era: 1
     characterMaterial: {fileID: 0}
     characterNum: 6
+    preCharacterNum: 0
+    techAbility: 0
   - name: "\u57CE\u4E3B"
     specialSkill: 4
     era: 1
     characterMaterial: {fileID: 0}
     characterNum: 7
+    preCharacterNum: 0
+    techAbility: 0
   - name: "\u8230\u957F"
     specialSkill: 9
     era: 1
     characterMaterial: {fileID: 0}
     characterNum: 8
+    preCharacterNum: 0
+    techAbility: 0
   - name: "\u6C34\u624B"
     specialSkill: 8
     era: 1
     characterMaterial: {fileID: 0}
     characterNum: 9
+    preCharacterNum: 0
+    techAbility: 0
   - name: "\u53E4\u5178\u519C\u6C11"
     specialSkill: 1
     era: 1
     characterMaterial: {fileID: 0}
     characterNum: 10
+    preCharacterNum: 0
+    techAbility: 0
   - name: "\u5929\u6587\u5B66\u5BB6"
     specialSkill: 3
     era: 1
     characterMaterial: {fileID: 0}
     characterNum: 11
+    preCharacterNum: 0
+    techAbility: 0
   - name: "\u91D1\u5C5E\u5DE5\u5320"
     specialSkill: 6
     era: 1
     characterMaterial: {fileID: 0}
     characterNum: 12
+    preCharacterNum: 0
+    techAbility: 0
   - name: "\u666E\u901A\u4EBA"
     specialSkill: -1
     era: 2
     characterMaterial: {fileID: 0}
     characterNum: 13
+    preCharacterNum: 0
+    techAbility: 0
   - name: "\u519B\u8230\u957F"
     specialSkill: 9
     era: 2
     characterMaterial: {fileID: 0}
     characterNum: 14
+    preCharacterNum: 0
+    techAbility: 0
   - name: "\u6D77\u5458"
     specialSkill: 8
     era: 2
     characterMaterial: {fileID: 0}
     characterNum: 15
+    preCharacterNum: 0
+    techAbility: 0
   - name: "\u51B6\u70BC\u5DE5\u4EBA"
     specialSkill: 7
     era: 2
     characterMaterial: {fileID: 0}
     characterNum: 16
+    preCharacterNum: 0
+    techAbility: 0
   - name: "\u7535\u529B\u5DE5\u4EBA"
     specialSkill: 11
     era: 2
     characterMaterial: {fileID: 0}
     characterNum: 17
+    preCharacterNum: 0
+    techAbility: 0
   - name: "\u73B0\u4EE3\u5316\u519C\u6C11"
     specialSkill: 1
     era: 2
     characterMaterial: {fileID: 0}
     characterNum: 18
+    preCharacterNum: 0
+    techAbility: 0
   - name: "\u592A\u7A7A\u79D1\u5B66\u5BB6"
     specialSkill: 10
     era: 2
     characterMaterial: {fileID: 0}
     characterNum: 19
+    preCharacterNum: 0
+    techAbility: 0
   maxAge: 50
-  eraMaterials:
-  - {fileID: 2100000, guid: 6f5f3757bfacc7849853e19acf378bc0, type: 2}
-  - {fileID: 2100000, guid: 6c597e60cc46c0d4bafc0c9fca4d2a31, type: 2}
-  - {fileID: 2100000, guid: 8ffa3cb87769cbb40b04a0246aba5234, type: 2}
-  specialMaterials:
-  - {fileID: 2100000, guid: 154d3d387ab4448489d8b12f1d4a486d, type: 2}
-  - {fileID: 2100000, guid: ce643dffc4988134dabded25a4d85175, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &912914643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2489,7 +2546,9 @@ MonoBehaviour:
     isHomeBuilding: 1
     buildingMaterial: {fileID: 2100000, guid: b62d4191aff1dbc4592f49ff922b30fb, type: 2}
     canBuild: 0
-    needTech: []
+    needTech:
+    - "\u9A6F\u5316"
+    preBuildings: 
   - name: "\u8349\u6728\u5C4B"
     buildingType: 1
     era: 0
@@ -2554,7 +2613,9 @@ MonoBehaviour:
     isHomeBuilding: 1
     buildingMaterial: {fileID: 2100000, guid: 9ac30ccab801e244facbbe1c3aa20ca0, type: 2}
     canBuild: 0
-    needTech: []
+    needTech:
+    - "\u9A6F\u5316"
+    preBuildings: 
   - name: "\u7F8A\u5708"
     buildingType: 2
     era: 0
@@ -2619,7 +2680,9 @@ MonoBehaviour:
     isHomeBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 89ca4ed0035484f41be5aa2b0a3a1bac, type: 2}
     canBuild: 0
-    needTech: []
+    needTech:
+    - "\u9A6F\u5316"
+    preBuildings: 
   - name: "\u539F\u59CB\u6355\u9C7C\u8BBE\u65BD"
     buildingType: 3
     era: 0
@@ -2684,7 +2747,9 @@ MonoBehaviour:
     isHomeBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: ada6539085386874fae62db151838e65, type: 2}
     canBuild: 0
-    needTech: []
+    needTech:
+    - "\u9A6F\u5316"
+    preBuildings: 
   - name: "\u539F\u59CB\u519C\u7530"
     buildingType: 4
     era: 0
@@ -2749,7 +2814,9 @@ MonoBehaviour:
     isHomeBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 974c1804b35b92f47a477be4b3890cb2, type: 2}
     canBuild: 0
-    needTech: []
+    needTech:
+    - "\u9A6F\u5316"
+    preBuildings: 
   - name: "\u5C0F\u578B\u7801\u5934"
     buildingType: 5
     era: 0
@@ -2814,7 +2881,9 @@ MonoBehaviour:
     isHomeBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 01fb8facf4660014c9d1240da6f42839, type: 2}
     canBuild: 0
-    needTech: []
+    needTech:
+    - "\u9A6F\u5316"
+    preBuildings: 
   - name: "\u5DE8\u77F3\u9635"
     buildingType: 6
     era: 0
@@ -2880,6 +2949,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 990a34d80a417ed41a6a28b1197426d9, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u5236\u9676\u8F6C\u76D8"
     buildingType: 7
     era: 0
@@ -2945,6 +3015,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u706B\u5806"
     buildingType: 8
     era: 0
@@ -3010,6 +3081,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 8ecc1184fa465a646a40ab04a0654c5b, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u5B66\u5802"
     buildingType: 9
     era: 0
@@ -3075,6 +3147,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 51c141c8118c98844b1269158afc2519, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u77F3\u5C4B"
     buildingType: 10
     era: 1
@@ -3140,6 +3213,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u957F\u5C4B"
     buildingType: 11
     era: 1
@@ -3205,6 +3279,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u57CE\u5E02\u4F4F\u5B85"
     buildingType: 12
     era: 1
@@ -3270,6 +3345,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u7801\u5934"
     buildingType: 13
     era: 1
@@ -3335,6 +3411,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u5854\u697C"
     buildingType: 14
     era: 1
@@ -3400,6 +3477,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u519C\u573A"
     buildingType: 15
     era: 1
@@ -3465,6 +3543,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u70BC\u91D1\u7814\u7A76\u6240"
     buildingType: 16
     era: 1
@@ -3530,6 +3609,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u57CE\u5821"
     buildingType: 14
     era: 0
@@ -3595,6 +3675,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u5927\u578B\u8230\u961F"
     buildingType: 18
     era: 1
@@ -3660,6 +3741,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u5C0F\u578B\u91D1\u5C5E\u5DE5\u574A"
     buildingType: 19
     era: 1
@@ -3725,6 +3807,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u6DF7\u51DD\u571F\u5927\u53A6"
     buildingType: 20
     era: 2
@@ -3790,6 +3873,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u5927\u522B\u91CE"
     buildingType: 21
     era: 2
@@ -3855,6 +3939,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u56DB\u5408\u9662"
     buildingType: 22
     era: 2
@@ -3920,6 +4005,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u5929\u6587\u53F0"
     buildingType: 23
     era: 2
@@ -3985,6 +4071,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u73B0\u4EE3\u5316\u519C\u573A"
     buildingType: 24
     era: 2
@@ -4050,6 +4137,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u706B\u7BAD\u53D1\u5C04\u57FA\u5730"
     buildingType: 25
     era: 2
@@ -4115,6 +4203,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u91D1\u5C5E\u51B6\u70BC\u5382"
     buildingType: 26
     era: 2
@@ -4180,6 +4269,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u6838\u7535\u7AD9"
     buildingType: 27
     era: 2
@@ -4245,6 +4335,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u84B8\u6C7D\u57CE\u5821"
     buildingType: 28
     era: 2
@@ -4310,6 +4401,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u6ED1\u7FD4\u673A\u673A\u573A"
     buildingType: 29
     era: 2
@@ -4375,6 +4467,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   - name: "\u77F3\u6CB9\u55B7\u53E3"
     buildingType: 30
     era: 2
@@ -4440,6 +4533,7 @@ MonoBehaviour:
     buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
+    preBuildings: 
   builders: 
   buildings:
   - {fileID: 0}
@@ -4544,6 +4638,7 @@ MonoBehaviour:
   - {fileID: 0}
   buildingInBlock: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxBuildingInBlock: 5
+  guarantees: 0
 --- !u!114 &912914644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4557,6 +4652,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   era: 0
+--- !u!1 &1039137925 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1039137925, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+  m_PrefabInstance: {fileID: 45901165}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1039137930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039137925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5fbdd0b4df1df84187b6b93cd18ac86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1179896109
 GameObject:
   m_ObjectHideFlags: 0
@@ -4750,7 +4862,6 @@ GameObject:
   - component: {fileID: 1555151210}
   - component: {fileID: 1555151209}
   - component: {fileID: 1555151212}
-  - component: {fileID: 1555151213}
   m_Layer: 0
   m_Name: Planet
   m_TagString: Planet
@@ -4840,19 +4951,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!135 &1555151213
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1555151207}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1690347347
 GameObject:
   m_ObjectHideFlags: 0
