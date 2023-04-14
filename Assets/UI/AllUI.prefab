@@ -860,8 +860,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2084693150465156689}
-        m_TargetAssemblyTypeName: EscUI, Assembly-CSharp
+      - m_Target: {fileID: 72229488939859118}
+        m_TargetAssemblyTypeName: FailUI, Assembly-CSharp
         m_MethodName: ReLoad
         m_Mode: 1
         m_Arguments:
@@ -1449,6 +1449,7 @@ GameObject:
   - component: {fileID: 1039137929}
   - component: {fileID: 1039137928}
   - component: {fileID: 1039137927}
+  - component: {fileID: 72229488939859118}
   m_Layer: 0
   m_Name: FailUI
   m_TagString: Untagged
@@ -1538,6 +1539,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &72229488939859118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039137925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5fbdd0b4df1df84187b6b93cd18ac86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1116869238
 GameObject:
   m_ObjectHideFlags: 0
@@ -2288,8 +2301,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2084693150465156689}
-        m_TargetAssemblyTypeName: EscUI, Assembly-CSharp
+      - m_Target: {fileID: 72229488939859118}
+        m_TargetAssemblyTypeName: FailUI, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -3122,8 +3135,8 @@ RectTransform:
   m_GameObject: {fileID: 2030165468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 132000408}
   - {fileID: 1444225352}
@@ -4639,7 +4652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.43080807, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4935,15 +4948,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4723322303460429834, guid: 7a6eed4784f927b4ab0c96e9e7de774e, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.499
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4723322303460429834, guid: 7a6eed4784f927b4ab0c96e9e7de774e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4723322303460429834, guid: 7a6eed4784f927b4ab0c96e9e7de774e, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.499
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5760812031256704548, guid: 7a6eed4784f927b4ab0c96e9e7de774e, type: 3}
       propertyPath: m_Layer
@@ -4951,11 +4964,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5938307560141754574, guid: 7a6eed4784f927b4ab0c96e9e7de774e, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.499
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5938307560141754574, guid: 7a6eed4784f927b4ab0c96e9e7de774e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6058594124465620221, guid: 7a6eed4784f927b4ab0c96e9e7de774e, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode

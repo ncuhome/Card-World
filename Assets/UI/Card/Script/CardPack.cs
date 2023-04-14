@@ -27,10 +27,28 @@ public class CardPack : MonoBehaviour //卡牌背包
     public static void SortCard()
     {
         canBeDrag = false;
-        float first = -Card.cardSizex / 2 * (cardPack.Count - 1);
+        float firstPos = -Card.cardSizex / 2 * (cardPack.Count - 1);
+        //float rot = 5f;
+        //if (cardPack.Count % 2 == 0)
+        //{
+        //    cardPack[cardPack.Count / 2].gameObject.transform.DORotate(Vector3.zero, Card.secondTime)
+        //        .OnComplete(() => { canBeDrag = true; }); ;
+        //    cardPack[cardPack.Count / 2 - 1].gameObject.transform.DORotate(Vector3.zero, Card.secondTime)
+        //        .OnComplete(() => { canBeDrag = true; }); ;
+        //    for (int i = 0; i < cardPack.Count / 2 - 1; i++)
+        //    {
+        //        cardPack[i].gameObject.transform.DORotate(new Vector3(0, 0, 0 + (cardPack.Count / 2 - 1 - i)*rot), Card.secondTime)
+        //        .OnComplete(() => { canBeDrag = true; }); ;
+        //    }
+        //    for (int i = cardPack.Count / 2 + 1; i < cardPack.Count; i++)
+        //    {
+        //        cardPack[i].gameObject.transform.DORotate(new Vector3(0, 0, 0 - (i - cardPack.Count / 2) * rot), Card.secondTime)
+        //        .OnComplete(() => { canBeDrag = true; }); ;
+        //    }
+        //}
         for (int i = 0; i < cardPack.Count; i++)
         {
-            cardPack[i].gameObject.transform.DOLocalMove(new Vector2(first + i * Card.cardSizex, 0), Card.secondTime)
+            cardPack[i].gameObject.transform.DOLocalMove(new Vector2(firstPos + i * Card.cardSizex, 0), Card.secondTime)
                 .OnComplete(() => { canBeDrag = true; });
         }
     }

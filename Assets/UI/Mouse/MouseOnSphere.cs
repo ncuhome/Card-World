@@ -48,11 +48,9 @@ public class MouseOnSphere : MonoBehaviour //读取鼠标在球上的位置
             {
                 // 获取球形对象上的碰撞点坐标
                 Vector3 hitPoint = hit.point;
-                Debug.Log("鼠标的坐标为" + hitPoint);
                 return hitPoint;
             }
         }
-        Debug.Log("鼠标的坐标没在星球上");
         return Vector3.zero;  //鼠标没碰到球体
     }
 }
