@@ -2059,7 +2059,7 @@ MonoBehaviour:
   - name: "\u91D1\u5C5E\u5DE5\u5320"
     specialSkill: 6
     era: 1
-    characterMaterial: {fileID: 2100000, guid: a488ac5554cbbab48b4915994c8f194b, type: 2}
+    characterMaterial: {fileID: 2100000, guid: ef0cb4f6fd764b2438055fb97512aa24, type: 2}
     characterNum: 12
     preCharacterNum: -1
     techAbility: 0
@@ -2108,7 +2108,7 @@ MonoBehaviour:
   - name: "\u592A\u7A7A\u79D1\u5B66\u5BB6"
     specialSkill: 10
     era: 2
-    characterMaterial: {fileID: 0}
+    characterMaterial: {fileID: 2100000, guid: b68fa577295624c4cb5f8418194ec742, type: 2}
     characterNum: 19
     preCharacterNum: 11
     techAbility: 0
