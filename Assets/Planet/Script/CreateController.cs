@@ -120,7 +120,7 @@ public class CreateController : MonoBehaviour
                     //随机生成水资源
                     case ResourceType.Water:
                         int randomWater = Random.Range(0, 2);
-                        itemSprite.transform.localPosition = new Vector3(0, 0.5f, 0);
+                        itemSprite.transform.localPosition = new Vector3(0, 0.498f, 0);
                         itemSprite.material = ResourceSystem.Instance.resourceDatas[(int)resourceType].resourceMaterials[randomWater];
                         if (randomWater == 0)
                         {
@@ -132,7 +132,7 @@ public class CreateController : MonoBehaviour
                         }
                         break;
                     case ResourceType.Oil:
-                        itemSprite.transform.localPosition = new Vector3(0, 0.5f, 0);
+                        itemSprite.transform.localPosition = new Vector3(0, 0.498f, 0);
                         itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x, itemSprite.transform.localScale.z, itemSprite.transform.localScale.y);
                         break;
                 }
@@ -146,7 +146,6 @@ public class CreateController : MonoBehaviour
                 switch (buildingType)
                 {
                     case BuildingType.OriginalFarmland:
-                    case BuildingType.Farm:
                         itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x, itemSprite.transform.localScale.z, itemSprite.transform.localScale.y);
                         itemSprite.transform.localPosition = new Vector3(0, 0.5f, 0);
                         break;

@@ -53,7 +53,7 @@ public class BuildingSystem : MonoBehaviour
         {
             case Era.AncientEra:
                 builderAge = 0;
-                size = 3;
+                size = 2;
                 break;
             case Era.ClassicalEra:
                 builderAge = 20;
@@ -75,7 +75,7 @@ public class BuildingSystem : MonoBehaviour
 
             foreach (string techNode in buildingDatas[i].needTech)
             {
-                if (techNode == null) {continue;}
+                if (techNode == null) { continue; }
                 if (!TechTree.instance.GetWhetherUnlocked(techNode))
                 {
                     buildingDatas[i].canBuild = false;
@@ -101,7 +101,7 @@ public class BuildingSystem : MonoBehaviour
         if (builders != null)
         {
             int buildingRandomNum = Random.Range(0, buildingsCanBeBuildNum);
-            
+
             //保底出居住建筑
             // if (!buildingsCanBeBuild[buildingRandomNum].isHomeBuilding)
             // {
@@ -122,8 +122,10 @@ public class BuildingSystem : MonoBehaviour
 
 
             Vector3 targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
-            while ((ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[0]) < 0.01f)
-                || (CharacterSystem.Instance.characters[builders[0]].item.blockNum != BlockSystem.Instance.GetBlockNum(Vector3.zero, Quaternion.Euler(targetEuler))))
+            while (((ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[0]) < 0.01f) && (buildingsCanBeBuild[buildingRandomNum].buildingType != BuildingType.LargeFleet))
+                || ((ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[0]) > 0.01f) && (buildingsCanBeBuild[buildingRandomNum].buildingType == BuildingType.LargeFleet))
+                || (CharacterSystem.Instance.characters[builders[0]].item.blockNum != BlockSystem.Instance.GetBlockNum(Vector3.zero, Quaternion.Euler(targetEuler)))
+                || (FindNearAngle(Quaternion.Euler(targetEuler)) < 2f))
             {
                 targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
             }
@@ -159,6 +161,22 @@ public class BuildingSystem : MonoBehaviour
             i++;
         }
         return i;
+    }
+
+    public float FindNearAngle(Quaternion itemQua)
+    {
+        float minAngle = 3600f;
+        foreach (Building building in buildings)
+        {
+            if (building == null) { continue; }
+            //Debug.Log(building.name + " " + building.buildingType + " " + buildingDatas[(int)building.buildingType].isHomeBuilding);
+            float angle = Vector3.Angle(itemQua * Vector3.up, building.transform.rotation * Vector3.up);
+            if (angle < minAngle)
+            {
+                minAngle = angle;
+            }
+        }
+        return minAngle;
     }
 
     //寻找最近的居住建筑
@@ -247,7 +265,13 @@ public class BuildingSystem : MonoBehaviour
             {
                 int num = Random.Range(0, buildingsCanProgressNum);
                 building.itemSprite.material = buildingsCanProgress[num].buildingMaterial;
+                if (buildingsCanProgress[num].buildingType == BuildingType.Farm)
+                {
+                    building.itemSprite.transform.localScale = new Vector3(building.itemSprite.transform.localScale.x, building.itemSprite.transform.localScale.z, building.itemSprite.transform.localScale.y);
+                    building.itemSprite.transform.localPosition = new Vector3(0, 0.505f, 0);
+                }
                 building.buildingType = buildingsCanProgress[num].buildingType;
+                building.name = buildingsCanProgress[num].name;
             }
         }
     }
