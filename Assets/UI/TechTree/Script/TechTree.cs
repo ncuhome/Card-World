@@ -19,7 +19,7 @@ public class TechTree : MonoBehaviour
     public TechNode[] industrialEraTech;
     void Start()
     {
-        Time.timeScale= 5.0f;
+        Time.timeScale= 1f;
         EraSystem.Instance.era = Era.AncientEra;
         if (instance ==  null)
         {

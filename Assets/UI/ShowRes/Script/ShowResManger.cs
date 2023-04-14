@@ -14,6 +14,8 @@ public class ShowResManger : MonoBehaviour
     private GameObject foldRes;
 
     public static bool change = false;
+
+    public bool speed; //是否加速
     void Update()
     {
         for (int i = 0; i < resText.Length; i++)
@@ -57,6 +59,20 @@ public class ShowResManger : MonoBehaviour
         {
             change = true;
             AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[7]);
+        }
+    }
+
+    public void Speed()
+    {
+        if (speed == false)
+        {
+            Time.timeScale = 10f;
+            speed = true;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+            speed = false;
         }
     }
 }

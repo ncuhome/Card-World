@@ -37,30 +37,30 @@ public class ResourceSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        InstantiateByTime();
+        //InstantiateByTime();
     }
 
     //初始化资源
     public void ResourceInitialization()
     {
         time = 0;
-        for (int i = 0; i < 24; i++)
+        for (int i = 0; i < 12; i++)
         {
-            int resourceNumInBlock = Random.Range(2, 6);
+            int resourceNumInBlock = 6;
             for (int j = 0; j < resourceNumInBlock; j++)
             {
                 float resourceTypeNum = Random.Range(0f, 1f);
                 if (resourceTypeNum < 0.5f)
                 {
-                    CreateController.Instance.CreateItem(ItemType.Resource, ResourceType.Wood, null, null, new int[] { i });
+                    CreateController.Instance.CreateItem(ItemType.Resource, ResourceType.Wood, null, null, new int[] { i }, true);
                 }
                 else if (resourceTypeNum < 0.8f)
                 {
-                    CreateController.Instance.CreateItem(ItemType.Resource, ResourceType.Stone, null, null, new int[] { i });
+                    CreateController.Instance.CreateItem(ItemType.Resource, ResourceType.Stone, null, null, new int[] { i }, true);
                 }
                 else
                 {
-                    CreateController.Instance.CreateItem(ItemType.Resource, ResourceType.Water, null, null, new int[] { i });
+                    CreateController.Instance.CreateItem(ItemType.Resource, ResourceType.Water, null, null, new int[] { i }, true);
                 }
             }
         }
@@ -108,7 +108,7 @@ public class ResourceSystem : MonoBehaviour
         DeleteResource(resourceObject);
         if (resourceObject.GetComponent<Resources>().isNature)
         {
-            StartCoroutine(DelayRegeneration(resourceObject.GetComponent<Resources>().resourceType, 5f));
+            CreateController.Instance.CreateItem(ItemType.Resource, resourceObject.GetComponent<Resources>().resourceType, null, null, true);
         }
     }
 
@@ -124,6 +124,12 @@ public class ResourceSystem : MonoBehaviour
         yield return new WaitForSeconds(time);
         RegenerationResource(resourceType);
     }
+    //延迟重新添加自然资源
+    public IEnumerator DelayRegeneration(ResourceType resourceType, float time, bool nature)
+    {
+        yield return new WaitForSeconds(time);
+        RegenerationResource(resourceType, nature);
+    }
 
     //在指定区块生成指定资源
     public void RegenerationResource(ResourceType resourceType, int[] blockNum)
@@ -131,11 +137,23 @@ public class ResourceSystem : MonoBehaviour
         //Debug.Log("RegenerationResource: Block[] " + blockNum);
         CreateController.Instance.CreateItem(ItemType.Resource, resourceType, null, null, blockNum);
     }
+    //在指定区块生成指定自然资源
+    public void RegenerationResource(ResourceType resourceType, int[] blockNum, bool nature)
+    {
+        //Debug.Log("RegenerationResource: Block[] " + blockNum);
+        CreateController.Instance.CreateItem(ItemType.Resource, resourceType, null, null, blockNum, nature);
+    }
     //在随机区块生成指定资源
     public void RegenerationResource(ResourceType resourceType)
     {
         //Debug.Log("RegenerationResource: Block[] " + blockNum);
         CreateController.Instance.CreateItem(ItemType.Resource, resourceType, null, null);
+    }
+    //在随机区块生成指定自然资源
+    public void RegenerationResource(ResourceType resourceType, bool nature)
+    {
+        //Debug.Log("RegenerationResource: Block[] " + blockNum);
+        CreateController.Instance.CreateItem(ItemType.Resource, resourceType, null, null, nature);
     }
 
 

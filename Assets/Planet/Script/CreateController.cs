@@ -42,6 +42,17 @@ public class CreateController : MonoBehaviour
 
         CreateItem(itemType, resourceType, buildingType, characterSkill, targetEuler);
     }
+    //生成自然资源 //指定类型，坐标随机
+    public void CreateItem(ItemType itemType, ResourceType? resourceType, BuildingType? buildingType, SpecialSkill? characterSkill, bool nature)
+    {
+        Vector3 targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
+        while (ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[0]) < 0.01f)
+        {
+            targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
+        }
+
+        CreateItem(itemType, resourceType, buildingType, characterSkill, targetEuler, nature);
+    }
     // //指定类型和区块
     public void CreateItem(ItemType itemType, ResourceType? resourceType, BuildingType? buildingType, SpecialSkill? characterSkill, int[] blockNum)
     {
@@ -52,6 +63,17 @@ public class CreateController : MonoBehaviour
             targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
         }
         CreateItem(itemType, resourceType, buildingType, characterSkill, targetEuler);
+    }
+    // //指定类型和区块创建自然资源
+    public void CreateItem(ItemType itemType, ResourceType? resourceType, BuildingType? buildingType, SpecialSkill? characterSkill, int[] blockNum, bool nature)
+    {
+        Vector3 targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
+        while ((ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[0]) < 0.01f)
+                || (System.Array.IndexOf(blockNum, BlockSystem.Instance.GetBlockNum(Vector3.zero, Quaternion.Euler(targetEuler))) == -1))
+        {
+            targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
+        }
+        CreateItem(itemType, resourceType, buildingType, characterSkill, targetEuler, nature);
     }
     //指定类型和坐标
     public void CreateItem(ItemType itemType, ResourceType? resourceType, BuildingType? buildingType, SpecialSkill? characterSkill, Vector3 targetEuler)
@@ -138,7 +160,94 @@ public class CreateController : MonoBehaviour
                 break;
         }
     }
+    //指定类型和坐标创建自然资源
+    public void CreateItem(ItemType itemType, ResourceType? resourceType, BuildingType? buildingType, SpecialSkill? characterSkill, Vector3 targetEuler, bool nature)
+    {
+        GameObject item = Instantiate(itemPrefab);
+        item.transform.SetParent(itemParent);
+        item.transform.position = Vector3.zero;
+        item.transform.localScale = Vector3.one;
+        item.transform.eulerAngles = targetEuler;
+        itemSprite = item.transform.Find("ItemSprite").GetComponent<MeshRenderer>();
 
+        Item itemScript = item.GetComponent<Item>();
+        Character character = item.GetComponent<Character>();
+        Resources resources = item.GetComponent<Resources>();
+        Building building = item.GetComponent<Building>();
+
+        switch (itemType)
+        {
+            case ItemType.Resource:
+
+                item.GetComponent<Resources>().isNature = nature;
+
+                itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 0.5f, itemSprite.transform.localScale.y * 0.5f, itemSprite.transform.localScale.z);
+                itemSprite.transform.localPosition = new Vector3(0, 0.505f, 0);
+                itemScript.itemType = ItemType.Resource;
+                itemSprite.material = ResourceSystem.Instance.resourceDatas[(int)resourceType].resourceMaterials[0];
+                item.name = ResourceSystem.Instance.resourceDatas[(int)resourceType].name;
+                resources.resourceType = (ResourceType)resourceType;
+                switch (resourceType)
+                {
+                    //分地形生成木头资源
+                    case ResourceType.Wood:
+                        if (ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[1]) < 0.01f)
+                        {
+                            itemSprite.material = ResourceSystem.Instance.resourceDatas[(int)resourceType].resourceMaterials[0];
+                        }
+                        else if (ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[2]) < 0.01f)
+                        {
+                            int randomWood = Random.Range(1, 4);
+                            itemSprite.material = ResourceSystem.Instance.resourceDatas[(int)resourceType].resourceMaterials[randomWood];
+                        }
+                        else if (ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(Quaternion.Euler(targetEuler) * Vector3.up), ColorSystem.Instance.colors[3]) < 0.01f)
+                        {
+                            itemSprite.material = ResourceSystem.Instance.resourceDatas[(int)resourceType].resourceMaterials[4];
+                        }
+                        break;
+                    //随机生成水资源
+                    case ResourceType.Water:
+                        int randomWater = Random.Range(0, 2);
+                        itemSprite.transform.localPosition = new Vector3(0, 0.5f, 0);
+                        itemSprite.material = ResourceSystem.Instance.resourceDatas[(int)resourceType].resourceMaterials[randomWater];
+                        if (randomWater == 0)
+                        {
+                            itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 2, itemSprite.transform.localScale.z, itemSprite.transform.localScale.y);
+                        }
+                        else
+                        {
+                            itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x, itemSprite.transform.localScale.z, itemSprite.transform.localScale.y);
+                        }
+                        break;
+                }
+                break;
+            case ItemType.Building:
+                itemSprite.transform.localPosition = new Vector3(0, 0.52f, 0);
+                itemScript.itemType = ItemType.Building;
+                itemSprite.material = BuildingSystem.Instance.buildingDatas[(int)buildingType].buildingMaterial;
+                building.buildingType = (BuildingType)buildingType;
+                item.name = BuildingSystem.Instance.buildingDatas[(int)buildingType].name;
+                switch (buildingType)
+                {
+                    case BuildingType.OriginalFarmland:
+                    case BuildingType.Farm:
+                        itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x, itemSprite.transform.localScale.z, itemSprite.transform.localScale.y);
+                        itemSprite.transform.localPosition = new Vector3(0, 0.5f, 0);
+                        break;
+                }
+                break;
+            case ItemType.Character:
+                itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 0.5f, itemSprite.transform.localScale.y * 0.5f, itemSprite.transform.localScale.z);
+                itemSprite.transform.localPosition = new Vector3(0, 0.505f, 0);
+                itemScript.itemType = ItemType.Character;
+                character.characterNum = CharacterSystem.Instance.GetCharacterNum();
+                character.specialSkill = (SpecialSkill)characterSkill;
+                CharacterSystem.Instance.characters[CharacterSystem.Instance.GetCharacterNum()] = character;
+                itemSprite.material = CharacterSystem.Instance.GetCharacter(EraSystem.Instance.era, characterSkill).characterMaterial;
+                item.name = CharacterSystem.Instance.GetCharacter(EraSystem.Instance.era, characterSkill).name;
+                break;
+        }
+    }
     //调试用初始化
     public void TestCreate()
     {
