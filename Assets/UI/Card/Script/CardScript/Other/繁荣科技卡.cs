@@ -6,11 +6,24 @@ public class 繁荣科技卡 : Card //随机解锁一个可以被解锁的科技
 {
     public override void BeUse()
     {
+        TechNode[] allTechNode;
         List<TechNode> canBeUnlock = new List<TechNode>();
-        foreach (TechNode tech in TechTree.instance.allTechNode)
+        if (EraSystem.Instance.era == Era.AncientEra)
+        {
+            allTechNode = TechTree.instance.ancientEraTech;
+        }
+        else if (EraSystem.Instance.era == Era.ClassicalEra)
+        {
+            allTechNode = TechTree.instance.classicalEraTech;
+        }
+        else
+        {
+            allTechNode = TechTree.instance.industrialEraTech;
+        }
+        foreach (TechNode tech in allTechNode)
         {
             Debug.Log(tech);
-            if (tech.CanBeUnlocked() == true && tech.unlock == false)
+            if (tech.CanBeUnlocked() == true && tech.unlock == false )
             {
                 Debug.Log(tech + "second");
                 canBeUnlock.Add(tech);
