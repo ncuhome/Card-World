@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -233,13 +233,12 @@ public class Character : MonoBehaviour
     {
         if (CharacterSystem.Instance.GetCharacter(EraSystem.Instance.era, specialSkill).techAbility && (Random.value > 0.7f))
         {
+            Debug.Log("小人死亡");
             List<TechNode> canBeUnlock = new List<TechNode>();
             foreach (TechNode tech in TechTree.instance.allTechNode)
             {
-                Debug.Log(tech);
                 if (tech.CanBeUnlocked() == true && tech.unlock == false)
                 {
-                    Debug.Log(tech + "second");
                     canBeUnlock.Add(tech);
                 }
             }

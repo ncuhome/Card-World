@@ -31,7 +31,7 @@ public class ShowBlockRes : MonoBehaviour
             if (MouseOnSphere.instance.ReturnMousePosition() != Vector3.zero)
             {
                 nowBlock = BlockSystem.Instance.GetBlockNum(MouseOnSphere.instance.sphere.transform.position, MouseOnSphere.instance.ReturnMousePosition());
-                Debug.Log(nowBlock);
+                Debug.Log("点击到了" + nowBlock + "区块");
             }
         }
     }
