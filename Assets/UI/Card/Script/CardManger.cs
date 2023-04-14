@@ -12,14 +12,16 @@ public class CardManger : MonoBehaviour
     public static CardManger instance;
     private bool haveDealCard;
     private float time;
+    public GameObject dividingLine;
     private void Start()
     {
-        for (int i = 0; i < 2; i++)  //开局送两张科技卡
-        {
-            GameObject newCard = Instantiate(AllCard[25]);
-            newCard.transform.SetParent(GameObject.Find("Card pack").transform);  //设置父类为卡包
-            newCard.transform.localScale = Vector2.zero;
-        }
+        //开局送一张科技卡
+        GameObject newCard = Instantiate(AllCard[25]);
+        newCard.transform.SetParent(GameObject.Find("Card pack").transform);  //设置父类为卡包
+        newCard.transform.localScale = Vector2.zero;
+
+        dividingLine = GameObject.Find("DividingLine");
+        dividingLine.SetActive(false);
         if (instance == null)
         {
             instance = this;

@@ -33,7 +33,17 @@ public class BlockSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        foreach (Block block in blocks)
+        {
+            if (block.temperature <= 0)
+            {
+                block.temperature = 0;
+            }
+            if (block.water <= 0)
+            {
+                block.water = 0;
+            }
+        }
     }
 
 

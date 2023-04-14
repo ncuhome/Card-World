@@ -11,6 +11,7 @@ public class 中雨卡 : RangeUsageCard
     {
         while (isSelect == true)
         {
+            CardManger.instance.dividingLine.SetActive(true);
             //Debug.Log("现在指着区块" + BlockSystem.Instance.GetBlockNum(MouseOnSphere.instance.sphere.transform.position, MouseOnSphere.instance.ReturnMousePosition()));
             if (Input.GetMouseButtonDown(0))
             {
@@ -22,6 +23,7 @@ public class 中雨卡 : RangeUsageCard
                     SignUI.instance.SetTextNULL();
                     CardPack.canBeDrag = true;  //其他卡牌能被拖动
                     canBeDrag = true;
+                    CardManger.instance.dividingLine.SetActive(false);
                 }
             }
             yield return null;
