@@ -9,7 +9,7 @@ public class FailUI : MonoBehaviour
     {
         AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[7]);
         //打包时不能使用
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
         //测试时不能执行，打包后可以执行
         Application.Quit();
     }
