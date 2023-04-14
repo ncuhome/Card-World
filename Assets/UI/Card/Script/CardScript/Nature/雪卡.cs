@@ -18,13 +18,14 @@ public class 雪卡 : RangeUsageCard
             {
                 if (MouseOnSphere.instance.ReturnMousePosition() != Vector3.zero)
                 {
+                    CardManger.instance.dividingLine.SetActive(false);
                     int[] block = new int[1];
                     block[0] = BlockSystem.Instance.GetBlockNum(MouseOnSphere.instance.sphere.transform.position, MouseOnSphere.instance.ReturnMousePosition());
                     AffectBlock(block);
                     SignUI.instance.SetTextNULL();
                     CardPack.canBeDrag = true;  //其他卡牌能被拖动
                     canBeDrag = true;
-                    CardManger.instance.dividingLine.SetActive(false);
+                    isSelect = false;
                 }
             }
             yield return null;
