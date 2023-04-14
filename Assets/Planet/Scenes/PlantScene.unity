@@ -1138,7 +1138,7 @@ MonoBehaviour:
     resourceType: 6
     resourceNum: 0
     resourceMaterials:
-    - {fileID: 2100000, guid: 1a908373fdba3cd459f6697c3f03e614, type: 2}
+    - {fileID: 2100000, guid: 3af28665beaaebf42ab7d20f48297efc, type: 2}
   - name: "\u82B1\u5C97\u5CA9"
     resourceType: 7
     resourceNum: 0

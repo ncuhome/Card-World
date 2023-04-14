@@ -131,6 +131,10 @@ public class CreateController : MonoBehaviour
                             itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x, itemSprite.transform.localScale.z, itemSprite.transform.localScale.y);
                         }
                         break;
+                    case ResourceType.Oil:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.5f, 0);
+                        itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x, itemSprite.transform.localScale.z, itemSprite.transform.localScale.y);
+                        break;
                 }
                 break;
             case ItemType.Building:
