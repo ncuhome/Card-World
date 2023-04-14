@@ -242,8 +242,12 @@ public class Character : MonoBehaviour
                     canBeUnlock.Add(tech);
                 }
             }
-            int random = Random.Range(0, canBeUnlock.Count); //解锁随机一个科技
-            canBeUnlock[random].ImmediateUnlockIt();
+            if (canBeUnlock.Count != 0)
+            {
+                Debug.Log(" 当前可解锁科技个数" + canBeUnlock.Count);
+                int random = Random.Range(0, canBeUnlock.Count); //解锁随机一个科技
+                canBeUnlock[random].ImmediateUnlockIt();
+            }
         }
 
         CharacterSystem.Instance.characters[characterNum] = null;

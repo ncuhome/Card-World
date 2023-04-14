@@ -57,7 +57,7 @@ public class Building : MonoBehaviour
 
     void GeneratePopulation()
     {
-        if (buildingType == BuildingType.Cave && (CharacterSystem.Instance.GetPopulation() < 9) && (!建筑.instance.unlock))
+        if ((buildingType == BuildingType.Cave) && (CharacterSystem.Instance.GetPopulation() < 9) && (!建筑.instance.unlock))
         {
             time += Time.deltaTime;
             if (time > 20f)
@@ -68,7 +68,7 @@ public class Building : MonoBehaviour
         }
         if (stopGenerate) { return; }
         time += Time.deltaTime;
-        if (time > 60f / population)
+        if ((time > 60f / population)&&(CharacterSystem.Instance.GetPopulation() < 50))
         {
             time = 0;
             CreateController.Instance.CreateItem(ItemType.Character, null, null, CharacterSystem.Instance.GetRandomSkill(), transform.eulerAngles);
