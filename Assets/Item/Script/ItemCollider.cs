@@ -8,6 +8,10 @@ public class ItemCollider : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (this.transform.parent.parent.GetComponent<Item>().itemType == ItemType.Building)
+        {
+            this.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
