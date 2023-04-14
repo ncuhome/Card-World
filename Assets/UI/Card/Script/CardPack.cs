@@ -21,6 +21,7 @@ public class CardPack : MonoBehaviour //卡牌背包
     public static void DeleteCard(Card card)
     {
         cardPack.Remove(card);
+        CardManger.instance.cardPackCount--;
         SortCard();
     }
     public static void SortCard()

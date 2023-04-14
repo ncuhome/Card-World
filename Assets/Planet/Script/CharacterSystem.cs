@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
@@ -173,6 +173,7 @@ public class CharacterSystem : MonoBehaviour
             if (characters[i] != null) { return; }
         }
         BuildingSystem.Instance.EndOfCivilization();
+        GameObject.Find("FailPanel").transform.localScale = Vector3.one; //显示失败UI
         Debug.Log("End Of Civilization");
     }
 
