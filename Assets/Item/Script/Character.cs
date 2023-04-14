@@ -56,6 +56,7 @@ public class Character : MonoBehaviour
         }
 
         AddAge();
+        ExpandScope();
         StartWork();
         GoHome();
 
@@ -371,6 +372,45 @@ public class Character : MonoBehaviour
                 Stay(BuildingType.NuclearPowerPlant);
                 break;
 
+        }
+    }
+
+    public void ExpandScope()
+    {
+        foreach (int blockNum in homeRange)
+        {
+            if (BuildingSystem.Instance.buildingInBlock[blockNum] == BuildingSystem.Instance.maxBuildingInBlock)
+            {
+                List<int> homeList = new List<int>(homeRange);
+                int[] nearBlock = BlockSystem.Instance.GetNearBlock(center.position, blockNum);
+                int block1 = -1, block2 = -1;
+                int min1 = 50, min2 = 50;
+                for (int i = 0; i < nearBlock.Length; i++)
+                {
+                    if (System.Array.IndexOf(homeRange, nearBlock[i]) != -1) { continue; }
+                    if (BuildingSystem.Instance.buildingInBlock[nearBlock[i]] < min1)
+                    {
+                        min2 = min1;
+                        block2 = block1;
+                        min1 = BuildingSystem.Instance.buildingInBlock[nearBlock[i]];
+                        block1 = nearBlock[i];
+                    }
+                    else if (BuildingSystem.Instance.buildingInBlock[nearBlock[i]] < min2)
+                    {
+                        block2 = nearBlock[i];
+                        min2 = BuildingSystem.Instance.buildingInBlock[nearBlock[i]];
+                    }
+                }
+                if (block1 != -1)
+                {
+                    homeList.Add(block1);
+                }
+                if (block2 != -1)
+                {
+                    homeList.Add(block2);
+                }
+                homeRange = homeList.ToArray();
+            }
         }
     }
 
