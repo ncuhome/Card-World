@@ -17,10 +17,15 @@ public class TechTree : MonoBehaviour
     public TechNode[] classicalEraTech;
 
     public TechNode[] industrialEraTech;
+    private void Update()
+    {
+        if (!建筑.instance.unlock)
+        {
+            建筑.instance.ImmediateUnlockIt(); //开始便解锁建筑科技
+        }
+    }
     void Start()
     {
-        Time.timeScale= 1f;
-        EraSystem.Instance.era = Era.AncientEra;
         if (instance ==  null)
         {
             instance = this;

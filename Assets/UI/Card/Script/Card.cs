@@ -167,6 +167,7 @@ public class RangeUsageCard : Card, IAffectBlock //范围使用的卡牌
         while (isSelect == true)
         {
             CardPack.canBeDrag = false;
+            CardManger.instance.dividingLine.SetActive(true);  //显示经纬线
             //Debug.Log("现在指着区块" + BlockSystem.Instance.GetBlockNum(MouseOnSphere.instance.sphere.transform.position, MouseOnSphere.instance.ReturnMousePosition()));
             if (Input.GetMouseButtonDown(0))
             {
@@ -177,6 +178,7 @@ public class RangeUsageCard : Card, IAffectBlock //范围使用的卡牌
                     AffectBlock(block);
                     SignUI.instance.SetTextNULL();
                     CardPack.canBeDrag = true;  //其他卡牌能被拖动
+                    CardManger.instance.dividingLine.SetActive(false);  //关闭显示经纬线
                     Destroy(this.gameObject);
                 }
             }
@@ -244,6 +246,7 @@ public class AccidentRangeUsageCard : AccidentCard, IAffectBlock //范围使用�
         
         while (isSelect == true)
         {
+            CardManger.instance.dividingLine.SetActive(true);  //显示经纬线
             CardPack.canBeDrag = false;
             if (Input.GetMouseButtonDown(0))
             {
@@ -254,6 +257,7 @@ public class AccidentRangeUsageCard : AccidentCard, IAffectBlock //范围使用�
                     AffectBlock(block);
                     SignUI.instance.SetTextNULL();
                     CardPack.canBeDrag = true;  //其他卡牌能被拖动
+                    CardManger.instance.dividingLine.SetActive(false);  //取消显示经纬线
                     Destroy(this.gameObject);
                 }
             }
