@@ -31,7 +31,7 @@ public class Building : MonoBehaviour
             switch (EraSystem.Instance.era)
             {
                 case Era.AncientEra:
-                    population = Random.Range(3, 7);
+                    population = Random.Range(1, 5);
                     break;
                 case Era.ClassicalEra:
                     population = Random.Range(5, 8);
@@ -57,6 +57,15 @@ public class Building : MonoBehaviour
 
     void GeneratePopulation()
     {
+        if (buildingType == BuildingType.Cave && (CharacterSystem.Instance.GetPopulation() < 9) && (!建筑.instance.unlock))
+        {
+            time += Time.deltaTime;
+            if (time > 20f)
+            {
+                time = 0;
+                CreateController.Instance.CreateItem(ItemType.Character, null, null, CharacterSystem.Instance.GetRandomSkill(), transform.eulerAngles);
+            }
+        }
         if (stopGenerate) { return; }
         time += Time.deltaTime;
         if (time > 60f / population)
