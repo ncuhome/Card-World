@@ -233,17 +233,34 @@ public class Character : MonoBehaviour
     {
         if (CharacterSystem.Instance.GetCharacter(EraSystem.Instance.era, specialSkill).techAbility && (Random.value > 0.7f))
         {
-            Debug.Log("小人死亡");
-            List<TechNode> canBeUnlock = new List<TechNode>();
-            foreach (TechNode tech in TechTree.instance.allTechNode)
             {
-                if (tech.CanBeUnlocked() == true && tech.unlock == false)
+                TechNode[] allTechNode;
+                List<TechNode> canBeUnlock = new List<TechNode>();
+                if (EraSystem.Instance.era == Era.AncientEra)
                 {
-                    canBeUnlock.Add(tech);
+                    allTechNode = TechTree.instance.ancientEraTech;
                 }
+                else if (EraSystem.Instance.era == Era.ClassicalEra)
+                {
+                    allTechNode = TechTree.instance.classicalEraTech;
+                }
+                else
+                {
+                    allTechNode = TechTree.instance.industrialEraTech;
+                }
+                foreach (TechNode tech in allTechNode)
+                {
+                    Debug.Log(tech);
+                    if (tech.CanBeUnlocked() == true && tech.unlock == false)
+                    {
+                        Debug.Log(tech + "second");
+                        canBeUnlock.Add(tech);
+                    }
+                }
+                int random = Random.Range(0, canBeUnlock.Count); //解锁随机一个科技
+                canBeUnlock[random].ImmediateUnlockIt();
+                AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[5]);
             }
-            int random = Random.Range(0, canBeUnlock.Count); //解锁随机一个科技
-            canBeUnlock[random].ImmediateUnlockIt();
         }
 
         CharacterSystem.Instance.characters[characterNum] = null;
