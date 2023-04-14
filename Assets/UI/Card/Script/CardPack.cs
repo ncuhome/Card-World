@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CardPack : MonoBehaviour //卡牌背包
 {
-    public int cardMaximums = 10;
+    public int cardMaximums = 6;
     public static float cardPackHigh;
     public static List<Card> cardPack = new List<Card>();
     public static bool canBeDrag = true;  //全局控制卡牌是否可以被拖到，如果正在使用时无法拖动
@@ -21,7 +21,6 @@ public class CardPack : MonoBehaviour //卡牌背包
     public static void DeleteCard(Card card)
     {
         cardPack.Remove(card);
-        CardManger.instance.cardPackCount--;
         SortCard();
     }
     public static void SortCard()
