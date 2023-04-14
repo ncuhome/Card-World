@@ -21,6 +21,8 @@ public class Building : MonoBehaviour
     public int generatePopulation;
     public GameObject oil;
     public float oilTime;
+    public GameObject farm;
+    public GameObject lake;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +47,7 @@ public class Building : MonoBehaviour
         {
             isBuilding = false;
         }
+
     }
 
     // Update is called once per frame
@@ -53,6 +56,22 @@ public class Building : MonoBehaviour
         if (!isBuilding) { return; }
         GeneratePopulation();
         InstantiateOil();
+        if ((buildingType == BuildingType.FishingFacility) || (buildingType == BuildingType.SmallDock))
+        {
+            lake.SetActive(true);
+        }
+        else
+        {
+            lake.SetActive(false);
+        }
+        if (buildingType == BuildingType.Farm)
+        {
+            farm.SetActive(true);
+        }
+        else
+        {
+            farm.SetActive(false);
+        }
     }
 
     void GeneratePopulation()
@@ -68,7 +87,7 @@ public class Building : MonoBehaviour
         }
         if (stopGenerate) { return; }
         time += Time.deltaTime;
-        if ((time > 60f / population)&&(CharacterSystem.Instance.GetPopulation() < 50))
+        if ((time > 60f / population) && (CharacterSystem.Instance.GetPopulation() < 50))
         {
             time = 0;
             CreateController.Instance.CreateItem(ItemType.Character, null, null, CharacterSystem.Instance.GetRandomSkill(), transform.eulerAngles);
