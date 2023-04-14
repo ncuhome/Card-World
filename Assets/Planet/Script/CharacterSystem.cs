@@ -18,6 +18,7 @@ public class CharacterSystem : MonoBehaviour
     public Character[] characters = new Character[100];
     public CharacterData[] characterDatas = new CharacterData[20];
     public float maxAge = 50f;
+    public int population;
     private void Awake()
     {
         if (Instance == null)
@@ -88,7 +89,15 @@ public class CharacterSystem : MonoBehaviour
         return null;
     }
 
-
+    public int GetPopulation()
+    {
+        population = 0;
+        foreach (Character character in characters)
+        {
+            if (character != null) { population++; }
+        }
+        return population;
+    }
 
     //获取角色数组里的最小空位
     public int GetCharacterNum()
