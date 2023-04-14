@@ -23,10 +23,10 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 3.84
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 860a66ca4259b384f9ec01b687f71c3c, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.172768, g: 0.21589169, b: 0.29782546, a: 1}
+  m_IndirectSpecularColor: {r: 0.0031535141, g: 0.002727223, b: 0.003360356, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 7d99492a6037f5b47ac6efaf7065b377, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &4041405
+--- !u!1 &125507967
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,38 +131,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4041406}
-  - component: {fileID: 4041409}
-  - component: {fileID: 4041408}
+  - component: {fileID: 125507968}
+  - component: {fileID: 125507970}
+  - component: {fileID: 125507969}
   m_Layer: 0
-  m_Name: 90 + 270longitude
+  m_Name: 150 + 210longitude
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4041406
+--- !u!4 &125507968
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4041405}
-  m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_GameObject: {fileID: 125507967}
+  m_LocalRotation: {x: -0.6830127, y: -0.6830127, z: 0.18301274, w: 0.18301274}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0005, y: 1e-13, z: 1.0005}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 318437762}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 90}
---- !u!23 &4041408
+  m_Father: {fileID: 717069329}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: -150, z: 90}
+--- !u!23 &125507969
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4041405}
+  m_GameObject: {fileID: 125507967}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -198,13 +198,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &4041409
+--- !u!33 &125507970
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4041405}
+  m_GameObject: {fileID: 125507967}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &139487639
 GameObject:
@@ -254,7 +254,7 @@ MonoBehaviour:
   time: 0
   lightCenter: {fileID: 139487640}
   rotateSpeed: 0.01
---- !u!1 &306325828
+--- !u!1 &541477267
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -262,37 +262,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 306325832}
-  - component: {fileID: 306325831}
-  - component: {fileID: 306325830}
-  - component: {fileID: 306325829}
+  - component: {fileID: 541477268}
+  - component: {fileID: 541477270}
+  - component: {fileID: 541477269}
   m_Layer: 0
-  m_Name: Map
+  m_Name: 30 + 330longitude
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!65 &306325829
-BoxCollider:
+  m_IsActive: 1
+--- !u!4 &541477268
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 306325828}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &306325830
+  m_GameObject: {fileID: 541477267}
+  m_LocalRotation: {x: -0.18301266, y: -0.18301266, z: 0.6830127, w: 0.6830127}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0005, y: 1e-13, z: 1.0005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 717069329}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: -30, z: 90}
+--- !u!23 &541477269
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 306325828}
+  m_GameObject: {fileID: 541477267}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -328,30 +329,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &306325831
+--- !u!33 &541477270
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 306325828}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &306325832
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 306325828}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1080, y: 1, z: 960}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &318437761
+  m_GameObject: {fileID: 541477267}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &640753372
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -359,75 +345,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 318437762}
+  - component: {fileID: 640753373}
+  - component: {fileID: 640753375}
+  - component: {fileID: 640753374}
   m_Layer: 0
-  m_Name: DividingLine
+  m_Name: 90latitude
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &318437762
+--- !u!4 &640753373
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 318437761}
+  m_GameObject: {fileID: 640753372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1022483009}
-  - {fileID: 1933183546}
-  - {fileID: 556332774}
-  - {fileID: 2074731339}
-  - {fileID: 4041406}
-  - {fileID: 1992577567}
-  m_Father: {fileID: 1555151211}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &556332773
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 556332774}
-  - component: {fileID: 556332777}
-  - component: {fileID: 556332776}
-  m_Layer: 0
-  m_Name: -45latitude
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &556332774
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 556332773}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.3535, z: 0}
-  m_LocalScale: {x: 0.706, y: 1e-15, z: 0.706}
+  m_LocalScale: {x: 1.003, y: 1e-10, z: 1.001}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 318437762}
-  m_RootOrder: 2
+  m_Father: {fileID: 717069329}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &556332776
+--- !u!23 &640753374
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 556332773}
+  m_GameObject: {fileID: 640753372}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -463,13 +412,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &556332777
+--- !u!33 &640753375
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 556332773}
+  m_GameObject: {fileID: 640753372}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &648175446
 GameObject:
@@ -517,11 +466,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _DrawMap: 1
-  _MapWidth: 1080
-  _MapHeight: 960
+  _MapWidth: 2160
+  _MapHeight: 1920
   _NoiseScale: 200
   _Octaves: 8
-  _Persistance: 0.311
+  _Persistance: 0.677
   _Lacunarity: 1
   _Seed: 40
   _Offset: {x: 0, y: 0}
@@ -554,6 +503,67 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &691192176
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 272.79648
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 469.54776
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.7305298
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6058594124559115715, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1457100090}
+    - target: {fileID: 6875215470551126260, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_Name
+      value: AllUI
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,6 +658,43 @@ Transform:
   m_Father: {fileID: 139487640}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &717069328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 717069329}
+  m_Layer: 0
+  m_Name: DividingLine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &717069329
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717069328}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 941969495}
+  - {fileID: 640753373}
+  - {fileID: 2044612730}
+  - {fileID: 541477268}
+  - {fileID: 1267380253}
+  - {fileID: 125507968}
+  m_Father: {fileID: 1555151211}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &912914634
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,58 +878,81 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   regenerationDuration: 5
   resourceDatas:
-  - name: 
+  - name: "\u6728\u5934"
     resourceType: 0
     resourceNum: 0
-    resourceMaterials: []
-  - name: 
-    resourceType: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: a315f842e8650264b98d6832d2e1a512, type: 2}
+    - {fileID: 2100000, guid: 1d9af6f0ca204c644a353e93dd51b60f, type: 2}
+    - {fileID: 2100000, guid: 1d7e58e1e6f61ea4db2e20f28f9fa2e1, type: 2}
+    - {fileID: 2100000, guid: 41c19775a0cf76b439ab48bc7bc8f2c8, type: 2}
+    - {fileID: 2100000, guid: c508dd7a75c53204196acdae7da40656, type: 2}
+  - name: "\u77F3\u5934"
+    resourceType: 1
     resourceNum: 0
-    resourceMaterials: []
-  - name: 
-    resourceType: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: 90be2108c2c302740b4d03c36bdfebe7, type: 2}
+  - name: "\u6C34\u8D44\u6E90"
+    resourceType: 2
     resourceNum: 0
-    resourceMaterials: []
-  - name: 
-    resourceType: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: 5f99f8c0643b2e7479401ade2e596705, type: 2}
+    - {fileID: 2100000, guid: dc1c98a0fb518e54fa6cefe5a2f93531, type: 2}
+  - name: "\u6591\u5CA9"
+    resourceType: 3
     resourceNum: 0
-    resourceMaterials: []
-  - name: 
-    resourceType: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: 8da8c53f387f455459c5b8a373d4dc03, type: 2}
+  - name: "\u71E7\u77F3"
+    resourceType: 4
     resourceNum: 0
-    resourceMaterials: []
-  - name: 
-    resourceType: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: b2f85a9968931df47aa07e2d5e501c36, type: 2}
+  - name: "\u9ECF\u571F"
+    resourceType: 5
     resourceNum: 0
-    resourceMaterials: []
-  - name: 
-    resourceType: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: 95c2762f65f791e458aa102d1efd63bb, type: 2}
+  - name: "\u77F3\u818F\u77F3"
+    resourceType: 6
     resourceNum: 0
-    resourceMaterials: []
-  - name: 
-    resourceType: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: 1a908373fdba3cd459f6697c3f03e614, type: 2}
+  - name: "\u82B1\u5C97\u5CA9"
+    resourceType: 7
     resourceNum: 0
-    resourceMaterials: []
-  - name: 
-    resourceType: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: 3f7ce1ce2f388d54abffee928d6b5295, type: 2}
+  - name: "\u94C1\u77FF"
+    resourceType: 8
     resourceNum: 0
-    resourceMaterials: []
-  - name: 
-    resourceType: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: 3a68b0c9b35c8a14ab0c2f220de35517, type: 2}
+  - name: "\u91D1\u77FF"
+    resourceType: 9
     resourceNum: 0
-    resourceMaterials: []
-  - name: 
-    resourceType: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: 4604462d3fb7f804793a9509d51a8009, type: 2}
+  - name: "\u9752\u94DC\u77FF"
+    resourceType: 10
     resourceNum: 0
-    resourceMaterials: []
-  - name: 
-    resourceType: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: 367ff12321ca31643abca448bf69afc4, type: 2}
+  - name: "\u7164\u70AD\u77FF"
+    resourceType: 11
     resourceNum: 0
-    resourceMaterials: []
-  - name: 
-    resourceType: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: 586899950f85e6042aee5ed796c2cfa4, type: 2}
+  - name: "\u949B\u77FF"
+    resourceType: 12
     resourceNum: 0
-    resourceMaterials: []
+    resourceMaterials:
+    - {fileID: 2100000, guid: 138114a3c8a3dd14e8b80bff97428452, type: 2}
+  - name: "\u77F3\u6CB9"
+    resourceType: 13
+    resourceNum: 0
+    resourceMaterials:
+    - {fileID: 2100000, guid: 1f937ae0f77e4d143b41b185771133df, type: 2}
   center: {fileID: 1555151207}
 --- !u!114 &912914641
 MonoBehaviour:
@@ -1898,145 +1968,145 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   characterDatas:
-  - name: 
+  - name: "\u666E\u901A\u539F\u59CB\u4EBA"
+    specialSkill: -1
+    era: 0
+    characterMaterial: {fileID: 2100000, guid: 1c71a843aea129b46b3be6378f0715d6, type: 2}
+    characterNum: 0
+    preCharacterNum: -1
+    techAbility: 1
+  - name: "\u72E9\u730E\u539F\u59CB\u4EBA"
     specialSkill: 0
     era: 0
-    characterMaterial: {fileID: 0}
-    characterNum: 0
+    characterMaterial: {fileID: 2100000, guid: 76d238024b2dce24db3329b706937a34, type: 2}
+    characterNum: 1
+    preCharacterNum: -1
+    techAbility: 1
+  - name: "\u539F\u59CB\u519C\u6C11"
+    specialSkill: 1
+    era: 0
+    characterMaterial: {fileID: 2100000, guid: 6008991c5edbce84ca77c994e7dab9e2, type: 2}
+    characterNum: 2
+    preCharacterNum: -1
+    techAbility: 1
+  - name: "\u539F\u59CB\u89C2\u661F\u8005"
+    specialSkill: 2
+    era: 0
+    characterMaterial: {fileID: 2100000, guid: 500b8be8a0d0c3a49b3344a8b8882d8a, type: 2}
+    characterNum: 3
+    preCharacterNum: -1
+    techAbility: 1
+  - name: "\u90E8\u843D\u914B\u957F"
+    specialSkill: 4
+    era: 0
+    characterMaterial: {fileID: 2100000, guid: daed4cf8e754b4c4b98843883eaf3973, type: 2}
+    characterNum: 4
+    preCharacterNum: -1
+    techAbility: 1
+  - name: "\u666E\u901A\u53E4\u5178\u4EBA"
+    specialSkill: -1
+    era: 1
+    characterMaterial: {fileID: 2100000, guid: a775400d07b158b44b8c82cc2be96954, type: 2}
+    characterNum: 5
     preCharacterNum: 0
     techAbility: 0
-  - name: 
-    specialSkill: 0
-    era: 0
-    characterMaterial: {fileID: 0}
-    characterNum: 0
-    preCharacterNum: 0
+  - name: "\u70BC\u91D1\u672F\u5E08"
+    specialSkill: 5
+    era: 1
+    characterMaterial: {fileID: 2100000, guid: 8deea82d78ec4b444ad713fbc0c70043, type: 2}
+    characterNum: 6
+    preCharacterNum: 3
     techAbility: 0
-  - name: 
-    specialSkill: 0
-    era: 0
-    characterMaterial: {fileID: 0}
-    characterNum: 0
-    preCharacterNum: 0
+  - name: "\u57CE\u4E3B"
+    specialSkill: 4
+    era: 1
+    characterMaterial: {fileID: 2100000, guid: 11c60838a27aa0b42922de102c22fdcd, type: 2}
+    characterNum: 7
+    preCharacterNum: 4
     techAbility: 0
-  - name: 
-    specialSkill: 0
-    era: 0
-    characterMaterial: {fileID: 0}
-    characterNum: 0
-    preCharacterNum: 0
+  - name: "\u8230\u957F"
+    specialSkill: 9
+    era: 1
+    characterMaterial: {fileID: 2100000, guid: d4087e2d8fbe80648b8785a0e897ec9d, type: 2}
+    characterNum: 8
+    preCharacterNum: -1
     techAbility: 0
-  - name: 
-    specialSkill: 0
-    era: 0
-    characterMaterial: {fileID: 0}
-    characterNum: 0
-    preCharacterNum: 0
+  - name: "\u6C34\u624B"
+    specialSkill: 8
+    era: 1
+    characterMaterial: {fileID: 2100000, guid: b0259ec7adeaeca4f8a34c327ad0f6a9, type: 2}
+    characterNum: 9
+    preCharacterNum: 1
     techAbility: 0
-  - name: 
-    specialSkill: 0
-    era: 0
-    characterMaterial: {fileID: 0}
-    characterNum: 0
-    preCharacterNum: 0
+  - name: "\u53E4\u5178\u519C\u6C11"
+    specialSkill: 1
+    era: 1
+    characterMaterial: {fileID: 2100000, guid: a8302cb52bc927f4ba82bece2c77ec6b, type: 2}
+    characterNum: 10
+    preCharacterNum: 2
     techAbility: 0
-  - name: 
-    specialSkill: 0
-    era: 0
-    characterMaterial: {fileID: 0}
-    characterNum: 0
-    preCharacterNum: 0
+  - name: "\u5929\u6587\u5B66\u5BB6"
+    specialSkill: 3
+    era: 1
+    characterMaterial: {fileID: 2100000, guid: 5577e64bf9655354780592e5062a1428, type: 2}
+    characterNum: 11
+    preCharacterNum: 3
     techAbility: 0
-  - name: 
-    specialSkill: 0
-    era: 0
-    characterMaterial: {fileID: 0}
-    characterNum: 0
-    preCharacterNum: 0
+  - name: "\u91D1\u5C5E\u5DE5\u5320"
+    specialSkill: 6
+    era: 1
+    characterMaterial: {fileID: 2100000, guid: a488ac5554cbbab48b4915994c8f194b, type: 2}
+    characterNum: 12
+    preCharacterNum: -1
     techAbility: 0
-  - name: 
-    specialSkill: 0
-    era: 0
-    characterMaterial: {fileID: 0}
-    characterNum: 0
-    preCharacterNum: 0
+  - name: "\u666E\u901A\u4EBA"
+    specialSkill: -1
+    era: 2
+    characterMaterial: {fileID: 2100000, guid: 6f4cf0c7615e55245b243d306283b572, type: 2}
+    characterNum: 13
+    preCharacterNum: 5
     techAbility: 0
-  - name: 
-    specialSkill: 0
-    era: 0
-    characterMaterial: {fileID: 0}
-    characterNum: 0
-    preCharacterNum: 0
+  - name: "\u519B\u8230\u957F"
+    specialSkill: 9
+    era: 2
+    characterMaterial: {fileID: 2100000, guid: 00a1ce28b721fd54ca0045d06aa3b5c1, type: 2}
+    characterNum: 14
+    preCharacterNum: 8
     techAbility: 0
-  - name: 
-    specialSkill: 0
-    era: 0
-    characterMaterial: {fileID: 0}
-    characterNum: 0
-    preCharacterNum: 0
+  - name: "\u6D77\u5458"
+    specialSkill: 8
+    era: 2
+    characterMaterial: {fileID: 2100000, guid: 47953fa9a119c6540acfb8aa199cdc42, type: 2}
+    characterNum: 15
+    preCharacterNum: 9
     techAbility: 0
-  - name: 
-    specialSkill: 0
-    era: 0
-    characterMaterial: {fileID: 0}
-    characterNum: 0
-    preCharacterNum: 0
+  - name: "\u51B6\u70BC\u5DE5\u4EBA"
+    specialSkill: 7
+    era: 2
+    characterMaterial: {fileID: 2100000, guid: a488ac5554cbbab48b4915994c8f194b, type: 2}
+    characterNum: 16
+    preCharacterNum: 12
     techAbility: 0
-  - name: 
-    specialSkill: 0
-    era: 0
-    characterMaterial: {fileID: 0}
-    characterNum: 0
-    preCharacterNum: 0
+  - name: "\u7535\u529B\u5DE5\u4EBA"
+    specialSkill: 11
+    era: 2
+    characterMaterial: {fileID: 2100000, guid: b6c09f7b5f338c845b264f5be775215c, type: 2}
+    characterNum: 17
+    preCharacterNum: -1
     techAbility: 0
-  - name: 
-    specialSkill: 0
-    era: 0
-    characterMaterial: {fileID: 0}
-    characterNum: 0
-    preCharacterNum: 0
+  - name: "\u73B0\u4EE3\u5316\u519C\u6C11"
+    specialSkill: 1
+    era: 2
+    characterMaterial: {fileID: 2100000, guid: 3b53e88fbdbbf364d86e8d32db8da02a, type: 2}
+    characterNum: 18
+    preCharacterNum: 10
     techAbility: 0
-  - name: 
-    specialSkill: 0
-    era: 0
+  - name: "\u592A\u7A7A\u79D1\u5B66\u5BB6"
+    specialSkill: 10
+    era: 2
     characterMaterial: {fileID: 0}
-    characterNum: 0
-    preCharacterNum: 0
-    techAbility: 0
-  - name: 
-    specialSkill: 0
-    era: 0
-    characterMaterial: {fileID: 0}
-    characterNum: 0
-    preCharacterNum: 0
-    techAbility: 0
-  - name: 
-    specialSkill: 0
-    era: 0
-    characterMaterial: {fileID: 0}
-    characterNum: 0
-    preCharacterNum: 0
-    techAbility: 0
-  - name: 
-    specialSkill: 0
-    era: 0
-    characterMaterial: {fileID: 0}
-    characterNum: 0
-    preCharacterNum: 0
-    techAbility: 0
-  - name: 
-    specialSkill: 0
-    era: 0
-    characterMaterial: {fileID: 0}
-    characterNum: 0
-    preCharacterNum: 0
-    techAbility: 0
-  - name: 
-    specialSkill: 0
-    era: 0
-    characterMaterial: {fileID: 0}
-    characterNum: 0
-    preCharacterNum: 0
+    characterNum: 19
+    preCharacterNum: 11
     techAbility: 0
   maxAge: 50
 --- !u!114 &912914643
@@ -2054,1863 +2124,2074 @@ MonoBehaviour:
   size: 2
   builderAge: 0
   buildingDatas:
-  - name: 
+  - name: "\u5C71\u6D1E"
     buildingType: 0
     era: 0
     targetResource:
-    - name: 
+    - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 0
+      resourceNum: 100000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 100000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 100000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 100000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 100000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 100000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 100000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 100000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 100000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 100000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 100000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 100000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u949B\u77FF"
+      resourceType: 13
+      resourceNum: 100000
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 12
       resourceNum: 0
       resourceMaterials: []
     isSpecialBuilding: 0
-    isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
+    isHomeBuilding: 1
+    buildingMaterial: {fileID: 2100000, guid: b62d4191aff1dbc4592f49ff922b30fb, type: 2}
     canBuild: 0
     needTech: []
     preBuildings: 
-  - name: 
-    buildingType: 0
+  - name: "\u8349\u6728\u5C4B"
+    buildingType: 1
     era: 0
     targetResource:
-    - name: 
+    - name: "\u6728\u5934"
       resourceType: 0
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 1
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u949B\u77FF"
+      resourceType: 12
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
       resourceNum: 0
       resourceMaterials: []
-    - name: 
+    isSpecialBuilding: 0
+    isHomeBuilding: 1
+    buildingMaterial: {fileID: 2100000, guid: 9ac30ccab801e244facbbe1c3aa20ca0, type: 2}
+    canBuild: 0
+    needTech:
+    - "\u5EFA\u7B51"
+    preBuildings: 
+  - name: "\u7F8A\u5708"
+    buildingType: 2
+    era: 0
+    targetResource:
+    - name: "\u6728\u5934"
       resourceType: 0
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 1
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 12
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
       resourceNum: 0
       resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
+    buildingMaterial: {fileID: 2100000, guid: 89ca4ed0035484f41be5aa2b0a3a1bac, type: 2}
+    canBuild: 0
+    needTech:
+    - "\u9A6F\u5316"
+    preBuildings: 
+  - name: "\u539F\u59CB\u6355\u9C7C\u8BBE\u65BD"
+    buildingType: 3
+    era: 0
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 12
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
+    isSpecialBuilding: 0
+    isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: ada6539085386874fae62db151838e65, type: 2}
+    canBuild: 0
+    needTech:
+    - "\u9020\u8239"
+    preBuildings: 
+  - name: "\u539F\u59CB\u519C\u7530"
+    buildingType: 4
+    era: 0
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 1
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 12
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
+    isSpecialBuilding: 0
+    isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 974c1804b35b92f47a477be4b3890cb2, type: 2}
+    canBuild: 0
+    needTech:
+    - "\u65E9\u671F\u519C\u4E1A"
+    preBuildings: 
+  - name: "\u5C0F\u578B\u7801\u5934"
+    buildingType: 5
+    era: 0
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 12
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
+    isSpecialBuilding: 0
+    isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 01fb8facf4660014c9d1240da6f42839, type: 2}
+    canBuild: 0
+    needTech:
+    - "\u9020\u8239"
+    preBuildings: 
+  - name: "\u5DE8\u77F3\u9635"
+    buildingType: 6
+    era: 0
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 1
+      resourceMaterials: []
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 12
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
+    isSpecialBuilding: 1
+    isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 990a34d80a417ed41a6a28b1197426d9, type: 2}
+    canBuild: 0
+    needTech:
+    - "\u795E\u5B66"
+    preBuildings: 
+  - name: "\u5236\u9676\u8F6C\u76D8"
+    buildingType: 7
+    era: 0
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 12
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
+    isSpecialBuilding: 1
+    isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
+    needTech:
+    - "\u8F6E\u5B50"
+    preBuildings: 
+  - name: "\u706B\u5806"
+    buildingType: 8
+    era: 0
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 1
+      resourceMaterials: []
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 12
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
+    isSpecialBuilding: 1
+    isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 8ecc1184fa465a646a40ab04a0654c5b, type: 2}
+    canBuild: 0
+    needTech:
+    - "\u706B"
+    preBuildings: 
+  - name: "\u5B66\u5802"
+    buildingType: 9
+    era: 0
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 1
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 3
+      resourceMaterials: []
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 12
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
+    isSpecialBuilding: 1
+    isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 51c141c8118c98844b1269158afc2519, type: 2}
+    canBuild: 0
+    needTech:
+    - "\u54F2\u5B66\u6570\u5B66"
+    preBuildings: 
+  - name: "\u77F3\u5C4B"
+    buildingType: 10
+    era: 1
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 12
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
+    isSpecialBuilding: 0
+    isHomeBuilding: 1
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
+    needTech:
+    - "\u77F3\u5236\u5EFA\u7B51"
+    preBuildings: 01000000
+  - name: "\u957F\u5C4B"
+    buildingType: 11
+    era: 1
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 12
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
+    isSpecialBuilding: 0
+    isHomeBuilding: 1
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
+    needTech:
+    - "\u77F3\u5236\u5EFA\u7B51"
+    preBuildings: 01000000
+  - name: "\u57CE\u5E02\u4F4F\u5B85"
+    buildingType: 12
+    era: 1
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 12
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
+    isSpecialBuilding: 0
+    isHomeBuilding: 1
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
+    needTech:
+    - "\u77F3\u5236\u5EFA\u7B51"
+    preBuildings: 01000000
+  - name: "\u7801\u5934"
+    buildingType: 13
+    era: 1
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 12
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
+    isSpecialBuilding: 0
+    isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
+    needTech:
+    - "\u822A\u6D77"
+    preBuildings: 05000000
+  - name: "\u5854\u697C"
+    buildingType: 14
+    era: 1
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 12
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
+    isSpecialBuilding: 0
+    isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
+    needTech:
+    - "\u5929\u6587\u89C2\u6D4B"
+    preBuildings: 
+  - name: "\u519C\u573A"
+    buildingType: 15
+    era: 1
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 12
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
+    isSpecialBuilding: 0
+    isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
-    preBuildings: 
-  - name: 
-    buildingType: 0
+    preBuildings: 04000000
+  - name: "\u57CE\u5821"
+    buildingType: 14
     era: 0
     targetResource:
-    - name: 
+    - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
       resourceMaterials: []
-    - name: 
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 1
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 3
+      resourceMaterials: []
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 12
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
+    isSpecialBuilding: 1
+    isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
+    needTech:
+    - "\u8981\u585E\u57CE\u5821"
+    preBuildings: 
+  - name: "\u70BC\u91D1\u7814\u7A76\u6240"
+    buildingType: 16
+    era: 1
+    targetResource:
+    - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
       resourceMaterials: []
-    - name: 
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 4
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 1
+      resourceMaterials: []
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 12
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
+    isSpecialBuilding: 1
+    isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
+    needTech:
+    - "\u70BC\u91D1"
+    preBuildings: 
+  - name: "\u5927\u578B\u8230\u961F"
+    buildingType: 18
+    era: 1
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 3
+      resourceMaterials: []
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 12
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
+    isSpecialBuilding: 1
+    isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
+    needTech:
+    - "\u5927\u578B\u8230\u961F"
+    preBuildings: 
+  - name: "\u5C0F\u578B\u91D1\u5C5E\u5DE5\u574A"
+    buildingType: 19
+    era: 1
+    targetResource:
+    - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
       resourceMaterials: []
-    - name: 
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 1
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 1
+      resourceMaterials: []
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 12
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
+    isSpecialBuilding: 1
+    isHomeBuilding: 0
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
+    needTech:
+    - "\u70BC\u94DC\u70BC\u94C1"
+    preBuildings: 
+  - name: "\u6DF7\u51DD\u571F\u5927\u53A6"
+    buildingType: 20
+    era: 2
+    targetResource:
+    - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 4
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 3
+      resourceMaterials: []
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 3
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u949B\u77FF"
+      resourceType: 12
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
       resourceNum: 0
       resourceMaterials: []
     isSpecialBuilding: 0
-    isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
+    isHomeBuilding: 1
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    canBuild: 0
+    needTech:
+    - "\u6C34\u6CE5\u6DF7\u51DD\u571F"
+    preBuildings: 
+  - name: "\u5927\u522B\u91CE"
+    buildingType: 21
+    era: 2
+    targetResource:
+    - name: "\u6728\u5934"
+      resourceType: 0
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 3
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 3
+      resourceMaterials: []
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 3
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 12
+      resourceNum: 0
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 0
+      resourceMaterials: []
+    isSpecialBuilding: 0
+    isHomeBuilding: 1
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
-    preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
+    preBuildings: 0a0000000b0000000c000000
+  - name: "\u56DB\u5408\u9662"
+    buildingType: 22
+    era: 2
     targetResource:
-    - name: 
+    - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 4
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 3
+      resourceMaterials: []
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 3
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u949B\u77FF"
+      resourceType: 12
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
       resourceNum: 0
       resourceMaterials: []
     isSpecialBuilding: 0
-    isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
+    isHomeBuilding: 1
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
-    preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
+    preBuildings: 0a0000000b0000000c000000
+  - name: "\u5929\u6587\u53F0"
+    buildingType: 23
+    era: 2
     targetResource:
-    - name: 
+    - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 4
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 3
+      resourceMaterials: []
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 3
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u949B\u77FF"
+      resourceType: 12
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
       resourceNum: 0
       resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
-    preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
+    preBuildings: 0e000000
+  - name: "\u73B0\u4EE3\u5316\u519C\u573A"
+    buildingType: 24
+    era: 2
     targetResource:
-    - name: 
+    - name: "\u6728\u5934"
       resourceType: 0
+      resourceNum: 3
+      resourceMaterials: []
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 4
+      resourceMaterials: []
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u949B\u77FF"
+      resourceType: 12
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 1
       resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
-    needTech: []
-    preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
+    needTech:
+    - "\u5185\u71C3\u673A"
+    preBuildings: 0f000000
+  - name: "\u706B\u7BAD\u53D1\u5C04\u57FA\u5730"
+    buildingType: 25
+    era: 2
     targetResource:
-    - name: 
+    - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 2
+      resourceMaterials: []
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u949B\u77FF"
+      resourceType: 12
+      resourceNum: 1
+      resourceMaterials: []
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    isSpecialBuilding: 0
+    isSpecialBuilding: 1
     isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
-    needTech: []
+    needTech:
+    - "\u822A\u5929\u5668"
     preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
+  - name: "\u91D1\u5C5E\u51B6\u70BC\u5382"
+    buildingType: 26
+    era: 2
     targetResource:
-    - name: 
+    - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 3
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 3
+      resourceMaterials: []
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 4
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 12
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    isSpecialBuilding: 0
+    isSpecialBuilding: 1
     isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
-    needTech: []
+    needTech:
+    - "\u91D1\u5C5E\u7CBE\u70BC"
     preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
+  - name: "\u6838\u7535\u7AD9"
+    buildingType: 27
+    era: 2
     targetResource:
-    - name: 
+    - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 4
+      resourceMaterials: []
+    - name: "\u6591\u5CA9"
+      resourceType: 3
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 3
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 3
+      resourceMaterials: []
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 4
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 12
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    isSpecialBuilding: 0
+    isSpecialBuilding: 1
     isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
-    needTech: []
+    needTech:
+    - "\u7535\u529B"
     preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
+  - name: "\u84B8\u6C7D\u57CE\u5821"
+    buildingType: 28
+    era: 2
     targetResource:
-    - name: 
+    - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 3
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 3
+      resourceMaterials: []
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 4
+      resourceMaterials: []
+    - name: "\u949B\u77FF"
+      resourceType: 12
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    isSpecialBuilding: 0
+    isSpecialBuilding: 1
     isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
-    needTech: []
+    needTech:
+    - "\u84B8\u6C7D\u673A"
     preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
+  - name: "\u6ED1\u7FD4\u673A\u673A\u573A"
+    buildingType: 29
+    era: 2
     targetResource:
-    - name: 
+    - name: "\u6728\u5934"
       resourceType: 0
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 3
+      resourceMaterials: []
+    - name: "\u91D1\u77FF"
+      resourceType: 9
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
+    - name: "\u949B\u77FF"
+      resourceType: 12
       resourceNum: 0
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 3
       resourceMaterials: []
-    isSpecialBuilding: 0
+    isSpecialBuilding: 1
     isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
-    needTech: []
+    needTech:
+    - "\u98DE\u884C\u5668"
     preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
+  - name: "\u77F3\u6CB9\u55B7\u53E3"
+    buildingType: 30
+    era: 2
     targetResource:
-    - name: 
+    - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 0
+      resourceNum: 10000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u77F3\u5934"
+      resourceType: 1
+      resourceNum: 10000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u6C34\u8D44\u6E90"
+      resourceType: 2
+      resourceNum: 10000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u6591\u5CA9"
+      resourceType: 3
+      resourceNum: 10000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u71E7\u77F3"
+      resourceType: 4
+      resourceNum: 10000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u9ECF\u571F"
+      resourceType: 5
+      resourceNum: 10000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u77F3\u818F\u77F3"
+      resourceType: 6
+      resourceNum: 10000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u82B1\u5C97\u5CA9"
+      resourceType: 7
+      resourceNum: 10000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u94C1\u77FF"
+      resourceType: 8
+      resourceNum: 10000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u91D1\u77FF"
+      resourceType: 9
+      resourceNum: 10000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u9752\u94DC\u77FF"
+      resourceType: 10
+      resourceNum: 10000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u7164\u70AD\u77FF"
+      resourceType: 11
+      resourceNum: 10000
       resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
+    - name: "\u949B\u77FF"
+      resourceType: 12
+      resourceNum: 10000
       resourceMaterials: []
-    isSpecialBuilding: 0
+    - name: "\u77F3\u6CB9"
+      resourceType: 13
+      resourceNum: 10000
+      resourceMaterials: []
+    isSpecialBuilding: 1
     isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
-    canBuild: 0
-    needTech: []
-    preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
-    targetResource:
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    isSpecialBuilding: 0
-    isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
-    canBuild: 0
-    needTech: []
-    preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
-    targetResource:
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    isSpecialBuilding: 0
-    isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
-    canBuild: 0
-    needTech: []
-    preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
-    targetResource:
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    isSpecialBuilding: 0
-    isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
-    canBuild: 0
-    needTech: []
-    preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
-    targetResource:
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    isSpecialBuilding: 0
-    isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
-    canBuild: 0
-    needTech: []
-    preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
-    targetResource:
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    isSpecialBuilding: 0
-    isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
-    canBuild: 0
-    needTech: []
-    preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
-    targetResource:
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    isSpecialBuilding: 0
-    isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
-    canBuild: 0
-    needTech: []
-    preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
-    targetResource:
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    isSpecialBuilding: 0
-    isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
-    canBuild: 0
-    needTech: []
-    preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
-    targetResource:
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    isSpecialBuilding: 0
-    isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
-    canBuild: 0
-    needTech: []
-    preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
-    targetResource:
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    isSpecialBuilding: 0
-    isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
-    canBuild: 0
-    needTech: []
-    preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
-    targetResource:
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    isSpecialBuilding: 0
-    isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
-    canBuild: 0
-    needTech: []
-    preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
-    targetResource:
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    isSpecialBuilding: 0
-    isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
-    canBuild: 0
-    needTech: []
-    preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
-    targetResource:
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    isSpecialBuilding: 0
-    isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
-    canBuild: 0
-    needTech: []
-    preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
-    targetResource:
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    isSpecialBuilding: 0
-    isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
-    canBuild: 0
-    needTech: []
-    preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
-    targetResource:
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    isSpecialBuilding: 0
-    isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
-    canBuild: 0
-    needTech: []
-    preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
-    targetResource:
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    isSpecialBuilding: 0
-    isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
-    canBuild: 0
-    needTech: []
-    preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
-    targetResource:
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    isSpecialBuilding: 0
-    isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
-    canBuild: 0
-    needTech: []
-    preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
-    targetResource:
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    isSpecialBuilding: 0
-    isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
-    canBuild: 0
-    needTech: []
-    preBuildings: 
-  - name: 
-    buildingType: 0
-    era: 0
-    targetResource:
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    - name: 
-      resourceType: 0
-      resourceNum: 0
-      resourceMaterials: []
-    isSpecialBuilding: 0
-    isHomeBuilding: 0
-    buildingMaterial: {fileID: 0}
+    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech: []
     preBuildings: 
@@ -4016,8 +4297,208 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   buildingInBlock: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  maxBuildingInBlock: 5
+  maxBuildingInBlock: 10
   guarantees: 0
 --- !u!114 &912914644
 MonoBehaviour:
@@ -4032,7 +4513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   era: 0
---- !u!1 &1022483008
+--- !u!1 &941969494
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4040,9 +4521,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1022483009}
-  - component: {fileID: 1022483012}
-  - component: {fileID: 1022483011}
+  - component: {fileID: 941969495}
+  - component: {fileID: 941969497}
+  - component: {fileID: 941969496}
   m_Layer: 0
   m_Name: 45latitude
   m_TagString: Untagged
@@ -4050,28 +4531,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1022483009
+--- !u!4 &941969495
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022483008}
+  m_GameObject: {fileID: 941969494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.3535, z: 0}
   m_LocalScale: {x: 0.706, y: 1e-15, z: 0.706}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 318437762}
+  m_Father: {fileID: 717069329}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1022483011
+--- !u!23 &941969496
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022483008}
+  m_GameObject: {fileID: 941969494}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -4107,13 +4588,96 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1022483012
+--- !u!33 &941969497
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022483008}
+  m_GameObject: {fileID: 941969494}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1267380252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1267380253}
+  - component: {fileID: 1267380255}
+  - component: {fileID: 1267380254}
+  m_Layer: 0
+  m_Name: 90 + 270longitude
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1267380253
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267380252}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0005, y: 1e-13, z: 1.0005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 717069329}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 90}
+--- !u!23 &1267380254
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267380252}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1267380255
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267380252}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1457100088
 GameObject:
@@ -4164,8 +4728,8 @@ Camera:
   m_GameObject: {fileID: 1457100088}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.28635636, g: 0.3767775, b: 0.5188679, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -4205,14 +4769,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457100088}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.17863134, y: -0, z: -0, w: 0.9839161}
   m_LocalPosition: {x: 0, y: 0, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -20.58, y: 0, z: 0}
 --- !u!1 &1555151207
 GameObject:
   m_ObjectHideFlags: 0
@@ -4225,7 +4789,6 @@ GameObject:
   - component: {fileID: 1555151210}
   - component: {fileID: 1555151209}
   - component: {fileID: 1555151212}
-  - component: {fileID: 1555151213}
   m_Layer: 0
   m_Name: Planet
   m_TagString: Planet
@@ -4297,7 +4860,7 @@ Transform:
   m_Children:
   - {fileID: 139487640}
   - {fileID: 1968171382}
-  - {fileID: 318437762}
+  - {fileID: 717069329}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4315,102 +4878,63 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!135 &1555151213
-SphereCollider:
+--- !u!1001 &1931743008
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1555151207}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1933183545
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1933183546}
-  - component: {fileID: 1933183549}
-  - component: {fileID: 1933183548}
-  m_Layer: 0
-  m_Name: 90latitude
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1933183546
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1933183545}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.003, y: 1e-10, z: 1.001}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 318437762}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1933183548
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1933183545}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1933183549
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1933183545}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7359464824034546103, guid: d2e27dd9c6015df44a5a830b1ca15005, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359464824034546103, guid: d2e27dd9c6015df44a5a830b1ca15005, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359464824034546103, guid: d2e27dd9c6015df44a5a830b1ca15005, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359464824034546103, guid: d2e27dd9c6015df44a5a830b1ca15005, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359464824034546103, guid: d2e27dd9c6015df44a5a830b1ca15005, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359464824034546103, guid: d2e27dd9c6015df44a5a830b1ca15005, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359464824034546103, guid: d2e27dd9c6015df44a5a830b1ca15005, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359464824034546103, guid: d2e27dd9c6015df44a5a830b1ca15005, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359464824034546103, guid: d2e27dd9c6015df44a5a830b1ca15005, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359464824034546103, guid: d2e27dd9c6015df44a5a830b1ca15005, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359464824034546103, guid: d2e27dd9c6015df44a5a830b1ca15005, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359464824034546105, guid: d2e27dd9c6015df44a5a830b1ca15005, type: 3}
+      propertyPath: m_Name
+      value: AudioManger
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d2e27dd9c6015df44a5a830b1ca15005, type: 3}
 --- !u!1 &1968171381
 GameObject:
   m_ObjectHideFlags: 0
@@ -4442,7 +4966,7 @@ Transform:
   m_Father: {fileID: 1555151211}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1992577566
+--- !u!1 &2044612729
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4450,38 +4974,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1992577567}
-  - component: {fileID: 1992577570}
-  - component: {fileID: 1992577569}
+  - component: {fileID: 2044612730}
+  - component: {fileID: 2044612732}
+  - component: {fileID: 2044612731}
   m_Layer: 0
-  m_Name: 150 + 210longitude
+  m_Name: -45latitude
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1992577567
+--- !u!4 &2044612730
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992577566}
-  m_LocalRotation: {x: -0.6830127, y: -0.6830127, z: 0.18301274, w: 0.18301274}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0005, y: 1e-13, z: 1.0005}
+  m_GameObject: {fileID: 2044612729}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.3535, z: 0}
+  m_LocalScale: {x: 0.706, y: 1e-15, z: 0.706}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 318437762}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: -150, z: 90}
---- !u!23 &1992577569
+  m_Father: {fileID: 717069329}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &2044612731
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992577566}
+  m_GameObject: {fileID: 2044612729}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -4517,151 +5041,11 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1992577570
+--- !u!33 &2044612732
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992577566}
+  m_GameObject: {fileID: 2044612729}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &2074731338
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2074731339}
-  - component: {fileID: 2074731342}
-  - component: {fileID: 2074731341}
-  m_Layer: 0
-  m_Name: 30 + 330longitude
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2074731339
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2074731338}
-  m_LocalRotation: {x: -0.18301266, y: -0.18301266, z: 0.6830127, w: 0.6830127}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0005, y: 1e-13, z: 1.0005}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 318437762}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: -30, z: 90}
---- !u!23 &2074731341
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2074731338}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &2074731342
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2074731338}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &72229488939859116
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6875215470551126260, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_Name
-      value: AllUI
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
