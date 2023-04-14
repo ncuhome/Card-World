@@ -57,7 +57,7 @@ public class Building : MonoBehaviour
 
     void GeneratePopulation()
     {
-        if ((buildingType == BuildingType.Cave) && (CharacterSystem.Instance.GetPopulation() < 9) && (!建筑.instance.unlock))
+        if ((buildingType == BuildingType.Cave) && (CharacterSystem.Instance.GetPopulation() < 8))
         {
             time += Time.deltaTime;
             if (time > 20f)
