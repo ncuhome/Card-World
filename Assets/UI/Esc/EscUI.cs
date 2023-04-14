@@ -35,9 +35,11 @@ public class EscUI : MonoBehaviour
     {
         AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[7]);
         Debug.Log("Relodad");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Esc.SetActive(false);
         Time.timeScale = 1f;
+        CardPack.cardPack.Clear();
+        //foreach(Card card in CardPack.cardPack) { CardPack.cardPack.Remove(card); Destroy(card.gameObject); }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Continue()

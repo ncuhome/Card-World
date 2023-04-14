@@ -9,7 +9,7 @@ public class CardPack : MonoBehaviour //卡牌背包
     public static float cardPackHigh;
     public static List<Card> cardPack = new List<Card>();
     public static bool canBeDrag = true;  //全局控制卡牌是否可以被拖到，如果正在使用时无法拖动
-    private void Awake()
+    private void Start()
     {
         cardPackHigh = this.transform.position.y;
     }

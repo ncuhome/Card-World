@@ -61,18 +61,4 @@ public class ShowResManger : MonoBehaviour
             AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[7]);
         }
     }
-
-    public void Speed()
-    {
-        if (speed == false)
-        {
-            Time.timeScale = 10f;
-            speed = true;
-        }
-        else
-        {
-            Time.timeScale = 1f;
-            speed = false;
-        }
-    }
 }

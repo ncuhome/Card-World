@@ -33,7 +33,17 @@ public class BlockSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        foreach (Block block in blocks)
+        {
+            if (block.temperature <= 0)
+            {
+                block.temperature = 0;
+            }
+            if (block.water <= 0)
+            {
+                block.water = 0;
+            }
+        }
     }
 
 
@@ -123,8 +133,14 @@ public class BlockSystem : MonoBehaviour
             time += Time.deltaTime;
             if (time > 1)
             {
-                BlockSystem.Instance.blocks[block[0]].temperature += tem;
-                BlockSystem.Instance.blocks[block[0]].water += water;
+                if (BlockSystem.Instance.blocks[block[0]].temperature > 0)
+                {
+                    BlockSystem.Instance.blocks[block[0]].temperature += tem;
+                }
+                if (BlockSystem.Instance.blocks[block[0]].water > 0)
+                {
+                    BlockSystem.Instance.blocks[block[0]].water += water;
+                }
                 BlockSystem.Instance.blocks[block[0]].livability += livability;
                 time -= 1;
             }

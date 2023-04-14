@@ -19,6 +19,7 @@ public class FailUI : MonoBehaviour
         AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[7]);
         Debug.Log("Relodad");
         GameObject.Find("FailPanel").transform.localScale = Vector3.zero;
+        CardPack.cardPack.Clear();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
