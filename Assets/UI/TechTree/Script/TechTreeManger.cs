@@ -4,23 +4,22 @@ using UnityEngine;
 
 public class TechTreeManger : MonoBehaviour
 {
-    private GameObject TechTreePanel;
+    public GameObject TechTreeImage;
     void Start()
     {
-        TechTreePanel = GameObject.Find("TechTreeUIPanel");
-        TechTreePanel.SetActive(false);
+        
     }
 
     public void OpenCloseTechTree()  //关闭科技树
     {
-        if (TechTreePanel.activeSelf == true)
+        if (TechTreeImage.transform.localScale == Vector3.zero)
         {
-            TechTreePanel.SetActive(false);
+            TechTreeImage.transform.localScale = new Vector3(1, 0.8f, 1);
             AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[4]);
         }
-        else
+        else if (TechTreeImage.transform.localScale == new Vector3(1, 0.8f, 1))
         {
-            TechTreePanel.SetActive(true);
+            TechTreeImage.transform.localScale = Vector3.zero;
             AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[4]);
         }
     }
