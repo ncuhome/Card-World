@@ -100,24 +100,25 @@ public class BuildingSystem : MonoBehaviour
         //获取了工人则开始建造
         if (builders != null)
         {
-            //保底出居住建筑
             int buildingRandomNum = Random.Range(0, buildingsCanBeBuildNum);
-            if (!buildingsCanBeBuild[buildingRandomNum].isHomeBuilding)
-            {
-                guarantees++;
-                if (guarantees > 2f)
-                {
-                    while (!buildingsCanBeBuild[buildingRandomNum].isHomeBuilding)
-                    {
-                        buildingRandomNum = Random.Range(0, buildingsCanBeBuildNum);
-                    }
-                    guarantees = 0;
-                }
-            }
-            else
-            {
-                guarantees = 0;
-            }
+            
+            //保底出居住建筑
+            // if (!buildingsCanBeBuild[buildingRandomNum].isHomeBuilding)
+            // {
+            //     guarantees++;
+            //     if (guarantees > 2f)
+            //     {
+            //         while (!buildingsCanBeBuild[buildingRandomNum].isHomeBuilding)
+            //         {
+            //             buildingRandomNum = Random.Range(0, buildingsCanBeBuildNum);
+            //         }
+            //         guarantees = 0;
+            //     }
+            // }
+            // else
+            // {
+            //     guarantees = 0;
+            // }
 
 
             Vector3 targetEuler = new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));

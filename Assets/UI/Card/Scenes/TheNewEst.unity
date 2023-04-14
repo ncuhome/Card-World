@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.0031562946, g: 0.002732728, b: 0.003365626, a: 1}
+  m_IndirectSpecularColor: {r: 0.003103807, g: 0.0027302764, b: 0.0033076787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1978,21 +1978,21 @@ MonoBehaviour:
     characterMaterial: {fileID: 2100000, guid: 1c71a843aea129b46b3be6378f0715d6, type: 2}
     characterNum: 0
     preCharacterNum: -1
-    techAbility: 1
+    techAbility: 0
   - name: "\u72E9\u730E\u539F\u59CB\u4EBA"
     specialSkill: 0
     era: 0
     characterMaterial: {fileID: 2100000, guid: 76d238024b2dce24db3329b706937a34, type: 2}
     characterNum: 1
     preCharacterNum: -1
-    techAbility: 1
+    techAbility: 0
   - name: "\u539F\u59CB\u519C\u6C11"
     specialSkill: 1
     era: 0
     characterMaterial: {fileID: 2100000, guid: 6008991c5edbce84ca77c994e7dab9e2, type: 2}
     characterNum: 2
     preCharacterNum: -1
-    techAbility: 1
+    techAbility: 0
   - name: "\u539F\u59CB\u89C2\u661F\u8005"
     specialSkill: 2
     era: 0
@@ -2006,14 +2006,14 @@ MonoBehaviour:
     characterMaterial: {fileID: 2100000, guid: daed4cf8e754b4c4b98843883eaf3973, type: 2}
     characterNum: 4
     preCharacterNum: -1
-    techAbility: 1
+    techAbility: 0
   - name: "\u666E\u901A\u53E4\u5178\u4EBA"
     specialSkill: -1
     era: 1
     characterMaterial: {fileID: 2100000, guid: a775400d07b158b44b8c82cc2be96954, type: 2}
     characterNum: 5
     preCharacterNum: 0
-    techAbility: 1
+    techAbility: 0
   - name: "\u70BC\u91D1\u672F\u5E08"
     specialSkill: 5
     era: 1
@@ -2027,7 +2027,7 @@ MonoBehaviour:
     characterMaterial: {fileID: 2100000, guid: 11c60838a27aa0b42922de102c22fdcd, type: 2}
     characterNum: 7
     preCharacterNum: 4
-    techAbility: 1
+    techAbility: 0
   - name: "\u8230\u957F"
     specialSkill: 9
     era: 1
