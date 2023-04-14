@@ -2213,11 +2213,11 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 2
+      resourceNum: 4
       resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 1
+      resourceNum: 2
       resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
@@ -2280,11 +2280,11 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 2
+      resourceNum: 4
       resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 1
+      resourceNum: 2
       resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
@@ -2347,7 +2347,7 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 2
+      resourceNum: 4
       resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
@@ -2355,7 +2355,7 @@ MonoBehaviour:
       resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      resourceNum: 2
+      resourceNum: 4
       resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
@@ -2414,11 +2414,11 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 2
+      resourceNum: 4
       resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 1
+      resourceNum: 2
       resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
@@ -2481,7 +2481,7 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 2
+      resourceNum: 4
       resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
@@ -2489,7 +2489,7 @@ MonoBehaviour:
       resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      resourceNum: 2
+      resourceNum: 4
       resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
@@ -2682,7 +2682,7 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 2
+      resourceNum: 4
       resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
@@ -2753,7 +2753,7 @@ MonoBehaviour:
       resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 1
+      resourceNum: 2
       resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
@@ -2816,11 +2816,11 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 2
+      resourceNum: 4
       resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 2
+      resourceNum: 4
       resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
@@ -2883,11 +2883,11 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 2
+      resourceNum: 4
       resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 2
+      resourceNum: 4
       resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
@@ -2950,11 +2950,11 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 2
+      resourceNum: 4
       resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 2
+      resourceNum: 4
       resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
@@ -3017,7 +3017,7 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 2
+      resourceNum: 4
       resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
@@ -3025,7 +3025,7 @@ MonoBehaviour:
       resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      resourceNum: 2
+      resourceNum: 4
       resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
@@ -3084,11 +3084,11 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 2
+      resourceNum: 4
       resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 2
+      resourceNum: 4
       resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
@@ -3151,11 +3151,11 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 2
+      resourceNum: 4
       resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 2
+      resourceNum: 4
       resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
@@ -3221,7 +3221,7 @@ MonoBehaviour:
       resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 1
+      resourceNum: 2
       resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
@@ -3288,7 +3288,7 @@ MonoBehaviour:
       resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 4
+      resourceNum: 8
       resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
@@ -3351,7 +3351,7 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 2
+      resourceNum: 4
       resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
@@ -3359,7 +3359,7 @@ MonoBehaviour:
       resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      resourceNum: 3
+      resourceNum: 6
       resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
@@ -3422,7 +3422,7 @@ MonoBehaviour:
       resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 2
+      resourceNum: 4
       resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
@@ -3489,7 +3489,7 @@ MonoBehaviour:
       resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 4
+      resourceNum: 8
       resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
@@ -3556,7 +3556,7 @@ MonoBehaviour:
       resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 3
+      resourceNum: 6
       resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
@@ -3622,7 +3622,7 @@ MonoBehaviour:
       resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 4
+      resourceNum: 8
       resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
@@ -3688,7 +3688,7 @@ MonoBehaviour:
       resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 4
+      resourceNum: 8
       resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
@@ -3750,11 +3750,11 @@ MonoBehaviour:
     targetResource:
     - name: "\u6728\u5934"
       resourceType: 0
-      resourceNum: 3
+      resourceNum: 6
       resourceMaterials: []
     - name: "\u77F3\u5934"
       resourceType: 1
-      resourceNum: 4
+      resourceNum: 8
       resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
@@ -3959,7 +3959,7 @@ MonoBehaviour:
       resourceMaterials: []
     - name: "\u6C34\u8D44\u6E90"
       resourceType: 2
-      resourceNum: 4
+      resourceNum: 8
       resourceMaterials: []
     - name: "\u6591\u5CA9"
       resourceType: 3
