@@ -10,7 +10,8 @@ public class CardManger : MonoBehaviour
     public GameObject textCard;
     public GameObject redCard;
     public static CardManger instance;
-    public int cardPackCount = 0;
+    private bool haveDealCard;
+    private float time;
     private void Start()
     {
         if (instance == null)
@@ -19,11 +20,17 @@ public class CardManger : MonoBehaviour
         }
     }
 
+    public void Update()
+    {
+        time += Time.deltaTime;
+    }
+
     public void DealCard()  //发牌
     {
         AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[1]);
-        if (cardPackCount < 6)
+        if ( CardPack.cardPack.Count < 6 && time > Card.firstTime)
         {
+            time = 0;
             GameObject newCard;
             float allProbability = 0;
             for (int i = 0; i < cardProbability.Length; i++)
@@ -36,7 +43,6 @@ public class CardManger : MonoBehaviour
             {
                 if (frontProbability < randomNum && randomNum <= frontProbability + cardProbability[i])
                 {
-                    CardManger.instance.cardPackCount++;
                     newCard = Instantiate(AllCard[i]);
                     newCard.transform.SetParent(GameObject.Find("Card pack").transform);  //设置父类为卡包
                     newCard.transform.localScale = Vector2.zero;
@@ -44,6 +50,10 @@ public class CardManger : MonoBehaviour
                 }
                 frontProbability += cardProbability[i];
             }
+        }
+        else if(time <= 0.5f)
+        {
+            SignUI.instance.DisplayText("抽卡间隔过短", 1f, Color.red);
         }
         else
         {
