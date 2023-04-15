@@ -144,8 +144,10 @@ public class Character : MonoBehaviour
                 }
                 break;
             case CharacterState.work:
+                itemSprite.enabled = false;
                 if (stayInBuilding == false)
                 {
+                    itemSprite.enabled = true;
                     characterState = CharacterState.idle;
                 }
                 break;
@@ -181,8 +183,10 @@ public class Character : MonoBehaviour
                 }
                 break;
             case CharacterState.sleep:
+                itemSprite.enabled = false;
                 if (goHome == false)
                 {
+                    itemSprite.enabled = true;
                     characterState = CharacterState.idle;
                 }
                 break;
@@ -235,34 +239,34 @@ public class Character : MonoBehaviour
     {
         if (CharacterSystem.Instance.GetCharacter(EraSystem.Instance.era, specialSkill).techAbility && (UnityEngine.Random.value > 0.7f))
         {
-                TechNode[] allTechNode;
-                List<TechNode> canBeUnlock = new List<TechNode>();
-                if (EraSystem.Instance.era == Era.AncientEra)
+            TechNode[] allTechNode;
+            List<TechNode> canBeUnlock = new List<TechNode>();
+            if (EraSystem.Instance.era == Era.AncientEra)
+            {
+                allTechNode = TechTree.instance.ancientEraTech;
+            }
+            else if (EraSystem.Instance.era == Era.ClassicalEra)
+            {
+                allTechNode = TechTree.instance.classicalEraTech;
+            }
+            else
+            {
+                allTechNode = TechTree.instance.industrialEraTech;
+            }
+            foreach (TechNode tech in allTechNode)
+            {
+                Debug.Log(tech);
+                if (tech.CanBeUnlocked() == true && tech.unlock == false)
                 {
-                    allTechNode = TechTree.instance.ancientEraTech;
+                    Debug.Log(tech + "second");
+                    canBeUnlock.Add(tech);
                 }
-                else if (EraSystem.Instance.era == Era.ClassicalEra)
-                {
-                    allTechNode = TechTree.instance.classicalEraTech;
-                }
-                else
-                {
-                    allTechNode = TechTree.instance.industrialEraTech;
-                }
-                foreach (TechNode tech in allTechNode)
-                {
-                    Debug.Log(tech);
-                    if (tech.CanBeUnlocked() == true && tech.unlock == false)
-                    {
-                        Debug.Log(tech + "second");
-                        canBeUnlock.Add(tech);
-                    }
-                }
-                int random = UnityEngine.Random.Range(0, canBeUnlock.Count); //解锁随机一个科技
-                canBeUnlock[random].ImmediateUnlockIt();
-                AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[5]);
+            }
+            int random = UnityEngine.Random.Range(0, canBeUnlock.Count); //解锁随机一个科技
+            canBeUnlock[random].ImmediateUnlockIt();
+            AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[5]);
         }
-       
+
 
         CharacterSystem.Instance.characters[characterNum] = null;
         Destroy(this.gameObject);
@@ -278,7 +282,7 @@ public class Character : MonoBehaviour
         else if ((ColorSystem.ColorExt.Difference(pixelColor, ColorSystem.Instance.colors[1]) < 0.01f)
          || (ColorSystem.ColorExt.Difference(pixelColor, ColorSystem.Instance.colors[3]) < 0.01f))
         {
-            
+
             ageSpeed = (float)(1f + Math.Sqrt(((BlockSystem.Instance.blocks[item.blockNum].water - 20) * (BlockSystem.Instance.blocks[item.blockNum].water - 20) + (BlockSystem.Instance.blocks[item.blockNum].temperature - 20) * (BlockSystem.Instance.blocks[item.blockNum].temperature - 20)) / 100 * (1 - (BlockSystem.Instance.blocks[item.blockNum].livability + 20) / 120)));
         }
         else
