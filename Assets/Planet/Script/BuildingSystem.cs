@@ -276,4 +276,13 @@ public class BuildingSystem : MonoBehaviour
         }
     }
 
+    public int GetBuildingNums()  //得到目前建筑数量
+    {
+        int buildingNum = 0;
+        foreach (Building building in Instance.buildings)
+        {
+            if (building != null) buildingNum++;
+        }
+        return buildingNum;
+    }
 }
