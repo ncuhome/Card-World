@@ -89,7 +89,7 @@ public class Building : MonoBehaviour
         {
             Debug.Log("建筑多于人数 ");
             secondTime += Time.deltaTime;
-            if (secondTime > 5f)
+            if (secondTime > 10f)
             {
                 secondTime = 0;
                 CreateController.Instance.CreateItem(ItemType.Character, null, null, CharacterSystem.Instance.GetRandomSkill(), transform.eulerAngles);

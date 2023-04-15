@@ -30,6 +30,7 @@ public class TechTree : MonoBehaviour
         {
             instance = this;
         }
+ 
     }
     public bool GetWhetherUnlocked(string techName)  //检查该科技是否解锁
     {
