@@ -13,7 +13,7 @@ public class LookAtCamera : MonoBehaviour
     {
         //如果是水资源或者石油或者农田就不旋转
         if (transform.parent.GetComponent<Resources>().resourceType == ResourceType.Water || transform.parent.GetComponent<Resources>().resourceType == ResourceType.Oil
-         || transform.parent.GetComponent<Building>().buildingType == BuildingType.OriginalFarmland )
+         || transform.parent.GetComponent<Building>().buildingType == BuildingType.OriginalFarmland || transform.parent.GetComponent<Building>().buildingType == BuildingType.Farm)
         {
             lookAtCamera = false;
         }

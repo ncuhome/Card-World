@@ -120,7 +120,7 @@ public class CreateController : MonoBehaviour
                     //随机生成水资源
                     case ResourceType.Water:
                         int randomWater = Random.Range(0, 2);
-                        itemSprite.transform.localPosition = new Vector3(0, 0.498f, 0);
+                        itemSprite.transform.localPosition = new Vector3(0, 0.499f, 0);
                         itemSprite.material = ResourceSystem.Instance.resourceDatas[(int)resourceType].resourceMaterials[randomWater];
                         if (randomWater == 0)
                         {
@@ -133,13 +133,16 @@ public class CreateController : MonoBehaviour
                         }
                         break;
                     case ResourceType.Oil:
-                        itemSprite.transform.localPosition = new Vector3(0, 0.498f, 0);
+                        itemSprite.transform.localPosition = new Vector3(0, 0.499f, 0);
                         itemSprite.transform.localEulerAngles = new Vector3(0, 0, 0);
+                        break;
+                    case ResourceType.GypsumStone:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.518f, 0);
                         break;
                 }
                 break;
             case ItemType.Building:
-                itemSprite.transform.localPosition = new Vector3(0, 0.52f, 0);
+                itemSprite.transform.localPosition = new Vector3(0, 0.521f, 0);
                 itemScript.itemType = ItemType.Building;
                 itemSprite.material = BuildingSystem.Instance.buildingDatas[(int)buildingType].buildingMaterial;
                 building.buildingType = (BuildingType)buildingType;
@@ -150,17 +153,59 @@ public class CreateController : MonoBehaviour
                         itemSprite.transform.localEulerAngles = new Vector3(0, 0, 0);
                         itemSprite.transform.localPosition = new Vector3(0, 0.5f, 0);
                         break;
+                    case BuildingType.PotteryTurntable:
+                    case BuildingType.UrbanHousing:
+                    case BuildingType.LargeFleet:
+                    case BuildingType.SmallMetalWorkshop:
+                    case BuildingType.ModernFarm:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.516f, 0);
+                        break;
+                    case BuildingType.StoneHouse:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.51f, 0);
+                        break;
+                    case BuildingType.LongHouse:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.513f, 0);
+                        break;
+                    case BuildingType.AlchemyInstitute:
+                    case BuildingType.ConcreteBuilding:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.52f, 0);
+                        break;
+                    case BuildingType.Villa:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.518f, 0);
+                        break;
+                    case BuildingType.CourtyardHouse:
+                    case BuildingType.Observatory:
+                    case BuildingType.GliderAirports:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.517f, 0);
+                        break;
+                    case BuildingType.MetalSmelter:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.519f, 0);
+                        break;
+                    case BuildingType.NuclearPowerPlant:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.514f, 0);
+                        break;
                 }
                 break;
             case ItemType.Character:
                 itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 0.5f, itemSprite.transform.localScale.y * 0.5f, itemSprite.transform.localScale.z);
-                itemSprite.transform.localPosition = new Vector3(0, 0.505f, 0);
+                itemSprite.transform.localPosition = new Vector3(0, 0.518f, 0);
                 itemScript.itemType = ItemType.Character;
                 character.characterNum = CharacterSystem.Instance.GetCharacterNum();
                 character.specialSkill = (SpecialSkill)characterSkill;
                 CharacterSystem.Instance.characters[CharacterSystem.Instance.GetCharacterNum()] = character;
                 itemSprite.material = CharacterSystem.Instance.GetCharacter(EraSystem.Instance.era, characterSkill).characterMaterial;
                 item.name = CharacterSystem.Instance.GetCharacter(EraSystem.Instance.era, characterSkill).name;
+                switch (CharacterSystem.Instance.GetCharacter(EraSystem.Instance.era, characterSkill).characterNum)
+                {
+                    case 12:
+                    case 13:
+                    case 18:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.515f, 0);
+                        break;
+                    case 17:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.514f, 0);
+                        break;
+                }
                 break;
         }
     }
@@ -186,7 +231,7 @@ public class CreateController : MonoBehaviour
                 item.GetComponent<Resources>().isNature = nature;
 
                 itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 0.5f, itemSprite.transform.localScale.y * 0.5f, itemSprite.transform.localScale.z);
-                itemSprite.transform.localPosition = new Vector3(0, 0.505f, 0);
+                itemSprite.transform.localPosition = new Vector3(0, 0.521f, 0);
                 itemScript.itemType = ItemType.Resource;
                 itemSprite.material = ResourceSystem.Instance.resourceDatas[(int)resourceType].resourceMaterials[0];
                 item.name = ResourceSystem.Instance.resourceDatas[(int)resourceType].name;
@@ -212,7 +257,7 @@ public class CreateController : MonoBehaviour
                     //随机生成水资源
                     case ResourceType.Water:
                         int randomWater = Random.Range(0, 2);
-                        itemSprite.transform.localPosition = new Vector3(0, 0.498f, 0);
+                        itemSprite.transform.localPosition = new Vector3(0, 0.499f, 0);
                         itemSprite.material = ResourceSystem.Instance.resourceDatas[(int)resourceType].resourceMaterials[randomWater];
                         if (randomWater == 0)
                         {
@@ -225,8 +270,11 @@ public class CreateController : MonoBehaviour
                         }
                         break;
                     case ResourceType.Oil:
-                        itemSprite.transform.localPosition = new Vector3(0, 0.498f, 0);
+                        itemSprite.transform.localPosition = new Vector3(0, 0.499f, 0);
                         itemSprite.transform.localEulerAngles = new Vector3(0, 0, 0);
+                        break;
+                    case ResourceType.GypsumStone:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.518f, 0);
                         break;
                 }
                 break;
@@ -243,16 +291,65 @@ public class CreateController : MonoBehaviour
                         itemSprite.transform.localPosition = new Vector3(0, 0.5f, 0);
                         break;
                 }
+                switch (buildingType)
+                {
+                    case BuildingType.OriginalFarmland:
+                        itemSprite.transform.localEulerAngles = new Vector3(0, 0, 0);
+                        itemSprite.transform.localPosition = new Vector3(0, 0.5f, 0);
+                        break;
+                    case BuildingType.PotteryTurntable:
+                    case BuildingType.UrbanHousing:
+                    case BuildingType.LargeFleet:
+                    case BuildingType.SmallMetalWorkshop:
+                    case BuildingType.ModernFarm:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.516f, 0);
+                        break;
+                    case BuildingType.StoneHouse:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.51f, 0);
+                        break;
+                    case BuildingType.LongHouse:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.513f, 0);
+                        break;
+                    case BuildingType.AlchemyInstitute:
+                    case BuildingType.ConcreteBuilding:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.52f, 0);
+                        break;
+                    case BuildingType.Villa:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.518f, 0);
+                        break;
+                    case BuildingType.CourtyardHouse:
+                    case BuildingType.Observatory:
+                    case BuildingType.GliderAirports:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.517f, 0);
+                        break;
+                    case BuildingType.MetalSmelter:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.519f, 0);
+                        break;
+                    case BuildingType.NuclearPowerPlant:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.514f, 0);
+                        break;
+                }
                 break;
             case ItemType.Character:
                 itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 0.5f, itemSprite.transform.localScale.y * 0.5f, itemSprite.transform.localScale.z);
-                itemSprite.transform.localPosition = new Vector3(0, 0.505f, 0);
+                itemSprite.transform.localPosition = new Vector3(0, 0.518f, 0);
                 itemScript.itemType = ItemType.Character;
                 character.characterNum = CharacterSystem.Instance.GetCharacterNum();
                 character.specialSkill = (SpecialSkill)characterSkill;
                 CharacterSystem.Instance.characters[CharacterSystem.Instance.GetCharacterNum()] = character;
                 itemSprite.material = CharacterSystem.Instance.GetCharacter(EraSystem.Instance.era, characterSkill).characterMaterial;
                 item.name = CharacterSystem.Instance.GetCharacter(EraSystem.Instance.era, characterSkill).name;
+                switch (CharacterSystem.Instance.GetCharacter(EraSystem.Instance.era, characterSkill).characterNum)
+                {
+                    case 12:
+                    case 13:
+                    case 18:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.515f, 0);
+                        break;
+                    case 17:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.514f, 0);
+                        break;
+                }
                 break;
         }
     }
