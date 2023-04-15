@@ -102,7 +102,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
     {
         if (canBeDrag && CardPack.canBeDrag)
         {
-            if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 200)  //在垃圾桶范围内
+            if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 150)  //在垃圾桶范围内
             {
                 this.transform.DOMove(cardTrash.transform.position, 0.5f).OnComplete(() => { CardPack.DeleteCard(this); Destroy(this.gameObject); });
                 AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[6]);
@@ -131,7 +131,7 @@ public class AccidentCard : Card
     {
         if (canBeDrag && CardPack.canBeDrag)
         {
-            if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 350)  //在垃圾桶范围内
+            if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 150)  //在垃圾桶范围内
             {
                 SignUI.instance.DisplayText("You can't broke it", 1f, Color.red);
                 CardPack.SortCard();
@@ -214,7 +214,7 @@ public class AccidentRangeUsageCard : AccidentCard, IAffectBlock //范围使用�
     {
         if (canBeDrag && CardPack.canBeDrag)
         {
-            if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 350)  //在垃圾桶范围内
+            if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 150)  //在垃圾桶范围内
             {
                 SignUI.instance.DisplayText("你无法摧毁这张意外卡", 1f, Color.red);
                 CardPack.SortCard();
