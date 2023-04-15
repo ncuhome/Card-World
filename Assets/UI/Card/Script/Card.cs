@@ -102,7 +102,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
     {
         if (canBeDrag && CardPack.canBeDrag)
         {
-            if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 200)  //在垃圾桶范围内
+            if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 150)  //在垃圾桶范围内
             {
                 this.transform.DOMove(cardTrash.transform.position, 0.5f).OnComplete(() => { CardPack.DeleteCard(this); Destroy(this.gameObject); });
                 AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[6]);
@@ -131,9 +131,9 @@ public class AccidentCard : Card
     {
         if (canBeDrag && CardPack.canBeDrag)
         {
-            if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 350)  //在垃圾桶范围内
+            if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 150)  //在垃圾桶范围内
             {
-                SignUI.instance.DisplayText("You can't broke it", 1f, Color.red);
+                SignUI.instance.DisplayText("你无法摧毁意外卡", 1f, Color.red);
                 CardPack.SortCard();
             }
             else if (this.GetComponent<RectTransform>().anchoredPosition.y >= CardPack.cardPackHigh + Card.cardSizey + 50)  //在使用
@@ -142,7 +142,7 @@ public class AccidentCard : Card
                 CardPack.DeleteCard(this);
                 transform.DOLocalMove(new Vector2(0, 540), 0.5f);
                 transform.DOScale(new Vector2(2f, 2f), 0.5f).
-                    OnComplete(() => { this.GetComponent<Image>().DOFade(0, 0.2f).OnComplete(() => { Destroy(this); }); });
+                    OnComplete(() => { Destroy(this.transform.GetChild(0).gameObject); this.transform.GetChild(1).GetComponent<Image>().DOFade(0, 0.2f).OnComplete(() => { CardPack.DeleteCard(this); }); });
                 BeUse();
             }
             else
@@ -214,7 +214,7 @@ public class AccidentRangeUsageCard : AccidentCard, IAffectBlock //范围使用�
     {
         if (canBeDrag && CardPack.canBeDrag)
         {
-            if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 350)  //在垃圾桶范围内
+            if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 150)  //在垃圾桶范围内
             {
                 SignUI.instance.DisplayText("你无法摧毁这张意外卡", 1f, Color.red);
                 CardPack.SortCard();

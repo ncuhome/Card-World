@@ -14,8 +14,6 @@ public class ShowResManger : MonoBehaviour
     private GameObject foldRes;
 
     public static bool change = false;
-
-    public bool speed; //是否加速
     void Update()
     {
         for (int i = 0; i < resText.Length; i++)
