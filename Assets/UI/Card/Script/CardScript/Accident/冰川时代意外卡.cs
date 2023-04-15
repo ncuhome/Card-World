@@ -11,6 +11,5 @@ public class 冰川时代意外卡 : AccidentCard
         {
             block.temperature -= 20;
         }
-        
     }
 }
