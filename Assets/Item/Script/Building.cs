@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +13,7 @@ public class Building : MonoBehaviour
 {
     private bool isBuilding;
     public bool finishBuilding;
-    private float time;
+    private float time, secondTime;
     public int population;
     public MeshRenderer itemSprite;
     public BuildingType buildingType = BuildingType.Cave;
@@ -82,6 +82,16 @@ public class Building : MonoBehaviour
             if (time > 20f)
             {
                 time = 0;
+                CreateController.Instance.CreateItem(ItemType.Character, null, null, CharacterSystem.Instance.GetRandomSkill(), transform.eulerAngles);
+            }
+        }
+        if ((buildingType == BuildingType.Cave) && (CharacterSystem.Instance.GetPopulation() < BuildingSystem.Instance.GetBuildingNums()))
+        {
+            Debug.Log("建筑多于人数 ");
+            secondTime += Time.deltaTime;
+            if (secondTime > 5f)
+            {
+                secondTime = 0;
                 CreateController.Instance.CreateItem(ItemType.Character, null, null, CharacterSystem.Instance.GetRandomSkill(), transform.eulerAngles);
             }
         }

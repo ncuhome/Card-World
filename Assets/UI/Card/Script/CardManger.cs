@@ -15,6 +15,7 @@ public class CardManger : MonoBehaviour
     public GameObject dividingLine;
     private void Start()
     {
+        Time.timeScale = 1f;
         //开局送一张科技卡
         GameObject newCard = Instantiate(AllCard[25]);
         newCard.transform.SetParent(GameObject.Find("Card pack").transform);  //设置父类为卡包
