@@ -15,9 +15,9 @@ public class Item : MonoBehaviour
     void Start()
     {
         center = GameObject.Find("Planet").transform;
-        blockNum = BlockSystem.Instance.GetBlockNum(center.position, this.transform.GetChild(0).position);
-        latitude = BlockSystem.Instance.GetLatitude(center.position, this.transform.GetChild(0).position);
-        longitude = BlockSystem.Instance.GetLongitude(center.position, this.transform.GetChild(0).position);
+        blockNum = BlockSystem.Instance.GetBlockNum(center.position, this.transform.GetChild(0).GetChild(0).position);
+        latitude = BlockSystem.Instance.GetLatitude(center.position, this.transform.GetChild(0).GetChild(0).position);
+        longitude = BlockSystem.Instance.GetLongitude(center.position, this.transform.GetChild(0).GetChild(0).position);
 
 
         //分配tag
@@ -38,9 +38,9 @@ public class Item : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        blockNum = BlockSystem.Instance.GetBlockNum(center.position, this.transform.GetChild(0).position);
-        latitude = BlockSystem.Instance.GetLatitude(center.position, this.transform.GetChild(0).position);
-        longitude = BlockSystem.Instance.GetLongitude(center.position, this.transform.GetChild(0).position);
+        blockNum = BlockSystem.Instance.GetBlockNum(center.position, this.transform.GetChild(0).GetChild(0).position);
+        latitude = BlockSystem.Instance.GetLatitude(center.position, this.transform.GetChild(0).GetChild(0).position);
+        longitude = BlockSystem.Instance.GetLongitude(center.position, this.transform.GetChild(0).GetChild(0).position);
     }
 
     //递归改变所有子物体的tag
