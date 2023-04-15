@@ -70,7 +70,7 @@ public class TechNode : MonoBehaviour
         }
         TechTree.instance.ConfirmEra();
     }
-    public void ImmediateUnlockIt()
+    public virtual void ImmediateUnlockIt()
     {
         this.unlock = true;
         this.gameObject.GetComponent<Image>().color = new Color(255, 0, 0, 0.5f);
