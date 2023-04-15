@@ -145,7 +145,6 @@ public class CharacterSystem : MonoBehaviour
                         character.itemSprite.transform.localPosition = new Vector3(0, 0.514f, 0);
                         break;
                 }
-                break;
             }
             else
             {
@@ -153,7 +152,7 @@ public class CharacterSystem : MonoBehaviour
                 character.itemSprite.material = GetCharacter(EraSystem.Instance.era, SpecialSkill.None).characterMaterial;
                 character.name = GetCharacter(EraSystem.Instance.era, SpecialSkill.None).name;
                 character.itemSprite.transform.localPosition = new Vector3(0, 0.518f, 0);
-                if (GetCharacter(EraSystem.Instance.era, SpecialSkill.None).characterNum == 13)
+                if (GetCharacter(EraSystem.Instance.era + 1, SpecialSkill.None).characterNum == 13)
                 {
                     character.itemSprite.transform.localPosition = new Vector3(0, 0.515f, 0);
                 }
