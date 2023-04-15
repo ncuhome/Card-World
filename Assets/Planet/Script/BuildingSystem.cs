@@ -268,10 +268,47 @@ public class BuildingSystem : MonoBehaviour
             {
                 int num = Random.Range(0, buildingsCanProgressNum);
                 building.itemSprite.material = buildingsCanProgress[num].buildingMaterial;
-                if (buildingsCanProgress[num].buildingType == BuildingType.Farm)
+                switch (buildingsCanProgress[num].buildingType)
                 {
-                    building.itemSprite.transform.localEulerAngles = new Vector3(90, 0, 0);
-                    building.itemSprite.transform.localPosition = new Vector3(0, 0.505f, 0);
+                    case BuildingType.Farm:
+                        building.itemSprite.transform.localEulerAngles = new Vector3(90, 0, 0);
+                        building.itemSprite.transform.localPosition = new Vector3(0, 0.505f, 0);
+                        break;
+                    case BuildingType.OriginalFarmland:
+                        building.itemSprite.transform.localEulerAngles = new Vector3(0, 0, 0);
+                        building.itemSprite.transform.localPosition = new Vector3(0, 0.5f, 0);
+                        break;
+                    case BuildingType.PotteryTurntable:
+                    case BuildingType.UrbanHousing:
+                    case BuildingType.LargeFleet:
+                    case BuildingType.SmallMetalWorkshop:
+                    case BuildingType.ModernFarm:
+                        building.itemSprite.transform.localPosition = new Vector3(0, 0.516f, 0);
+                        break;
+                    case BuildingType.StoneHouse:
+                        building.itemSprite.transform.localPosition = new Vector3(0, 0.51f, 0);
+                        break;
+                    case BuildingType.LongHouse:
+                        building.itemSprite.transform.localPosition = new Vector3(0, 0.513f, 0);
+                        break;
+                    case BuildingType.AlchemyInstitute:
+                    case BuildingType.ConcreteBuilding:
+                        building.itemSprite.transform.localPosition = new Vector3(0, 0.52f, 0);
+                        break;
+                    case BuildingType.Villa:
+                        building.itemSprite.transform.localPosition = new Vector3(0, 0.518f, 0);
+                        break;
+                    case BuildingType.CourtyardHouse:
+                    case BuildingType.Observatory:
+                    case BuildingType.GliderAirports:
+                        building.itemSprite.transform.localPosition = new Vector3(0, 0.517f, 0);
+                        break;
+                    case BuildingType.MetalSmelter:
+                        building.itemSprite.transform.localPosition = new Vector3(0, 0.519f, 0);
+                        break;
+                    case BuildingType.NuclearPowerPlant:
+                        building.itemSprite.transform.localPosition = new Vector3(0, 0.514f, 0);
+                        break;
                 }
                 building.buildingType = buildingsCanProgress[num].buildingType;
                 building.name = buildingsCanProgress[num].name;
