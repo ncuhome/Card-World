@@ -83,7 +83,7 @@ public class CreateController : MonoBehaviour
         item.transform.position = Vector3.zero;
         item.transform.localScale = Vector3.one;
         item.transform.eulerAngles = targetEuler;
-        itemSprite = item.transform.Find("ItemSprite").GetComponent<MeshRenderer>();
+        itemSprite = item.transform.Find("ItemSpriteCenter").Find("ItemSprite").GetComponent<MeshRenderer>();
 
         Item itemScript = item.GetComponent<Item>();
         Character character = item.GetComponent<Character>();
@@ -124,16 +124,17 @@ public class CreateController : MonoBehaviour
                         itemSprite.material = ResourceSystem.Instance.resourceDatas[(int)resourceType].resourceMaterials[randomWater];
                         if (randomWater == 0)
                         {
-                            itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 2, itemSprite.transform.localScale.z, itemSprite.transform.localScale.y);
+                            itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 2, itemSprite.transform.localScale.y, itemSprite.transform.localScale.z);
+                            itemSprite.transform.localEulerAngles = new Vector3(0, 0, 0);
                         }
                         else
                         {
-                            itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x, itemSprite.transform.localScale.z, itemSprite.transform.localScale.y);
+                            itemSprite.transform.localEulerAngles = new Vector3(0, 0, 0);
                         }
                         break;
                     case ResourceType.Oil:
                         itemSprite.transform.localPosition = new Vector3(0, 0.498f, 0);
-                        itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x, itemSprite.transform.localScale.z, itemSprite.transform.localScale.y);
+                        itemSprite.transform.localEulerAngles = new Vector3(0, 0, 0);
                         break;
                 }
                 break;
@@ -146,7 +147,7 @@ public class CreateController : MonoBehaviour
                 switch (buildingType)
                 {
                     case BuildingType.OriginalFarmland:
-                        itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x, itemSprite.transform.localScale.z, itemSprite.transform.localScale.y);
+                        itemSprite.transform.localEulerAngles = new Vector3(0, 0, 0);
                         itemSprite.transform.localPosition = new Vector3(0, 0.5f, 0);
                         break;
                 }
@@ -171,7 +172,7 @@ public class CreateController : MonoBehaviour
         item.transform.position = Vector3.zero;
         item.transform.localScale = Vector3.one;
         item.transform.eulerAngles = targetEuler;
-        itemSprite = item.transform.Find("ItemSprite").GetComponent<MeshRenderer>();
+        itemSprite = item.transform.Find("ItemSpriteCenter").Find("ItemSprite").GetComponent<MeshRenderer>();
 
         Item itemScript = item.GetComponent<Item>();
         Character character = item.GetComponent<Character>();
@@ -211,16 +212,21 @@ public class CreateController : MonoBehaviour
                     //随机生成水资源
                     case ResourceType.Water:
                         int randomWater = Random.Range(0, 2);
-                        itemSprite.transform.localPosition = new Vector3(0, 0.5f, 0);
+                        itemSprite.transform.localPosition = new Vector3(0, 0.498f, 0);
                         itemSprite.material = ResourceSystem.Instance.resourceDatas[(int)resourceType].resourceMaterials[randomWater];
                         if (randomWater == 0)
                         {
-                            itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 2, itemSprite.transform.localScale.z, itemSprite.transform.localScale.y);
+                            itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 2, itemSprite.transform.localScale.y, itemSprite.transform.localScale.z);
+                            itemSprite.transform.localEulerAngles = new Vector3(0, 0, 0);
                         }
                         else
                         {
-                            itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x, itemSprite.transform.localScale.z, itemSprite.transform.localScale.y);
+                            itemSprite.transform.localEulerAngles = new Vector3(0, 0, 0);
                         }
+                        break;
+                    case ResourceType.Oil:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.498f, 0);
+                        itemSprite.transform.localEulerAngles = new Vector3(0, 0, 0);
                         break;
                 }
                 break;
@@ -233,8 +239,7 @@ public class CreateController : MonoBehaviour
                 switch (buildingType)
                 {
                     case BuildingType.OriginalFarmland:
-                    case BuildingType.Farm:
-                        itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x, itemSprite.transform.localScale.z, itemSprite.transform.localScale.y);
+                        itemSprite.transform.localEulerAngles = new Vector3(0, 0, 0);
                         itemSprite.transform.localPosition = new Vector3(0, 0.5f, 0);
                         break;
                 }
