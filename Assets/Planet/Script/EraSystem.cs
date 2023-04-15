@@ -24,6 +24,17 @@ public class EraSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (era == Era.AncientEra)
+        {
+            BuildingSystem.Instance.maxBuildingInBlock = 10;
+        }
+        if (era == Era.ClassicalEra)
+        {
+            BuildingSystem.Instance.maxBuildingInBlock = 15;
+        }
+        if (era == Era.IndustrialEra)
+        {
+            BuildingSystem.Instance.maxBuildingInBlock = 20;
+        }
     }
 }
