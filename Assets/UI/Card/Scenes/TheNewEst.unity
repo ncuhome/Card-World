@@ -526,9 +526,57 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -111.1102
       objectReference: {fileID: 0}
+    - target: {fileID: 1034486753896846265, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d829b036d83d1644a9af55fb396027e2, type: 3}
+    - target: {fileID: 2602403566210666349, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.79999924
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701722578536081614, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701722578536081614, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701722578536081614, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -334
+      objectReference: {fileID: 0}
     - target: {fileID: 3701722578536081614, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -250
+      value: -1107
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701722579594988573, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 236.644
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701722579594988573, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 218.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701722579594988573, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701722579594988573, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -9.160908
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701722579594988574, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c2444d9c7da0e4045b9957c01d05ac2b, type: 3}
+    - target: {fileID: 3701722579963453546, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: textCard
+      value: 
+      objectReference: {fileID: 793240376685275443, guid: c65a522cdaa394049a137d653c8e92ef, type: 3}
+    - target: {fileID: 3701722579963453546, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: cardProbability.Array.data[3]
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
       propertyPath: m_RootOrder
