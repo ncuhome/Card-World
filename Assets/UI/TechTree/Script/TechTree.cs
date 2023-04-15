@@ -17,8 +17,12 @@ public class TechTree : MonoBehaviour
     public TechNode[] classicalEraTech;
 
     public TechNode[] industrialEraTech;
+
+    public bool firstInClass, firstInInd, firstGetAll;
+
     private void Update()
     {
+        ConfirmEra();
         if (!建筑.instance.unlock)
         {
             建筑.instance.ImmediateUnlockIt(); //开始便解锁建筑科技
@@ -60,11 +64,12 @@ public class TechTree : MonoBehaviour
                 count++;
             }
         }
-        if (count == industrialEraTech.Length)
+        if (count == industrialEraTech.Length && firstGetAll == false)
         {
             EraSignUI.instance.DisplayText("你已经解锁了所有科技！", 5f, Color.red);
             Debug.Log("解锁所有科技");
             AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[2]);
+            firstGetAll = true;
             return 2; //第三个时代
         }
         count = 0;
@@ -75,9 +80,9 @@ public class TechTree : MonoBehaviour
                 count++;
             }
         }
-        if (count == classicalEraTech.Length)
+        if (count == classicalEraTech.Length && firstInInd == false)
         {
-            if (EraSystem.Instance.era == Era.ClassicalEra /*&& goOnFirst == false*/)
+            if (EraSystem.Instance.era == Era.ClassicalEra && firstInInd == false)
             {
                 EraSignUI.instance.DisplayText("你进入了工业时代！", 5f, Color.red);
                 Debug.Log("进入工业时代");
@@ -85,6 +90,7 @@ public class TechTree : MonoBehaviour
                 BuildingSystem.Instance.CivilizationProgresses();
                 CharacterSystem.Instance.CivilizationProgresses();
                 Debug.Log(EraSystem.Instance.era);
+                firstInInd = true;
             }
             EraSystem.Instance.era = Era.IndustrialEra;
             return 2; //第三个时代
@@ -97,7 +103,7 @@ public class TechTree : MonoBehaviour
                 count++;
             }
         }
-        if (count == ancientEraTech.Length)
+        if (count == ancientEraTech.Length && firstInClass == false)
         {
             if (EraSystem.Instance.era == Era.AncientEra)
             {
@@ -107,12 +113,12 @@ public class TechTree : MonoBehaviour
                 BuildingSystem.Instance.CivilizationProgresses();
                 CharacterSystem.Instance.CivilizationProgresses();
                 Debug.Log(EraSystem.Instance.era);
+                firstInClass = true;
             }
             EraSystem.Instance.era = Era.ClassicalEra;
             return 1; //第二个时代
         }
 
-        EraSystem.Instance.era = Era.AncientEra;
         return 0; //第一个时代
     }
 }

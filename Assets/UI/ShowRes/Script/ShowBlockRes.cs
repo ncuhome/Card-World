@@ -22,9 +22,9 @@ public class ShowBlockRes : MonoBehaviour
         }
         else
         {
-            BlockResText[0].text = BlockSystem.Instance.blocks[nowBlock].temperature.ToString();
-            BlockResText[1].text = BlockSystem.Instance.blocks[nowBlock].water.ToString();
-            BlockResText[2].text = BlockSystem.Instance.blocks[nowBlock].livability.ToString();
+            BlockResText[0].text = BlockSystem.Instance.blocks[nowBlock].temperature.ToString("0.0");
+            BlockResText[1].text = BlockSystem.Instance.blocks[nowBlock].water.ToString("0.0");
+            BlockResText[2].text = BlockSystem.Instance.blocks[nowBlock].livability.ToString("0.0");
         }   
         if (Input.GetMouseButtonDown(0))
         {

@@ -317,15 +317,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 342391795, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 342391795, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 342391795, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 342391795, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -923,6 +923,10 @@ PrefabInstance:
       propertyPath: textCard
       value: 
       objectReference: {fileID: 7087728850691015331, guid: ad1eb164a4a36814aa18827ff561abee, type: 3}
+    - target: {fileID: 3701722579963453546, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: cardProbability.Array.data[16]
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4366246215517088702, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
       propertyPath: frontTechnology.Array.data[0]
       value: 

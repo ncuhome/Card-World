@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public enum CharacterState { idle, wait, walk, work, gather, build, sleep }
 public enum SpecialSkill { None = -1, Hunting, Farming, Stargazing, AstronomicalObservation, Leading, Alchemy, Smelt, Refining, Navigation, OceanSailing, AerospaceResearch, GenerateElectricity }
@@ -67,8 +68,8 @@ public class Character : MonoBehaviour
                 //自动获取可行的移动方向和距离
                 do
                 {
-                    axisVec = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), Random.Range(-1f, 1f));
-                    angle = Random.Range(-60f, 60f);
+                    axisVec = new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f));
+                    angle = UnityEngine.Random.Range(-60f, 60f);
                     oldQua = transform.rotation;
                     targetQua = Quaternion.AngleAxis(angle, axisVec) * oldQua;
                     targetVec = targetQua * Vector3.up;
@@ -232,9 +233,8 @@ public class Character : MonoBehaviour
     //角色死亡
     public void Die()
     {
-        if (CharacterSystem.Instance.GetCharacter(EraSystem.Instance.era, specialSkill).techAbility && (Random.value > 0.7f))
+        if (CharacterSystem.Instance.GetCharacter(EraSystem.Instance.era, specialSkill).techAbility && (UnityEngine.Random.value > 0.7f))
         {
-            {
                 TechNode[] allTechNode;
                 List<TechNode> canBeUnlock = new List<TechNode>();
                 if (EraSystem.Instance.era == Era.AncientEra)
@@ -258,11 +258,11 @@ public class Character : MonoBehaviour
                         canBeUnlock.Add(tech);
                     }
                 }
-                int random = Random.Range(0, canBeUnlock.Count); //解锁随机一个科技
+                int random = UnityEngine.Random.Range(0, canBeUnlock.Count); //解锁随机一个科技
                 canBeUnlock[random].ImmediateUnlockIt();
                 AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[5]);
-            }
         }
+       
 
         CharacterSystem.Instance.characters[characterNum] = null;
         Destroy(this.gameObject);
@@ -278,11 +278,12 @@ public class Character : MonoBehaviour
         else if ((ColorSystem.ColorExt.Difference(pixelColor, ColorSystem.Instance.colors[1]) < 0.01f)
          || (ColorSystem.ColorExt.Difference(pixelColor, ColorSystem.Instance.colors[3]) < 0.01f))
         {
-            ageSpeed = 1f + (BlockSystem.Instance.blocks[item.blockNum].water * BlockSystem.Instance.blocks[item.blockNum].temperature * 8f) / (BlockSystem.Instance.blocks[item.blockNum].water + BlockSystem.Instance.blocks[item.blockNum].temperature) / BlockSystem.Instance.blocks[item.blockNum].livability - 1;
+            
+            ageSpeed = (float)(1f + Math.Sqrt(((BlockSystem.Instance.blocks[item.blockNum].water - 20) * (BlockSystem.Instance.blocks[item.blockNum].water - 20) + (BlockSystem.Instance.blocks[item.blockNum].temperature - 20) * (BlockSystem.Instance.blocks[item.blockNum].temperature - 20)) / 100 * (1 - (BlockSystem.Instance.blocks[item.blockNum].livability + 20) / 120)));
         }
         else
         {
-            ageSpeed = 0.5f + (BlockSystem.Instance.blocks[item.blockNum].water * BlockSystem.Instance.blocks[item.blockNum].temperature * 8f) / (BlockSystem.Instance.blocks[item.blockNum].water + BlockSystem.Instance.blocks[item.blockNum].temperature) / BlockSystem.Instance.blocks[item.blockNum].livability - 1;
+            ageSpeed = (float)(0.5f + Math.Sqrt(((BlockSystem.Instance.blocks[item.blockNum].water - 20) * (BlockSystem.Instance.blocks[item.blockNum].water - 20) + (BlockSystem.Instance.blocks[item.blockNum].temperature - 20) * (BlockSystem.Instance.blocks[item.blockNum].temperature - 20)) / 100 * (1 - (BlockSystem.Instance.blocks[item.blockNum].livability + 20) / 120)));
         }
         age += Time.deltaTime * ageSpeed;
         if ((age > CharacterSystem.Instance.maxAge) && (!goToBuild))
