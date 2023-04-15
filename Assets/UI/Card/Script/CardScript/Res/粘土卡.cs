@@ -10,6 +10,10 @@ public class 粘土卡 : RangeUsageCard
     public override void AffectBlock(int[] block)
     {
         ResourceSystem.Instance.RegenerationResource(ResourceType.Clay, block);
+        ResourceSystem.Instance.RegenerationResource(ResourceType.Clay, block);
+        ResourceSystem.Instance.RegenerationResource(ResourceType.Clay, block);
+        ResourceSystem.Instance.RegenerationResource(ResourceType.Clay, block);
+        ResourceSystem.Instance.RegenerationResource(ResourceType.Clay, block);
         BlockSystem.Instance.blocks[block[0]].water -= 3;
         BlockSystem.Instance.blocks[block[0]].livability -= 3;
     }

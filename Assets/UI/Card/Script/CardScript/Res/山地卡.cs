@@ -12,6 +12,10 @@ public class 山地卡 : RangeUsageCard
         BlockSystem.Instance.blocks[block[0]].temperature -= 1;
         BlockSystem.Instance.blocks[block[0]].livability += 2;
         ResourceSystem.Instance.RegenerationResource(ResourceType.Stone, block);
+        ResourceSystem.Instance.RegenerationResource(ResourceType.Stone, block);
+        ResourceSystem.Instance.RegenerationResource(ResourceType.Stone, block);
+        ResourceSystem.Instance.RegenerationResource(ResourceType.Stone, block);
+        ResourceSystem.Instance.RegenerationResource(ResourceType.Stone, block);
     }
 
 }

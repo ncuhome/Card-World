@@ -43,6 +43,10 @@ public class BlockSystem : MonoBehaviour
             {
                 block.water = 0;
             }
+            if (block.livability <= 0)
+            {
+                block.livability = 0;
+            }
         }
     }
 
