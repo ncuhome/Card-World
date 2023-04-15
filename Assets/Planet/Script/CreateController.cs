@@ -94,7 +94,7 @@ public class CreateController : MonoBehaviour
         {
             case ItemType.Resource:
                 itemSprite.transform.localScale = new Vector3(itemSprite.transform.localScale.x * 0.5f, itemSprite.transform.localScale.y * 0.5f, itemSprite.transform.localScale.z);
-                itemSprite.transform.localPosition = new Vector3(0, 0.505f, 0);
+                itemSprite.transform.localPosition = new Vector3(0, 0.518f, 0);
                 itemScript.itemType = ItemType.Resource;
                 itemSprite.material = ResourceSystem.Instance.resourceDatas[(int)resourceType].resourceMaterials[0];
                 item.name = ResourceSystem.Instance.resourceDatas[(int)resourceType].name;
