@@ -126,6 +126,7 @@ public class CharacterSystem : MonoBehaviour
                     charactersCanProgressNum++;
                 }
             }
+            character.stayInBuilding = false;
             if (charactersCanProgressNum != 0)
             {
                 int num = Random.Range(0, charactersCanProgressNum);
