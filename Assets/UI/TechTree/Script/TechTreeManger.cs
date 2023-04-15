@@ -14,10 +14,10 @@ public class TechTreeManger : MonoBehaviour
     {
         if (TechTreeImage.transform.localScale == Vector3.zero)
         {
-            TechTreeImage.transform.localScale = new Vector3(1, 0.8f, 1);
+            TechTreeImage.transform.localScale = Vector3.one;
             AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[4]);
         }
-        else if (TechTreeImage.transform.localScale == new Vector3(1, 0.8f, 1))
+        else if (TechTreeImage.transform.localScale == Vector3.one)
         {
             TechTreeImage.transform.localScale = Vector3.zero;
             AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[4]);
