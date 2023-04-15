@@ -8,6 +8,7 @@ public class StartGame : MonoBehaviour
     public void Start()
     {
         Time.timeScale = 0f;
+        Debug.Log("start");
     }
     public void StartThisGame()
     {

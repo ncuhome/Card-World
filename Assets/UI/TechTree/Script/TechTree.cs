@@ -22,7 +22,6 @@ public class TechTree : MonoBehaviour
 
     private void Update()
     {
-        ConfirmEra();
         if (!建筑.instance.unlock)
         {
             建筑.instance.ImmediateUnlockIt(); //开始便解锁建筑科技
@@ -118,7 +117,6 @@ public class TechTree : MonoBehaviour
             EraSystem.Instance.era = Era.ClassicalEra;
             return 1; //第二个时代
         }
-
         return 0; //第一个时代
     }
 }
