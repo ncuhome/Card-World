@@ -267,7 +267,7 @@ public class BuildingSystem : MonoBehaviour
                 building.itemSprite.material = buildingsCanProgress[num].buildingMaterial;
                 if (buildingsCanProgress[num].buildingType == BuildingType.Farm)
                 {
-                    building.itemSprite.transform.localScale = new Vector3(building.itemSprite.transform.localScale.x, building.itemSprite.transform.localScale.z, building.itemSprite.transform.localScale.y);
+                    building.itemSprite.transform.localEulerAngles = new Vector3(90, 0, 0);
                     building.itemSprite.transform.localPosition = new Vector3(0, 0.505f, 0);
                 }
                 building.buildingType = buildingsCanProgress[num].buildingType;

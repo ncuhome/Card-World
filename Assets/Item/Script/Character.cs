@@ -33,7 +33,7 @@ public class Character : MonoBehaviour
     void Start()
     {
         center = GameObject.Find("Planet").transform;
-        itemSprite = item.transform.Find("ItemSprite").GetComponent<MeshRenderer>();
+        itemSprite = item.transform.Find("ItemSpriteCenter").Find("ItemSprite").GetComponent<MeshRenderer>();
         if (item.itemType == ItemType.Character)
         {
             isCharacter = true;

@@ -8,7 +8,7 @@ public class ItemCollider : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (this.transform.parent.parent.GetComponent<Item>().itemType == ItemType.Building)
+        if (this.transform.parent.parent.parent.GetComponent<Item>().itemType == ItemType.Building)
         {
             this.gameObject.SetActive(false);
         }
@@ -26,13 +26,13 @@ public class ItemCollider : MonoBehaviour
         switch (transform.tag)
         {
             case "Character":
-                if ((other.tag == "Resource") && (!other.transform.parent.parent.GetComponent<Resources>().isGathering) && (other.transform.parent.parent.GetComponent<Resources>().canBeGathered))
+                if ((other.tag == "Resource") && (!other.transform.parent.parent.parent.GetComponent<Resources>().isGathering) && (other.transform.parent.parent.parent.GetComponent<Resources>().canBeGathered))
                 {
                     int targetBlock = BlockSystem.Instance.GetBlockNum(item.center.position, other.GetComponent<ItemCollider>().item.transform.rotation);
                     if (item.character.RoadCanMove(targetBlock))
                     {
                         item.character.foundResource = true;
-                        other.transform.parent.parent.GetComponent<Resources>().isGathering = true;
+                        other.transform.parent.parent.parent.GetComponent<Resources>().isGathering = true;
                         item.character.resourceObject = other.GetComponent<ItemCollider>().item.gameObject;
                         //Debug.Log("resourceRotation:" + other.GetComponent<ItemCollider>().item.transform.rotation);
                         item.character.WalkToTargetQua(other.GetComponent<ItemCollider>().item.transform.rotation);
@@ -52,13 +52,13 @@ public class ItemCollider : MonoBehaviour
         switch (transform.tag)
         {
             case "Character":
-                if ((other.tag == "Resource") && (!other.transform.parent.parent.GetComponent<Resources>().isGathering) && (other.transform.parent.parent.GetComponent<Resources>().canBeGathered))
+                if ((other.tag == "Resource") && (!other.transform.parent.parent.parent.GetComponent<Resources>().isGathering) && (other.transform.parent.parent.parent.GetComponent<Resources>().canBeGathered))
                 {
                     int targetBlock = BlockSystem.Instance.GetBlockNum(item.center.position, other.GetComponent<ItemCollider>().item.transform.rotation);
                     if (item.character.RoadCanMove(targetBlock))
                     {
                         item.character.foundResource = true;
-                        other.transform.parent.parent.GetComponent<Resources>().isGathering = true;
+                        other.transform.parent.parent.parent.GetComponent<Resources>().isGathering = true;
                         item.character.resourceObject = other.GetComponent<ItemCollider>().item.gameObject;
                         //Debug.Log("resourceRotation:" + other.GetComponent<ItemCollider>().item.transform.rotation);
                         item.character.WalkToTargetQua(other.GetComponent<ItemCollider>().item.transform.rotation);

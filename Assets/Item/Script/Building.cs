@@ -26,7 +26,7 @@ public class Building : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        itemSprite = transform.Find("ItemSprite").GetComponent<MeshRenderer>();
+        itemSprite = transform.Find("ItemSpriteCenter").Find("ItemSprite").GetComponent<MeshRenderer>();
         if (GetComponent<Item>().itemType == ItemType.Building)
         {
             isBuilding = true;
@@ -85,6 +85,7 @@ public class Building : MonoBehaviour
                 CreateController.Instance.CreateItem(ItemType.Character, null, null, CharacterSystem.Instance.GetRandomSkill(), transform.eulerAngles);
             }
         }
+
         if (stopGenerate) { return; }
         time += Time.deltaTime;
         if ((time > 60f / population) && (CharacterSystem.Instance.GetPopulation() < 50))
