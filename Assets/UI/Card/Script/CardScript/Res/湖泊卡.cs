@@ -11,8 +11,11 @@ public class 湖泊卡 : RangeUsageCard
     {
         BlockSystem.Instance.blocks[block[0]].water += 5;
         BlockSystem.Instance.blocks[block[0]].livability += 2;
-        Debug.Log("森林卡生成树木");
-        ResourceSystem.Instance.RegenerationResource(ResourceType.Water, block);
+        for (int i = 0; i < 10; i++)
+        {
+            ResourceSystem.Instance.RegenerationResource(ResourceType.Water, block);
+        }
+        
     }
 
 }

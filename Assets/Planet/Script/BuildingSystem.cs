@@ -54,14 +54,17 @@ public class BuildingSystem : MonoBehaviour
             case Era.AncientEra:
                 builderAge = 0;
                 size = 2;
+                BuildingSystem.Instance.maxBuildingInBlock = 10;
                 break;
             case Era.ClassicalEra:
                 builderAge = 20;
                 size = 4;
+                BuildingSystem.Instance.maxBuildingInBlock = 15;
                 break;
             case Era.IndustrialEra:
                 builderAge = 40;
                 size = 5;
+                BuildingSystem.Instance.maxBuildingInBlock = 20;
                 break;
         }
 
