@@ -3938,7 +3938,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 1
-    buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
+    buildingMaterial: {fileID: 2100000, guid: 94f1f0867ae5dbc448384697fb68c6ae, type: 2}
     canBuild: 0
     needTech:
     - "\u77F3\u5236\u5EFA\u7B51"

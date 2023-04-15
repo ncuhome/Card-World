@@ -132,12 +132,30 @@ public class CharacterSystem : MonoBehaviour
                 character.specialSkill = charactersCanProgress[num].specialSkill;
                 character.itemSprite.material = charactersCanProgress[num].characterMaterial;
                 character.name = charactersCanProgress[num].name;
+                character.itemSprite.transform.localPosition = new Vector3(0, 0.518f, 0);
+                switch (CharacterSystem.Instance.GetCharacter(EraSystem.Instance.era + 1, character.specialSkill).characterNum)
+                {
+                    case 12:
+                    case 13:
+                    case 18:
+                        character.itemSprite.transform.localPosition = new Vector3(0, 0.515f, 0);
+                        break;
+                    case 17:
+                        character.itemSprite.transform.localPosition = new Vector3(0, 0.514f, 0);
+                        break;
+                }
+                break;
             }
             else
             {
                 character.specialSkill = SpecialSkill.None;
                 character.itemSprite.material = GetCharacter(EraSystem.Instance.era, SpecialSkill.None).characterMaterial;
                 character.name = GetCharacter(EraSystem.Instance.era, SpecialSkill.None).name;
+                character.itemSprite.transform.localPosition = new Vector3(0, 0.518f, 0);
+                if (GetCharacter(EraSystem.Instance.era, SpecialSkill.None).characterNum == 13)
+                {
+                    character.itemSprite.transform.localPosition = new Vector3(0, 0.515f, 0);
+                }
             }
         }
     }
