@@ -11,8 +11,8 @@ public class 森林卡 : RangeUsageCard
     {
         for (int i = 0; i < 10; i++)
         {
-            BlockSystem.Instance.blocks[block[0]].livability += 3;
             ResourceSystem.Instance.RegenerationResource(ResourceType.Wood, block);
         }
+        BlockSystem.Instance.blocks[block[0]].livability += 5;
     }
 }

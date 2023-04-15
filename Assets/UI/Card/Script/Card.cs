@@ -110,9 +110,10 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
             else if (this.GetComponent<RectTransform>().anchoredPosition.y >= CardPack.cardPackHigh + Card.cardSizey + 50)
             {
                 canBeDrag = false;
+                CardPack.DeleteCard(this);
                 transform.DOLocalMove(new Vector2(0, 540), 0.5f);
                 transform.DOScale(new Vector2(2f, 2f), 0.5f).
-                    OnComplete(() => { Destroy(this.transform.GetChild(0).gameObject); this.transform.GetChild(1).GetComponent<Image>().DOFade(0, 0.2f).OnComplete(() => { CardPack.DeleteCard(this);Destroy(this.gameObject); }); });
+                    OnComplete(() => { Destroy(this.transform.GetChild(0).gameObject); this.transform.GetChild(1).GetComponent<Image>().DOFade(0, 0.2f).OnComplete(() => { CardPack.DeleteCard(this); }); });
                 BeUse();
             }
             else
@@ -138,9 +139,10 @@ public class AccidentCard : Card
             else if (this.GetComponent<RectTransform>().anchoredPosition.y >= CardPack.cardPackHigh + Card.cardSizey + 50)  //在使用
             {
                 this.canBeDrag = false;
+                CardPack.DeleteCard(this);
                 transform.DOLocalMove(new Vector2(0, 540), 0.5f);
                 transform.DOScale(new Vector2(2f, 2f), 0.5f).
-                    OnComplete(() => { Destroy(this.transform.GetChild(0).gameObject); this.transform.GetChild(1).GetComponent<Image>().DOFade(0, 0.2f).OnComplete(() => { CardPack.DeleteCard(this); Destroy(this.gameObject); }); });
+                    OnComplete(() => { Destroy(this.transform.GetChild(0).gameObject); this.transform.GetChild(1).GetComponent<Image>().DOFade(0, 0.2f).OnComplete(() => { CardPack.DeleteCard(this); }); });
                 BeUse();
             }
             else
