@@ -84,15 +84,15 @@ public class BlockSystem : MonoBehaviour
         int blockX = blockNum - blockY * 6;
         if (blockY == 0)
         {
-            nearBlock = new int[4] { blockY * 6 + (blockX - 1) % 6, blockNum, blockY * 6 + (blockX + 1) % 6, blockNum + 6 };
+            nearBlock = new int[4] { blockY * 6 + (blockX + 5) % 6, blockNum, blockY * 6 + (blockX + 1) % 6, blockNum + 6 };
         }
         else if ((blockY == 1) || (blockY == 2))
         {
-            nearBlock = new int[5] { blockNum - 6, blockY * 6 + (blockX - 1) % 6, blockNum, blockY * 6 + (blockX + 1) % 6, blockNum + 6 };
+            nearBlock = new int[5] { blockNum - 6, blockY * 6 + (blockX + 5) % 6, blockNum, blockY * 6 + (blockX + 1) % 6, blockNum + 6 };
         }
         else
         {
-            nearBlock = new int[4] { blockNum - 6, blockY * 6 + (blockX - 1) % 6, blockNum, blockY * 6 + (blockX + 1) % 6 };
+            nearBlock = new int[4] { blockNum - 6, blockY * 6 + (blockX + 5) % 6, blockNum, blockY * 6 + (blockX + 1) % 6 };
         }
         return nearBlock;
     }
@@ -106,28 +106,28 @@ public class BlockSystem : MonoBehaviour
 
         if (blockY == 0)
         {
-            nearBlock = new int[3] { blockY * 6 + (blockX - 1) % 6, blockY * 6 + (blockX + 1) % 6, blockNum + 6 };
+            nearBlock = new int[3] { blockY * 6 + (blockX + 5) % 6, blockY * 6 + (blockX + 1) % 6, blockNum + 6 };
             randomNearBlock = new int[2] { blockNum, nearBlock[Random.Range(0, 3)] };
         }
         else if ((blockY == 1) || (blockY == 2))
         {
-            nearBlock = new int[4] { blockNum - 6, blockY * 6 + (blockX - 1) % 6, blockY * 6 + (blockX + 1) % 6, blockNum + 6 };
+            nearBlock = new int[4] { blockNum - 6, blockY * 6 + (blockX + 5) % 6, blockY * 6 + (blockX + 1) % 6, blockNum + 6 };
             randomNearBlock = new int[2] { blockNum, nearBlock[Random.Range(0, 4)] };
         }
         else
         {
-            nearBlock = new int[3] { blockNum - 6, blockY * 6 + (blockX - 1) % 6, blockY * 6 + (blockX + 1) % 6 };
+            nearBlock = new int[3] { blockNum - 6, blockY * 6 + (blockX + 5) % 6, blockY * 6 + (blockX + 1) % 6 };
             randomNearBlock = new int[2] { blockNum, nearBlock[Random.Range(0, 3)] };
         }
         return randomNearBlock;
     }
-    public IEnumerator NauAffectBlock(float tem, float water, float livability, float theTime, GameObject thisCard,int[] block)
+    public IEnumerator NauAffectBlock(float tem, float water, float livability, float theTime, GameObject thisCard, int[] block)
     {
         float allTime = 0;
         float time = 0;
         while (true)
         {
-            
+
             Debug.Log("正在完成效果");
             allTime += Time.deltaTime;
             time += Time.deltaTime;
