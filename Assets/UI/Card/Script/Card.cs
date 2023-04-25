@@ -1,9 +1,11 @@
 ﻿using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Sequence = DG.Tweening.Sequence;
 
 public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IDragHandler, IEndDragHandler
 {
@@ -13,18 +15,19 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
 
     public static float firstTime = 0.5f;  //抽卡第一阶段时长 变大并展示
 
-    public static float secondTime = 0.3f; //抽卡第二阶段时长 缩小进入卡槽
+    public static float secondTime = 0.15f; //抽卡第二阶段时长 缩小进入卡槽
 
     public static GameObject cardTrash;    //垃圾桶在所有卡牌中都是一个对象
 
-    private float mouseTimer;               //鼠标停留的时间
+    public float mouseTimer;               //鼠标停留的时间
 
-    private bool mouseOnCard;               //鼠标是否在卡牌上
+    public bool mouseOnCard;               //鼠标是否在卡牌上
 
     private int moveY = 50;                     //鼠标在卡牌上时卡牌上移高度
-    protected bool canBeDrag;
+    public bool canBeDrag;
+    public bool isDrag;                     //是否正在被拖动
     private Canvas cardCanvas;
-    [SerializeField] private GameObject descriptionPanel;
+    [SerializeField] public GameObject descriptionPanel;
     public void Start() //卡牌被创建后立即执行
     {
         cardTrash = GameObject.Find("TrashCan");
@@ -62,7 +65,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (canBeDrag && CardPack.canBeDrag)
+        if (canBeDrag && CardPack.canBeDrag && !isDrag)
         {
             mouseOnCard = true;
             this.transform.SetAsLastSibling(); //显示在所有卡牌的最上面
@@ -73,7 +76,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (canBeDrag && CardPack.canBeDrag)
+        if (canBeDrag && CardPack.canBeDrag && !isDrag)
         {
             mouseOnCard = false;
             mouseTimer = 0;
@@ -90,6 +93,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
     {
         if (canBeDrag && CardPack.canBeDrag)
         {
+            isDrag = true;
             mouseOnCard = false;
             this.GetComponent<RectTransform>().anchoredPosition +=
                 eventData.delta / this.transform.parent.transform.parent.GetComponent<Canvas>().scaleFactor;
@@ -100,6 +104,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
 
     public virtual void OnEndDrag(PointerEventData eventData)
     {
+        isDrag = false;
         if (canBeDrag && CardPack.canBeDrag)
         {
             if (Vector2.Distance(this.transform.position, cardTrash.transform.position) < 150)  //在垃圾桶范围内
@@ -107,7 +112,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
                 this.transform.DOMove(cardTrash.transform.position, 0.5f).OnComplete(() => { CardPack.DeleteCard(this); Destroy(this.gameObject); });
                 AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[6]);
             }
-            else if (this.GetComponent<RectTransform>().anchoredPosition.y >= CardPack.cardPackHigh + Card.cardSizey + 50)
+            else if (this.GetComponent<RectTransform>().anchoredPosition.y >= CardPack.cardPackHigh + Card.cardSizey + 50)  //使用卡牌
             {
                 canBeDrag = false;
                 CardPack.DeleteCard(this);

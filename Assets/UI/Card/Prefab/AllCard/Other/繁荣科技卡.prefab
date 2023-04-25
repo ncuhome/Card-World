@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 8937711558382185737}
   - component: {fileID: 5822139804855837837}
   - component: {fileID: 13071207935178904}
+  - component: {fileID: 3013386680248221210}
   m_Layer: 5
   m_Name: DescriptionPanel
   m_TagString: Untagged
@@ -234,6 +235,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3013386680248221210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7087728850691015328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70848ca291495494894c951b2e088fcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7087728850691015331
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,6 +307,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 897ba73b3af334142bcf3330d4900c3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseTimer: 0
+  mouseOnCard: 0
+  canBeDrag: 0
+  isDrag: 0
   descriptionPanel: {fileID: 7087728850691015328}
 --- !u!1 &8221061613661158776
 GameObject:

@@ -25,7 +25,6 @@ public class 繁荣科技卡 : Card //随机解锁一个可以被解锁的科技
             Debug.Log(tech);
             if (tech.CanBeUnlocked() == true && tech.unlock == false )
             {
-                Debug.Log(tech + "second");
                 canBeUnlock.Add(tech);
             }
         }
