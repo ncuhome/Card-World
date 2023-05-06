@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ public class CreateController : MonoBehaviour
     public GameObject itemPrefab;
     public Transform itemParent;
     public MeshRenderer itemSprite;
+    public static float createTime = 0.5f; //物体从0变大的动画时间
     void Awake()
     {
         if (Instance == null)
@@ -208,6 +210,7 @@ public class CreateController : MonoBehaviour
                 }
                 break;
         }
+        itemSprite.transform.DOScale(new Vector3(0, 0, 0), createTime).From();
     }
     //指定类型和坐标创建自然资源
     public void CreateItem(ItemType itemType, ResourceType? resourceType, BuildingType? buildingType, SpecialSkill? characterSkill, Vector3 targetEuler, bool nature)
@@ -352,6 +355,7 @@ public class CreateController : MonoBehaviour
                 }
                 break;
         }
+        itemSprite.transform.DOScale(new Vector3(0, 0, 0), createTime).From();
     }
     //调试用初始化
     public void TestCreate()
