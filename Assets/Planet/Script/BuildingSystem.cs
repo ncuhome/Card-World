@@ -325,4 +325,14 @@ public class BuildingSystem : MonoBehaviour
         }
         return buildingNum;
     }
+
+    public int GetHomeNums() //获取目前居住建筑数量
+    {
+        int homeNum = 0;
+        foreach (Building building in Instance.buildings)
+        {
+            if ((building != null) && (buildingDatas[(int)building.buildingType].isHomeBuilding)) homeNum++;
+        }
+        return homeNum;
+    }
 }

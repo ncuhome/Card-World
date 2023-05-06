@@ -33,13 +33,13 @@ public class Building : MonoBehaviour
             switch (EraSystem.Instance.era)
             {
                 case Era.AncientEra:
-                    population = Random.Range(1, 5);
+                    population = (int)Mathf.Floor(Random.Range(1, 5) * PopulationController.Instance.CivilizationScale);
                     break;
                 case Era.ClassicalEra:
-                    population = Random.Range(5, 8);
+                    population = (int)Mathf.Floor(Random.Range(5, 8) * PopulationController.Instance.CivilizationScale);
                     break;
                 case Era.IndustrialEra:
-                    population = Random.Range(6, 10);
+                    population = (int)Mathf.Floor(Random.Range(6, 10) * PopulationController.Instance.CivilizationScale);
                     break;
             }
         }
