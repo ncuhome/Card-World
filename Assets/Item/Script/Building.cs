@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,6 +24,13 @@ public class Building : MonoBehaviour
     public float oilTime;
     public GameObject farm;
     public GameObject lake;
+    public int maintenanceTimes;
+    public int maxProduceTimes;
+    public int maxMaintenanceTimes;
+    public int produceTimes;
+    public int produceGrainNum = 5;
+    public bool waitForMaintenance = false;
+    public float generateMultiplier = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,13 +41,13 @@ public class Building : MonoBehaviour
             switch (EraSystem.Instance.era)
             {
                 case Era.AncientEra:
-                    population = (int)Mathf.Floor(Random.Range(1, 5) * PopulationController.Instance.CivilizationScale);
+                    population = UnityEngine.Random.Range(1, 5);
                     break;
                 case Era.ClassicalEra:
-                    population = (int)Mathf.Floor(Random.Range(5, 8) * PopulationController.Instance.CivilizationScale);
+                    population = UnityEngine.Random.Range(5, 8);
                     break;
                 case Era.IndustrialEra:
-                    population = (int)Mathf.Floor(Random.Range(6, 10) * PopulationController.Instance.CivilizationScale);
+                    population = UnityEngine.Random.Range(6, 10);
                     break;
             }
         }
@@ -54,8 +62,6 @@ public class Building : MonoBehaviour
     void Update()
     {
         if (!isBuilding) { return; }
-        GeneratePopulation();
-        InstantiateOil();
         if ((buildingType == BuildingType.FishingFacility) || (buildingType == BuildingType.SmallDock))
         {
             lake.SetActive(true);
@@ -72,6 +78,37 @@ public class Building : MonoBehaviour
         {
             farm.SetActive(false);
         }
+
+        if (!stopGenerate)
+        {
+            maxProduceTimes = 2;
+            maxMaintenanceTimes = 2;
+        }
+        if (BuildingSystem.Instance.buildingDatas[(int)buildingType].isGrainBuilding)
+        {
+            maxProduceTimes = 10;
+            if ((buildingType == BuildingType.FishingFacility)||(buildingType == BuildingType.Pier))
+            {
+                maxMaintenanceTimes = 3;
+            }
+            else
+            {
+                maxMaintenanceTimes = 4;
+            }
+        }
+
+        if (CivilizationScaleSystem.Instance.civilizationScaleOverFlow)
+        {
+            generateMultiplier = 1.5f;
+        }
+        else
+        {
+            generateMultiplier = 1f;
+        }
+        GeneratePopulation();
+        InstantiateOil();
+        ProduceGrain();
+        WaitForMaintenance();
     }
 
     void GeneratePopulation()
@@ -79,7 +116,7 @@ public class Building : MonoBehaviour
         if ((buildingType == BuildingType.Cave) && (CharacterSystem.Instance.GetPopulation() < 8))
         {
             time += Time.deltaTime;
-            if (time > 20f)
+            if (time > 20f * generateMultiplier)
             {
                 time = 0;
                 CreateController.Instance.CreateItem(ItemType.Character, null, null, CharacterSystem.Instance.GetRandomSkill(), transform.eulerAngles);
@@ -96,16 +133,18 @@ public class Building : MonoBehaviour
             }
         }
         if (stopGenerate) { return; }
+        if (waitForMaintenance) { return; }
         time += Time.deltaTime;
-        if ((time > 60f / population) && (CharacterSystem.Instance.GetPopulation() < 50))
+        if ((time > 60f * generateMultiplier / (population- Convert.ToInt32(CivilizationScaleSystem.Instance.civilizationScaleOverFlow))) && (CharacterSystem.Instance.GetPopulation() < 50))
         {
             time = 0;
             CreateController.Instance.CreateItem(ItemType.Character, null, null, CharacterSystem.Instance.GetRandomSkill(), transform.eulerAngles);
             generatePopulation++;
         }
-        if (generatePopulation > population)
+        if (generatePopulation > (population- Convert.ToInt32(CivilizationScaleSystem.Instance.civilizationScaleOverFlow)))
         {
             stopGenerate = true;
+            produceTimes++;
         }
     }
 
@@ -122,5 +161,41 @@ public class Building : MonoBehaviour
                 oilTime = 0;
             }
         }
+    }
+
+    void ProduceGrain()
+    {
+        if (!BuildingSystem.Instance.buildingDatas[(int)buildingType].isGrainBuilding) { return; }
+        if (waitForMaintenance) { return; }
+        time += Time.deltaTime;
+        if (time > 10f)
+        {
+            ResourceSystem.Instance.grainNum += produceGrainNum;
+            produceTimes++;
+            time = 0f;
+        }
+    }
+
+    void WaitForMaintenance()
+    {
+        if (produceTimes >= maxProduceTimes)
+        {
+            waitForMaintenance = true;
+            if ((maintenanceTimes > maxMaintenanceTimes)&&(BuildingSystem.Instance.buildingDatas[(int)buildingType].isGrainBuilding))
+            {
+                BuildingSystem.Instance.buildingInBlock[BlockSystem.Instance.GetBlockNum(Vector3.zero,transform.position)] --;
+                DestroyImmediate(this.gameObject);
+            }
+            for (int j = 0; j < 13; j++)
+            {
+                if (ResourceSystem.Instance.resourceDatas[j].resourceNum < (BuildingSystem.Instance.buildingDatas[(int)buildingType].targetResource[j].resourceNum + Convert.ToInt32(CivilizationScaleSystem.Instance.civilizationScaleOverFlow)))
+                {
+                    waitForMaintenance = false;
+                    produceTimes = 0;
+                    maintenanceTimes ++;
+                }
+            }
+        }
+
     }
 }

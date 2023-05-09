@@ -13,6 +13,7 @@ public class BuildingData //构建可序列化的数据类
     public ResourceData[] targetResource = new ResourceData[14];
     public bool isSpecialBuilding;
     public bool isHomeBuilding;
+    public bool isGrainBuilding;
     public Material buildingMaterial;
     public bool canBuild; //当前是否可以建造该种建筑
     public string[] needTech;
@@ -28,7 +29,7 @@ public class BuildingSystem : MonoBehaviour
     public Building[] buildings = new Building[120];
     public int[] buildingInBlock = new int[24];
     public int maxBuildingInBlock;
-    public int guarantees;
+    public float consumptionMultiplier = 1f;
     // Start is called before the first frame update
     /// <summary>
     /// Awake is called when the script instance is being loaded.
@@ -68,6 +69,15 @@ public class BuildingSystem : MonoBehaviour
                 break;
         }
 
+        if (CivilizationScaleSystem.Instance.civilizationScaleOverFlow)
+        {
+            consumptionMultiplier = 1.5f;
+        }
+        else
+        {
+            consumptionMultiplier = 1f;
+        }
+
         //寻找可建造的建筑
         BuildingData[] buildingsCanBeBuild = new BuildingData[30];
         int buildingsCanBeBuildNum = 0;
@@ -87,7 +97,7 @@ public class BuildingSystem : MonoBehaviour
 
             for (int j = 0; j < 13; j++)
             {
-                if (ResourceSystem.Instance.resourceDatas[j].resourceNum < buildingDatas[i].targetResource[j].resourceNum) { buildingDatas[i].canBuild = false; }
+                if (ResourceSystem.Instance.resourceDatas[j].resourceNum < (int)Mathf.Floor(buildingDatas[i].targetResource[j].resourceNum * consumptionMultiplier)) { buildingDatas[i].canBuild = false; }
             }
             if (buildingDatas[i].canBuild)
             {
@@ -143,7 +153,7 @@ public class BuildingSystem : MonoBehaviour
             //减少建造需求的对应资源
             for (int j = 0; j < 13; j++)
             {
-                ResourceSystem.Instance.resourceDatas[j].resourceNum -= buildingsCanBeBuild[buildingRandomNum].targetResource[j].resourceNum;
+                ResourceSystem.Instance.resourceDatas[j].resourceNum -= (int)Mathf.Floor(buildingsCanBeBuild[buildingRandomNum].targetResource[j].resourceNum * consumptionMultiplier);
             }
             foreach (int builderNum in builders)
             {
@@ -334,5 +344,18 @@ public class BuildingSystem : MonoBehaviour
             if ((building != null) && (buildingDatas[(int)building.buildingType].isHomeBuilding)) homeNum++;
         }
         return homeNum;
+    }
+
+    public int GetPioneeredBlockNum()
+    {
+        int sum = 0;
+        for (int i = 0; i < 24; i++)
+        {
+            if (buildingInBlock[i] > 0)
+            {
+                sum ++;
+            }
+        }
+        return sum;
     }
 }
