@@ -20,11 +20,18 @@ public class 寒潮卡 : RangeUsageCard
                     int[] block = new int[1];
                     CardManger.instance.dividingLine.SetActive(false);
                     block[0] = BlockSystem.Instance.GetBlockNum(MouseOnSphere.instance.sphere.transform.position, MouseOnSphere.instance.ReturnMousePosition());
-                    AffectBlock(block);
-                    SignUI.instance.SetTextNULL();
-                    CardPack.canBeDrag = true;  //其他卡牌能被拖动
-                    canBeDrag = true;
-                    isSelect = false;
+                    if (!BlockSystem.Instance.blocks[block[0]].isWeather)
+                    {
+                        AffectBlock(block);
+                        SignUI.instance.SetTextNULL();
+                        CardPack.canBeDrag = true;  //其他卡牌能被拖动
+                        canBeDrag = true;
+                        isSelect = false;
+                    }
+                    else
+                    {
+                        SignUI.instance.DisplayText("该区块已经存在天气效果", 3f, Color.blue);
+                    }
                 }
             }
             yield return null;
@@ -32,7 +39,8 @@ public class 寒潮卡 : RangeUsageCard
     }
     public override void AffectBlock(int[] block)
     {
-        StartCoroutine(BlockSystem.Instance.NauAffectBlock(-1.5f, 0f, 0, 10f, this.gameObject, block));
+        WeatherParticleSystem.instance.Cold(block[0], 60);
+        Destroy(gameObject);
     }
 
 }

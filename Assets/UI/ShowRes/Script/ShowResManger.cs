@@ -21,12 +21,17 @@ public class ShowResManger : MonoBehaviour
             if (!change)
             {
                 resText[i].text = ResourceSystem.Instance.resourceDatas[i].resourceNum.ToString();
+                if (i == resText.Length - 1)
+                {
+                    resText[i].text = ResourceSystem.Instance.grainNum.ToString();
+                }
             }
             else
             {
                 resText[i].text = gameObjects[i].name;
             }
         }
+
     }
     private void Start()
     {

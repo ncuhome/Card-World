@@ -261,30 +261,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1039137929, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1115711228, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1115711232, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3701722578907611974, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3701722579963453546, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: testCard
-      value: 
-      objectReference: {fileID: 4032888705073352957, guid: ef3aa6cce598e244e8aec57fe1498d9f, type: 3}
-    - target: {fileID: 3701722579963453546, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: textCard
-      value: 
-      objectReference: {fileID: 8889260860107925295, guid: d7ada36b46e3b964c9243f33c0112d7d, type: 3}
     - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -332,14 +308,6 @@ PrefabInstance:
     - target: {fileID: 6875215470551126260, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
       propertyPath: m_Name
       value: AllUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 8594907708393437247, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_PixelPerfect
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8594907708393437247, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
@@ -1100,6 +1068,7 @@ MonoBehaviour:
     resourceMaterials:
     - {fileID: 2100000, guid: 1f937ae0f77e4d143b41b185771133df, type: 2}
   center: {fileID: 1555151207}
+  grainNum: 0
 --- !u!114 &912914641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2333,6 +2302,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 1
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: b62d4191aff1dbc4592f49ff922b30fb, type: 2}
     canBuild: 0
     needTech: []
@@ -2399,6 +2369,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 1
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 9ac30ccab801e244facbbe1c3aa20ca0, type: 2}
     canBuild: 0
     needTech:
@@ -2466,6 +2437,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 0
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 89ca4ed0035484f41be5aa2b0a3a1bac, type: 2}
     canBuild: 0
     needTech:
@@ -2533,6 +2505,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 0
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: ada6539085386874fae62db151838e65, type: 2}
     canBuild: 0
     needTech:
@@ -2600,6 +2573,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 0
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 974c1804b35b92f47a477be4b3890cb2, type: 2}
     canBuild: 0
     needTech:
@@ -2667,6 +2641,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 0
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 01fb8facf4660014c9d1240da6f42839, type: 2}
     canBuild: 0
     needTech:
@@ -2734,6 +2709,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 990a34d80a417ed41a6a28b1197426d9, type: 2}
     canBuild: 0
     needTech:
@@ -2801,6 +2777,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 83b4b3856894957408ad86f3d4c1a416, type: 2}
     canBuild: 0
     needTech:
@@ -2868,6 +2845,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 8ecc1184fa465a646a40ab04a0654c5b, type: 2}
     canBuild: 0
     needTech:
@@ -2935,6 +2913,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 51c141c8118c98844b1269158afc2519, type: 2}
     canBuild: 0
     needTech:
@@ -3002,6 +2981,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 1
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: e7dcd4f206fb97a4da12ea0c2b250a75, type: 2}
     canBuild: 0
     needTech:
@@ -3069,6 +3049,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 1
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 94f1f0867ae5dbc448384697fb68c6ae, type: 2}
     canBuild: 0
     needTech:
@@ -3136,6 +3117,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 1
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 5a50a574bd29b7b439e3830b8b1b8c44, type: 2}
     canBuild: 0
     needTech:
@@ -3203,6 +3185,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 0
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 0517d98dcb3334e4db2b2935d1028a61, type: 2}
     canBuild: 0
     needTech:
@@ -3270,6 +3253,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 0
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 9d27fdeb34d53474ea2c253a4f22dd3b, type: 2}
     canBuild: 0
     needTech:
@@ -3337,6 +3321,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 0
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 3c89d98d98fd6714f869e1e0f4bc0fcc, type: 2}
     canBuild: 0
     needTech: []
@@ -3403,6 +3388,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 1ec464b4c4b04cc41bec15c4044c4edb, type: 2}
     canBuild: 0
     needTech:
@@ -3470,6 +3456,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 9efb65f2e07d2424992591c79c69cbdc, type: 2}
     canBuild: 0
     needTech:
@@ -3537,6 +3524,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 9c01ef406bc47314190234cc8f307fe0, type: 2}
     canBuild: 0
     needTech:
@@ -3604,6 +3592,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 13309755a94ce194cb4715c12c60f6f3, type: 2}
     canBuild: 0
     needTech:
@@ -3671,6 +3660,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 1
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 084a30a8e498c6b45b249696ec22fcf3, type: 2}
     canBuild: 0
     needTech:
@@ -3738,6 +3728,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 1
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: a199859185cc51547920028f0ded9290, type: 2}
     canBuild: 0
     needTech: []
@@ -3804,6 +3795,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 1
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 33402ef277db58c4f949ac6e315e02cb, type: 2}
     canBuild: 0
     needTech: []
@@ -3870,6 +3862,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 0
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 4bec619a85bb917408e73d2e8e3399a5, type: 2}
     canBuild: 0
     needTech: []
@@ -3936,6 +3929,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 0
     isHomeBuilding: 0
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 8e7393000f727704f8fc629c1f609875, type: 2}
     canBuild: 0
     needTech:
@@ -4003,6 +3997,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 0a9adc001f1e41445bfafc37f4e3b404, type: 2}
     canBuild: 0
     needTech:
@@ -4070,6 +4065,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 37559761ad33ffa41b32be64bfb487b6, type: 2}
     canBuild: 0
     needTech:
@@ -4137,6 +4133,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 0ac4de6155300d9459c4c69bbabb1c17, type: 2}
     canBuild: 0
     needTech:
@@ -4204,6 +4201,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: c7baef44553e2e149a621fed9249670b, type: 2}
     canBuild: 0
     needTech:
@@ -4271,6 +4269,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: 29731ce2808badb48a2a04ac07d8336f, type: 2}
     canBuild: 0
     needTech:
@@ -4338,6 +4337,7 @@ MonoBehaviour:
       resourceMaterials: []
     isSpecialBuilding: 1
     isHomeBuilding: 0
+    isGrainBuilding: 0
     buildingMaterial: {fileID: 2100000, guid: a5123f4d71008aa4cb7a5cb2cc5d4e16, type: 2}
     canBuild: 0
     needTech: []
@@ -4646,7 +4646,7 @@ MonoBehaviour:
   - {fileID: 0}
   buildingInBlock: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxBuildingInBlock: 10
-  guarantees: 0
+  consumptionMultiplier: 1
 --- !u!114 &912914644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5077,14 +5077,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7359464824034546104, guid: d2e27dd9c6015df44a5a830b1ca15005, type: 3}
-      propertyPath: audioClips.Array.size
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359464824034546104, guid: d2e27dd9c6015df44a5a830b1ca15005, type: 3}
-      propertyPath: audioClips.Array.data[8]
-      value: 
-      objectReference: {fileID: 8300000, guid: 130a177e727814a2ea78a886ab72213d, type: 3}
     - target: {fileID: 7359464824034546105, guid: d2e27dd9c6015df44a5a830b1ca15005, type: 3}
       propertyPath: m_Name
       value: AudioManger
