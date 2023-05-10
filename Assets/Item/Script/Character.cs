@@ -30,6 +30,8 @@ public class Character : MonoBehaviour
     public MeshRenderer itemSprite;
     public bool goHome, stayInBuilding = false;
     public Building home, targetBuilding;
+    public float grainTime;
+    public bool isHunger;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +62,7 @@ public class Character : MonoBehaviour
         ExpandScope();
         StartWork();
         GoHome();
+        Hunger();
 
         switch (characterState)
         {
@@ -289,6 +292,7 @@ public class Character : MonoBehaviour
         {
             ageSpeed = (float)(0.5f + Math.Sqrt(((BlockSystem.Instance.blocks[item.blockNum].water - 20) * (BlockSystem.Instance.blocks[item.blockNum].water - 20) + (BlockSystem.Instance.blocks[item.blockNum].temperature - 20) * (BlockSystem.Instance.blocks[item.blockNum].temperature - 20)) / 100 * (1 - (BlockSystem.Instance.blocks[item.blockNum].livability + 20) / 120)));
         }
+        if (isHunger) { ageSpeed = ageSpeed * 2; }
         age += Time.deltaTime * ageSpeed;
         if ((age > CharacterSystem.Instance.maxAge) && (!goToBuild))
         {
@@ -313,13 +317,22 @@ public class Character : MonoBehaviour
                 if (goToBuild || foundResource) { return; }
                 WalkToTargetQua(home.transform.rotation);
                 goHome = true;
-                stayInBuilding = false;
+                if (stayInBuilding)
+                {
+                    stayInBuilding = false;
+                    if (targetBuilding != null)
+                    {
+                        //Debug.Log("EndWork");
+                        targetBuilding.produceGrainNum--;
+                    }
+                }
             }
         }
     }
 
     public void Stay(BuildingType buildingType)
     {
+        if (goToBuild || goHome || foundResource) { return; }
         targetBuilding = BuildingSystem.Instance.FindNearBuildingWithType(transform, buildingType);
         if (targetBuilding == null)
         {
@@ -328,14 +341,19 @@ public class Character : MonoBehaviour
         }
         if (stayInBuilding == false)
         {
-            if (goToBuild || goHome || foundResource) { return; }
             stayInBuilding = true;
             WalkToTargetQua(targetBuilding.transform.rotation);
+            if (BuildingSystem.Instance.buildingDatas[(int)targetBuilding.buildingType].isGrainBuilding)
+            {
+                //Debug.Log("startWork");
+                targetBuilding.produceGrainNum++;
+            }
         }
     }
 
     public void StartWork()
     {
+        if (targetBuilding != null) { return; }
         switch (specialSkill)
         {
             case SpecialSkill.None:
@@ -415,6 +433,24 @@ public class Character : MonoBehaviour
                     homeList.Add(block2);
                 }
                 homeRange = homeList.ToArray();
+            }
+        }
+    }
+
+    public void Hunger()
+    {
+        grainTime += Time.deltaTime;
+        if (grainTime > 15f)
+        {
+            if (ResourceSystem.Instance.grainNum > 1)
+            {
+                isHunger = false;
+                ResourceSystem.Instance.grainNum--;
+                grainTime = 0;
+            }
+            else
+            {
+                isHunger = true;
             }
         }
     }

@@ -17,6 +17,7 @@ public class ResourceSystem : MonoBehaviour
     public float regenerationDuration;
     public ResourceData[] resourceDatas = new ResourceData[14];
     public GameObject center;
+    public int grainNum = 0;
     /// <summary>
     /// Awake is called when the script instance is being loaded.
     /// </summary>

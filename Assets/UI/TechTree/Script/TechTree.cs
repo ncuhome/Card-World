@@ -90,6 +90,7 @@ public class TechTree : MonoBehaviour
                 CharacterSystem.Instance.CivilizationProgresses();
                 Debug.Log(EraSystem.Instance.era);
                 firstInInd = true;
+                CivilizationScaleSystem.Instance.maxCivilizationScale += 30;
             }
             EraSystem.Instance.era = Era.IndustrialEra;
             return 2; //第三个时代
@@ -113,6 +114,7 @@ public class TechTree : MonoBehaviour
                 CharacterSystem.Instance.CivilizationProgresses();
                 Debug.Log(EraSystem.Instance.era);
                 firstInClass = true;
+                CivilizationScaleSystem.Instance.maxCivilizationScale += 30;
             }
             EraSystem.Instance.era = Era.ClassicalEra;
             return 1; //第二个时代
