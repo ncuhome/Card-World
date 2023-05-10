@@ -277,6 +277,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3701722579963453546, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: testCard
+      value: 
+      objectReference: {fileID: 4032888705073352957, guid: ef3aa6cce598e244e8aec57fe1498d9f, type: 3}
+    - target: {fileID: 3701722579963453546, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
+      propertyPath: textCard
+      value: 
+      objectReference: {fileID: 8889260860107925295, guid: d7ada36b46e3b964c9243f33c0112d7d, type: 3}
     - target: {fileID: 5250462098726660746, guid: 1e40a2f4f3035954c8cb8017f43278a5, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -879,75 +887,99 @@ MonoBehaviour:
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
   - temperature: 20
     water: 20
     livability: 80
+    isWeather: 0
 --- !u!114 &912914638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5045,6 +5077,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7359464824034546104, guid: d2e27dd9c6015df44a5a830b1ca15005, type: 3}
+      propertyPath: audioClips.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359464824034546104, guid: d2e27dd9c6015df44a5a830b1ca15005, type: 3}
+      propertyPath: audioClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 130a177e727814a2ea78a886ab72213d, type: 3}
     - target: {fileID: 7359464824034546105, guid: d2e27dd9c6015df44a5a830b1ca15005, type: 3}
       propertyPath: m_Name
       value: AudioManger
@@ -5165,3 +5205,60 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2044612729}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &6634444588300474324
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6634444588432475822, guid: e25f937f75efa6b479b1247695351eec, type: 3}
+      propertyPath: m_Name
+      value: ParticleSystemManger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634444588432475823, guid: e25f937f75efa6b479b1247695351eec, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634444588432475823, guid: e25f937f75efa6b479b1247695351eec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634444588432475823, guid: e25f937f75efa6b479b1247695351eec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634444588432475823, guid: e25f937f75efa6b479b1247695351eec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634444588432475823, guid: e25f937f75efa6b479b1247695351eec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634444588432475823, guid: e25f937f75efa6b479b1247695351eec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634444588432475823, guid: e25f937f75efa6b479b1247695351eec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634444588432475823, guid: e25f937f75efa6b479b1247695351eec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634444588432475823, guid: e25f937f75efa6b479b1247695351eec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634444588432475823, guid: e25f937f75efa6b479b1247695351eec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634444588432475823, guid: e25f937f75efa6b479b1247695351eec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e25f937f75efa6b479b1247695351eec, type: 3}

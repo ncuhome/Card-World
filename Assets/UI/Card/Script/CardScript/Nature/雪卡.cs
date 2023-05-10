@@ -33,6 +33,7 @@ public class 雪卡 : RangeUsageCard
     }
     public override void AffectBlock(int[] block)
     {
-        StartCoroutine(BlockSystem.Instance.NauAffectBlock(-1f, 0.5f, 0, 10f, this.gameObject, block));
+        WeatherParticleSystem.instance.Snow(block[0], 20f);
+        StartCoroutine(BlockSystem.Instance.NauAffectBlock(0, 0, 0, 20f, this.gameObject, block));
     }
 }

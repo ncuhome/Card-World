@@ -10,6 +10,8 @@ public class Block
     public float water = 20;      //水量
 
     public float livability = 80; //宜居度
+
+    public bool isWeather;        //是否有天气效果
 }
 
 public class BlockSystem : MonoBehaviour
@@ -131,7 +133,6 @@ public class BlockSystem : MonoBehaviour
         float time = 0;
         while (true)
         {
-
             Debug.Log("正在完成效果");
             allTime += Time.deltaTime;
             time += Time.deltaTime;
@@ -154,6 +155,18 @@ public class BlockSystem : MonoBehaviour
             }
             yield return null;
         }
+        BlockSystem.Instance.blocks[block[0]].isWeather = false;
         Destroy(thisCard);
     }
+    public Vector3 ReturnBlockAngles(int blockNum)  //返回区块中心旋转值
+    {
+        float x = 0;
+        float y = -30f;
+        float z = 157.5f;
+        int temp = blockNum % 6;
+        y = y - temp * 60;
+        temp = (int)blockNum / 6;
+        z = z - temp * 45;
+        return new Vector3(x, y, z);
+    } 
 }

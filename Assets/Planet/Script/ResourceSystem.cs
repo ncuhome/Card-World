@@ -136,6 +136,7 @@ public class ResourceSystem : MonoBehaviour
     {
         //Debug.Log("RegenerationResource: Block[] " + blockNum);
         CreateController.Instance.CreateItem(ItemType.Resource, resourceType, null, null, blockNum);
+        AudioManger.instance.effetPlaySound(AudioManger.instance.audioClips[8]);
     }
     //在指定区块生成指定自然资源
     public void RegenerationResource(ResourceType resourceType, int[] blockNum, bool nature)
