@@ -25,7 +25,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6309620410528591776}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 8240204976471078268}
   - component: {fileID: 2269514512074952090}
   - component: {fileID: 726630344240782169}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Text (Legacy) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 8868844082475831022}
   - component: {fileID: 3616349694915612974}
   - component: {fileID: 9038973962571987155}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,8 @@ GameObject:
   - component: {fileID: 4463238437294159650}
   - component: {fileID: 888668945462743654}
   - component: {fileID: 2895329524494468188}
-  m_Layer: 5
+  - component: {fileID: 2322935340828595389}
+  m_Layer: 2
   m_Name: DescriptionPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,6 +315,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2322935340828595389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8889260860107925292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70848ca291495494894c951b2e088fcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8889260860107925295
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,7 +355,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4463238437294159650}
   - {fileID: 4844878566544558926}
@@ -374,5 +387,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d152ca787a90744ad2cb3b81c8cd96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseTimer: 0
+  mouseOnCard: 0
+  canBeDrag: 0
+  isDrag: 0
   descriptionPanel: {fileID: 8889260860107925292}
   isSelect: 0

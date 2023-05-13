@@ -47,8 +47,15 @@ public class CardPack : MonoBehaviour //卡牌背包
         //}
         for (int i = 0; i < cardPack.Count; i++)
         {
-            cardPack[i].gameObject.transform.DOLocalMove(new Vector2(firstPos + i * Card.cardSizex, 0), Card.secondTime)
-                .OnComplete(() => { canBeDrag = true; });
+            if (!cardPack[i].isDrag)
+            {
+                cardPack[i].gameObject.transform.DOLocalMove(new Vector2(firstPos + i * Card.cardSizex, 0), Card.secondTime)
+                    .OnComplete(() => { canBeDrag = true; });
+            }
+            else
+            {
+                canBeDrag = true;
+            }
         }
     }
 }
