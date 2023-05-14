@@ -32,6 +32,8 @@ public class Character : MonoBehaviour
     public Building home, targetBuilding;
     public float grainTime;
     public bool isHunger;
+    public Vector3 nextLocalPosition;
+    public float walkTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -109,8 +111,11 @@ public class Character : MonoBehaviour
             //进入行走阶段
             case CharacterState.walk:
                 time += Time.deltaTime;
+                walkTime += Time.deltaTime;
                 //使用绕轴旋转
                 nextQua = Quaternion.AngleAxis(turnSpeed * time, axisVec) * oldQua;
+                nextLocalPosition = new Vector3(0, transform.GetChild(0).GetChild(0).localPosition.y + Mathf.Sin(walkTime * 20) / 4000, 0);
+                transform.GetChild(0).GetChild(0).localPosition = nextLocalPosition;
                 // if (ColorSystem.ColorExt.Difference(GetColorSystem.Instance.GetColor(nextQua * Vector3.up), ColorSystem.Instance.colors[0]) < 0.1f)
                 // {
                 //     characterState = CharacterState.idle;
