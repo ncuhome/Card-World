@@ -11,5 +11,6 @@ public class 岩浆卡 : RangeUsageCard
     {
         BlockSystem.Instance.blocks[block[0]].temperature += 20;
         BlockSystem.Instance.blocks[block[0]].livability -= 10;
+        CreateController.Instance.CreateItem(ItemType.Building, null, BuildingType.Magma, null, block);
     }
 }
