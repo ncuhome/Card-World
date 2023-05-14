@@ -18,14 +18,21 @@ public class 雪卡 : RangeUsageCard
             {
                 if (MouseOnSphere.instance.ReturnMousePosition() != Vector3.zero)
                 {
-                    CardManger.instance.dividingLine.SetActive(false);
                     int[] block = new int[1];
+                    CardManger.instance.dividingLine.SetActive(false);
                     block[0] = BlockSystem.Instance.GetBlockNum(MouseOnSphere.instance.sphere.transform.position, MouseOnSphere.instance.ReturnMousePosition());
-                    AffectBlock(block);
-                    SignUI.instance.SetTextNULL();
-                    CardPack.canBeDrag = true;  //其他卡牌能被拖动
-                    canBeDrag = true;
-                    isSelect = false;
+                    if (!BlockSystem.Instance.blocks[block[0]].isWeather)
+                    {
+                        AffectBlock(block);
+                        SignUI.instance.SetTextNULL();
+                        CardPack.canBeDrag = true;  //其他卡牌能被拖动
+                        canBeDrag = true;
+                        isSelect = false;
+                    }
+                    else
+                    {
+                        SignUI.instance.DisplayText("该区块已经存在天气效果", 3f, Color.blue);
+                    }
                 }
             }
             yield return null;
@@ -33,6 +40,7 @@ public class 雪卡 : RangeUsageCard
     }
     public override void AffectBlock(int[] block)
     {
-        StartCoroutine(BlockSystem.Instance.NauAffectBlock(-1f, 0.5f, 0, 10f, this.gameObject, block));
+        WeatherParticleSystem.instance.Snow(block[0], 20f);
+        StartCoroutine(BlockSystem.Instance.NauAffectBlock(0, 0, 0, 20f, this.gameObject, block));
     }
 }

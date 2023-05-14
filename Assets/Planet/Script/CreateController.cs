@@ -186,6 +186,10 @@ public class CreateController : MonoBehaviour
                     case BuildingType.NuclearPowerPlant:
                         itemSprite.transform.localPosition = new Vector3(0, 0.514f, 0);
                         break;
+                    case BuildingType.Magma:
+                        itemSprite.transform.localPosition = new Vector3(0, 0.499f, 0);
+                        itemSprite.transform.localEulerAngles = new Vector3(0, 0, 0);
+                        break;
                 }
                 break;
             case ItemType.Character:
