@@ -8,10 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/UI/Start/Start1.unity
     guid: 7f98e949202185f4bbcb4788f30a907e
-  - enabled: 1
+  - enabled: 0
     path: Assets/UI/Card/Scenes/TheNewEst.unity
     guid: 96d171c3680408947b1b9f3e91933ffc
   - enabled: 0
     path: Assets/Planet/Scenes/PlantScene.unity
     guid: 4816d1d079e40674f9161a04dc5ffa67
+  - enabled: 1
+    path: Assets/Planet/Scenes/TheNewEst.unity
+    guid: 111bd400b2073f74cb88905ed5b9fe27
   m_configObjects: {}

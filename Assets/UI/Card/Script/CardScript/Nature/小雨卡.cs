@@ -31,5 +31,6 @@ public class 小雨卡 : RangeUsageCard
     public override void AffectBlock(int[] block)
     {
         StartCoroutine(BlockSystem.Instance.NauAffectBlock(0, 0.5f, 0, 5f, this.gameObject, block));
+        Destroy(this.gameObject);
     }
 }
